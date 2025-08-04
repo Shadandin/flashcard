@@ -131,7 +131,12 @@ class FlashcardApp {
             
             unitCard.innerHTML = `
                 <h3>Unit ${unitNumber}</h3>
-                <p>${unit.title}</p>
+                <p class="unit-title">${unit.title}</p>
+                <p class="unit-description">${unit.description || 'Vocabulary for various topics'}</p>
+                <div class="unit-info">
+                    <span class="word-count">${unit.words.length} words</span>
+                    <span class="difficulty">${unit.words[0]?.difficulty || 'beginner'}</span>
+                </div>
                 <div class="unit-status">
                     ${unitData.studied ? '✓ Studied' : 'Not studied'} | 
                     ${unitData.practiced ? '✓ Practiced' : 'Not practiced'}
@@ -523,6 +528,24 @@ class FlashcardApp {
                 const progressElement = bookCard.querySelector('.book-progress');
                 progressElement.textContent = `${completedUnits}/30 units`;
             }
+        });
+        
+        // Update all book cards with enhanced information
+        const bookCards = document.querySelectorAll('.book-card');
+        bookCards.forEach(card => {
+            const bookNumber = parseInt(card.dataset.book);
+            const book = vocabularyData.books[bookNumber];
+            const bookProgress = this.progress.books[bookNumber] || {};
+            const completedUnits = Object.values(bookProgress).filter(unit => unit.studied).length;
+            
+            // Update book title and description
+            const titleElement = card.querySelector('h3');
+            const descriptionElement = card.querySelector('p');
+            const progressElement = card.querySelector('.book-progress');
+            
+            titleElement.textContent = book.title;
+            descriptionElement.textContent = book.description || 'Vocabulary for various levels';
+            progressElement.textContent = `${completedUnits}/30 units`;
         });
     }
 
