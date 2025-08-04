@@ -1,0 +1,136 @@
+{
+  "bookId": 5,
+  "title": "Book 5 - Upper-Intermediate Level",
+  "level": "Upper-Intermediate",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Clothing and Fashion",
+      "words": [
+        {
+          "word": "catch",
+          "meaning": "to stop and hold something that is moving",
+          "partOfSpeech": "verb",
+          "example": "The goalkeeper caught the ball."
+        },
+        {
+          "word": "cause",
+          "meaning": "to make something happen",
+          "partOfSpeech": "verb",
+          "example": "Smoking causes lung cancer."
+        },
+        {
+          "word": "celebrate",
+          "meaning": "to do something special for an important event",
+          "partOfSpeech": "verb",
+          "example": "We celebrated her birthday with a party."
+        },
+        {
+          "word": "challenge",
+          "meaning": "something difficult that tests your ability",
+          "partOfSpeech": "noun",
+          "example": "Learning a new language is a challenge."
+        },
+        {
+          "word": "change",
+          "meaning": "to become different",
+          "partOfSpeech": "verb",
+          "example": "The weather changed from sunny to rainy."
+        },
+        {
+          "word": "charge",
+          "meaning": "to ask for money for something",
+          "partOfSpeech": "verb",
+          "example": "The restaurant charges $20 for dinner."
+        },
+        {
+          "word": "check",
+          "meaning": "to examine something carefully",
+          "partOfSpeech": "verb",
+          "example": "Please check your work before submitting."
+        },
+        {
+          "word": "choose",
+          "meaning": "to decide between different options",
+          "partOfSpeech": "verb",
+          "example": "I chose the blue shirt over the red one."
+        },
+        {
+          "word": "claim",
+          "meaning": "to say something is true",
+          "partOfSpeech": "verb",
+          "example": "He claims he didn't see the sign."
+        },
+        {
+          "word": "clean",
+          "meaning": "free from dirt or impurities",
+          "partOfSpeech": "adjective",
+          "example": "The kitchen is very clean."
+        },
+        {
+          "word": "clear",
+          "meaning": "easy to understand or see through",
+          "partOfSpeech": "adjective",
+          "example": "The instructions are very clear."
+        },
+        {
+          "word": "close",
+          "meaning": "near in space or time",
+          "partOfSpeech": "adjective",
+          "example": "The store is close to my house."
+        },
+        {
+          "word": "collect",
+          "meaning": "to gather things together",
+          "partOfSpeech": "verb",
+          "example": "I collect stamps from different countries."
+        },
+        {
+          "word": "combine",
+          "meaning": "to join or mix things together",
+          "partOfSpeech": "verb",
+          "example": "Combine the flour and eggs to make dough."
+        },
+        {
+          "word": "come",
+          "meaning": "to move toward someone or something",
+          "partOfSpeech": "verb",
+          "example": "Come here and sit down."
+        },
+        {
+          "word": "compare",
+          "meaning": "to examine similarities and differences",
+          "partOfSpeech": "verb",
+          "example": "Let's compare the two products."
+        },
+        {
+          "word": "complete",
+          "meaning": "to finish something",
+          "partOfSpeech": "verb",
+          "example": "I need to complete this report by Friday."
+        },
+        {
+          "word": "consider",
+          "meaning": "to think about something carefully",
+          "partOfSpeech": "verb",
+          "example": "Please consider all the options."
+        },
+        {
+          "word": "contain",
+          "meaning": "to have something inside",
+          "partOfSpeech": "verb",
+          "example": "This box contains old photographs."
+        },
+        {
+          "word": "continue",
+          "meaning": "to keep doing something",
+          "partOfSpeech": "verb",
+          "example": "Please continue with your story."
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Upper-intermediate level English vocabulary with advanced academic and professional terms."
+}

@@ -1,0 +1,136 @@
+{
+  "bookId": 3,
+  "title": "Book 3 - Pre-Intermediate Level",
+  "level": "Pre-Intermediate",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Family and Home",
+      "words": [
+        {
+          "word": "achieve",
+          "meaning": "to succeed in doing something difficult",
+          "partOfSpeech": "verb",
+          "example": "She achieved her goal of becoming a doctor."
+        },
+        {
+          "word": "adapt",
+          "meaning": "to change behavior to suit new conditions",
+          "partOfSpeech": "verb",
+          "example": "It took time to adapt to the new school."
+        },
+        {
+          "word": "admire",
+          "meaning": "to respect and approve of someone",
+          "partOfSpeech": "verb",
+          "example": "I admire her courage and determination."
+        },
+        {
+          "word": "advance",
+          "meaning": "to move forward or make progress",
+          "partOfSpeech": "verb",
+          "example": "Technology continues to advance rapidly."
+        },
+        {
+          "word": "advantage",
+          "meaning": "something that helps you succeed",
+          "partOfSpeech": "noun",
+          "example": "Speaking English gives you an advantage in business."
+        },
+        {
+          "word": "adventure",
+          "meaning": "an exciting and dangerous journey",
+          "partOfSpeech": "noun",
+          "example": "We went on an adventure in the mountains."
+        },
+        {
+          "word": "affect",
+          "meaning": "to have an influence on something",
+          "partOfSpeech": "verb",
+          "example": "The weather affects my mood."
+        },
+        {
+          "word": "agree",
+          "meaning": "to have the same opinion as someone",
+          "partOfSpeech": "verb",
+          "example": "I agree with your decision."
+        },
+        {
+          "word": "allow",
+          "meaning": "to give permission for something",
+          "partOfSpeech": "verb",
+          "example": "My parents allow me to stay out late."
+        },
+        {
+          "word": "amaze",
+          "meaning": "to surprise someone very much",
+          "partOfSpeech": "verb",
+          "example": "The magician's tricks amazed the audience."
+        },
+        {
+          "word": "analyze",
+          "meaning": "to examine something carefully",
+          "partOfSpeech": "verb",
+          "example": "Scientists analyze the data from experiments."
+        },
+        {
+          "word": "announce",
+          "meaning": "to tell people about something officially",
+          "partOfSpeech": "verb",
+          "example": "The company announced its new product."
+        },
+        {
+          "word": "appear",
+          "meaning": "to become visible or noticeable",
+          "partOfSpeech": "verb",
+          "example": "The sun appeared from behind the clouds."
+        },
+        {
+          "word": "apply",
+          "meaning": "to put something on a surface",
+          "partOfSpeech": "verb",
+          "example": "Apply sunscreen before going outside."
+        },
+        {
+          "word": "approach",
+          "meaning": "to come near to something",
+          "partOfSpeech": "verb",
+          "example": "The train approached the station slowly."
+        },
+        {
+          "word": "approve",
+          "meaning": "to officially agree to something",
+          "partOfSpeech": "verb",
+          "example": "The committee approved the new budget."
+        },
+        {
+          "word": "argue",
+          "meaning": "to disagree with someone angrily",
+          "partOfSpeech": "verb",
+          "example": "They argued about politics for hours."
+        },
+        {
+          "word": "arrange",
+          "meaning": "to organize or plan something",
+          "partOfSpeech": "verb",
+          "example": "I'll arrange a meeting for next week."
+        },
+        {
+          "word": "assume",
+          "meaning": "to think something is true without proof",
+          "partOfSpeech": "verb",
+          "example": "Don't assume everyone knows the rules."
+        },
+        {
+          "word": "attend",
+          "meaning": "to be present at an event",
+          "partOfSpeech": "verb",
+          "example": "Many people attended the concert."
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Pre-intermediate level English vocabulary with more complex words and expressions."
+}

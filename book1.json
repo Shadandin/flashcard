@@ -1,0 +1,166 @@
+{
+  "bookId": 1,
+  "title": "Book 1 - Beginner Level",
+  "level": "Beginner",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Basic Words",
+      "words": [
+        {
+          "word": "apple",
+          "meaning": "a round fruit with red, yellow, or green skin and white flesh",
+          "partOfSpeech": "noun",
+          "example": "I eat an apple every day for breakfast."
+        },
+        {
+          "word": "book",
+          "meaning": "a set of printed pages that are held together in a cover",
+          "partOfSpeech": "noun",
+          "example": "I love reading books in my free time."
+        },
+        {
+          "word": "cat",
+          "meaning": "a small animal with fur, four legs, and a tail that people keep as a pet",
+          "partOfSpeech": "noun",
+          "example": "The cat is sleeping on the sofa."
+        },
+        {
+          "word": "dog",
+          "meaning": "an animal with four legs and a tail that people keep as a pet",
+          "partOfSpeech": "noun",
+          "example": "The dog is playing in the garden."
+        },
+        {
+          "word": "eat",
+          "meaning": "to put food into your mouth and swallow it",
+          "partOfSpeech": "verb",
+          "example": "We eat dinner at 7 PM every evening."
+        },
+        {
+          "word": "friend",
+          "meaning": "someone you know well and like",
+          "partOfSpeech": "noun",
+          "example": "Sarah is my best friend from school."
+        },
+        {
+          "word": "good",
+          "meaning": "of high quality or standard",
+          "partOfSpeech": "adjective",
+          "example": "This is a very good movie."
+        },
+        {
+          "word": "house",
+          "meaning": "a building where people live",
+          "partOfSpeech": "noun",
+          "example": "They live in a beautiful house near the park."
+        },
+        {
+          "word": "important",
+          "meaning": "having great value or significance",
+          "partOfSpeech": "adjective",
+          "example": "It's important to study hard for exams."
+        },
+        {
+          "word": "job",
+          "meaning": "work that you do to earn money",
+          "partOfSpeech": "noun",
+          "example": "She has a good job at the hospital."
+        },
+        {
+          "word": "know",
+          "meaning": "to have information about something",
+          "partOfSpeech": "verb",
+          "example": "I know the answer to that question."
+        },
+        {
+          "word": "like",
+          "meaning": "to enjoy something or find it pleasant",
+          "partOfSpeech": "verb",
+          "example": "I like chocolate ice cream."
+        },
+        {
+          "word": "make",
+          "meaning": "to create or produce something",
+          "partOfSpeech": "verb",
+          "example": "She likes to make cakes on weekends."
+        },
+        {
+          "word": "new",
+          "meaning": "recently created or bought",
+          "partOfSpeech": "adjective",
+          "example": "I bought a new car last week."
+        },
+        {
+          "word": "old",
+          "meaning": "having lived or existed for a long time",
+          "partOfSpeech": "adjective",
+          "example": "This is an old building from the 1800s."
+        },
+        {
+          "word": "people",
+          "meaning": "human beings in general",
+          "partOfSpeech": "noun",
+          "example": "Many people live in this city."
+        },
+        {
+          "word": "read",
+          "meaning": "to look at and understand written words",
+          "partOfSpeech": "verb",
+          "example": "I read the newspaper every morning."
+        },
+        {
+          "word": "see",
+          "meaning": "to use your eyes to look at something",
+          "partOfSpeech": "verb",
+          "example": "I can see the mountains from my window."
+        },
+        {
+          "word": "think",
+          "meaning": "to use your mind to consider something",
+          "partOfSpeech": "verb",
+          "example": "I think this is a good idea."
+        },
+        {
+          "word": "time",
+          "meaning": "the indefinite continued progress of existence",
+          "partOfSpeech": "noun",
+          "example": "What time is it now?"
+        },
+        {
+          "word": "want",
+          "meaning": "to have a desire for something",
+          "partOfSpeech": "verb",
+          "example": "I want to learn English."
+        },
+        {
+          "word": "work",
+          "meaning": "to do a job or activity",
+          "partOfSpeech": "verb",
+          "example": "I work in an office."
+        },
+        {
+          "word": "year",
+          "meaning": "a period of 365 days",
+          "partOfSpeech": "noun",
+          "example": "I started learning English last year."
+        },
+        {
+          "word": "young",
+          "meaning": "having lived for only a short time",
+          "partOfSpeech": "adjective",
+          "example": "She is a young teacher."
+        },
+        {
+          "word": "clean",
+          "meaning": "free from dirt or impurities",
+          "partOfSpeech": "adjective",
+          "example": "Keep your room clean and tidy."
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Essential English vocabulary for beginners with basic words and common phrases."
+}

@@ -1,0 +1,136 @@
+{
+  "bookId": 4,
+  "title": "Book 4 - Intermediate Level",
+  "level": "Intermediate",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Food and Cooking",
+      "words": [
+        {
+          "word": "attract",
+          "meaning": "to make someone interested in something",
+          "partOfSpeech": "verb",
+          "example": "The bright colors attract customers to the store."
+        },
+        {
+          "word": "avoid",
+          "meaning": "to stay away from something",
+          "partOfSpeech": "verb",
+          "example": "I try to avoid eating too much sugar."
+        },
+        {
+          "word": "aware",
+          "meaning": "knowing about something",
+          "partOfSpeech": "adjective",
+          "example": "Are you aware of the new policy?"
+        },
+        {
+          "word": "balance",
+          "meaning": "to keep something steady",
+          "partOfSpeech": "verb",
+          "example": "It's important to balance work and family life."
+        },
+        {
+          "word": "believe",
+          "meaning": "to think something is true",
+          "partOfSpeech": "verb",
+          "example": "I believe in working hard to achieve goals."
+        },
+        {
+          "word": "belong",
+          "meaning": "to be a member of a group",
+          "partOfSpeech": "verb",
+          "example": "This book belongs to the library."
+        },
+        {
+          "word": "benefit",
+          "meaning": "an advantage or positive result",
+          "partOfSpeech": "noun",
+          "example": "Exercise has many health benefits."
+        },
+        {
+          "word": "blame",
+          "meaning": "to say someone is responsible for something bad",
+          "partOfSpeech": "verb",
+          "example": "Don't blame yourself for the accident."
+        },
+        {
+          "word": "bother",
+          "meaning": "to annoy or trouble someone",
+          "partOfSpeech": "verb",
+          "example": "I don't want to bother you with my problems."
+        },
+        {
+          "word": "breathe",
+          "meaning": "to take air into and out of your lungs",
+          "partOfSpeech": "verb",
+          "example": "Take deep breaths to relax."
+        },
+        {
+          "word": "brief",
+          "meaning": "short in time or length",
+          "partOfSpeech": "adjective",
+          "example": "I'll give you a brief summary of the meeting."
+        },
+        {
+          "word": "bright",
+          "meaning": "giving out a lot of light",
+          "partOfSpeech": "adjective",
+          "example": "The sun is bright today."
+        },
+        {
+          "word": "build",
+          "meaning": "to make something by putting parts together",
+          "partOfSpeech": "verb",
+          "example": "They're building a new school in our neighborhood."
+        },
+        {
+          "word": "burn",
+          "meaning": "to be on fire",
+          "partOfSpeech": "verb",
+          "example": "The candle burns slowly."
+        },
+        {
+          "word": "burst",
+          "meaning": "to break open suddenly",
+          "partOfSpeech": "verb",
+          "example": "The balloon burst when it touched the sharp object."
+        },
+        {
+          "word": "bury",
+          "meaning": "to put something in the ground",
+          "partOfSpeech": "verb",
+          "example": "They buried the treasure in the backyard."
+        },
+        {
+          "word": "calculate",
+          "meaning": "to work out a number or amount",
+          "partOfSpeech": "verb",
+          "example": "I need to calculate the total cost."
+        },
+        {
+          "word": "cancel",
+          "meaning": "to stop something from happening",
+          "partOfSpeech": "verb",
+          "example": "I had to cancel my appointment due to illness."
+        },
+        {
+          "word": "care",
+          "meaning": "to look after someone or something",
+          "partOfSpeech": "verb",
+          "example": "Parents care for their children."
+        },
+        {
+          "word": "carry",
+          "meaning": "to hold and take something somewhere",
+          "partOfSpeech": "verb",
+          "example": "Can you help me carry these bags?"
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Intermediate level English vocabulary with academic and professional words."
+}

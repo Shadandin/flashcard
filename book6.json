@@ -1,0 +1,136 @@
+{
+  "bookId": 6,
+  "title": "Book 6 - Advanced Level",
+  "level": "Advanced",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Transportation",
+      "words": [
+        {
+          "word": "control",
+          "meaning": "to have power over something",
+          "partOfSpeech": "verb",
+          "example": "The pilot controls the airplane."
+        },
+        {
+          "word": "create",
+          "meaning": "to make something new",
+          "partOfSpeech": "verb",
+          "example": "Artists create beautiful paintings."
+        },
+        {
+          "word": "cross",
+          "meaning": "to go from one side to another",
+          "partOfSpeech": "verb",
+          "example": "Be careful when you cross the street."
+        },
+        {
+          "word": "cut",
+          "meaning": "to divide something with a sharp tool",
+          "partOfSpeech": "verb",
+          "example": "I cut the paper with scissors."
+        },
+        {
+          "word": "damage",
+          "meaning": "to harm or break something",
+          "partOfSpeech": "verb",
+          "example": "The storm damaged many houses."
+        },
+        {
+          "word": "decide",
+          "meaning": "to make a choice",
+          "partOfSpeech": "verb",
+          "example": "I need to decide which university to attend."
+        },
+        {
+          "word": "decrease",
+          "meaning": "to become smaller in amount",
+          "partOfSpeech": "verb",
+          "example": "The temperature decreased overnight."
+        },
+        {
+          "word": "define",
+          "meaning": "to explain what something means",
+          "partOfSpeech": "verb",
+          "example": "Can you define this word for me?"
+        },
+        {
+          "word": "demand",
+          "meaning": "to ask for something strongly",
+          "partOfSpeech": "verb",
+          "example": "Workers demanded better pay."
+        },
+        {
+          "word": "describe",
+          "meaning": "to explain what something is like",
+          "partOfSpeech": "verb",
+          "example": "Please describe what happened."
+        },
+        {
+          "word": "design",
+          "meaning": "to plan how something will look",
+          "partOfSpeech": "verb",
+          "example": "She designs beautiful websites."
+        },
+        {
+          "word": "develop",
+          "meaning": "to grow or improve",
+          "partOfSpeech": "verb",
+          "example": "Children develop quickly in their early years."
+        },
+        {
+          "word": "die",
+          "meaning": "to stop living",
+          "partOfSpeech": "verb",
+          "example": "Plants die without water."
+        },
+        {
+          "word": "discover",
+          "meaning": "to find something for the first time",
+          "partOfSpeech": "verb",
+          "example": "Scientists discovered a new species."
+        },
+        {
+          "word": "discuss",
+          "meaning": "to talk about something with others",
+          "partOfSpeech": "verb",
+          "example": "Let's discuss the problem together."
+        },
+        {
+          "word": "divide",
+          "meaning": "to separate into parts",
+          "partOfSpeech": "verb",
+          "example": "Divide the cake into equal pieces."
+        },
+        {
+          "word": "drop",
+          "meaning": "to let something fall",
+          "partOfSpeech": "verb",
+          "example": "I dropped my keys on the floor."
+        },
+        {
+          "word": "earn",
+          "meaning": "to get money for work",
+          "partOfSpeech": "verb",
+          "example": "She earns a good salary."
+        },
+        {
+          "word": "educate",
+          "meaning": "to teach someone",
+          "partOfSpeech": "verb",
+          "example": "Parents educate their children."
+        },
+        {
+          "word": "encourage",
+          "meaning": "to give someone confidence",
+          "partOfSpeech": "verb",
+          "example": "Teachers encourage students to study hard."
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Advanced level English vocabulary with sophisticated academic and professional terminology."
+}
