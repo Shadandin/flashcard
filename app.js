@@ -10,6 +10,9 @@ class FlashcardApp {
         this.mistakes = [];
         this.progress = this.loadProgress();
         
+        // Load saved vocabulary data
+        this.loadVocabularyData();
+        
         this.initializeEventListeners();
         this.updateProgressDisplay();
         this.updateBookProgress();
@@ -82,6 +85,33 @@ class FlashcardApp {
         // Flashcard click to flip
         document.getElementById('flashcard').addEventListener('click', () => {
             this.flipCard();
+        });
+
+        // Editable card save button
+        document.getElementById('saveWord').addEventListener('click', () => {
+            this.saveWord();
+        });
+
+        // Enter key to save word
+        document.getElementById('editWord').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
+            }
+        });
+        document.getElementById('editPartOfSpeech').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
+            }
+        });
+        document.getElementById('editMeaning').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
+            }
+        });
+        document.getElementById('editExample').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
+            }
         });
     }
 
@@ -195,16 +225,106 @@ class FlashcardApp {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
         const word = unit.words[this.currentWordIndex];
         
-        document.getElementById('word').textContent = word.word;
-        document.getElementById('partOfSpeech').textContent = word.partOfSpeech;
-        document.getElementById('meaning').textContent = word.meaning;
-        document.getElementById('example').textContent = word.example;
+        // Check if the word is empty (editable)
+        if (!word.word || word.word.trim() === '') {
+            this.showEditableCard(word);
+        } else {
+            this.showNormalCard(word);
+        }
         
         document.getElementById('studyProgress').textContent = `${this.currentWordIndex + 1} / ${unit.words.length}`;
         document.getElementById('studyUnit').textContent = `Unit ${this.currentUnit}`;
         
         // Reset card to front
         document.getElementById('flashcard').classList.remove('flipped');
+    }
+
+    showNormalCard(word) {
+        // Hide editable elements
+        document.getElementById('editableCard').style.display = 'none';
+        document.getElementById('normalCard').style.display = 'block';
+        
+        // Show normal card content
+        document.getElementById('word').textContent = word.word;
+        document.getElementById('partOfSpeech').textContent = word.partOfSpeech;
+        document.getElementById('meaning').textContent = word.meaning;
+        document.getElementById('example').textContent = word.example;
+    }
+
+    showEditableCard(word) {
+        // Hide normal card elements
+        document.getElementById('normalCard').style.display = 'none';
+        document.getElementById('editableCard').style.display = 'block';
+        
+        // Populate input fields with current values (if any)
+        document.getElementById('editWord').value = word.word || '';
+        document.getElementById('editPartOfSpeech').value = word.partOfSpeech || '';
+        document.getElementById('editMeaning').value = word.meaning || '';
+        document.getElementById('editExample').value = word.example || '';
+        
+        // Focus on the first input
+        document.getElementById('editWord').focus();
+    }
+
+    saveWord() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const word = unit.words[this.currentWordIndex];
+        
+        // Get values from input fields
+        const newWord = document.getElementById('editWord').value.trim();
+        const newPartOfSpeech = document.getElementById('editPartOfSpeech').value.trim();
+        const newMeaning = document.getElementById('editMeaning').value.trim();
+        const newExample = document.getElementById('editExample').value.trim();
+        
+        // Validate that at least the word is provided
+        if (!newWord) {
+            alert('Please enter a word.');
+            document.getElementById('editWord').focus();
+            return;
+        }
+        
+        // Update the word object
+        word.word = newWord;
+        word.partOfSpeech = newPartOfSpeech;
+        word.meaning = newMeaning;
+        word.example = newExample;
+        
+        // Save to localStorage
+        this.saveVocabularyData();
+        
+        // Show success message
+        alert('Word saved successfully!');
+        
+        // Reload the current word to show it as a normal card
+        this.loadCurrentWord();
+    }
+
+    saveVocabularyData() {
+        // Save the updated vocabulary data to localStorage
+        localStorage.setItem('vocabularyData', JSON.stringify(vocabularyData));
+    }
+
+    loadVocabularyData() {
+        // Load saved vocabulary data from localStorage
+        const savedData = localStorage.getItem('vocabularyData');
+        if (savedData) {
+            const parsedData = JSON.parse(savedData);
+            // Merge saved data with current data, preserving structure
+            Object.keys(parsedData.books).forEach(bookNum => {
+                if (vocabularyData.books[bookNum]) {
+                    Object.keys(parsedData.books[bookNum].units).forEach(unitNum => {
+                        if (vocabularyData.books[bookNum].units[unitNum]) {
+                            // Update words that have been saved
+                            parsedData.books[bookNum].units[unitNum].words.forEach((savedWord, index) => {
+                                if (savedWord.word && savedWord.word.trim() !== '') {
+                                    vocabularyData.books[bookNum].units[unitNum].words[index] = savedWord;
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }
     }
 
     flipCard() {
