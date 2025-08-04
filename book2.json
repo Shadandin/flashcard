@@ -1,0 +1,136 @@
+{
+  "bookId": 2,
+  "title": "Book 2 - Elementary Level",
+  "level": "Elementary",
+  "units": {
+    "1": {
+      "unitId": 1,
+      "title": "Unit 1: Daily Activities",
+      "words": [
+        {
+          "word": "wake",
+          "meaning": "to stop sleeping and become conscious",
+          "partOfSpeech": "verb",
+          "example": "I wake up at 7 AM every morning."
+        },
+        {
+          "word": "brush",
+          "meaning": "to clean with a brush",
+          "partOfSpeech": "verb",
+          "example": "Don't forget to brush your teeth."
+        },
+        {
+          "word": "shower",
+          "meaning": "to wash yourself with water",
+          "partOfSpeech": "verb",
+          "example": "I shower every morning before work."
+        },
+        {
+          "word": "dress",
+          "meaning": "to put on clothes",
+          "partOfSpeech": "verb",
+          "example": "It takes me 10 minutes to dress."
+        },
+        {
+          "word": "drive",
+          "meaning": "to control and operate a vehicle",
+          "partOfSpeech": "verb",
+          "example": "I drive to work every day."
+        },
+        {
+          "word": "arrive",
+          "meaning": "to reach a destination",
+          "partOfSpeech": "verb",
+          "example": "I arrive at work at 9 AM."
+        },
+        {
+          "word": "start",
+          "meaning": "to begin something",
+          "partOfSpeech": "verb",
+          "example": "The meeting starts at 10 AM."
+        },
+        {
+          "word": "finish",
+          "meaning": "to complete something",
+          "partOfSpeech": "verb",
+          "example": "I finish work at 5 PM."
+        },
+        {
+          "word": "return",
+          "meaning": "to go back to a place",
+          "partOfSpeech": "verb",
+          "example": "I return home at 6 PM."
+        },
+        {
+          "word": "cook",
+          "meaning": "to prepare food by heating it",
+          "partOfSpeech": "verb",
+          "example": "I cook dinner for my family."
+        },
+        {
+          "word": "watch",
+          "meaning": "to look at something for a period of time",
+          "partOfSpeech": "verb",
+          "example": "I watch TV after dinner."
+        },
+        {
+          "word": "listen",
+          "meaning": "to pay attention to sounds",
+          "partOfSpeech": "verb",
+          "example": "I listen to music while working."
+        },
+        {
+          "word": "talk",
+          "meaning": "to speak to someone",
+          "partOfSpeech": "verb",
+          "example": "I talk to my friends on the phone."
+        },
+        {
+          "word": "walk",
+          "meaning": "to move on foot",
+          "partOfSpeech": "verb",
+          "example": "I walk my dog in the evening."
+        },
+        {
+          "word": "exercise",
+          "meaning": "physical activity to stay healthy",
+          "partOfSpeech": "noun",
+          "example": "I do exercise three times a week."
+        },
+        {
+          "word": "study",
+          "meaning": "to learn about a subject",
+          "partOfSpeech": "verb",
+          "example": "I study English every evening."
+        },
+        {
+          "word": "write",
+          "meaning": "to form letters or words on paper",
+          "partOfSpeech": "verb",
+          "example": "I write in my diary every night."
+        },
+        {
+          "word": "call",
+          "meaning": "to telephone someone",
+          "partOfSpeech": "verb",
+          "example": "I call my parents every Sunday."
+        },
+        {
+          "word": "visit",
+          "meaning": "to go to see someone",
+          "partOfSpeech": "verb",
+          "example": "I visit my grandparents on weekends."
+        },
+        {
+          "word": "sleep",
+          "meaning": "to rest with your eyes closed",
+          "partOfSpeech": "verb",
+          "example": "I sleep for 8 hours every night."
+        }
+      ]
+    }
+  },
+  "totalUnits": 30,
+  "totalWords": 750,
+  "description": "Elementary level English vocabulary focusing on daily activities and common verbs."
+}
