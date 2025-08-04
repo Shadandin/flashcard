@@ -5,11 +5,11 @@ A comprehensive web-based flashcard application for studying the 4000 Essential 
 ## Features
 
 ### 📚 Complete Vocabulary Coverage
-- **Book 1**: Uses actual vocabulary from 4000 Essential English Words 2nd Edition
-- **8 Units in Book 1**: Family, School, Food, Colors, Numbers, Time, Body, Clothes
+- **Books 3-6**: Generated sample data for vocabulary learning
+- **30 Units per Book**: Themed units covering various topics
 - **20 Words per Unit**: Carefully selected vocabulary with definitions, parts of speech, and example sentences
-- **160 Words in Book 1**: Authentic vocabulary from the official textbook
-- **Additional Books**: Generated sample data for Books 2-6 (can be replaced with actual content)
+- **600 Words per Book**: Comprehensive vocabulary coverage
+- **Sample Content**: Can be replaced with actual content from vocabulary textbooks
 
 ### 🎯 Study Modes
 
@@ -50,7 +50,7 @@ A comprehensive web-based flashcard application for studying the 4000 Essential 
 ### Getting Started
 1. **Open the Application**: Simply open `index.html` in any modern web browser
 2. **Choose Study Mode**: Start with "Study Mode" to learn new vocabulary
-3. **Select a Book**: Choose from 6 books based on your level
+3. **Select a Book**: Choose from 4 books based on your level
 4. **Pick a Unit**: Each book has 30 themed units
 
 ### Study Mode Workflow
@@ -75,23 +75,22 @@ A comprehensive web-based flashcard application for studying the 4000 Essential 
 2. **Monitor Books**: See completion status for each book
 3. **Track Units**: Visual progress indicators for all units
 
-## Book 1 Vocabulary Update
+## Available Books
 
-### ✅ Authentic Content
-- **Real Textbook Words**: Book 1 now uses actual vocabulary from 4000 Essential English Words 2nd Edition
-- **Accurate Definitions**: All definitions match the official textbook
-- **Proper Examples**: Example sentences are authentic and appropriate for learners
-- **Correct Parts of Speech**: All words have accurate grammatical classifications
+### 📖 Book Structure
+- **Book 3**: Pre-Intermediate Level - 30 units covering various themes
+- **Book 4**: Intermediate Level - 30 units covering various themes  
+- **Book 5**: Upper-Intermediate Level - 30 units covering various themes
+- **Book 6**: Advanced Level - 30 units covering various themes
 
-### 📖 Unit Themes
-1. **Unit 1: Family** - Family members and relationships
-2. **Unit 2: School** - Education and learning vocabulary
-3. **Unit 3: Food** - Food items and eating vocabulary
-4. **Unit 4: Colors** - Color words and descriptive adjectives
-5. **Unit 5: Numbers** - Numbers and counting vocabulary
-6. **Unit 6: Time** - Time-related words and expressions
-7. **Unit 7: Body** - Body parts and physical descriptions
-8. **Unit 8: Clothes** - Clothing items and fashion vocabulary
+### 🎯 Unit Themes
+Each book contains 30 themed units covering topics such as:
+- Basic Words, Family and Home, Daily Activities, Food and Cooking
+- Clothing and Fashion, Transportation, Work and Jobs, Education
+- Health and Medicine, Sports and Exercise, Entertainment, Technology
+- Nature and Environment, Travel and Tourism, Business and Money
+- Emotions and Feelings, Time and Calendar, Weather and Seasons
+- And many more comprehensive vocabulary themes
 
 ## Technical Details
 
