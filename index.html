@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4000 Essential English Words - Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>4000 Essential English Words</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0% Complete</div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <button class="nav-btn active" data-mode="study">Study Mode</button>
+            <button class="nav-btn" data-mode="practice">Practice Mode</button>
+            <button class="nav-btn" data-mode="review">Review Mistakes</button>
+            <button class="nav-btn" data-mode="progress">Progress</button>
+        </nav>
+
+        <!-- Book Selection -->
+        <div class="book-selection" id="bookSelection">
+            <h2>Select a Book</h2>
+            <div class="books-grid">
+                <div class="book-card" data-book="1">
+                    <h3>Book 1</h3>
+                    <p>Beginner Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="2">
+                    <h3>Book 2</h3>
+                    <p>Elementary Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="3">
+                    <h3>Book 3</h3>
+                    <p>Pre-Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="4">
+                    <h3>Book 4</h3>
+                    <p>Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="5">
+                    <h3>Book 5</h3>
+                    <p>Upper-Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="6">
+                    <h3>Book 6</h3>
+                    <p>Advanced Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unit Selection -->
+        <div class="unit-selection" id="unitSelection" style="display: none;">
+            <h2>Select a Unit</h2>
+            <div class="back-btn" id="backToBooks">← Back to Books</div>
+            <div class="units-grid" id="unitsGrid"></div>
+        </div>
+
+        <!-- Study Mode -->
+        <div class="study-mode" id="studyMode" style="display: none;">
+            <div class="back-btn" id="backToUnits">← Back to Units</div>
+            <div class="study-info">
+                <span id="studyProgress">1 / 20</span>
+                <span id="studyUnit">Unit 1</span>
+            </div>
+            <div class="flashcard" id="flashcard">
+                <div class="card-front">
+                    <h3 id="word">Loading...</h3>
+                    <p id="partOfSpeech">Loading...</p>
+                </div>
+                <div class="card-back">
+                    <h3 id="meaning">Loading...</h3>
+                    <p id="example">Loading...</p>
+                </div>
+            </div>
+            <div class="study-controls">
+                <button class="btn btn-secondary" id="flipCard">Flip Card</button>
+                <button class="btn btn-primary" id="nextCard">Next Word</button>
+            </div>
+        </div>
+
+        <!-- Practice Mode -->
+        <div class="practice-mode" id="practiceMode" style="display: none;">
+            <div class="back-btn" id="backToUnitsPractice">← Back to Units</div>
+            <div class="practice-info">
+                <span id="practiceProgress">1 / 10</span>
+                <span id="practiceUnit">Unit 1</span>
+            </div>
+            <div class="question-card">
+                <h3 id="questionText">Loading...</h3>
+                <div class="options" id="options"></div>
+            </div>
+            <div class="practice-controls">
+                <button class="btn btn-primary" id="submitAnswer" disabled>Submit Answer</button>
+                <button class="btn btn-secondary" id="nextQuestion" style="display: none;">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Review Mode -->
+        <div class="review-mode" id="reviewMode" style="display: none;">
+            <h2>Review Mistakes</h2>
+            <div class="mistakes-list" id="mistakesList">
+                <p>No mistakes to review yet. Complete some practice sessions first!</p>
+            </div>
+        </div>
+
+        <!-- Progress Mode -->
+        <div class="progress-mode" id="progressMode" style="display: none;">
+            <h2>Your Progress</h2>
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <h3>Total Words Studied</h3>
+                    <p id="totalStudied">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Practice Questions</h3>
+                    <p id="totalQuestions">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Correct Answers</h3>
+                    <p id="correctAnswers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accuracy</h3>
+                    <p id="accuracy">0%</p>
+                </div>
+            </div>
+            <div class="book-progress-details" id="bookProgressDetails"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
