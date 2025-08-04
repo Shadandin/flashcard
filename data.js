@@ -3,10 +3,10 @@ const vocabularyData = {
     books: {}
 };
 
-// Generate books with sample data (Books 3-6)
+// Generate books with sample data (Books 1-6)
 function generateSampleData() {
-    // Add books (3-6) with generated data
-    for (let book = 3; book <= 6; book++) {
+    // Add books (1-6) with generated data
+    for (let book = 1; book <= 6; book++) {
         vocabularyData.books[book] = {
             title: `Book ${book} - ${getBookLevel(book)}`,
             units: {}
