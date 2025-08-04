@@ -537,7 +537,7 @@ class FlashcardApp {
 
     updateProgressDisplay() {
         const stats = this.calculateStats();
-        const totalWords = 6 * 30 * 20; // 6 books * 30 units * 20 words
+        const totalWords = 4 * 30 * 20; // 4 books * 30 units * 20 words
         const progressPercentage = Math.round((stats.totalStudied / totalWords) * 100);
         
         document.getElementById('progressFill').style.width = `${progressPercentage}%`;
