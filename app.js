@@ -35,6 +35,11 @@ class FlashcardApp {
             this.showBookSelection();
         });
 
+        // Add breadcrumb navigation
+        document.getElementById('backToBooks').addEventListener('click', () => {
+            this.showBookSelection();
+        });
+
         document.getElementById('backToUnits').addEventListener('click', () => {
             this.showUnitSelection();
         });
@@ -111,6 +116,14 @@ class FlashcardApp {
 
     showUnitSelection() {
         document.getElementById('unitSelection').style.display = 'block';
+        // Update the header to show which book is selected
+        const bookTitle = vocabularyData.books[this.currentBook].title;
+        document.querySelector('#unitSelection h2').textContent = `Units in ${bookTitle}`;
+        
+        // Update back button to show which book we're returning to
+        const backBtn = document.getElementById('backToBooks');
+        backBtn.innerHTML = `← Back to ${bookTitle}`;
+        
         this.renderUnits();
     }
 
@@ -132,6 +145,9 @@ class FlashcardApp {
             unitCard.innerHTML = `
                 <h3>Unit ${unitNumber}</h3>
                 <p>${unit.title}</p>
+                <div class="unit-info">
+                    <span class="word-count">${unit.words.length} words</span>
+                </div>
                 <div class="unit-status">
                     ${unitData.studied ? '✓ Studied' : 'Not studied'} | 
                     ${unitData.practiced ? '✓ Practiced' : 'Not practiced'}
