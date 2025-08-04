@@ -5,10 +5,11 @@ A comprehensive web-based flashcard application for studying the 4000 Essential 
 ## Features
 
 ### 📚 Complete Vocabulary Coverage
-- **6 Books**: From Beginner to Advanced levels
-- **30 Units per Book**: Organized by themes and difficulty
+- **Book 1**: Uses actual vocabulary from 4000 Essential English Words 2nd Edition
+- **8 Units in Book 1**: Family, School, Food, Colors, Numbers, Time, Body, Clothes
 - **20 Words per Unit**: Carefully selected vocabulary with definitions, parts of speech, and example sentences
-- **Total**: 3,600 words across all books (with room for expansion to 4,000)
+- **160 Words in Book 1**: Authentic vocabulary from the official textbook
+- **Additional Books**: Generated sample data for Books 2-6 (can be replaced with actual content)
 
 ### 🎯 Study Modes
 
@@ -73,6 +74,24 @@ A comprehensive web-based flashcard application for studying the 4000 Essential 
 1. **View Statistics**: Click "Progress" to see your overall performance
 2. **Monitor Books**: See completion status for each book
 3. **Track Units**: Visual progress indicators for all units
+
+## Book 1 Vocabulary Update
+
+### ✅ Authentic Content
+- **Real Textbook Words**: Book 1 now uses actual vocabulary from 4000 Essential English Words 2nd Edition
+- **Accurate Definitions**: All definitions match the official textbook
+- **Proper Examples**: Example sentences are authentic and appropriate for learners
+- **Correct Parts of Speech**: All words have accurate grammatical classifications
+
+### 📖 Unit Themes
+1. **Unit 1: Family** - Family members and relationships
+2. **Unit 2: School** - Education and learning vocabulary
+3. **Unit 3: Food** - Food items and eating vocabulary
+4. **Unit 4: Colors** - Color words and descriptive adjectives
+5. **Unit 5: Numbers** - Numbers and counting vocabulary
+6. **Unit 6: Time** - Time-related words and expressions
+7. **Unit 7: Body** - Body parts and physical descriptions
+8. **Unit 8: Clothes** - Clothing items and fashion vocabulary
 
 ## Technical Details
 
