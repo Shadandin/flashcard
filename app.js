@@ -26,8 +26,21 @@ class FlashcardApp {
         // Book selection
         document.querySelectorAll('.book-card').forEach(card => {
             card.addEventListener('click', (e) => {
+                // Don't trigger book selection if clicking on delete button
+                if (e.target.classList.contains('delete-btn')) {
+                    return;
+                }
                 this.selectBook(parseInt(e.currentTarget.dataset.book));
             });
+        });
+
+        // Delete buttons (using event delegation for dynamic elements)
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('delete-btn')) {
+                e.stopPropagation(); // Prevent triggering book selection
+                const bookNumber = parseInt(e.target.dataset.book);
+                this.deleteBook(bookNumber);
+            }
         });
 
         // Back buttons
@@ -524,7 +537,7 @@ class FlashcardApp {
 
     updateProgressDisplay() {
         const stats = this.calculateStats();
-        const totalWords = 4 * 30 * 20; // 4 books * 30 units * 20 words
+        const totalWords = 6 * 30 * 20; // 6 books * 30 units * 20 words
         const progressPercentage = Math.round((stats.totalStudied / totalWords) * 100);
         
         document.getElementById('progressFill').style.width = `${progressPercentage}%`;
@@ -561,6 +574,35 @@ class FlashcardApp {
     loadMistakes() {
         const saved = localStorage.getItem('flashcardMistakes');
         return saved ? JSON.parse(saved) : [];
+    }
+
+    deleteBook(bookNumber) {
+        // Show confirmation dialog
+        if (confirm(`Are you sure you want to delete Book ${bookNumber}? This action cannot be undone.`)) {
+            // Remove the book card from the DOM
+            const bookCard = document.querySelector(`[data-book="${bookNumber}"]`);
+            if (bookCard) {
+                bookCard.remove();
+            }
+            
+            // Remove book data from vocabulary
+            if (vocabularyData.books[bookNumber]) {
+                delete vocabularyData.books[bookNumber];
+            }
+            
+            // Remove book progress from localStorage
+            if (this.progress.books[bookNumber]) {
+                delete this.progress.books[bookNumber];
+                this.saveProgress();
+            }
+            
+            // Update progress display
+            this.updateProgressDisplay();
+            this.updateBookProgress();
+            
+            // Show success message
+            alert(`Book ${bookNumber} has been deleted successfully.`);
+        }
     }
 }
 
