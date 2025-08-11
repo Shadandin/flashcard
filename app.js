@@ -154,7 +154,13 @@ class FlashcardApp {
 
     selectBook(bookNumber) {
         this.currentBook = bookNumber;
-        this.showUnitSelection();
+        // Load any server-side overrides for this book before showing units
+        this.loadBookOverrides(bookNumber).then(() => {
+            this.showUnitSelection();
+        }).catch(() => {
+            // On failure, proceed without blocking UI
+            this.showUnitSelection();
+        });
     }
 
     showUnitSelection() {
@@ -283,14 +289,24 @@ class FlashcardApp {
             return;
         }
         
-        // Update the word object
+        // Update the word object in memory
         word.word = newWord;
         word.partOfSpeech = newPartOfSpeech;
         word.meaning = newMeaning;
         word.example = newExample;
         
-        // Save to localStorage
+        // Save to localStorage (fallback persistence)
         this.saveVocabularyData();
+        
+        // Also persist to server per book
+        this.saveWordToServer({
+            bookNumber: this.currentBook,
+            unitNumber: this.currentUnit,
+            wordIndex: this.currentWordIndex,
+            word: { ...word }
+        }).catch(() => {
+            // Non-blocking; we already saved to localStorage
+        });
         
         // Show success message
         alert('Word saved successfully!');
@@ -722,6 +738,47 @@ class FlashcardApp {
             
             // Show success message
             alert(`Book ${bookNumber} has been deleted successfully.`);
+        }
+    }
+
+    async loadBookOverrides(bookNumber) {
+        try {
+            const response = await fetch(`/api/book-overrides?book=${bookNumber}`, { cache: 'no-store' });
+            if (!response.ok) return;
+            const overrides = await response.json();
+            if (!overrides || typeof overrides !== 'object') return;
+            // Apply overrides to in-memory vocabularyData
+            Object.keys(overrides).forEach(key => {
+                const [unitStr, indexStr] = key.split('-');
+                const unitNumber = parseInt(unitStr, 10);
+                const wordIndex = parseInt(indexStr, 10);
+                if (
+                    Number.isInteger(unitNumber) &&
+                    Number.isInteger(wordIndex) &&
+                    vocabularyData.books[bookNumber] &&
+                    vocabularyData.books[bookNumber].units[unitNumber] &&
+                    vocabularyData.books[bookNumber].units[unitNumber].words[wordIndex] !== undefined
+                ) {
+                    const savedWord = overrides[key];
+                    if (savedWord && savedWord.word && savedWord.word.trim() !== '') {
+                        vocabularyData.books[bookNumber].units[unitNumber].words[wordIndex] = savedWord;
+                    }
+                }
+            });
+        } catch (e) {
+            // Ignore errors; server persistence might be unavailable
+        }
+    }
+
+    async saveWordToServer(payload) {
+        try {
+            await fetch('/api/save-word', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+        } catch (e) {
+            // Ignore errors in UI; localStorage already persisted
         }
     }
 }
