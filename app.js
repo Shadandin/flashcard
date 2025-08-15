@@ -62,15 +62,6 @@ class FlashcardApp {
             this.showUnitSelection();
         });
 
-        // Back to word list from flashcard view
-        document.getElementById('backToUnits').addEventListener('click', () => {
-            if (document.getElementById('flashcardView').style.display !== 'none') {
-                this.showWordListView();
-            } else {
-                this.showUnitSelection();
-            }
-        });
-
         document.getElementById('backToUnitsPractice').addEventListener('click', () => {
             this.showUnitSelection();
         });
@@ -206,7 +197,10 @@ class FlashcardApp {
     }
 
     showUnitSelection() {
+        // Hide study mode and show unit selection
+        document.getElementById('studyMode').style.display = 'none';
         document.getElementById('unitSelection').style.display = 'block';
+        
         // Update the header to show which book is selected
         const bookTitle = vocabularyData.books[this.currentBook].title;
         document.querySelector('#unitSelection h2').textContent = `Units in ${bookTitle}`;
@@ -261,6 +255,7 @@ class FlashcardApp {
         
         if (this.currentMode === 'study') {
             this.startStudyMode();
+            this.showUnitWindow(); // Ensure unit opens in its own window
         } else if (this.currentMode === 'practice') {
             this.startPracticeMode();
         }
@@ -273,6 +268,10 @@ class FlashcardApp {
         this.renderWordList();
         this.updateWordCount();
         this.switchToReviewMode(); // Start in review mode by default
+        
+        // Update the back button text to show which unit we're in
+        const backBtn = document.getElementById('backToUnits');
+        backBtn.innerHTML = `← Back to Units`;
     }
 
     switchToReviewMode() {
@@ -693,6 +692,15 @@ class FlashcardApp {
         this.loadCurrentWord();
     }
 
+    showUnitWindow() {
+        // This method ensures the unit opens in its own window
+        // The unit is already selected and study mode is started
+        // The back button will return to units grid
+        this.renderWordList();
+        this.updateWordCount();
+        this.switchToReviewMode(); // Start in review mode
+    }
+
     updateAddWordButton() {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
         const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
@@ -722,6 +730,7 @@ class FlashcardApp {
         document.getElementById('wordListView').style.display = 'block';
         this.renderWordList();
         this.updateWordCount();
+        this.updateStudyProgress();
     }
 
     loadVocabularyData() {
