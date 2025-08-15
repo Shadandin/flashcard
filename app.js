@@ -745,6 +745,9 @@ class FlashcardApp {
                     statusElement.textContent = 'Connected';
                     statusElement.style.color = '#28a745';
                     
+                    // Update Git status
+                    await this.updateGitStatus();
+                    
                     statsContainer.style.display = 'block';
                 } else {
                     this.showRepositoryError();
@@ -755,6 +758,90 @@ class FlashcardApp {
             }
         } else {
             this.showRepositoryError();
+        }
+    }
+
+    async updateGitStatus() {
+        const gitStatusElement = document.getElementById('gitStatus');
+        const gitSyncButton = document.getElementById('gitSyncButton');
+        
+        if (!gitStatusElement) return;
+        
+        try {
+            const response = await fetch('/api/git/status');
+            if (response.ok) {
+                const gitStatus = await response.json();
+                
+                if (gitStatus.isGitRepository) {
+                    gitStatusElement.innerHTML = `
+                        <strong>Git Repository:</strong> ${gitStatus.branch}<br>
+                        <strong>Last Commit:</strong> ${gitStatus.lastCommit}<br>
+                        <strong>Changes:</strong> ${gitStatus.hasChanges ? 'Yes' : 'No'}
+                    `;
+                    gitStatusElement.style.color = '#28a745';
+                    
+                    if (gitSyncButton) {
+                        gitSyncButton.style.display = 'inline-block';
+                    }
+                } else {
+                    gitStatusElement.innerHTML = `
+                        <strong>Git Repository:</strong> Not initialized<br>
+                        <strong>Status:</strong> Local only
+                    `;
+                    gitStatusElement.style.color = '#ffc107';
+                    
+                    if (gitSyncButton) {
+                        gitSyncButton.style.display = 'none';
+                    }
+                }
+            } else {
+                gitStatusElement.innerHTML = `
+                    <strong>Git Status:</strong> Error<br>
+                    <strong>Status:</strong> Unable to check
+                `;
+                gitStatusElement.style.color = '#dc3545';
+            }
+        } catch (error) {
+            console.error('Error fetching Git status:', error);
+            gitStatusElement.innerHTML = `
+                <strong>Git Status:</strong> Error<br>
+                <strong>Status:</strong> Connection failed
+            `;
+            gitStatusElement.style.color = '#dc3545';
+        }
+    }
+
+    async manualGitSync() {
+        const syncButton = document.getElementById('gitSyncButton');
+        if (syncButton) {
+            syncButton.disabled = true;
+            syncButton.textContent = 'Syncing...';
+        }
+        
+        try {
+            const response = await fetch('/api/git/sync', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                alert('Git sync completed successfully!');
+                await this.updateGitStatus();
+            } else {
+                const error = await response.json();
+                alert('Git sync failed: ' + error.error);
+            }
+        } catch (error) {
+            console.error('Error during Git sync:', error);
+            alert('Git sync failed: ' + error.message);
+        } finally {
+            if (syncButton) {
+                syncButton.disabled = false;
+                syncButton.textContent = 'Sync Git';
+            }
         }
     }
 

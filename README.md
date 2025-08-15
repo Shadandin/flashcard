@@ -24,6 +24,40 @@ The app now includes a backend repository system that automatically saves each n
 - **Search Capability**: Search flashcards by word, meaning, or example
 - **Book/Unit Filtering**: Filter flashcards by book and unit
 
+## 🔄 Git Synchronization
+
+The app supports Git-based synchronization for cross-device flashcard sharing:
+
+### Git Sync Features
+
+- **Automatic Commits**: Each new flashcard is automatically committed to Git
+- **Cross-Device Sync**: Pull the repository on any device to get the latest flashcards
+- **Version Control**: Track changes and revert if needed
+- **Collaboration**: Multiple users can contribute to the same flashcard collection
+- **Manual Sync**: Use the "Sync Git" button for manual synchronization
+- **Status Monitoring**: Real-time Git status display
+
+### Quick Git Setup
+
+1. **Initialize Git repository**:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+2. **Create remote repository** on GitHub/GitLab
+
+3. **Connect to remote**:
+   ```bash
+   git remote add origin <your-repo-url>
+   git push -u origin main
+   ```
+
+4. **Start the server** - Git sync will work automatically!
+
+For detailed setup instructions, see [GIT_SETUP.md](GIT_SETUP.md).
+
 ## Installation
 
 1. **Install Dependencies**:

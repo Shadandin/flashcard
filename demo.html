@@ -154,12 +154,31 @@ GET    /api/stats              # Get repository statistics
 
         <div class="demo-section">
             <h2>💾 Data Storage</h2>
-            <p><strong>Dual Storage System:</strong></p>
+            <p><strong>Triple Storage System:</strong></p>
             <ul class="feature-list">
                 <li><strong>Local Storage:</strong> Browser localStorage for offline access</li>
                 <li><strong>Repository:</strong> Server-side JSON file for persistence</li>
-                <li><strong>Synchronization:</strong> Automatic sync between local and repository</li>
+                <li><strong>Git Sync:</strong> Cross-device synchronization via Git</li>
+                <li><strong>Automatic Sync:</strong> Changes are automatically committed and pushed</li>
             </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔄 Git Synchronization</h2>
+            <p><strong>Cross-Device Flashcard Sharing:</strong></p>
+            <ul class="feature-list">
+                <li><strong>Automatic Commits:</strong> Each new flashcard is automatically committed to Git</li>
+                <li><strong>Cross-Device Sync:</strong> Pull the repository on any device to get the latest flashcards</li>
+                <li><strong>Version Control:</strong> Track changes and revert if needed</li>
+                <li><strong>Collaboration:</strong> Multiple users can contribute to the same flashcard collection</li>
+                <li><strong>Manual Sync:</strong> Use the "Sync Git" button for manual synchronization</li>
+                <li><strong>Status Monitoring:</strong> Real-time Git status display</li>
+            </ul>
+            <p><strong>Quick Setup:</strong></p>
+            <div class="code-block">
+npm run setup-git
+# Follow the instructions to complete Git setup
+            </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">

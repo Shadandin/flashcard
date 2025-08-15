@@ -2,7 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs').promises;
 const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
 
+const execAsync = promisify(exec);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,6 +16,10 @@ app.use(express.static('.'));
 
 // Data storage file
 const FLASHCARDS_FILE = 'flashcards_repository.json';
+
+// Git configuration
+const GIT_ENABLED = process.env.GIT_SYNC !== 'false'; // Enable by default
+const GIT_AUTO_COMMIT = process.env.GIT_AUTO_COMMIT !== 'false'; // Enable by default
 
 // Initialize repository file if it doesn't exist
 async function initializeRepository() {
@@ -26,6 +33,81 @@ async function initializeRepository() {
         };
         await fs.writeFile(FLASHCARDS_FILE, JSON.stringify(initialData, null, 2));
         console.log('Repository file created');
+    }
+}
+
+// Git operations
+async function gitCommand(command) {
+    try {
+        const { stdout, stderr } = await execAsync(command, { cwd: process.cwd() });
+        if (stderr) {
+            console.log('Git stderr:', stderr);
+        }
+        return stdout.trim();
+    } catch (error) {
+        console.error(`Git command failed: ${command}`, error.message);
+        throw error;
+    }
+}
+
+async function isGitRepository() {
+    try {
+        await gitCommand('git rev-parse --git-dir');
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+async function gitAddAndCommit(message) {
+    if (!GIT_ENABLED) return;
+    
+    try {
+        const isGit = await isGitRepository();
+        if (!isGit) {
+            console.log('Not a Git repository, skipping Git operations');
+            return;
+        }
+
+        // Add the flashcards file
+        await gitCommand(`git add ${FLASHCARDS_FILE}`);
+        
+        // Check if there are changes to commit
+        const status = await gitCommand('git status --porcelain');
+        if (status.includes(FLASHCARDS_FILE)) {
+            // Commit the changes
+            await gitCommand(`git commit -m "${message}"`);
+            console.log('Git commit successful:', message);
+            
+            // Try to push to remote (if configured)
+            try {
+                await gitCommand('git push');
+                console.log('Git push successful');
+            } catch (pushError) {
+                console.log('Git push failed (remote may not be configured):', pushError.message);
+            }
+        } else {
+            console.log('No changes to commit');
+        }
+    } catch (error) {
+        console.error('Git operation failed:', error.message);
+    }
+}
+
+async function gitPull() {
+    if (!GIT_ENABLED) return;
+    
+    try {
+        const isGit = await isGitRepository();
+        if (!isGit) {
+            console.log('Not a Git repository, skipping Git pull');
+            return;
+        }
+
+        await gitCommand('git pull');
+        console.log('Git pull successful');
+    } catch (error) {
+        console.error('Git pull failed:', error.message);
     }
 }
 
@@ -45,6 +127,12 @@ async function saveFlashcards(data) {
     try {
         data.lastUpdated = new Date().toISOString();
         await fs.writeFile(FLASHCARDS_FILE, JSON.stringify(data, null, 2));
+        
+        // Auto-commit to Git if enabled
+        if (GIT_AUTO_COMMIT) {
+            await gitAddAndCommit('Auto-save flashcards');
+        }
+        
         return true;
     } catch (error) {
         console.error('Error saving flashcards:', error);
@@ -57,6 +145,9 @@ async function saveFlashcards(data) {
 // GET /api/flashcards - Get all flashcards
 app.get('/api/flashcards', async (req, res) => {
     try {
+        // Pull latest changes from Git first
+        await gitPull();
+        
         const data = await loadFlashcards();
         res.json(data);
     } catch (error) {
@@ -226,7 +317,9 @@ app.get('/api/stats', async (req, res) => {
         const stats = {
             totalFlashcards: data.flashcards.length,
             books: {},
-            lastUpdated: data.lastUpdated
+            lastUpdated: data.lastUpdated,
+            gitEnabled: GIT_ENABLED,
+            gitAutoCommit: GIT_AUTO_COMMIT
         };
 
         // Count flashcards by book
@@ -253,11 +346,62 @@ app.get('/api/stats', async (req, res) => {
     }
 });
 
+// GET /api/git/status - Get Git status
+app.get('/api/git/status', async (req, res) => {
+    try {
+        const isGit = await isGitRepository();
+        if (!isGit) {
+            return res.json({
+                isGitRepository: false,
+                message: 'Not a Git repository'
+            });
+        }
+
+        const status = await gitCommand('git status --porcelain');
+        const branch = await gitCommand('git branch --show-current');
+        const lastCommit = await gitCommand('git log -1 --pretty=format:"%h - %s (%cr)"');
+
+        res.json({
+            isGitRepository: true,
+            branch: branch,
+            lastCommit: lastCommit,
+            hasChanges: status.length > 0,
+            changes: status
+        });
+    } catch (error) {
+        console.error('Error getting Git status:', error);
+        res.status(500).json({ error: 'Failed to get Git status' });
+    }
+});
+
+// POST /api/git/sync - Manual Git sync
+app.post('/api/git/sync', async (req, res) => {
+    try {
+        const isGit = await isGitRepository();
+        if (!isGit) {
+            return res.status(400).json({ error: 'Not a Git repository' });
+        }
+
+        // Pull latest changes
+        await gitPull();
+        
+        // Add and commit any local changes
+        await gitAddAndCommit('Manual sync - flashcards update');
+        
+        res.json({ message: 'Git sync completed successfully' });
+    } catch (error) {
+        console.error('Error during Git sync:', error);
+        res.status(500).json({ error: 'Git sync failed' });
+    }
+});
+
 // Initialize repository and start server
 initializeRepository().then(() => {
     app.listen(PORT, () => {
         console.log(`Flashcard repository server running on port ${PORT}`);
         console.log(`Repository file: ${FLASHCARDS_FILE}`);
+        console.log(`Git sync: ${GIT_ENABLED ? 'Enabled' : 'Disabled'}`);
+        console.log(`Auto-commit: ${GIT_AUTO_COMMIT ? 'Enabled' : 'Disabled'}`);
     });
 }).catch(error => {
     console.error('Failed to initialize repository:', error);

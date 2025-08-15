@@ -177,6 +177,19 @@
                         <p id="repoStatus">Disconnected</p>
                     </div>
                 </div>
+                
+                <!-- Git Status -->
+                <div class="git-status-section">
+                    <h3>Git Synchronization</h3>
+                    <div class="git-status-card">
+                        <div id="gitStatus" class="git-status-info">
+                            <strong>Git Status:</strong> Loading...
+                        </div>
+                        <button class="btn btn-primary" id="gitSyncButton" onclick="app.manualGitSync()" style="display: none;">
+                            Sync Git
+                        </button>
+                    </div>
+                </div>
             </div>
             
             <div class="book-progress-details" id="bookProgressDetails"></div>

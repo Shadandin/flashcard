@@ -163,6 +163,57 @@ body::before {
     border: 2px solid #ffc107;
 }
 
+/* Git Status Section */
+.git-status-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    border: 2px solid #dee2e6;
+}
+
+.git-status-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.git-status-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.git-status-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.git-status-info strong {
+    color: #495057;
+}
+
+#gitSyncButton {
+    min-width: 120px;
+    height: 45px;
+    font-size: 0.9rem;
+}
+
+#gitSyncButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 /* Navigation */
 .nav {
     display: flex;
