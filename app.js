@@ -254,42 +254,45 @@ class FlashcardApp {
         this.currentUnit = unitNumber;
         
         if (this.currentMode === 'study') {
-            // Open unit in a new window
-            this.openUnitInNewWindow(unitNumber);
+            // Open unit in the same window
+            this.openUnitInSameWindow(unitNumber);
         } else if (this.currentMode === 'practice') {
             this.startPracticeMode();
         }
     }
 
-    openUnitInNewWindow(unitNumber) {
-        // Create URL parameters for the unit
-        const params = new URLSearchParams({
-            book: this.currentBook,
-            unit: unitNumber,
-            mode: 'study'
-        });
+    openUnitInSameWindow(unitNumber) {
+        this.currentUnit = unitNumber;
+        this.startStudyMode();
+        this.showUnitWindow();
+    }
+
+    showUnitWindow() {
+        // Hide unit selection and show study mode
+        document.getElementById('unitSelection').style.display = 'none';
+        document.getElementById('studyMode').style.display = 'block';
         
-        // Open new window with unit
-        const unitWindow = window.open(`unit.html?${params.toString()}`, `unit_${this.currentBook}_${unitNumber}`, 
-            'width=1200,height=800,scrollbars=yes,resizable=yes');
+        // Update the back button text
+        const backBtn = document.getElementById('backToUnits');
+        backBtn.innerHTML = `← Back to Units`;
         
-        if (unitWindow) {
-            // Focus the new window
-            unitWindow.focus();
-        } else {
-            alert('Please allow pop-ups to open units in separate windows.');
-        }
+        // Initialize the unit
+        this.renderWordList();
+        this.updateWordCount();
+        this.switchToReviewMode();
     }
 
     startStudyMode() {
         document.getElementById('studyMode').style.display = 'block';
         this.currentWordIndex = 0;
         this.studyWordIndex = 0;
-        this.renderWordList();
-        this.updateWordCount();
-        this.switchToReviewMode(); // Start in review mode by default
         
-        // Update the back button text to show which unit we're in
+        // Update the unit title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
+        const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
+        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        
+        // Update the back button text
         const backBtn = document.getElementById('backToUnits');
         backBtn.innerHTML = `← Back to Units`;
     }
