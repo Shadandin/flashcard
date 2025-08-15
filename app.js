@@ -189,8 +189,9 @@ class FlashcardApp {
     showBookSelection() {
         document.getElementById('bookSelection').style.display = 'block';
         
-        // Show main title, hide unit title
+        // Show main title, hide book and unit titles
         document.getElementById('mainTitle').style.display = 'block';
+        document.getElementById('bookTitle').style.display = 'none';
         document.getElementById('unitTitle').style.display = 'none';
         
         this.updateBookProgress();
@@ -198,7 +199,30 @@ class FlashcardApp {
 
     selectBook(bookNumber) {
         this.currentBook = bookNumber;
-        this.showUnitSelection();
+        this.showBookWindow();
+    }
+
+    showBookWindow() {
+        // Hide book selection and show unit selection
+        document.getElementById('bookSelection').style.display = 'none';
+        document.getElementById('unitSelection').style.display = 'block';
+        
+        // Show book title, hide main title
+        document.getElementById('mainTitle').style.display = 'none';
+        document.getElementById('bookTitle').style.display = 'block';
+        
+        // Update the book title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
+        document.getElementById('bookTitle').textContent = bookTitle;
+        
+        // Update the header to show which book is selected
+        document.querySelector('#unitSelection h2').textContent = `Units in ${bookTitle}`;
+        
+        // Update back button to show which book we're returning to
+        const backBtn = document.getElementById('backToBooks');
+        backBtn.innerHTML = `← Back to Books`;
+        
+        this.renderUnits();
     }
 
     showUnitSelection() {
@@ -206,8 +230,8 @@ class FlashcardApp {
         document.getElementById('studyMode').style.display = 'none';
         document.getElementById('unitSelection').style.display = 'block';
         
-        // Show main title, hide unit title
-        document.getElementById('mainTitle').style.display = 'block';
+        // Show book title, hide unit title
+        document.getElementById('bookTitle').style.display = 'block';
         document.getElementById('unitTitle').style.display = 'none';
         
         // Update the header to show which book is selected
@@ -216,7 +240,7 @@ class FlashcardApp {
         
         // Update back button to show which book we're returning to
         const backBtn = document.getElementById('backToBooks');
-        backBtn.innerHTML = `← Back to ${bookTitle}`;
+        backBtn.innerHTML = `← Back to Books`;
         
         this.renderUnits();
     }
@@ -285,8 +309,8 @@ class FlashcardApp {
         const backBtn = document.getElementById('backToUnits');
         backBtn.innerHTML = `← Back to Units`;
         
-        // Show unit title, hide main title
-        document.getElementById('mainTitle').style.display = 'none';
+        // Show unit title, hide book title
+        document.getElementById('bookTitle').style.display = 'none';
         document.getElementById('unitTitle').style.display = 'block';
         
         // Initialize the unit
@@ -305,8 +329,8 @@ class FlashcardApp {
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
         document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
         
-        // Show unit title, hide main title
-        document.getElementById('mainTitle').style.display = 'none';
+        // Show unit title, hide book title
+        document.getElementById('bookTitle').style.display = 'none';
         document.getElementById('unitTitle').style.display = 'block';
         
         // Update the back button text
@@ -883,6 +907,16 @@ class FlashcardApp {
     startPracticeMode() {
         document.getElementById('practiceMode').style.display = 'block';
         this.currentQuestionIndex = 0;
+        
+        // Show unit title, hide book title
+        document.getElementById('bookTitle').style.display = 'none';
+        document.getElementById('unitTitle').style.display = 'block';
+        
+        // Update the unit title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
+        const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
+        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        
         this.generateQuestions();
         this.loadCurrentQuestion();
     }
