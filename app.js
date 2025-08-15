@@ -712,14 +712,7 @@ class FlashcardApp {
         this.loadCurrentWord();
     }
 
-    showUnitWindow() {
-        // This method ensures the unit opens in its own window
-        // The unit is already selected and study mode is started
-        // The back button will return to units grid
-        this.renderWordList();
-        this.updateWordCount();
-        this.switchToReviewMode(); // Start in review mode
-    }
+
 
     updateAddWordButton() {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
