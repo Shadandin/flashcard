@@ -167,6 +167,20 @@ app.post('/api/flashcards', async (req, res) => {
 
         const data = await loadFlashcards();
         
+        // Check for duplicate words (case-insensitive)
+        const trimmedWord = word.trim().toLowerCase();
+        const existingWord = data.flashcards.find(flashcard => 
+            flashcard.word.toLowerCase() === trimmedWord
+        );
+        
+        if (existingWord) {
+            return res.status(409).json({ 
+                error: 'Word already exists',
+                existingFlashcard: existingWord,
+                message: `The word "${existingWord.word}" already exists in the repository.`
+            });
+        }
+        
         // Create new flashcard entry
         const newFlashcard = {
             id: Date.now().toString(), // Simple ID generation
@@ -305,6 +319,39 @@ app.get('/api/flashcards/search', async (req, res) => {
         });
     } catch (error) {
         console.error('Error searching flashcards:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// GET /api/flashcards/check/:word - Check if a word exists
+app.get('/api/flashcards/check/:word', async (req, res) => {
+    try {
+        const { word } = req.params;
+        
+        if (!word) {
+            return res.status(400).json({ error: 'Word parameter is required' });
+        }
+
+        const data = await loadFlashcards();
+        const trimmedWord = word.trim().toLowerCase();
+        const existingWord = data.flashcards.find(flashcard => 
+            flashcard.word.toLowerCase() === trimmedWord
+        );
+
+        if (existingWord) {
+            res.json({
+                exists: true,
+                flashcard: existingWord,
+                message: `The word "${existingWord.word}" already exists in the repository.`
+            });
+        } else {
+            res.json({
+                exists: false,
+                message: `The word "${word}" is available.`
+            });
+        }
+    } catch (error) {
+        console.error('Error checking word:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });

@@ -100,6 +100,11 @@ class FlashcardApp {
                 this.saveWord();
             }
         });
+
+        // Real-time duplicate checking as user types
+        document.getElementById('editWord').addEventListener('input', (e) => {
+            this.checkWordAvailability(e.target.value);
+        });
         document.getElementById('editPartOfSpeech').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 this.saveWord();
@@ -119,6 +124,9 @@ class FlashcardApp {
 
     switchMode(mode) {
         this.currentMode = mode;
+        
+        // Clear word availability status when switching modes
+        this.clearWordAvailabilityStatus();
         
         // Update navigation
         document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -264,6 +272,9 @@ class FlashcardApp {
         document.getElementById('editMeaning').value = word.meaning || '';
         document.getElementById('editExample').value = word.example || '';
         
+        // Clear any existing word availability status
+        this.clearWordAvailabilityStatus();
+        
         // Focus on the first input
         document.getElementById('editWord').focus();
     }
@@ -282,6 +293,13 @@ class FlashcardApp {
         if (!newWord) {
             alert('Please enter a word.');
             document.getElementById('editWord').focus();
+            return;
+        }
+        
+        // Check for duplicates locally first
+        const isDuplicateLocal = this.checkDuplicateWord(newWord);
+        if (isDuplicateLocal) {
+            alert(`The word "${newWord}" already exists in your local vocabulary. Please choose a different word.`);
             return;
         }
         
@@ -318,6 +336,19 @@ class FlashcardApp {
                 const result = await response.json();
                 console.log('Flashcard saved to repository:', result);
                 alert('Word saved successfully to repository!');
+            } else if (response.status === 409) {
+                // Handle duplicate word error from repository
+                const error = await response.json();
+                console.error('Duplicate word in repository:', error);
+                alert(`The word "${newWord}" already exists in the repository. Please choose a different word.`);
+                // Revert the local changes since it's a duplicate
+                word.word = '';
+                word.partOfSpeech = '';
+                word.meaning = '';
+                word.example = '';
+                this.saveVocabularyData();
+                this.loadCurrentWord();
+                return;
             } else {
                 const error = await response.json();
                 console.error('Failed to save to repository:', error);
@@ -335,6 +366,112 @@ class FlashcardApp {
     saveVocabularyData() {
         // Save the updated vocabulary data to localStorage
         localStorage.setItem('vocabularyData', JSON.stringify(vocabularyData));
+    }
+
+    checkDuplicateWord(newWord) {
+        // Check if the word already exists in any book/unit (case-insensitive)
+        const trimmedNewWord = newWord.trim().toLowerCase();
+        
+        for (const bookNum in vocabularyData.books) {
+            const book = vocabularyData.books[bookNum];
+            for (const unitNum in book.units) {
+                const unit = book.units[unitNum];
+                for (const word of unit.words) {
+                    if (word.word && word.word.trim().toLowerCase() === trimmedNewWord) {
+                        return true; // Found a duplicate
+                    }
+                }
+            }
+        }
+        
+        return false; // No duplicate found
+    }
+
+    async checkWordAvailability(word) {
+        const trimmedWord = word.trim();
+        if (!trimmedWord) {
+            this.clearWordAvailabilityStatus();
+            return;
+        }
+
+        // Check locally first
+        const isLocalDuplicate = this.checkDuplicateWord(trimmedWord);
+        if (isLocalDuplicate) {
+            this.showWordAvailabilityStatus('duplicate', `"${trimmedWord}" already exists locally`);
+            return;
+        }
+
+        // Check repository if connected
+        if (this.repositoryStatus === 'connected') {
+            try {
+                const response = await fetch(`/api/flashcards/check/${encodeURIComponent(trimmedWord)}`, {
+                    signal: AbortSignal.timeout(3000)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.exists) {
+                        this.showWordAvailabilityStatus('duplicate', `"${trimmedWord}" already exists in repository`);
+                    } else {
+                        this.showWordAvailabilityStatus('available', `"${trimmedWord}" is available`);
+                    }
+                } else {
+                    this.showWordAvailabilityStatus('checking', 'Checking availability...');
+                }
+            } catch (error) {
+                // If repository check fails, just show local status
+                this.showWordAvailabilityStatus('available', `"${trimmedWord}" is available locally`);
+            }
+        } else {
+            this.showWordAvailabilityStatus('available', `"${trimmedWord}" is available locally`);
+        }
+    }
+
+    showWordAvailabilityStatus(status, message) {
+        let statusElement = document.getElementById('wordAvailabilityStatus');
+        if (!statusElement) {
+            statusElement = document.createElement('div');
+            statusElement.id = 'wordAvailabilityStatus';
+            statusElement.style.cssText = `
+                font-size: 0.85rem;
+                margin-top: 5px;
+                padding: 4px 8px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            `;
+            
+            const wordInput = document.getElementById('editWord');
+            wordInput.parentNode.insertBefore(statusElement, wordInput.nextSibling);
+        }
+
+        statusElement.textContent = message;
+        statusElement.className = `word-availability-${status}`;
+        
+        // Apply appropriate styling
+        switch (status) {
+            case 'duplicate':
+                statusElement.style.color = '#d32f2f';
+                statusElement.style.backgroundColor = '#ffebee';
+                statusElement.style.border = '1px solid #ffcdd2';
+                break;
+            case 'available':
+                statusElement.style.color = '#2e7d32';
+                statusElement.style.backgroundColor = '#e8f5e8';
+                statusElement.style.border = '1px solid #c8e6c9';
+                break;
+            case 'checking':
+                statusElement.style.color = '#1976d2';
+                statusElement.style.backgroundColor = '#e3f2fd';
+                statusElement.style.border = '1px solid #bbdefb';
+                break;
+        }
+    }
+
+    clearWordAvailabilityStatus() {
+        const statusElement = document.getElementById('wordAvailabilityStatus');
+        if (statusElement) {
+            statusElement.remove();
+        }
     }
 
     loadVocabularyData() {

@@ -10,6 +10,7 @@ A comprehensive flashcard application for learning the 4000 Essential English Wo
 - **Progress Tracking**: Monitor your learning progress across all books and units
 - **Repository Storage**: Save flashcards to a persistent repository
 - **Offline Support**: Continue learning even when repository is unavailable
+- **🔒 Duplicate Prevention**: Prevents duplicate words from being created
 
 ## Repository Functionality
 
@@ -23,6 +24,7 @@ The app now includes a backend repository system that automatically saves each n
 - **Statistics**: View repository statistics including total flashcards and last update time
 - **Search Capability**: Search flashcards by word, meaning, or example
 - **Book/Unit Filtering**: Filter flashcards by book and unit
+- **🔒 Duplicate Prevention**: Prevents duplicate words across all devices
 
 ## 🔄 Git Synchronization
 
@@ -85,11 +87,36 @@ npm run dev
 The server provides the following API endpoints:
 
 - `GET /api/flashcards` - Get all flashcards
-- `POST /api/flashcards` - Save a new flashcard
+- `POST /api/flashcards` - Save a new flashcard (with duplicate checking)
 - `PUT /api/flashcards/:id` - Update an existing flashcard
 - `DELETE /api/flashcards/:id` - Delete a flashcard
 - `GET /api/flashcards/search` - Search flashcards
+- `GET /api/flashcards/check/:word` - Check if a word exists
 - `GET /api/stats` - Get repository statistics
+
+## 🔒 Duplicate Prevention
+
+The app now includes comprehensive duplicate word prevention to ensure data integrity:
+
+### Features
+
+- **Local Checking**: Prevents duplicate words within the same application session
+- **Repository Checking**: Prevents duplicate words across all devices via the repository
+- **Real-time Feedback**: Shows word availability status as you type
+- **Case-insensitive Matching**: "Hello" and "hello" are treated as duplicates
+- **Graceful Error Handling**: Works offline and handles server connection issues
+- **Visual Status Indicators**: Clear color-coded feedback for different states
+
+### How It Works
+
+1. **As You Type**: Real-time checking shows if a word is available or already exists
+2. **Before Saving**: Double-check prevents duplicate submission
+3. **Cross-Device**: Repository ensures no duplicates across different devices
+4. **User Feedback**: Clear messages explain why a word cannot be saved
+
+### Testing
+
+Open `duplicate-test.html` in your browser to test the duplicate prevention features without needing the server running.
 
 ## How to Use
 
@@ -98,6 +125,7 @@ The server provides the following API endpoints:
 3. **Study Mode**: 
    - Click on empty word slots to add new flashcards
    - Fill in the word, part of speech, meaning, and example
+   - The app will prevent duplicate words automatically
    - Click "Save Word" to save to both local storage and repository
 4. **Practice Mode**: Test your knowledge with generated questions
 5. **Review Mistakes**: Review incorrect answers from practice sessions

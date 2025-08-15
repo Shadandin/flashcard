@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Word Prevention Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .test-section h2 {
+            color: #555;
+            margin-top: 0;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .status.duplicate {
+            background-color: #ffebee;
+            color: #d32f2f;
+            border: 1px solid #ffcdd2;
+        }
+        .status.available {
+            background-color: #e8f5e8;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+        .status.checking {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+        }
+        .status.error {
+            background-color: #fff3e0;
+            color: #f57c00;
+            border: 1px solid #ffcc02;
+        }
+        .word-list {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: white;
+        }
+        .word-item {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .word-item:last-child {
+            border-bottom: none;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .server-status {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .server-status.connected {
+            background-color: #e8f5e8;
+            color: #2e7d32;
+        }
+        .server-status.disconnected {
+            background-color: #ffebee;
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Duplicate Word Prevention Test</h1>
+        
+        <div id="serverStatus" class="server-status disconnected">
+            Server Status: Checking...
+        </div>
+
+        <div class="test-section">
+            <h2>📝 Features Implemented</h2>
+            <ul class="feature-list">
+                <li><strong>Local Duplicate Checking:</strong> Prevents duplicate words within the same application session</li>
+                <li><strong>Repository Duplicate Checking:</strong> Prevents duplicate words across all devices via the repository</li>
+                <li><strong>Real-time Feedback:</strong> Shows word availability status as you type</li>
+                <li><strong>Case-insensitive Matching:</strong> "Hello" and "hello" are treated as duplicates</li>
+                <li><strong>Graceful Error Handling:</strong> Works offline and handles server connection issues</li>
+                <li><strong>Visual Status Indicators:</strong> Clear color-coded feedback for different states</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 Test Word Entry</h2>
+            <div class="input-group">
+                <label for="testWord">Enter a word:</label>
+                <input type="text" id="testWord" placeholder="Type a word to test duplicate checking...">
+            </div>
+            <div id="wordStatus" class="status" style="display: none;"></div>
+            <button onclick="testWordEntry()">Test Word Entry</button>
+        </div>
+
+        <div class="test-section">
+            <h2>📚 Sample Words (Try these to test duplicates)</h2>
+            <div class="word-list" id="sampleWords">
+                <div class="word-item"><strong>apple</strong> - A round fruit with red or green skin</div>
+                <div class="word-item"><strong>beautiful</strong> - Pleasing to look at</div>
+                <div class="word-item"><strong>computer</strong> - An electronic device for processing data</div>
+                <div class="word-item"><strong>dictionary</strong> - A book containing definitions of words</div>
+                <div class="word-item"><strong>education</strong> - The process of teaching and learning</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔍 API Endpoints</h2>
+            <p><strong>POST /api/flashcards</strong> - Saves a new flashcard (with duplicate checking)</p>
+            <p><strong>GET /api/flashcards/check/:word</strong> - Checks if a word exists</p>
+            <p><strong>GET /api/flashcards</strong> - Retrieves all flashcards</p>
+            <p><strong>GET /api/stats</strong> - Gets repository statistics</p>
+        </div>
+
+        <div class="test-section">
+            <h2>🚀 How to Test</h2>
+            <ol>
+                <li><strong>Start the server:</strong> Run <code>node server.js</code> in your terminal</li>
+                <li><strong>Open the main app:</strong> Open <code>index.html</code> in your browser</li>
+                <li><strong>Try adding words:</strong> Enter words in the study mode</li>
+                <li><strong>Test duplicates:</strong> Try entering the same word twice</li>
+                <li><strong>Check real-time feedback:</strong> Watch the status as you type</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Sample vocabulary data for testing
+        const sampleVocabulary = [
+            { word: 'apple', meaning: 'A round fruit with red or green skin' },
+            { word: 'beautiful', meaning: 'Pleasing to look at' },
+            { word: 'computer', meaning: 'An electronic device for processing data' },
+            { word: 'dictionary', meaning: 'A book containing definitions of words' },
+            { word: 'education', meaning: 'The process of teaching and learning' }
+        ];
+
+        // Check server status
+        async function checkServerStatus() {
+            try {
+                const response = await fetch('/api/stats', {
+                    signal: AbortSignal.timeout(3000)
+                });
+                if (response.ok) {
+                    document.getElementById('serverStatus').textContent = 'Server Status: Connected ✅';
+                    document.getElementById('serverStatus').className = 'server-status connected';
+                } else {
+                    throw new Error('Server not responding');
+                }
+            } catch (error) {
+                document.getElementById('serverStatus').textContent = 'Server Status: Disconnected ❌ (Run "node server.js" to start)';
+                document.getElementById('serverStatus').className = 'server-status disconnected';
+            }
+        }
+
+        // Test word entry function
+        async function testWordEntry() {
+            const wordInput = document.getElementById('testWord');
+            const word = wordInput.value.trim();
+            const statusDiv = document.getElementById('wordStatus');
+            
+            if (!word) {
+                alert('Please enter a word to test.');
+                return;
+            }
+
+            // Check if word exists in sample vocabulary
+            const existingWord = sampleVocabulary.find(item => 
+                item.word.toLowerCase() === word.toLowerCase()
+            );
+
+            if (existingWord) {
+                statusDiv.textContent = `❌ "${word}" already exists in sample vocabulary`;
+                statusDiv.className = 'status duplicate';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            // Try to save to server if connected
+            try {
+                const response = await fetch('/api/flashcards', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        word: word,
+                        meaning: 'Test meaning',
+                        partOfSpeech: 'noun',
+                        example: 'Test example'
+                    }),
+                    signal: AbortSignal.timeout(5000)
+                });
+
+                if (response.status === 409) {
+                    const error = await response.json();
+                    statusDiv.textContent = `❌ ${error.message}`;
+                    statusDiv.className = 'status duplicate';
+                } else if (response.ok) {
+                    statusDiv.textContent = `✅ "${word}" saved successfully!`;
+                    statusDiv.className = 'status available';
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                statusDiv.textContent = `⚠️ "${word}" would be saved (server not available)`;
+                statusDiv.className = 'status error';
+            }
+            
+            statusDiv.style.display = 'block';
+        }
+
+        // Real-time word checking
+        document.getElementById('testWord').addEventListener('input', async function(e) {
+            const word = e.target.value.trim();
+            const statusDiv = document.getElementById('wordStatus');
+            
+            if (!word) {
+                statusDiv.style.display = 'none';
+                return;
+            }
+
+            // Check sample vocabulary first
+            const existingWord = sampleVocabulary.find(item => 
+                item.word.toLowerCase() === word.toLowerCase()
+            );
+
+            if (existingWord) {
+                statusDiv.textContent = `❌ "${word}" already exists in sample vocabulary`;
+                statusDiv.className = 'status duplicate';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            // Check server if available
+            try {
+                const response = await fetch(`/api/flashcards/check/${encodeURIComponent(word)}`, {
+                    signal: AbortSignal.timeout(2000)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.exists) {
+                        statusDiv.textContent = `❌ ${result.message}`;
+                        statusDiv.className = 'status duplicate';
+                    } else {
+                        statusDiv.textContent = `✅ ${result.message}`;
+                        statusDiv.className = 'status available';
+                    }
+                } else {
+                    statusDiv.textContent = `⏳ Checking availability...`;
+                    statusDiv.className = 'status checking';
+                }
+            } catch (error) {
+                statusDiv.textContent = `✅ "${word}" is available locally`;
+                statusDiv.className = 'status available';
+            }
+            
+            statusDiv.style.display = 'block';
+        });
+
+        // Check server status on page load
+        checkServerStatus();
+    </script>
+</body>
+</html> 
