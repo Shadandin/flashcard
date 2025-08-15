@@ -68,16 +68,13 @@
                 <span id="studyProgress">1 / 20</span>
                 <span id="studyUnit">Unit 1</span>
                 <span id="wordCount">(0/20 words)</span>
+                <button class="btn btn-primary add-word-btn" id="addWordBtn" title="Add New Word">
+                    <span>+</span>
+                </button>
             </div>
             
             <!-- Word List View -->
             <div class="word-list-view" id="wordListView">
-                <div class="word-list-header">
-                    <h3>Unit Words</h3>
-                    <button class="btn btn-primary add-word-btn" id="addWordBtn" title="Add New Word">
-                        <span>+</span>
-                    </button>
-                </div>
                 <div class="word-list" id="wordList"></div>
             </div>
             
@@ -107,7 +104,25 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="editPartOfSpeech">Part of Speech:</label>
-                                    <input type="text" id="editPartOfSpeech" placeholder="e.g., Noun, Verb, Adjective">
+                                    <select id="editPartOfSpeech">
+                                        <option value="">Select part of speech...</option>
+                                        <option value="Noun">Noun</option>
+                                        <option value="Verb">Verb</option>
+                                        <option value="Adjective">Adjective</option>
+                                        <option value="Adverb">Adverb</option>
+                                        <option value="Pronoun">Pronoun</option>
+                                        <option value="Preposition">Preposition</option>
+                                        <option value="Conjunction">Conjunction</option>
+                                        <option value="Interjection">Interjection</option>
+                                        <option value="Article">Article</option>
+                                        <option value="Determiner">Determiner</option>
+                                        <option value="Numeral">Numeral</option>
+                                        <option value="Auxiliary Verb">Auxiliary Verb</option>
+                                        <option value="Modal Verb">Modal Verb</option>
+                                        <option value="Phrasal Verb">Phrasal Verb</option>
+                                        <option value="Idiom">Idiom</option>
+                                        <option value="Expression">Expression</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="editMeaning">Meaning:</label>

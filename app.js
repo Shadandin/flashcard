@@ -124,10 +124,9 @@ class FlashcardApp {
         document.getElementById('editWord').addEventListener('input', (e) => {
             this.checkWordAvailability(e.target.value);
         });
-        document.getElementById('editPartOfSpeech').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                this.saveWord();
-            }
+        // Part of speech select change event
+        document.getElementById('editPartOfSpeech').addEventListener('change', () => {
+            // Optional: Add any validation or feedback here
         });
         document.getElementById('editMeaning').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -297,7 +296,11 @@ class FlashcardApp {
         
         // Populate input fields with current values (if any)
         document.getElementById('editWord').value = word.word || '';
-        document.getElementById('editPartOfSpeech').value = word.partOfSpeech || '';
+        
+        // Set the selected option in the dropdown
+        const partOfSpeechSelect = document.getElementById('editPartOfSpeech');
+        partOfSpeechSelect.value = word.partOfSpeech || '';
+        
         document.getElementById('editMeaning').value = word.meaning || '';
         document.getElementById('editExample').value = word.example || '';
         

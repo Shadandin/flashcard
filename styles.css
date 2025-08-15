@@ -543,6 +543,7 @@ body::before {
     background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
     border-radius: 16px;
     border: 2px solid #c3e6cb;
+    gap: 15px;
 }
 
 .study-info span {
@@ -628,32 +629,14 @@ body::before {
     margin-bottom: 30px;
 }
 
-.word-list-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    border-radius: 12px;
-    border: 1px solid #90caf9;
-}
-
-.word-list-header h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1976d2;
-    margin: 0;
-}
-
 .add-word-btn {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     border: none;
     background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -661,6 +644,7 @@ body::before {
     justify-content: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    flex-shrink: 0;
 }
 
 .add-word-btn:hover {
@@ -785,7 +769,8 @@ body::before {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     padding: 12px 16px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
@@ -801,8 +786,27 @@ body::before {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.form-group select option {
+    background: #667eea;
+    color: white;
+    padding: 8px;
+}
+
+/* Custom dropdown arrow */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: rgba(255, 255, 255, 0.8);
     background: rgba(255, 255, 255, 0.15);
