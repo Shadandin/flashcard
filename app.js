@@ -290,8 +290,34 @@ class FlashcardApp {
             // Open unit in the same window
             this.openUnitInSameWindow(unitNumber);
         } else if (this.currentMode === 'practice') {
-            this.startPracticeMode();
+            // Open unit in practice mode
+            this.openUnitInPracticeMode(unitNumber);
         }
+    }
+
+    openUnitInPracticeMode(unitNumber) {
+        this.currentUnit = unitNumber;
+        this.startPracticeMode();
+        this.showPracticeWindow();
+    }
+
+    showPracticeWindow() {
+        // Hide unit selection and show practice mode
+        document.getElementById('unitSelection').style.display = 'none';
+        document.getElementById('practiceMode').style.display = 'block';
+        
+        // Show unit title, hide book title
+        document.getElementById('bookTitle').style.display = 'none';
+        document.getElementById('unitTitle').style.display = 'block';
+        
+        // Update the unit title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
+        const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
+        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        
+        // Update the back button text
+        const backBtn = document.getElementById('backToUnitsPractice');
+        backBtn.innerHTML = `← Back to Units`;
     }
 
     openUnitInSameWindow(unitNumber) {
@@ -907,16 +933,6 @@ class FlashcardApp {
     startPracticeMode() {
         document.getElementById('practiceMode').style.display = 'block';
         this.currentQuestionIndex = 0;
-        
-        // Show unit title, hide book title
-        document.getElementById('bookTitle').style.display = 'none';
-        document.getElementById('unitTitle').style.display = 'block';
-        
-        // Update the unit title in the header
-        const bookTitle = vocabularyData.books[this.currentBook].title;
-        const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
-        
         this.generateQuestions();
         this.loadCurrentQuestion();
     }
