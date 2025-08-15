@@ -108,10 +108,7 @@ class FlashcardApp {
             this.showWordListView();
         });
 
-        // Add word button
-        document.getElementById('addWordBtn').addEventListener('click', () => {
-            this.addNewWord();
-        });
+
 
         // Enter key to save word
         document.getElementById('editWord').addEventListener('keypress', (e) => {
@@ -395,6 +392,13 @@ class FlashcardApp {
         this.showWordListView();
     }
 
+
+
+    saveVocabularyData() {
+        // Save the updated vocabulary data to localStorage
+        localStorage.setItem('vocabularyData', JSON.stringify(vocabularyData));
+    }
+
     addNewWord() {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
         const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
@@ -411,11 +415,6 @@ class FlashcardApp {
         } else {
             alert('No empty slots available in this unit.');
         }
-    }
-
-    saveVocabularyData() {
-        // Save the updated vocabulary data to localStorage
-        localStorage.setItem('vocabularyData', JSON.stringify(vocabularyData));
     }
 
     checkDuplicateWord(newWord) {
@@ -558,7 +557,7 @@ class FlashcardApp {
             wordList.appendChild(wordItem);
         });
         
-        // Update add word button state
+        // Update add word button state (for future reference)
         this.updateAddWordButton();
     }
 
@@ -569,24 +568,25 @@ class FlashcardApp {
         wordCountElement.textContent = `(${existingWords}/20 words)`;
     }
 
-    updateAddWordButton() {
-        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
-        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
-        const addWordBtn = document.getElementById('addWordBtn');
-        
-        if (existingWords >= 20) {
-            addWordBtn.disabled = true;
-            addWordBtn.title = 'Unit is full (20 words maximum)';
-        } else {
-            addWordBtn.disabled = false;
-            addWordBtn.title = 'Add New Word';
-        }
-    }
+
 
     openFlashcardView(wordIndex) {
         this.currentWordIndex = wordIndex;
         this.showFlashcardView();
         this.loadCurrentWord();
+    }
+
+    updateAddWordButton() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
+        
+        // Check if unit is full (for future reference if needed)
+        if (existingWords >= 20) {
+            // Unit is full - could be used for other UI updates
+            return false;
+        } else {
+            return true;
+        }
     }
 
     openAddWordView(wordIndex) {
