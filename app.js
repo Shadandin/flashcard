@@ -941,9 +941,9 @@ class FlashcardApp {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
         this.questions = [];
         
-        // Generate 10 questions from the unit
+        // Generate 30 questions from the unit
         const shuffledWords = [...unit.words].sort(() => Math.random() - 0.5);
-        const questionWords = shuffledWords.slice(0, 10);
+        const questionWords = shuffledWords.slice(0, 30);
         
         questionWords.forEach(word => {
             const questionTypes = ['meaning', 'word', 'partOfSpeech'];
@@ -1163,8 +1163,8 @@ class FlashcardApp {
         Object.values(this.progress.books).forEach(book => {
             Object.values(book).forEach(unit => {
                 if (unit.studied) totalStudied += 20; // 20 words per unit
-                if (unit.practiced) totalQuestions += 10; // 10 questions per practice
-                correctAnswers += (10 - (unit.mistakes ? unit.mistakes.length : 0));
+                if (unit.practiced) totalQuestions += 30; // 30 questions per practice
+                correctAnswers += (30 - (unit.mistakes ? unit.mistakes.length : 0));
             });
         });
         
