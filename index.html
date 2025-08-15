@@ -16,6 +16,7 @@
                 <div class="progress-fill" id="progressFill"></div>
             </div>
             <div class="progress-text" id="progressText">0% Complete</div>
+            <div class="repository-status" id="repositoryStatus">Repository: checking...</div>
         </header>
 
         <!-- Navigation -->
@@ -158,6 +159,26 @@
                     <p id="accuracy">0%</p>
                 </div>
             </div>
+            
+            <!-- Repository Statistics -->
+            <div class="repository-stats" id="repositoryStats" style="display: none;">
+                <h3>Repository Statistics</h3>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <h3>Total Flashcards in Repository</h3>
+                        <p id="repoTotalFlashcards">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Last Updated</h3>
+                        <p id="repoLastUpdated">Never</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Repository Status</h3>
+                        <p id="repoStatus">Disconnected</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="book-progress-details" id="bookProgressDetails"></div>
         </div>
     </div>

@@ -9,6 +9,7 @@ class FlashcardApp {
         this.selectedAnswer = null;
         this.mistakes = [];
         this.progress = this.loadProgress();
+        this.repositoryStatus = 'disconnected';
         
         // Load saved vocabulary data
         this.loadVocabularyData();
@@ -16,6 +17,7 @@ class FlashcardApp {
         this.initializeEventListeners();
         this.updateProgressDisplay();
         this.updateBookProgress();
+        this.checkRepositoryStatus();
     }
 
     initializeEventListeners() {
@@ -266,7 +268,7 @@ class FlashcardApp {
         document.getElementById('editWord').focus();
     }
 
-    saveWord() {
+    async saveWord() {
         const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
         const word = unit.words[this.currentWordIndex];
         
@@ -292,8 +294,39 @@ class FlashcardApp {
         // Save to localStorage
         this.saveVocabularyData();
         
-        // Show success message
-        alert('Word saved successfully!');
+        // Save to repository
+        try {
+            const response = await fetch('/api/flashcards', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    word: newWord,
+                    partOfSpeech: newPartOfSpeech,
+                    meaning: newMeaning,
+                    example: newExample,
+                    book: this.currentBook,
+                    unit: this.currentUnit,
+                    wordIndex: this.currentWordIndex
+                }),
+                // Add timeout to prevent hanging
+                signal: AbortSignal.timeout(10000)
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Flashcard saved to repository:', result);
+                alert('Word saved successfully to repository!');
+            } else {
+                const error = await response.json();
+                console.error('Failed to save to repository:', error);
+                alert('Word saved locally, but failed to save to repository. Please check server connection.');
+            }
+        } catch (error) {
+            console.error('Error saving to repository:', error);
+            alert('Word saved locally, but failed to save to repository. Please check server connection.');
+        }
         
         // Reload the current word to show it as a normal card
         this.loadCurrentWord();
@@ -324,6 +357,79 @@ class FlashcardApp {
                     });
                 }
             });
+        }
+    }
+
+    async checkRepositoryStatus() {
+        try {
+            const response = await fetch('/api/stats', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // Add timeout to prevent hanging
+                signal: AbortSignal.timeout(5000)
+            });
+            if (response.ok) {
+                this.repositoryStatus = 'connected';
+                this.updateRepositoryStatusDisplay();
+                // Load any flashcards from repository that might not be in local data
+                await this.loadFlashcardsFromRepository();
+            } else {
+                this.repositoryStatus = 'error';
+                this.updateRepositoryStatusDisplay();
+            }
+        } catch (error) {
+            console.log('Repository server not available:', error.message);
+            this.repositoryStatus = 'disconnected';
+            this.updateRepositoryStatusDisplay();
+        }
+    }
+
+    updateRepositoryStatusDisplay() {
+        const statusElement = document.getElementById('repositoryStatus');
+        if (statusElement) {
+            statusElement.textContent = `Repository: ${this.repositoryStatus}`;
+            statusElement.className = `repository-status ${this.repositoryStatus}`;
+        }
+    }
+
+    async loadFlashcardsFromRepository() {
+        try {
+            const response = await fetch('/api/flashcards');
+            if (response.ok) {
+                const data = await response.json();
+                console.log('Loaded flashcards from repository:', data.flashcards.length);
+                
+                // Merge repository flashcards with local data
+                data.flashcards.forEach(repoFlashcard => {
+                    if (repoFlashcard.book && repoFlashcard.unit && repoFlashcard.wordIndex !== undefined) {
+                        const bookNum = repoFlashcard.book.toString();
+                        const unitNum = repoFlashcard.unit.toString();
+                        
+                        if (vocabularyData.books[bookNum] && 
+                            vocabularyData.books[bookNum].units[unitNum] &&
+                            vocabularyData.books[bookNum].units[unitNum].words[repoFlashcard.wordIndex]) {
+                            
+                            // Update local data with repository data if it's more recent
+                            const localWord = vocabularyData.books[bookNum].units[unitNum].words[repoFlashcard.wordIndex];
+                            if (!localWord.word || localWord.word.trim() === '') {
+                                vocabularyData.books[bookNum].units[unitNum].words[repoFlashcard.wordIndex] = {
+                                    word: repoFlashcard.word,
+                                    partOfSpeech: repoFlashcard.partOfSpeech,
+                                    meaning: repoFlashcard.meaning,
+                                    example: repoFlashcard.example
+                                };
+                            }
+                        }
+                    }
+                });
+                
+                // Save merged data back to localStorage
+                this.saveVocabularyData();
+            }
+        } catch (error) {
+            console.error('Error loading flashcards from repository:', error);
         }
     }
 
@@ -548,6 +654,7 @@ class FlashcardApp {
         document.getElementById('progressMode').style.display = 'block';
         this.updateProgressStats();
         this.renderDetailedProgress();
+        this.updateRepositoryStats();
     }
 
     updateProgressStats() {
@@ -619,6 +726,50 @@ class FlashcardApp {
             bookItem.appendChild(unitProgress);
             container.appendChild(bookItem);
         });
+    }
+
+    async updateRepositoryStats() {
+        const statsContainer = document.getElementById('repositoryStats');
+        const totalElement = document.getElementById('repoTotalFlashcards');
+        const lastUpdatedElement = document.getElementById('repoLastUpdated');
+        const statusElement = document.getElementById('repoStatus');
+        
+        if (this.repositoryStatus === 'connected') {
+            try {
+                const response = await fetch('/api/stats');
+                if (response.ok) {
+                    const stats = await response.json();
+                    
+                    totalElement.textContent = stats.totalFlashcards;
+                    lastUpdatedElement.textContent = new Date(stats.lastUpdated).toLocaleString();
+                    statusElement.textContent = 'Connected';
+                    statusElement.style.color = '#28a745';
+                    
+                    statsContainer.style.display = 'block';
+                } else {
+                    this.showRepositoryError();
+                }
+            } catch (error) {
+                console.error('Error fetching repository stats:', error);
+                this.showRepositoryError();
+            }
+        } else {
+            this.showRepositoryError();
+        }
+    }
+
+    showRepositoryError() {
+        const statsContainer = document.getElementById('repositoryStats');
+        const totalElement = document.getElementById('repoTotalFlashcards');
+        const lastUpdatedElement = document.getElementById('repoLastUpdated');
+        const statusElement = document.getElementById('repoStatus');
+        
+        totalElement.textContent = 'N/A';
+        lastUpdatedElement.textContent = 'N/A';
+        statusElement.textContent = 'Disconnected';
+        statusElement.style.color = '#dc3545';
+        
+        statsContainer.style.display = 'block';
     }
 
     markUnitStudied() {
