@@ -67,49 +67,68 @@
             <div class="study-info">
                 <span id="studyProgress">1 / 20</span>
                 <span id="studyUnit">Unit 1</span>
+                <span id="wordCount">(0/20 words)</span>
             </div>
-            <div class="flashcard" id="flashcard">
-                <!-- Normal Card (for existing words) -->
-                <div id="normalCard">
-                    <div class="card-front">
-                        <h3 id="word">Loading...</h3>
-                        <p id="partOfSpeech">Loading...</p>
-                    </div>
-                    <div class="card-back">
-                        <h3 id="meaning">Loading...</h3>
-                        <p id="example">Loading...</p>
-                    </div>
+            
+            <!-- Word List View -->
+            <div class="word-list-view" id="wordListView">
+                <div class="word-list-header">
+                    <h3>Unit Words</h3>
+                    <button class="btn btn-primary add-word-btn" id="addWordBtn" title="Add New Word">
+                        <span>+</span>
+                    </button>
                 </div>
-                
-                <!-- Editable Card (for empty words) -->
-                <div id="editableCard" style="display: none;">
-                    <div class="editable-card-content">
-                        <h3>Add New Word</h3>
-                        <div class="edit-form">
-                            <div class="form-group">
-                                <label for="editWord">Word:</label>
-                                <input type="text" id="editWord" placeholder="Enter the word">
+                <div class="word-list" id="wordList"></div>
+            </div>
+            
+            <!-- Flashcard View -->
+            <div class="flashcard-view" id="flashcardView" style="display: none;">
+                <div class="flashcard" id="flashcard">
+                    <!-- Normal Card (for existing words) -->
+                    <div id="normalCard">
+                        <div class="card-front">
+                            <h3 id="word">Loading...</h3>
+                            <p id="partOfSpeech">Loading...</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 id="meaning">Loading...</h3>
+                            <p id="example">Loading...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Editable Card (for new words) -->
+                    <div id="editableCard" style="display: none;">
+                        <div class="editable-card-content">
+                            <h3>Add New Word</h3>
+                            <div class="edit-form">
+                                <div class="form-group">
+                                    <label for="editWord">Word:</label>
+                                    <input type="text" id="editWord" placeholder="Enter the word">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPartOfSpeech">Part of Speech:</label>
+                                    <input type="text" id="editPartOfSpeech" placeholder="e.g., Noun, Verb, Adjective">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editMeaning">Meaning:</label>
+                                    <textarea id="editMeaning" placeholder="Enter the meaning"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editExample">Example:</label>
+                                    <textarea id="editExample" placeholder="Enter an example sentence"></textarea>
+                                </div>
+                                <div class="edit-controls">
+                                    <button class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                                    <button class="btn btn-primary" id="saveWord">Save Word</button>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="editPartOfSpeech">Part of Speech:</label>
-                                <input type="text" id="editPartOfSpeech" placeholder="e.g., Noun, Verb, Adjective">
-                            </div>
-                            <div class="form-group">
-                                <label for="editMeaning">Meaning:</label>
-                                <textarea id="editMeaning" placeholder="Enter the meaning"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="editExample">Example:</label>
-                                <textarea id="editExample" placeholder="Enter an example sentence"></textarea>
-                            </div>
-                            <button class="btn btn-primary" id="saveWord">Save Word</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="study-controls">
-                <button class="btn btn-secondary" id="flipCard">Flip Card</button>
-                <button class="btn btn-primary" id="nextCard">Next Word</button>
+                <div class="study-controls" id="studyControls">
+                    <button class="btn btn-secondary" id="flipCard">Flip Card</button>
+                    <button class="btn btn-primary" id="nextCard">Next Word</button>
+                </div>
             </div>
         </div>
 

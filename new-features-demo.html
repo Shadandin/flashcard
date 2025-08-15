@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Flashcard Features Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .feature-section h2 {
+            color: #555;
+            margin-top: 0;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #58cc02;
+            font-weight: bold;
+        }
+        .demo-image {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px dashed #dee2e6;
+        }
+        .demo-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .btn {
+            background-color: #58cc02;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #46b000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🆕 New Flashcard App Features</h1>
+        
+        <div class="feature-section">
+            <h2>✨ Plus (+) Function for Adding Words</h2>
+            <ul class="feature-list">
+                <li><strong>Plus Button:</strong> Each unit now has a prominent "+" button to add new words</li>
+                <li><strong>Smart Placement:</strong> Automatically finds the next available slot</li>
+                <li><strong>Visual Feedback:</strong> Button is disabled when unit is full (20 words)</li>
+                <li><strong>Easy Access:</strong> No need to scroll through empty slots</li>
+            </ul>
+            <div class="highlight">
+                <strong>How it works:</strong> Click the green "+" button in the unit header to add a new word. The system will automatically find the next empty slot and open the word creation form.
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>📊 20-Word Unit Limit</h2>
+            <ul class="feature-list">
+                <li><strong>Structured Learning:</strong> Each unit is limited to exactly 20 words</li>
+                <li><strong>Progress Tracking:</strong> Shows current word count (e.g., "15/20 words")</li>
+                <li><strong>Unit Management:</strong> Prevents overloading units with too many words</li>
+                <li><strong>Consistent Structure:</strong> Maintains organized learning progression</li>
+            </ul>
+            <div class="highlight">
+                <strong>Benefits:</strong> This ensures each unit is manageable and follows the original 4000 Essential English Words structure, making learning more organized and less overwhelming.
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🪟 Unit Window Interface</h2>
+            <ul class="feature-list">
+                <li><strong>Word List View:</strong> Shows all words in the unit at a glance</li>
+                <li><strong>Individual Word Cards:</strong> Click any word to open it in flashcard view</li>
+                <li><strong>Easy Navigation:</strong> Back button returns to word list</li>
+                <li><strong>Visual Organization:</strong> Empty slots are clearly marked</li>
+            </ul>
+            <div class="highlight">
+                <strong>User Experience:</strong> When you select a unit, you see a comprehensive list of all words. Click any word to study it individually, or use the "+" button to add new words.
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>📈 Word Count Display</h2>
+            <ul class="feature-list">
+                <li><strong>Unit Selection:</strong> Shows "X/20 words" for each unit</li>
+                <li><strong>Study Mode:</strong> Displays current word count in header</li>
+                <li><strong>Progress Indicator:</strong> Visual feedback on unit completion</li>
+                <li><strong>Quick Assessment:</strong> Immediately see which units need more words</li>
+            </ul>
+            <div class="highlight">
+                <strong>Example:</strong> Unit 1 shows "14/20 words" - you know immediately that 6 more words can be added to complete the unit.
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🎯 Smart Button Management</h2>
+            <ul class="feature-list">
+                <li><strong>Context-Aware:</strong> "Flip Card" and "Next Card" buttons only appear when studying existing words</li>
+                <li><strong>Clean Interface:</strong> No confusing buttons when adding new words</li>
+                <li><strong>Focused Experience:</strong> Users can concentrate on word creation</li>
+                <li><strong>Intuitive Design:</strong> Interface adapts to current task</li>
+            </ul>
+            <div class="highlight">
+                <strong>User Experience:</strong> When creating a new word, you only see "Save Word" and "Cancel" buttons. When studying existing words, you see "Flip Card" and "Next Word" buttons.
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🚀 How to Test the New Features</h2>
+            <ol>
+                <li><strong>Open the main app:</strong> Open <code>index.html</code> in your browser</li>
+                <li><strong>Select a book:</strong> Choose any book (3-6)</li>
+                <li><strong>Select a unit:</strong> Notice the word count display (e.g., "8/20 words")</li>
+                <li><strong>Explore the word list:</strong> See all words in the unit at once</li>
+                <li><strong>Add a new word:</strong> Click the "+" button or an empty slot</li>
+                <li><strong>Study existing words:</strong> Click any existing word to open flashcard view</li>
+                <li><strong>Observe button changes:</strong> Notice how buttons appear/disappear based on context</li>
+            </ol>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" class="btn">🚀 Try the New Features</a>
+                <a href="duplicate-test.html" class="btn">🔒 Test Duplicate Prevention</a>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>💡 Technical Implementation</h2>
+            <div class="code-block">
+// New methods added to FlashcardApp class:
+- renderWordList() - Displays all words in a unit
+- updateWordCount() - Updates word count display
+- addNewWord() - Handles adding new words via + button
+- openFlashcardView() - Opens individual word in flashcard mode
+- showWordListView() - Returns to word list from flashcard
+- updateAddWordButton() - Enables/disables + button based on unit capacity
+            </div>
+            
+            <div class="code-block">
+// Key CSS additions:
+- .word-list-view - Grid layout for word display
+- .add-word-btn - Styled + button with hover effects
+- .word-item - Individual word cards with hover states
+- .edit-controls - Button layout for word creation
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🎉 Benefits of the New Design</h2>
+            <ul class="feature-list">
+                <li><strong>Better Organization:</strong> Clear structure with 20-word units</li>
+                <li><strong>Improved UX:</strong> Intuitive navigation and button management</li>
+                <li><strong>Visual Progress:</strong> Easy to see unit completion status</li>
+                <li><strong>Efficient Workflow:</strong> Quick access to add new words</li>
+                <li><strong>Reduced Confusion:</strong> Context-appropriate interface elements</li>
+                <li><strong>Scalable Design:</strong> Works well for units with varying word counts</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

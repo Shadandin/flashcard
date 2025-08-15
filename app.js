@@ -62,6 +62,15 @@ class FlashcardApp {
             this.showUnitSelection();
         });
 
+        // Back to word list from flashcard view
+        document.getElementById('backToUnits').addEventListener('click', () => {
+            if (document.getElementById('flashcardView').style.display !== 'none') {
+                this.showWordListView();
+            } else {
+                this.showUnitSelection();
+            }
+        });
+
         document.getElementById('backToUnitsPractice').addEventListener('click', () => {
             this.showUnitSelection();
         });
@@ -92,6 +101,16 @@ class FlashcardApp {
         // Editable card save button
         document.getElementById('saveWord').addEventListener('click', () => {
             this.saveWord();
+        });
+
+        // Cancel edit button
+        document.getElementById('cancelEdit').addEventListener('click', () => {
+            this.showWordListView();
+        });
+
+        // Add word button
+        document.getElementById('addWordBtn').addEventListener('click', () => {
+            this.addNewWord();
         });
 
         // Enter key to save word
@@ -191,6 +210,9 @@ class FlashcardApp {
             const unit = book.units[unitNumber];
             const unitData = unitProgress[unitNumber] || { studied: false, practiced: false, mistakes: [] };
             
+            // Count existing words (non-empty words)
+            const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
+            
             const unitCard = document.createElement('div');
             unitCard.className = `unit-card ${unitData.studied ? 'completed' : ''}`;
             unitCard.dataset.unit = unitNumber;
@@ -199,7 +221,7 @@ class FlashcardApp {
                 <h3>Unit ${unitNumber}</h3>
                 <p>${unit.title}</p>
                 <div class="unit-info">
-                    <span class="word-count">${unit.words.length} words</span>
+                    <span class="word-count">${existingWords}/20 words</span>
                 </div>
                 <div class="unit-status">
                     ${unitData.studied ? '✓ Studied' : 'Not studied'} | 
@@ -228,7 +250,8 @@ class FlashcardApp {
     startStudyMode() {
         document.getElementById('studyMode').style.display = 'block';
         this.currentWordIndex = 0;
-        this.loadCurrentWord();
+        this.renderWordList();
+        this.updateWordCount();
     }
 
     loadCurrentWord() {
@@ -254,6 +277,9 @@ class FlashcardApp {
         document.getElementById('editableCard').style.display = 'none';
         document.getElementById('normalCard').style.display = 'block';
         
+        // Show study controls for existing words
+        document.getElementById('studyControls').style.display = 'flex';
+        
         // Show normal card content
         document.getElementById('word').textContent = word.word;
         document.getElementById('partOfSpeech').textContent = word.partOfSpeech;
@@ -265,6 +291,9 @@ class FlashcardApp {
         // Hide normal card elements
         document.getElementById('normalCard').style.display = 'none';
         document.getElementById('editableCard').style.display = 'block';
+        
+        // Hide study controls when adding new words
+        document.getElementById('studyControls').style.display = 'none';
         
         // Populate input fields with current values (if any)
         document.getElementById('editWord').value = word.word || '';
@@ -359,8 +388,26 @@ class FlashcardApp {
             alert('Word saved locally, but failed to save to repository. Please check server connection.');
         }
         
-        // Reload the current word to show it as a normal card
-        this.loadCurrentWord();
+        // Return to word list view and update
+        this.showWordListView();
+    }
+
+    addNewWord() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
+        
+        if (existingWords >= 20) {
+            alert('This unit is full. Each unit can contain a maximum of 20 words.');
+            return;
+        }
+        
+        // Find the first empty slot
+        const emptyIndex = unit.words.findIndex(word => !word.word || word.word.trim() === '');
+        if (emptyIndex !== -1) {
+            this.openAddWordView(emptyIndex);
+        } else {
+            alert('No empty slots available in this unit.');
+        }
     }
 
     saveVocabularyData() {
@@ -472,6 +519,89 @@ class FlashcardApp {
         if (statusElement) {
             statusElement.remove();
         }
+    }
+
+    renderWordList() {
+        const wordList = document.getElementById('wordList');
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        
+        wordList.innerHTML = '';
+        
+        unit.words.forEach((word, index) => {
+            const wordItem = document.createElement('div');
+            wordItem.className = `word-item ${!word.word || word.word.trim() === '' ? 'empty' : ''}`;
+            wordItem.dataset.index = index;
+            
+            if (word.word && word.word.trim() !== '') {
+                wordItem.innerHTML = `
+                    <div class="word-number">${index + 1}</div>
+                    <div class="word-title">${word.word}</div>
+                    <div class="word-part">${word.partOfSpeech}</div>
+                    <div class="word-meaning">${word.meaning}</div>
+                `;
+                wordItem.addEventListener('click', () => {
+                    this.openFlashcardView(index);
+                });
+            } else {
+                wordItem.innerHTML = `
+                    <div class="word-number">${index + 1}</div>
+                    <div>Click to add word</div>
+                `;
+                wordItem.addEventListener('click', () => {
+                    this.openAddWordView(index);
+                });
+            }
+            
+            wordList.appendChild(wordItem);
+        });
+        
+        // Update add word button state
+        this.updateAddWordButton();
+    }
+
+    updateWordCount() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
+        const wordCountElement = document.getElementById('wordCount');
+        wordCountElement.textContent = `(${existingWords}/20 words)`;
+    }
+
+    updateAddWordButton() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '').length;
+        const addWordBtn = document.getElementById('addWordBtn');
+        
+        if (existingWords >= 20) {
+            addWordBtn.disabled = true;
+            addWordBtn.title = 'Unit is full (20 words maximum)';
+        } else {
+            addWordBtn.disabled = false;
+            addWordBtn.title = 'Add New Word';
+        }
+    }
+
+    openFlashcardView(wordIndex) {
+        this.currentWordIndex = wordIndex;
+        this.showFlashcardView();
+        this.loadCurrentWord();
+    }
+
+    openAddWordView(wordIndex) {
+        this.currentWordIndex = wordIndex;
+        this.showFlashcardView();
+        this.showEditableCard({ word: '', partOfSpeech: '', meaning: '', example: '' });
+    }
+
+    showFlashcardView() {
+        document.getElementById('wordListView').style.display = 'none';
+        document.getElementById('flashcardView').style.display = 'block';
+    }
+
+    showWordListView() {
+        document.getElementById('flashcardView').style.display = 'none';
+        document.getElementById('wordListView').style.display = 'block';
+        this.renderWordList();
+        this.updateWordCount();
     }
 
     loadVocabularyData() {
