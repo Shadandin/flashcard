@@ -254,10 +254,30 @@ class FlashcardApp {
         this.currentUnit = unitNumber;
         
         if (this.currentMode === 'study') {
-            this.startStudyMode();
-            this.showUnitWindow(); // Ensure unit opens in its own window
+            // Open unit in a new window
+            this.openUnitInNewWindow(unitNumber);
         } else if (this.currentMode === 'practice') {
             this.startPracticeMode();
+        }
+    }
+
+    openUnitInNewWindow(unitNumber) {
+        // Create URL parameters for the unit
+        const params = new URLSearchParams({
+            book: this.currentBook,
+            unit: unitNumber,
+            mode: 'study'
+        });
+        
+        // Open new window with unit
+        const unitWindow = window.open(`unit.html?${params.toString()}`, `unit_${this.currentBook}_${unitNumber}`, 
+            'width=1200,height=800,scrollbars=yes,resizable=yes');
+        
+        if (unitWindow) {
+            // Focus the new window
+            unitWindow.focus();
+        } else {
+            alert('Please allow pop-ups to open units in separate windows.');
         }
     }
 
