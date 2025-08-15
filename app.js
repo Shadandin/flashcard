@@ -108,6 +108,29 @@ class FlashcardApp {
             this.showWordListView();
         });
 
+        // Study mode toggle buttons
+        document.getElementById('reviewModeBtn').addEventListener('click', () => {
+            this.switchToReviewMode();
+        });
+
+        document.getElementById('studyModeBtn').addEventListener('click', () => {
+            this.switchToStudyMode();
+        });
+
+        // Study flashcard controls
+        document.getElementById('studyFlipCard').addEventListener('click', () => {
+            this.flipStudyCard();
+        });
+
+        document.getElementById('studyNextCard').addEventListener('click', () => {
+            this.nextStudyCard();
+        });
+
+        // Study flashcard click to flip
+        document.getElementById('studyFlashcard').addEventListener('click', () => {
+            this.flipStudyCard();
+        });
+
 
 
         // Enter key to save word
@@ -246,8 +269,99 @@ class FlashcardApp {
     startStudyMode() {
         document.getElementById('studyMode').style.display = 'block';
         this.currentWordIndex = 0;
+        this.studyWordIndex = 0;
         this.renderWordList();
         this.updateWordCount();
+        this.switchToReviewMode(); // Start in review mode by default
+    }
+
+    switchToReviewMode() {
+        // Update button states
+        document.getElementById('reviewModeBtn').classList.add('active');
+        document.getElementById('studyModeBtn').classList.remove('active');
+        
+        // Show review section, hide study section
+        document.getElementById('wordListView').style.display = 'block';
+        document.getElementById('studyFlashcardView').style.display = 'none';
+        
+        // Update progress display
+        this.updateStudyProgress();
+    }
+
+    switchToStudyMode() {
+        // Update button states
+        document.getElementById('studyModeBtn').classList.add('active');
+        document.getElementById('reviewModeBtn').classList.remove('active');
+        
+        // Hide review section, show study section
+        document.getElementById('wordListView').style.display = 'none';
+        document.getElementById('studyFlashcardView').style.display = 'block';
+        
+        // Load first study card
+        this.loadStudyCard();
+    }
+
+    loadStudyCard() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '');
+        
+        if (existingWords.length === 0) {
+            alert('No words to study in this unit. Add some words first!');
+            this.switchToReviewMode();
+            return;
+        }
+        
+        if (this.studyWordIndex >= existingWords.length) {
+            this.studyWordIndex = 0; // Loop back to start
+        }
+        
+        const word = existingWords[this.studyWordIndex];
+        
+        // Update study card content
+        document.getElementById('studyCardWord').textContent = word.word;
+        document.getElementById('studyCardPartOfSpeech').textContent = word.partOfSpeech;
+        document.getElementById('studyCardMeaning').textContent = word.meaning;
+        document.getElementById('studyCardExample').textContent = word.example;
+        
+        // Reset card to front
+        document.getElementById('studyFlashcard').classList.remove('flipped');
+        
+        // Update progress
+        this.updateStudyProgress();
+    }
+
+    flipStudyCard() {
+        document.getElementById('studyFlashcard').classList.toggle('flipped');
+    }
+
+    nextStudyCard() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '');
+        
+        this.studyWordIndex++;
+        
+        if (this.studyWordIndex >= existingWords.length) {
+            // Completed all words
+            alert('Congratulations! You have completed studying all words in this unit.');
+            this.studyWordIndex = 0;
+            this.switchToReviewMode();
+            return;
+        }
+        
+        this.loadStudyCard();
+    }
+
+    updateStudyProgress() {
+        const unit = vocabularyData.books[this.currentBook].units[this.currentUnit];
+        const existingWords = unit.words.filter(word => word.word && word.word.trim() !== '');
+        
+        if (document.getElementById('studyModeBtn').classList.contains('active')) {
+            // In study mode
+            document.getElementById('studyProgress').textContent = `${this.studyWordIndex + 1} / ${existingWords.length}`;
+        } else {
+            // In review mode
+            document.getElementById('studyProgress').textContent = `${this.currentWordIndex + 1} / ${unit.words.length}`;
+        }
     }
 
     loadCurrentWord() {
@@ -559,6 +673,9 @@ class FlashcardApp {
         
         // Update add word button state (for future reference)
         this.updateAddWordButton();
+        
+        // Update study progress
+        this.updateStudyProgress();
     }
 
     updateWordCount() {

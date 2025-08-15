@@ -68,11 +68,33 @@
                 <span id="studyProgress">1 / 20</span>
                 <span id="studyUnit">Unit 1</span>
                 <span id="wordCount">(0/20 words)</span>
+                <div class="study-mode-toggle">
+                    <button class="mode-btn active" id="reviewModeBtn">Review</button>
+                    <button class="mode-btn" id="studyModeBtn">Study</button>
+                </div>
             </div>
             
-            <!-- Word List View -->
+            <!-- Review Section (Word List View) -->
             <div class="word-list-view" id="wordListView">
                 <div class="word-list" id="wordList"></div>
+            </div>
+            
+            <!-- Study Section (Flashcard View) -->
+            <div class="study-flashcard-view" id="studyFlashcardView" style="display: none;">
+                <div class="study-flashcard" id="studyFlashcard">
+                    <div class="study-card-front">
+                        <h3 id="studyCardWord">Loading...</h3>
+                        <p id="studyCardPartOfSpeech">Loading...</p>
+                    </div>
+                    <div class="study-card-back">
+                        <h3 id="studyCardMeaning">Loading...</h3>
+                        <p id="studyCardExample">Loading...</p>
+                    </div>
+                </div>
+                <div class="study-flashcard-controls">
+                    <button class="btn btn-secondary" id="studyFlipCard">Flip Card</button>
+                    <button class="btn btn-primary" id="studyNextCard">Next Word</button>
+                </div>
             </div>
             
             <!-- Flashcard View -->
