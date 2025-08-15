@@ -544,51 +544,56 @@ class FlashcardApp {
         // Save to localStorage
         this.saveVocabularyData();
         
-        // Save to repository
-        try {
-            const response = await fetch('/api/flashcards', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    word: newWord,
-                    partOfSpeech: newPartOfSpeech,
-                    meaning: newMeaning,
-                    example: newExample,
-                    book: this.currentBook,
-                    unit: this.currentUnit,
-                    wordIndex: this.currentWordIndex
-                }),
-                // Add timeout to prevent hanging
-                signal: AbortSignal.timeout(10000)
-            });
-            
-            if (response.ok) {
-                const result = await response.json();
-                console.log('Flashcard saved to repository:', result);
-                alert('Word saved successfully to repository!');
-            } else if (response.status === 409) {
-                // Handle duplicate word error from repository
-                const error = await response.json();
-                console.error('Duplicate word in repository:', error);
-                alert(`The word "${newWord}" already exists in the repository. Please choose a different word.`);
-                // Revert the local changes since it's a duplicate
-                word.word = '';
-                word.partOfSpeech = '';
-                word.meaning = '';
-                word.example = '';
-                this.saveVocabularyData();
-                this.loadCurrentWord();
-                return;
-            } else {
-                const error = await response.json();
-                console.error('Failed to save to repository:', error);
+        // Try to save to repository if connected
+        if (this.repositoryStatus === 'connected') {
+            try {
+                const response = await fetch('/api/flashcards', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        word: newWord,
+                        partOfSpeech: newPartOfSpeech,
+                        meaning: newMeaning,
+                        example: newExample,
+                        book: this.currentBook,
+                        unit: this.currentUnit,
+                        wordIndex: this.currentWordIndex
+                    }),
+                    // Add timeout to prevent hanging
+                    signal: AbortSignal.timeout(10000)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('Flashcard saved to repository:', result);
+                    alert('Word saved successfully to repository!');
+                } else if (response.status === 409) {
+                    // Handle duplicate word error from repository
+                    const error = await response.json();
+                    console.error('Duplicate word in repository:', error);
+                    alert(`The word "${newWord}" already exists in the repository. Please choose a different word.`);
+                    // Revert the local changes since it's a duplicate
+                    word.word = '';
+                    word.partOfSpeech = '';
+                    word.meaning = '';
+                    word.example = '';
+                    this.saveVocabularyData();
+                    this.loadCurrentWord();
+                    return;
+                } else {
+                    const error = await response.json();
+                    console.error('Failed to save to repository:', error);
+                    alert('Word saved locally, but failed to save to repository. Please check server connection.');
+                }
+            } catch (error) {
+                console.error('Error saving to repository:', error);
                 alert('Word saved locally, but failed to save to repository. Please check server connection.');
             }
-        } catch (error) {
-            console.error('Error saving to repository:', error);
-            alert('Word saved locally, but failed to save to repository. Please check server connection.');
+        } else {
+            // Repository not connected - just save locally
+            alert('Word saved locally! (Repository not connected)');
         }
         
         // Return to word list view and update
@@ -868,8 +873,29 @@ class FlashcardApp {
     updateRepositoryStatusDisplay() {
         const statusElement = document.getElementById('repositoryStatus');
         if (statusElement) {
-            statusElement.textContent = `Repository: ${this.repositoryStatus}`;
-            statusElement.className = `repository-status ${this.repositoryStatus}`;
+            let statusText = '';
+            let statusClass = '';
+            
+            switch (this.repositoryStatus) {
+                case 'connected':
+                    statusText = 'Repository: Connected';
+                    statusClass = 'repository-status connected';
+                    break;
+                case 'disconnected':
+                    statusText = 'Repository: Offline (Local Mode)';
+                    statusClass = 'repository-status disconnected';
+                    break;
+                case 'error':
+                    statusText = 'Repository: Error';
+                    statusClass = 'repository-status error';
+                    break;
+                default:
+                    statusText = 'Repository: Checking...';
+                    statusClass = 'repository-status checking';
+            }
+            
+            statusElement.textContent = statusText;
+            statusElement.className = statusClass;
         }
     }
 
