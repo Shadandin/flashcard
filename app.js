@@ -188,6 +188,11 @@ class FlashcardApp {
 
     showBookSelection() {
         document.getElementById('bookSelection').style.display = 'block';
+        
+        // Show main title, hide unit title
+        document.getElementById('mainTitle').style.display = 'block';
+        document.getElementById('unitTitle').style.display = 'none';
+        
         this.updateBookProgress();
     }
 
@@ -200,6 +205,10 @@ class FlashcardApp {
         // Hide study mode and show unit selection
         document.getElementById('studyMode').style.display = 'none';
         document.getElementById('unitSelection').style.display = 'block';
+        
+        // Show main title, hide unit title
+        document.getElementById('mainTitle').style.display = 'block';
+        document.getElementById('unitTitle').style.display = 'none';
         
         // Update the header to show which book is selected
         const bookTitle = vocabularyData.books[this.currentBook].title;
@@ -276,6 +285,10 @@ class FlashcardApp {
         const backBtn = document.getElementById('backToUnits');
         backBtn.innerHTML = `← Back to Units`;
         
+        // Show unit title, hide main title
+        document.getElementById('mainTitle').style.display = 'none';
+        document.getElementById('unitTitle').style.display = 'block';
+        
         // Initialize the unit
         this.renderWordList();
         this.updateWordCount();
@@ -291,6 +304,10 @@ class FlashcardApp {
         const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
         document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        
+        // Show unit title, hide main title
+        document.getElementById('mainTitle').style.display = 'none';
+        document.getElementById('unitTitle').style.display = 'block';
         
         // Update the back button text
         const backBtn = document.getElementById('backToUnits');
@@ -1032,6 +1049,11 @@ class FlashcardApp {
 
     showReviewMode() {
         document.getElementById('reviewMode').style.display = 'block';
+        
+        // Show main title, hide unit title
+        document.getElementById('mainTitle').style.display = 'block';
+        document.getElementById('unitTitle').style.display = 'none';
+        
         this.renderMistakes();
     }
 
@@ -1064,6 +1086,11 @@ class FlashcardApp {
 
     showProgressMode() {
         document.getElementById('progressMode').style.display = 'block';
+        
+        // Show main title, hide unit title
+        document.getElementById('mainTitle').style.display = 'block';
+        document.getElementById('unitTitle').style.display = 'none';
+        
         this.updateProgressStats();
         this.renderDetailedProgress();
         this.updateRepositoryStats();
