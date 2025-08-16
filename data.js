@@ -3763,7 +3763,305 @@ const book3Data = {
 // Book 4 data with real unit titles and complete word lists
 const book4Data = {
   "title": "Book 4 - Intermediate Level",
-  "units": {}
+  "units": {
+    "1": {
+      "title": "Unit 1 - Social Media",
+      "words": [
+        {
+          "word": "accountable",
+          "partOfSpeech": "adjective",
+          "meaning": "responsible for actions",
+          "example": "Teachers are accountable for their students' progress."
+        },
+        {
+          "word": "addictive",
+          "partOfSpeech": "adjective",
+          "meaning": "causing dependence",
+          "example": "Video games can be addictive."
+        },
+        {
+          "word": "agenda",
+          "partOfSpeech": "noun",
+          "meaning": "a list of things to do",
+          "example": "The manager set the agenda for the meeting."
+        },
+        {
+          "word": "coin",
+          "partOfSpeech": "verb",
+          "meaning": "to invent a word or phrase",
+          "example": "He coined the term \"cloud computing.\""
+        },
+        {
+          "word": "correlate",
+          "partOfSpeech": "verb",
+          "meaning": "to show a connection",
+          "example": "Exercise and health strongly correlate."
+        },
+        {
+          "word": "depression",
+          "partOfSpeech": "noun",
+          "meaning": "extreme sadness; also an economic downturn",
+          "example": "She suffered from depression after losing her job."
+        },
+        {
+          "word": "digital",
+          "partOfSpeech": "adjective",
+          "meaning": "using computer technology",
+          "example": "I prefer digital books over printed ones."
+        },
+        {
+          "word": "importance",
+          "partOfSpeech": "noun",
+          "meaning": "significance or value",
+          "example": "Education has great importance for success."
+        },
+        {
+          "word": "keyboard",
+          "partOfSpeech": "noun",
+          "meaning": "a device for typing on computers",
+          "example": "He bought a new keyboard for his laptop."
+        },
+        {
+          "word": "loneliness",
+          "partOfSpeech": "noun",
+          "meaning": "the feeling of being alone",
+          "example": "Moving to a new city brought her loneliness."
+        },
+        {
+          "word": "media",
+          "partOfSpeech": "noun",
+          "meaning": "newspapers, TV, internet, etc",
+          "example": "The news was reported in all media outlets."
+        },
+        {
+          "word": "platform",
+          "partOfSpeech": "noun",
+          "meaning": "stage or system for communication",
+          "example": "Twitter is a social media platform."
+        },
+        {
+          "word": "poor",
+          "partOfSpeech": "adjective",
+          "meaning": "lacking money or quality",
+          "example": "The poor man asked for help."
+        },
+        {
+          "word": "presence",
+          "partOfSpeech": "noun",
+          "meaning": "being in a place",
+          "example": "Her presence made the room lively."
+        },
+        {
+          "word": "subject",
+          "partOfSpeech": "noun",
+          "meaning": "topic or field of study",
+          "example": "Math is his favorite subject."
+        },
+        {
+          "word": "surge",
+          "partOfSpeech": "noun",
+          "meaning": "sudden increase",
+          "example": "There was a surge in demand for masks."
+        },
+        {
+          "word": "survey",
+          "partOfSpeech": "noun",
+          "meaning": "a set of questions for research",
+          "example": "The survey showed most people like coffee."
+        },
+        {
+          "word": "target",
+          "partOfSpeech": "noun",
+          "meaning": "a goal or aim",
+          "example": "The company set a sales target for June."
+        },
+        {
+          "word": "trend",
+          "partOfSpeech": "noun",
+          "meaning": "a general pattern",
+          "example": "Short videos are the latest trend online."
+        },
+        {
+          "word": "validate",
+          "partOfSpeech": "verb",
+          "meaning": "to confirm as true",
+          "example": "The scientist validated her theory with data."
+        }
+      ]
+    },
+    "2": {
+      "title": "Unit 2 - Enhanced Weathering",
+      "words": [
+        {
+          "word": "carbon",
+          "partOfSpeech": "noun",
+          "meaning": "a chemical element found in all life",
+          "example": "Diamonds are made of pure carbon."
+        },
+        {
+          "word": "carbon dioxide",
+          "partOfSpeech": "noun",
+          "meaning": "a gas humans breathe out",
+          "example": "Plants use carbon dioxide for photosynthesis."
+        },
+        {
+          "word": "dust",
+          "partOfSpeech": "noun",
+          "meaning": "tiny particles of dirt",
+          "example": "The shelf was covered in dust."
+        },
+        {
+          "word": "emit",
+          "partOfSpeech": "verb",
+          "meaning": "to release or give off",
+          "example": "Cars emit harmful gases."
+        },
+        {
+          "word": "enable",
+          "partOfSpeech": "verb",
+          "meaning": "to make possible",
+          "example": "The new law enables people to vote online."
+        },
+        {
+          "word": "grind",
+          "partOfSpeech": "verb",
+          "meaning": "to crush into powder",
+          "example": "She grinds coffee beans every morning."
+        },
+        {
+          "word": "heal",
+          "partOfSpeech": "verb",
+          "meaning": "to recover from injury",
+          "example": "The wound healed quickly."
+        },
+        {
+          "word": "integrate",
+          "partOfSpeech": "verb",
+          "meaning": "to combine into one system",
+          "example": "Immigrants integrate into society over time."
+        },
+        {
+          "word": "leading",
+          "partOfSpeech": "adjective",
+          "meaning": "most important",
+          "example": "She is a leading expert in biology."
+        },
+        {
+          "word": "moreover",
+          "partOfSpeech": "adverb",
+          "meaning": "in addition",
+          "example": "He is smart; moreover, he is hardworking."
+        },
+        {
+          "word": "object",
+          "partOfSpeech": "noun",
+          "meaning": "a thing you can see or touch",
+          "example": "The museum had rare objects on display."
+        },
+        {
+          "word": "pollutant",
+          "partOfSpeech": "noun",
+          "meaning": "something that makes air, water, or soil dirty",
+          "example": "Factories release pollutants into the river."
+        },
+        {
+          "word": "powder",
+          "partOfSpeech": "noun",
+          "meaning": "fine dry particles",
+          "example": "He spilled baby powder on the floor."
+        },
+        {
+          "word": "prompt",
+          "partOfSpeech": "verb",
+          "meaning": "to cause or encourage",
+          "example": "The teacher's question prompted a discussion."
+        },
+        {
+          "word": "reject",
+          "partOfSpeech": "verb",
+          "meaning": "to refuse",
+          "example": "She rejected his job offer."
+        },
+        {
+          "word": "skeptic",
+          "partOfSpeech": "noun",
+          "meaning": "a person who doubts",
+          "example": "The skeptic questioned the new theory."
+        },
+        {
+          "word": "substance",
+          "partOfSpeech": "noun",
+          "meaning": "material with a certain makeup",
+          "example": "Water is a clear substance."
+        },
+        {
+          "word": "substantially",
+          "partOfSpeech": "adverb",
+          "meaning": "greatly, by a large amount",
+          "example": "The cost increased substantially."
+        },
+        {
+          "word": "ton",
+          "partOfSpeech": "noun",
+          "meaning": "a unit of weight (1000 kg)",
+          "example": "The ship carried 10 tons of coal."
+        },
+        {
+          "word": "transport",
+          "partOfSpeech": "verb",
+          "meaning": "to move from one place to another",
+          "example": "Trucks transport goods across the country."
+        }
+      ]
+    },
+    "3": {
+      "title": "Unit 3 - Le Chambonsur-Lignon",
+      "words": [
+        {
+          "word": "align",
+          "partOfSpeech": "verb",
+          "meaning": "to line up",
+          "example": "He aligned the text to the left."
+        },
+        {
+          "word": "authority",
+          "partOfSpeech": "noun",
+          "meaning": "power to control",
+          "example": "The police have authority to arrest people."
+        },
+        {
+          "word": "barn",
+          "partOfSpeech": "noun",
+          "meaning": "a farm building",
+          "example": "The cows are kept in the barn."
+        },
+        {
+          "word": "betray",
+          "partOfSpeech": "verb",
+          "meaning": "to break trust",
+          "example": "He betrayed his friend's secret."
+        },
+        {
+          "word": "Bible",
+          "partOfSpeech": "noun",
+          "meaning": "the holy book of Christianity",
+          "example": "She read a story from the Bible."
+        },
+        {
+          "word": "Catholic",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "relating to the Roman Catholic Church",
+          "example": "He grew up in a Catholic family."
+        },
+        {
+          "word": "cooperate",
+          "partOfSpeech": "verb",
+          "meaning": "to work together",
+          "example": "The teams cooperated to finish the project."
+        }
+      ]
+    }
+  }
 };
 
 // Generate books with actual data (Books 3-4) and empty structure (Books 5-6)
