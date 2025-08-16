@@ -3774,7 +3774,7 @@ function generateSampleData() {
     // Add Book 4 with actual data
     vocabularyData.books[4] = book4Data;
     
-    // Add books (5-6) with empty structure for future uploads
+    // Add empty Books 5-6 (waiting for file uploads)
     for (let book = 5; book <= 6; book++) {
         vocabularyData.books[book] = {
             title: `Book ${book} - ${getBookLevel(book)}`,
