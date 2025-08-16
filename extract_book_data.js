@@ -90,6 +90,7 @@ function parseBookData(text, bookNumber) {
         }
         
         // Look for word entries with the format: word (partOfSpeech) – meaning.Example
+        // The meaning and example are separated by a period but no space
         const wordMatch = line.match(/^([A-Za-z]+)\s*\(([A-Za-z\/]+)\)\s*[-–]\s*(.+?)\.(.+)$/);
         if (wordMatch && currentUnit) {
             const word = {
