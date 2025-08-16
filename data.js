@@ -7454,13 +7454,13 @@ function generateSampleData() {
             units: {}
         };
         
-        // Create 30 units for each book with empty word slots
-        for (let unit = 1; unit <= 30; unit++) {
-            vocabularyData.books[book].units[unit] = {
-                title: `Unit ${unit}: ${getUnitTheme(unit)}`,
-                words: Array(20).fill().map(() => ({ word: "", partOfSpeech: "", meaning: "", example: "" }))
-            };
-        }
+                            // Create 30 units for each book with completely empty word lists
+                    for (let unit = 1; unit <= 30; unit++) {
+                        vocabularyData.books[book].units[unit] = {
+                            title: `Unit ${unit}: ${getUnitTheme(unit)}`,
+                            words: []
+                        };
+                    }
     }
 }
 
