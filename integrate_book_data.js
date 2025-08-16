@@ -11,9 +11,6 @@ async function integrateBookData() {
         console.log('Book 3 units found:', Object.keys(book3Data).length);
         console.log('Book 4 units found:', Object.keys(book4Data).length);
         
-        // Read the current data.js file
-        const dataJsContent = await fs.readFile('data.js', 'utf8');
-        
         // Create the updated data structure
         const updatedData = createUpdatedDataStructure(book3Data, book4Data);
         
@@ -66,7 +63,7 @@ function createUpdatedDataStructure(book3Data, book4Data) {
         };
     });
     
-    // Add empty structure for Books 5-6
+    // Add empty Books 5-6 (waiting for upload)
     for (let book = 5; book <= 6; book++) {
         vocabularyData.books[book] = {
             title: `Book ${book} - ${getBookLevel(book)}`,
@@ -132,7 +129,7 @@ function generateSampleData() {
     // Add Book 4 with actual data
     vocabularyData.books[4] = book4Data;
     
-    // Add books (5-6) with empty structure for future uploads
+    // Add empty Books 5-6 (waiting for file uploads)
     for (let book = 5; book <= 6; book++) {
         vocabularyData.books[book] = {
             title: \`Book \${book} - \${getBookLevel(book)}\`,
@@ -192,7 +189,7 @@ integrateBookData()
         console.log('Your flashcard application now has:');
         console.log('- Book 3 with real unit titles and complete word lists');
         console.log('- Book 4 with real unit titles and complete word lists');
-        console.log('- Empty structure for Books 5-6 for future uploads');
+        console.log('- Empty Books 5-6 (waiting for file uploads)');
     })
     .catch(error => {
         console.error('Integration failed:', error);
