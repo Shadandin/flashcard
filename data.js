@@ -239,7 +239,7 @@ const book3Data = {
     ]
 };
 
-// Generate books with sample data (Books 3-6)
+// Generate books with actual data (Book 3) and empty structure (Books 4-6)
 function generateSampleData() {
     // Add Book 3 with actual data
     vocabularyData.books[3] = {
@@ -257,7 +257,7 @@ function generateSampleData() {
         }
     }
     
-    // Generate remaining units for Book 3 (11-30) with sample data
+    // Generate remaining units for Book 3 (11-30) with sample data (to be replaced with actual data later)
     for (let unit = 11; unit <= 30; unit++) {
         vocabularyData.books[3].units[unit] = {
             title: `Unit ${unit}: ${getUnitTheme(unit)}`,
@@ -265,18 +265,18 @@ function generateSampleData() {
         };
     }
     
-    // Add books (4-6) with generated data
+    // Add books (4-6) with empty structure for future uploads
     for (let book = 4; book <= 6; book++) {
         vocabularyData.books[book] = {
             title: `Book ${book} - ${getBookLevel(book)}`,
             units: {}
         };
         
-        // Generate 30 units for each book
+        // Create 30 units for each book with empty word slots
         for (let unit = 1; unit <= 30; unit++) {
             vocabularyData.books[book].units[unit] = {
                 title: `Unit ${unit}: ${getUnitTheme(unit)}`,
-                words: generateUnitWords(unit, book)
+                words: Array(20).fill().map(() => ({ word: "", partOfSpeech: "", meaning: "", example: "" }))
             };
         }
     }
