@@ -4060,6 +4060,506 @@ const book4Data = {
           "example": "The teams cooperated to finish the project."
         }
       ]
+    },
+    "4": {
+      "title": "Unit 4 - Women in Tech",
+      "words": [
+        {
+          "word": "comfortable",
+          "partOfSpeech": "adjective",
+          "meaning": "providing ease",
+          "example": "This chair is very comfortable."
+        },
+        {
+          "word": "education",
+          "partOfSpeech": "noun",
+          "meaning": "process of learning",
+          "example": "Education is a human right."
+        },
+        {
+          "word": "encouragement",
+          "partOfSpeech": "noun",
+          "meaning": "support",
+          "example": "Her words gave him encouragement."
+        },
+        {
+          "word": "endorse",
+          "partOfSpeech": "verb",
+          "meaning": "to publicly support",
+          "example": "The athlete endorsed the new product."
+        },
+        {
+          "word": "equal",
+          "partOfSpeech": "adjective",
+          "meaning": "the same in amount",
+          "example": "All citizens are equal before the law."
+        },
+        {
+          "word": "face",
+          "partOfSpeech": "verb",
+          "meaning": "to deal with",
+          "example": "We must face challenges bravely."
+        },
+        {
+          "word": "field",
+          "partOfSpeech": "noun",
+          "meaning": "area of land or study",
+          "example": "She works in the medical field."
+        },
+        {
+          "word": "foster",
+          "partOfSpeech": "verb",
+          "meaning": "to encourage growth",
+          "example": "The teacher fostered creativity in class."
+        },
+        {
+          "word": "guidance",
+          "partOfSpeech": "noun",
+          "meaning": "help or advice",
+          "example": "She asked for guidance on her career."
+        },
+        {
+          "word": "hold",
+          "partOfSpeech": "verb",
+          "meaning": "to grasp; to keep",
+          "example": "He held the baby gently."
+        },
+        {
+          "word": "inclusion",
+          "partOfSpeech": "noun",
+          "meaning": "the act of involving all",
+          "example": "The school values inclusion of every student."
+        },
+        {
+          "word": "inspire",
+          "partOfSpeech": "verb",
+          "meaning": "to motivate",
+          "example": "The speech inspired the crowd."
+        },
+        {
+          "word": "mere",
+          "partOfSpeech": "adjective",
+          "meaning": "only; nothing more",
+          "example": "It was a mere suggestion."
+        },
+        {
+          "word": "position",
+          "partOfSpeech": "noun",
+          "meaning": "place or job",
+          "example": "She applied for a teaching position."
+        },
+        {
+          "word": "power",
+          "partOfSpeech": "noun",
+          "meaning": "strength or authority",
+          "example": "Knowledge is power."
+        },
+        {
+          "word": "responsibility",
+          "partOfSpeech": "noun",
+          "meaning": "duty",
+          "example": "Parents have responsibility for children."
+        },
+        {
+          "word": "soar",
+          "partOfSpeech": "verb",
+          "meaning": "to fly high",
+          "example": "The eagle soared above the mountains."
+        },
+        {
+          "word": "tool",
+          "partOfSpeech": "noun",
+          "meaning": "an instrument for work",
+          "example": "A hammer is a useful tool."
+        },
+        {
+          "word": "vocal",
+          "partOfSpeech": "adjective",
+          "meaning": "related to voice; outspoken",
+          "example": "She was vocal about her opinions."
+        },
+        {
+          "word": "workplace",
+          "partOfSpeech": "noun",
+          "meaning": "a place of employment",
+          "example": "The workplace has strict safety rules."
+        }
+      ]
+    },
+    "5": {
+      "title": "Unit 5 - Impressionism",
+      "words": [
+        {
+          "word": "academic",
+          "partOfSpeech": "adjective",
+          "meaning": "related to education",
+          "example": "She has strong academic skills."
+        },
+        {
+          "word": "acceptance",
+          "partOfSpeech": "noun",
+          "meaning": "approval",
+          "example": "He gained acceptance into the club."
+        },
+        {
+          "word": "array",
+          "partOfSpeech": "noun",
+          "meaning": "a wide variety",
+          "example": "The store had an array of books."
+        },
+        {
+          "word": "blur",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to make unclear; unclear image",
+          "example": "Tears blurred her vision."
+        },
+        {
+          "word": "café",
+          "partOfSpeech": "noun",
+          "meaning": "a small restaurant",
+          "example": "We had lunch at a café."
+        },
+        {
+          "word": "canvas",
+          "partOfSpeech": "noun",
+          "meaning": "strong cloth for painting",
+          "example": "He painted on a large canvas."
+        },
+        {
+          "word": "cinema",
+          "partOfSpeech": "noun",
+          "meaning": "movie theater",
+          "example": "We went to the cinema to watch a film."
+        },
+        {
+          "word": "class",
+          "partOfSpeech": "noun",
+          "meaning": "group of students or type",
+          "example": "The class studied history."
+        },
+        {
+          "word": "distinctive",
+          "partOfSpeech": "adjective",
+          "meaning": "unique, easy to recognize",
+          "example": "He has a distinctive accent."
+        },
+        {
+          "word": "key",
+          "partOfSpeech": "noun",
+          "meaning": "important tool; also a small device",
+          "example": "Honesty is the key to trust."
+        },
+        {
+          "word": "movement",
+          "partOfSpeech": "noun",
+          "meaning": "act of moving or social group",
+          "example": "The movement for equal rights grew."
+        },
+        {
+          "word": "practice",
+          "partOfSpeech": "noun/verb",
+          "meaning": "repeated exercise; to rehearse",
+          "example": "She practices piano daily."
+        },
+        {
+          "word": "realistic",
+          "partOfSpeech": "adjective",
+          "meaning": "practical, true to life",
+          "example": "That movie had realistic scenes."
+        },
+        {
+          "word": "reflection",
+          "partOfSpeech": "noun",
+          "meaning": "image in a mirror or deep thought",
+          "example": "She saw her reflection in the water."
+        },
+        {
+          "word": "rule",
+          "partOfSpeech": "noun/verb",
+          "meaning": "law; to govern",
+          "example": "The teacher set clear rules."
+        },
+        {
+          "word": "stroke",
+          "partOfSpeech": "noun/verb",
+          "meaning": "a hit; to move smoothly",
+          "example": "The swimmer made strong strokes."
+        },
+        {
+          "word": "sunlight",
+          "partOfSpeech": "noun",
+          "meaning": "light from the sun",
+          "example": "The room was full of sunlight."
+        },
+        {
+          "word": "traditional",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to customs",
+          "example": "They wore traditional clothing at the festival."
+        },
+        {
+          "word": "unlike",
+          "partOfSpeech": "preposition/conjunction",
+          "meaning": "different from",
+          "example": "Unlike his brother, he loves sports."
+        },
+        {
+          "word": "width",
+          "partOfSpeech": "noun",
+          "meaning": "how wide something is",
+          "example": "The width of the table is 2 meters."
+        }
+      ]
+    },
+    "6": {
+      "title": "Unit 6 - Anzac Day",
+      "words": [
+        {
+          "word": "anthem",
+          "partOfSpeech": "noun",
+          "meaning": "a national song",
+          "example": "They sang the national anthem."
+        },
+        {
+          "word": "beyond",
+          "partOfSpeech": "preposition/adverb",
+          "meaning": "farther than",
+          "example": "The park is beyond the river."
+        },
+        {
+          "word": "determination",
+          "partOfSpeech": "noun",
+          "meaning": "strong will",
+          "example": "She showed great determination in her work."
+        },
+        {
+          "word": "fighting",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "physical combat",
+          "example": "The fighting lasted for hours."
+        },
+        {
+          "word": "joint",
+          "partOfSpeech": "noun",
+          "meaning": "a connection of bones",
+          "example": "My knee joint hurts."
+        },
+        {
+          "word": "landing",
+          "partOfSpeech": "noun",
+          "meaning": "coming down from air",
+          "example": "The plane made a smooth landing."
+        },
+        {
+          "word": "mark",
+          "partOfSpeech": "noun/verb",
+          "meaning": "a sign; to indicate",
+          "example": "He marked the wrong answer."
+        },
+        {
+          "word": "mobilize",
+          "partOfSpeech": "verb",
+          "meaning": "to organize for action",
+          "example": "The army mobilized quickly."
+        },
+        {
+          "word": "nation",
+          "partOfSpeech": "noun",
+          "meaning": "a country",
+          "example": "The nation celebrated Independence Day."
+        },
+        {
+          "word": "originally",
+          "partOfSpeech": "adverb",
+          "meaning": "at first",
+          "example": "The game was originally from China."
+        },
+        {
+          "word": "outbreak",
+          "partOfSpeech": "noun",
+          "meaning": "sudden spread of disease or conflict",
+          "example": "There was an outbreak of flu."
+        },
+        {
+          "word": "pray",
+          "partOfSpeech": "verb",
+          "meaning": "to talk to God",
+          "example": "They prayed for peace."
+        },
+        {
+          "word": "prisoner",
+          "partOfSpeech": "noun",
+          "meaning": "a person kept in jail",
+          "example": "The prisoner escaped at night."
+        },
+        {
+          "word": "sacrifice",
+          "partOfSpeech": "noun/verb",
+          "meaning": "to give up for others",
+          "example": "She sacrificed her free time for study."
+        },
+        {
+          "word": "silence",
+          "partOfSpeech": "noun",
+          "meaning": "absence of sound",
+          "example": "There was complete silence in the room."
+        },
+        {
+          "word": "thus",
+          "partOfSpeech": "adverb",
+          "meaning": "as a result",
+          "example": "He was late; thus, he missed the bus."
+        },
+        {
+          "word": "tribute",
+          "partOfSpeech": "noun",
+          "meaning": "respect shown",
+          "example": "They paid tribute to the hero."
+        },
+        {
+          "word": "victory",
+          "partOfSpeech": "noun",
+          "meaning": "success in a contest",
+          "example": "The team celebrated their victory."
+        },
+        {
+          "word": "wild",
+          "partOfSpeech": "adjective",
+          "meaning": "not tamed",
+          "example": "Wild animals live in the jungle."
+        },
+        {
+          "word": "wound",
+          "partOfSpeech": "noun/verb",
+          "meaning": "injury; to injure",
+          "example": "The soldier had a deep wound."
+        }
+      ]
+    },
+    "7": {
+      "title": "Unit 7 - Endangered languages",
+      "words": [
+        {
+          "word": "assimilate",
+          "partOfSpeech": "verb",
+          "meaning": "to absorb into a group",
+          "example": "Immigrants assimilate into new cultures."
+        },
+        {
+          "word": "attempt",
+          "partOfSpeech": "noun/verb",
+          "meaning": "a try; to try",
+          "example": "He made an attempt to climb Everest."
+        },
+        {
+          "word": "case",
+          "partOfSpeech": "noun",
+          "meaning": "an example or situation",
+          "example": "This is a rare case of illness."
+        },
+        {
+          "word": "cease",
+          "partOfSpeech": "verb",
+          "meaning": "to stop",
+          "example": "The rain finally ceased."
+        },
+        {
+          "word": "danger",
+          "partOfSpeech": "noun",
+          "meaning": "risk of harm",
+          "example": "He was in great danger."
+        },
+        {
+          "word": "devastating",
+          "partOfSpeech": "adjective",
+          "meaning": "very destructive",
+          "example": "The hurricane was devastating."
+        },
+        {
+          "word": "diversity",
+          "partOfSpeech": "noun",
+          "meaning": "variety",
+          "example": "The city has cultural diversity."
+        },
+        {
+          "word": "earthquake",
+          "partOfSpeech": "noun",
+          "meaning": "sudden shaking of the earth",
+          "example": "A strong earthquake struck the town."
+        },
+        {
+          "word": "endangered",
+          "partOfSpeech": "adjective",
+          "meaning": "at risk of extinction",
+          "example": "Pandas are endangered animals."
+        },
+        {
+          "word": "extinction",
+          "partOfSpeech": "noun",
+          "meaning": "dying out of a species",
+          "example": "Dinosaurs faced extinction long ago."
+        },
+        {
+          "word": "forever",
+          "partOfSpeech": "adverb",
+          "meaning": "for all time",
+          "example": "I will love you forever."
+        },
+        {
+          "word": "generally",
+          "partOfSpeech": "adverb",
+          "meaning": "usually",
+          "example": "He generally wakes up early."
+        },
+        {
+          "word": "genocide",
+          "partOfSpeech": "noun",
+          "meaning": "killing of a large group",
+          "example": "The war led to genocide."
+        },
+        {
+          "word": "hit",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to strike; a blow",
+          "example": "He hit the ball with the bat."
+        },
+        {
+          "word": "lose",
+          "partOfSpeech": "verb",
+          "meaning": "to misplace or not win",
+          "example": "They lost the game."
+        },
+        {
+          "word": "native",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "original to a place",
+          "example": "She is a native speaker of English."
+        },
+        {
+          "word": "percent",
+          "partOfSpeech": "noun",
+          "meaning": "one part in a hundred",
+          "example": "Ten percent of students passed."
+        },
+        {
+          "word": "reason",
+          "partOfSpeech": "noun",
+          "meaning": "cause or explanation",
+          "example": "The reason for his absence was illness."
+        },
+        {
+          "word": "reference",
+          "partOfSpeech": "noun",
+          "meaning": "mention or source",
+          "example": "She gave a reference to her book."
+        },
+        {
+          "word": "urban",
+          "partOfSpeech": "adjective",
+          "meaning": "related to cities",
+          "example": "Urban areas are crowded."
+        }
+      ]
     }
   }
 };
