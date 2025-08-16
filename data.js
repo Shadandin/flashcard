@@ -4560,6 +4560,2881 @@ const book4Data = {
           "example": "Urban areas are crowded."
         }
       ]
+    },
+    "8": {
+      "title": "Unit 8 - The Ketogenic Diet",
+      "words": [
+        {
+          "word": "burn",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to be on fire; damage from heat",
+          "example": "The paper burned quickly."
+        },
+        {
+          "word": "check",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to examine; a mark or test",
+          "example": "Please check your answers."
+        },
+        {
+          "word": "consume",
+          "partOfSpeech": "verb",
+          "meaning": "to eat or use up",
+          "example": "The fire consumed the building."
+        },
+        {
+          "word": "diet",
+          "partOfSpeech": "noun",
+          "meaning": "food and drink regularly consumed",
+          "example": "A healthy diet includes vegetables."
+        },
+        {
+          "word": "energy",
+          "partOfSpeech": "noun",
+          "meaning": "power or strength",
+          "example": "The sun provides energy for plants."
+        },
+        {
+          "word": "fat",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "oily substance; overweight",
+          "example": "Some fat is necessary for health."
+        },
+        {
+          "word": "fuel",
+          "partOfSpeech": "noun",
+          "meaning": "material burned for energy",
+          "example": "Gasoline is a type of fuel."
+        },
+        {
+          "word": "glucose",
+          "partOfSpeech": "noun",
+          "meaning": "sugar used by the body",
+          "example": "Glucose provides energy to cells."
+        },
+        {
+          "word": "ketone",
+          "partOfSpeech": "noun",
+          "meaning": "chemical produced during fat breakdown",
+          "example": "Ketones are used for energy."
+        },
+        {
+          "word": "limit",
+          "partOfSpeech": "noun/verb",
+          "meaning": "boundary; to restrict",
+          "example": "There is a limit to what we can do."
+        },
+        {
+          "word": "metabolism",
+          "partOfSpeech": "noun",
+          "meaning": "chemical processes in the body",
+          "example": "Exercise increases metabolism."
+        },
+        {
+          "word": "protein",
+          "partOfSpeech": "noun",
+          "meaning": "nutrient for building muscles",
+          "example": "Meat is high in protein."
+        },
+        {
+          "word": "reduce",
+          "partOfSpeech": "verb",
+          "meaning": "to make smaller or less",
+          "example": "We need to reduce waste."
+        },
+        {
+          "word": "source",
+          "partOfSpeech": "noun",
+          "meaning": "where something comes from",
+          "example": "The river is the source of water."
+        },
+        {
+          "word": "store",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to keep; a shop",
+          "example": "The body stores fat for energy."
+        },
+        {
+          "word": "supply",
+          "partOfSpeech": "noun/verb",
+          "meaning": "amount available; to provide",
+          "example": "The supply of food was limited."
+        },
+        {
+          "word": "switch",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to change; a device",
+          "example": "He switched to a new diet."
+        },
+        {
+          "word": "target",
+          "partOfSpeech": "noun/verb",
+          "meaning": "goal; to aim at",
+          "example": "The target was hit perfectly."
+        },
+        {
+          "word": "weight",
+          "partOfSpeech": "noun",
+          "meaning": "how heavy something is",
+          "example": "She lost weight on the diet."
+        },
+        {
+          "word": "yield",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to produce; amount produced",
+          "example": "The farm yields good crops."
+        }
+      ]
+    },
+    "9": {
+      "title": "Unit 9 - The Bachelor's lesson",
+      "words": [
+        {
+          "word": "bachelor",
+          "partOfSpeech": "noun",
+          "meaning": "unmarried man",
+          "example": "He is a bachelor who lives alone."
+        },
+        {
+          "word": "cook",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to prepare food; person who cooks",
+          "example": "She loves to cook Italian food."
+        },
+        {
+          "word": "dinner",
+          "partOfSpeech": "noun",
+          "meaning": "evening meal",
+          "example": "We had dinner at 7 PM."
+        },
+        {
+          "word": "experience",
+          "partOfSpeech": "noun/verb",
+          "meaning": "knowledge from doing; to go through",
+          "example": "Travel gives you new experiences."
+        },
+        {
+          "word": "fail",
+          "partOfSpeech": "verb",
+          "meaning": "to not succeed",
+          "example": "Don't be afraid to fail."
+        },
+        {
+          "word": "guest",
+          "partOfSpeech": "noun",
+          "meaning": "person invited to visit",
+          "example": "We had guests for dinner."
+        },
+        {
+          "word": "host",
+          "partOfSpeech": "noun/verb",
+          "meaning": "person who receives guests; to organize",
+          "example": "She was a gracious host."
+        },
+        {
+          "word": "invite",
+          "partOfSpeech": "verb",
+          "meaning": "to ask someone to come",
+          "example": "I invite you to my party."
+        },
+        {
+          "word": "kitchen",
+          "partOfSpeech": "noun",
+          "meaning": "room for cooking",
+          "example": "The kitchen is the heart of the home."
+        },
+        {
+          "word": "learn",
+          "partOfSpeech": "verb",
+          "meaning": "to gain knowledge",
+          "example": "Children learn quickly."
+        },
+        {
+          "word": "lesson",
+          "partOfSpeech": "noun",
+          "meaning": "teaching session",
+          "example": "The lesson was very helpful."
+        },
+        {
+          "word": "meal",
+          "partOfSpeech": "noun",
+          "meaning": "food eaten at one time",
+          "example": "Breakfast is the most important meal."
+        },
+        {
+          "word": "prepare",
+          "partOfSpeech": "verb",
+          "meaning": "to get ready",
+          "example": "Prepare for the exam."
+        },
+        {
+          "word": "recipe",
+          "partOfSpeech": "noun",
+          "meaning": "instructions for cooking",
+          "example": "Follow the recipe carefully."
+        },
+        {
+          "word": "serve",
+          "partOfSpeech": "verb",
+          "meaning": "to provide food or help",
+          "example": "The waiter served the food."
+        },
+        {
+          "word": "skill",
+          "partOfSpeech": "noun",
+          "meaning": "ability to do something well",
+          "example": "Cooking is a useful skill."
+        },
+        {
+          "word": "success",
+          "partOfSpeech": "noun",
+          "meaning": "achievement of goals",
+          "example": "Hard work leads to success."
+        },
+        {
+          "word": "teach",
+          "partOfSpeech": "verb",
+          "meaning": "to help someone learn",
+          "example": "Teachers teach students."
+        },
+        {
+          "word": "try",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to attempt; an attempt",
+          "example": "Try your best."
+        },
+        {
+          "word": "welcome",
+          "partOfSpeech": "verb/adjective",
+          "meaning": "to greet warmly; gladly received",
+          "example": "Welcome to our home."
+        }
+      ]
+    },
+    "10": {
+      "title": "Unit 10 - The Corrupt Administrator",
+      "words": [
+        {
+          "word": "administrator",
+          "partOfSpeech": "noun",
+          "meaning": "person who manages an organization",
+          "example": "The administrator approved the budget."
+        },
+        {
+          "word": "authority",
+          "partOfSpeech": "noun",
+          "meaning": "power to control or make decisions",
+          "example": "The police have authority to arrest."
+        },
+        {
+          "word": "bribe",
+          "partOfSpeech": "noun/verb",
+          "meaning": "money given to influence; to offer money",
+          "example": "He refused to take a bribe."
+        },
+        {
+          "word": "corrupt",
+          "partOfSpeech": "adjective/verb",
+          "meaning": "dishonest; to make dishonest",
+          "example": "The corrupt official was arrested."
+        },
+        {
+          "word": "crime",
+          "partOfSpeech": "noun",
+          "meaning": "illegal act",
+          "example": "Stealing is a crime."
+        },
+        {
+          "word": "evidence",
+          "partOfSpeech": "noun",
+          "meaning": "proof or indication",
+          "example": "The evidence proved his guilt."
+        },
+        {
+          "word": "government",
+          "partOfSpeech": "noun",
+          "meaning": "group that rules a country",
+          "example": "The government passed new laws."
+        },
+        {
+          "word": "investigate",
+          "partOfSpeech": "verb",
+          "meaning": "to examine carefully",
+          "example": "Police investigate crimes."
+        },
+        {
+          "word": "justice",
+          "partOfSpeech": "noun",
+          "meaning": "fair treatment under law",
+          "example": "Everyone deserves justice."
+        },
+        {
+          "word": "law",
+          "partOfSpeech": "noun",
+          "meaning": "rule made by government",
+          "example": "It's against the law to speed."
+        },
+        {
+          "word": "official",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "person in government; formal",
+          "example": "The official denied the charges."
+        },
+        {
+          "word": "power",
+          "partOfSpeech": "noun",
+          "meaning": "ability to control or influence",
+          "example": "Money gives people power."
+        },
+        {
+          "word": "punish",
+          "partOfSpeech": "verb",
+          "meaning": "to penalize for wrongdoing",
+          "example": "The court will punish the criminal."
+        },
+        {
+          "word": "report",
+          "partOfSpeech": "noun/verb",
+          "meaning": "written account; to tell about",
+          "example": "The report was published yesterday."
+        },
+        {
+          "word": "scandal",
+          "partOfSpeech": "noun",
+          "meaning": "shocking or disgraceful event",
+          "example": "The scandal ruined his career."
+        },
+        {
+          "word": "secret",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "information kept hidden; private",
+          "example": "Keep this a secret."
+        },
+        {
+          "word": "steal",
+          "partOfSpeech": "verb",
+          "meaning": "to take without permission",
+          "example": "It's wrong to steal."
+        },
+        {
+          "word": "suspect",
+          "partOfSpeech": "noun/verb",
+          "meaning": "person thought to be guilty; to think",
+          "example": "The suspect was arrested."
+        },
+        {
+          "word": "trust",
+          "partOfSpeech": "noun/verb",
+          "meaning": "belief in reliability; to believe",
+          "example": "Trust is important in relationships."
+        },
+        {
+          "word": "wrong",
+          "partOfSpeech": "adjective/adverb",
+          "meaning": "not correct; incorrectly",
+          "example": "It's wrong to lie."
+        }
+      ]
+    },
+    "11": {
+      "title": "Unit 11 - A Famous Accident",
+      "words": [
+        {
+          "word": "accident",
+          "partOfSpeech": "noun",
+          "meaning": "unfortunate event",
+          "example": "The car accident was serious."
+        },
+        {
+          "word": "celebrity",
+          "partOfSpeech": "noun",
+          "meaning": "famous person",
+          "example": "The celebrity signed autographs."
+        },
+        {
+          "word": "crash",
+          "partOfSpeech": "noun/verb",
+          "meaning": "violent collision; to collide",
+          "example": "The plane crash was tragic."
+        },
+        {
+          "word": "damage",
+          "partOfSpeech": "noun/verb",
+          "meaning": "harm; to harm",
+          "example": "The storm caused damage."
+        },
+        {
+          "word": "famous",
+          "partOfSpeech": "adjective",
+          "meaning": "well-known",
+          "example": "She is a famous actress."
+        },
+        {
+          "word": "injury",
+          "partOfSpeech": "noun",
+          "meaning": "physical harm",
+          "example": "He suffered a serious injury."
+        },
+        {
+          "word": "media",
+          "partOfSpeech": "noun",
+          "meaning": "news and entertainment",
+          "example": "The media covered the story."
+        },
+        {
+          "word": "news",
+          "partOfSpeech": "noun",
+          "meaning": "information about events",
+          "example": "The news was shocking."
+        },
+        {
+          "word": "public",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "people; open to everyone",
+          "example": "The public was concerned."
+        },
+        {
+          "word": "recovery",
+          "partOfSpeech": "noun",
+          "meaning": "return to health",
+          "example": "Her recovery was quick."
+        },
+        {
+          "word": "report",
+          "partOfSpeech": "noun/verb",
+          "meaning": "account; to tell",
+          "example": "The report was accurate."
+        },
+        {
+          "word": "safety",
+          "partOfSpeech": "noun",
+          "meaning": "protection from harm",
+          "example": "Safety is our priority."
+        },
+        {
+          "word": "scene",
+          "partOfSpeech": "noun",
+          "meaning": "place where something happens",
+          "example": "Police arrived at the scene."
+        },
+        {
+          "word": "serious",
+          "partOfSpeech": "adjective",
+          "meaning": "important or severe",
+          "example": "This is a serious matter."
+        },
+        {
+          "word": "survive",
+          "partOfSpeech": "verb",
+          "meaning": "to stay alive",
+          "example": "He survived the accident."
+        },
+        {
+          "word": "tragic",
+          "partOfSpeech": "adjective",
+          "meaning": "very sad",
+          "example": "It was a tragic event."
+        },
+        {
+          "word": "victim",
+          "partOfSpeech": "noun",
+          "meaning": "person harmed",
+          "example": "The victim was hospitalized."
+        },
+        {
+          "word": "witness",
+          "partOfSpeech": "noun/verb",
+          "meaning": "person who sees; to see",
+          "example": "The witness testified in court."
+        },
+        {
+          "word": "wound",
+          "partOfSpeech": "noun/verb",
+          "meaning": "injury; to injure",
+          "example": "The wound was deep."
+        },
+        {
+          "word": "wreck",
+          "partOfSpeech": "noun/verb",
+          "meaning": "destroyed vehicle; to destroy",
+          "example": "The car was a total wreck."
+        }
+      ]
+    },
+    "12": {
+      "title": "Unit 12 - Beethoven's Gift",
+      "words": [
+        {
+          "word": "art",
+          "partOfSpeech": "noun",
+          "meaning": "creative expression",
+          "example": "She loves modern art."
+        },
+        {
+          "word": "artist",
+          "partOfSpeech": "noun",
+          "meaning": "person who creates art",
+          "example": "The artist painted a masterpiece."
+        },
+        {
+          "word": "beautiful",
+          "partOfSpeech": "adjective",
+          "meaning": "pleasing to look at",
+          "example": "The sunset was beautiful."
+        },
+        {
+          "word": "compose",
+          "partOfSpeech": "verb",
+          "meaning": "to create music",
+          "example": "He composed a symphony."
+        },
+        {
+          "word": "creative",
+          "partOfSpeech": "adjective",
+          "meaning": "imaginative",
+          "example": "She is very creative."
+        },
+        {
+          "word": "deaf",
+          "partOfSpeech": "adjective",
+          "meaning": "unable to hear",
+          "example": "The musician was deaf."
+        },
+        {
+          "word": "emotion",
+          "partOfSpeech": "noun",
+          "meaning": "feeling",
+          "example": "The music expressed emotion."
+        },
+        {
+          "word": "express",
+          "partOfSpeech": "verb",
+          "meaning": "to show feelings",
+          "example": "Art helps express emotions."
+        },
+        {
+          "word": "gift",
+          "partOfSpeech": "noun",
+          "meaning": "talent or present",
+          "example": "He has a gift for music."
+        },
+        {
+          "word": "inspire",
+          "partOfSpeech": "verb",
+          "meaning": "to motivate",
+          "example": "The story inspired many."
+        },
+        {
+          "word": "masterpiece",
+          "partOfSpeech": "noun",
+          "meaning": "great work of art",
+          "example": "This painting is a masterpiece."
+        },
+        {
+          "word": "music",
+          "partOfSpeech": "noun",
+          "meaning": "organized sound",
+          "example": "I love classical music."
+        },
+        {
+          "word": "musician",
+          "partOfSpeech": "noun",
+          "meaning": "person who plays music",
+          "example": "The musician performed well."
+        },
+        {
+          "word": "passion",
+          "partOfSpeech": "noun",
+          "meaning": "strong feeling",
+          "example": "He has a passion for music."
+        },
+        {
+          "word": "perform",
+          "partOfSpeech": "verb",
+          "meaning": "to present to audience",
+          "example": "She performed beautifully."
+        },
+        {
+          "word": "symphony",
+          "partOfSpeech": "noun",
+          "meaning": "long musical piece",
+          "example": "The symphony was amazing."
+        },
+        {
+          "word": "talent",
+          "partOfSpeech": "noun",
+          "meaning": "natural ability",
+          "example": "She has great talent."
+        },
+        {
+          "word": "touch",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to feel; sense of feeling",
+          "example": "The music touched my heart."
+        },
+        {
+          "word": "vision",
+          "partOfSpeech": "noun",
+          "meaning": "ability to see or imagine",
+          "example": "He had a clear vision."
+        },
+        {
+          "word": "voice",
+          "partOfSpeech": "noun",
+          "meaning": "sound made when speaking",
+          "example": "She has a beautiful voice."
+        }
+      ]
+    },
+    "13": {
+      "title": "Unit 13 - The day Without Sight",
+      "words": [
+        {
+          "word": "blind",
+          "partOfSpeech": "adjective",
+          "meaning": "unable to see",
+          "example": "The blind man used a cane."
+        },
+        {
+          "word": "challenge",
+          "partOfSpeech": "noun/verb",
+          "meaning": "difficult task; to test",
+          "example": "This is a big challenge."
+        },
+        {
+          "word": "dark",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "without light; absence of light",
+          "example": "The room was dark."
+        },
+        {
+          "word": "difficulty",
+          "partOfSpeech": "noun",
+          "meaning": "problem or trouble",
+          "example": "He faced many difficulties."
+        },
+        {
+          "word": "experience",
+          "partOfSpeech": "noun/verb",
+          "meaning": "event; to go through",
+          "example": "It was a new experience."
+        },
+        {
+          "word": "feel",
+          "partOfSpeech": "verb",
+          "meaning": "to sense by touch",
+          "example": "Feel the texture."
+        },
+        {
+          "word": "guide",
+          "partOfSpeech": "noun/verb",
+          "meaning": "person who helps; to lead",
+          "example": "The guide showed the way."
+        },
+        {
+          "word": "help",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to assist; assistance",
+          "example": "Can you help me?"
+        },
+        {
+          "word": "imagine",
+          "partOfSpeech": "verb",
+          "meaning": "to picture in mind",
+          "example": "Imagine a world without sight."
+        },
+        {
+          "word": "independence",
+          "partOfSpeech": "noun",
+          "meaning": "freedom from control",
+          "example": "She values her independence."
+        },
+        {
+          "word": "learn",
+          "partOfSpeech": "verb",
+          "meaning": "to gain knowledge",
+          "example": "We learn from experience."
+        },
+        {
+          "word": "light",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "brightness; not heavy",
+          "example": "The light was bright."
+        },
+        {
+          "word": "sense",
+          "partOfSpeech": "noun/verb",
+          "meaning": "feeling; to perceive",
+          "example": "Use your common sense."
+        },
+        {
+          "word": "sight",
+          "partOfSpeech": "noun",
+          "meaning": "ability to see",
+          "example": "He lost his sight."
+        },
+        {
+          "word": "sound",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "noise; healthy",
+          "example": "The sound was loud."
+        },
+        {
+          "word": "support",
+          "partOfSpeech": "noun/verb",
+          "meaning": "help; to help",
+          "example": "Thank you for your support."
+        },
+        {
+          "word": "touch",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to feel; sense of feeling",
+          "example": "The fabric felt soft to touch."
+        },
+        {
+          "word": "understand",
+          "partOfSpeech": "verb",
+          "meaning": "to comprehend",
+          "example": "I understand the problem."
+        },
+        {
+          "word": "vision",
+          "partOfSpeech": "noun",
+          "meaning": "ability to see",
+          "example": "Her vision was perfect."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world is beautiful."
+        }
+      ]
+    },
+    "14": {
+      "title": "Unit 14 - The History of Parachutes",
+      "words": [
+        {
+          "word": "air",
+          "partOfSpeech": "noun",
+          "meaning": "the atmosphere",
+          "example": "The air was fresh."
+        },
+        {
+          "word": "brave",
+          "partOfSpeech": "adjective",
+          "meaning": "courageous",
+          "example": "The brave soldier fought."
+        },
+        {
+          "word": "danger",
+          "partOfSpeech": "noun",
+          "meaning": "risk of harm",
+          "example": "He faced great danger."
+        },
+        {
+          "word": "design",
+          "partOfSpeech": "noun/verb",
+          "meaning": "plan; to plan",
+          "example": "The design was clever."
+        },
+        {
+          "word": "develop",
+          "partOfSpeech": "verb",
+          "meaning": "to grow or improve",
+          "example": "Technology continues to develop."
+        },
+        {
+          "word": "fall",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to drop; autumn",
+          "example": "The leaves fall in autumn."
+        },
+        {
+          "word": "fly",
+          "partOfSpeech": "verb",
+          "meaning": "to move through air",
+          "example": "Birds fly in the sky."
+        },
+        {
+          "word": "height",
+          "partOfSpeech": "noun",
+          "meaning": "how high something is",
+          "example": "The building has great height."
+        },
+        {
+          "word": "history",
+          "partOfSpeech": "noun",
+          "meaning": "past events",
+          "example": "History repeats itself."
+        },
+        {
+          "word": "invent",
+          "partOfSpeech": "verb",
+          "meaning": "to create something new",
+          "example": "He invented a new device."
+        },
+        {
+          "word": "land",
+          "partOfSpeech": "noun/verb",
+          "meaning": "ground; to come down",
+          "example": "The plane will land soon."
+        },
+        {
+          "word": "military",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "relating to armed forces",
+          "example": "Military training is tough."
+        },
+        {
+          "word": "parachute",
+          "partOfSpeech": "noun",
+          "meaning": "device for safe landing",
+          "example": "The parachute opened safely."
+        },
+        {
+          "word": "pilot",
+          "partOfSpeech": "noun",
+          "meaning": "person who flies aircraft",
+          "example": "The pilot was experienced."
+        },
+        {
+          "word": "safety",
+          "partOfSpeech": "noun",
+          "meaning": "protection from harm",
+          "example": "Safety is important."
+        },
+        {
+          "word": "sky",
+          "partOfSpeech": "noun",
+          "meaning": "space above earth",
+          "example": "The sky was blue."
+        },
+        {
+          "word": "soldier",
+          "partOfSpeech": "noun",
+          "meaning": "member of army",
+          "example": "The soldier was brave."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Modern technology is amazing."
+        },
+        {
+          "word": "test",
+          "partOfSpeech": "noun/verb",
+          "meaning": "examination; to examine",
+          "example": "The test was difficult."
+        },
+        {
+          "word": "war",
+          "partOfSpeech": "noun",
+          "meaning": "armed conflict",
+          "example": "War is terrible."
+        }
+      ]
+    },
+    "15": {
+      "title": "Unit 15 - Microchips",
+      "words": [
+        {
+          "word": "advance",
+          "partOfSpeech": "noun/verb",
+          "meaning": "progress; to move forward",
+          "example": "Technology continues to advance."
+        },
+        {
+          "word": "computer",
+          "partOfSpeech": "noun",
+          "meaning": "electronic device",
+          "example": "The computer is fast."
+        },
+        {
+          "word": "control",
+          "partOfSpeech": "noun/verb",
+          "meaning": "power over; to manage",
+          "example": "He has control over the situation."
+        },
+        {
+          "word": "device",
+          "partOfSpeech": "noun",
+          "meaning": "tool or machine",
+          "example": "This device is useful."
+        },
+        {
+          "word": "electronic",
+          "partOfSpeech": "adjective",
+          "meaning": "using electricity",
+          "example": "Electronic devices are everywhere."
+        },
+        {
+          "word": "function",
+          "partOfSpeech": "noun/verb",
+          "meaning": "purpose; to work",
+          "example": "The function of this tool is clear."
+        },
+        {
+          "word": "information",
+          "partOfSpeech": "noun",
+          "meaning": "facts or data",
+          "example": "The information was helpful."
+        },
+        {
+          "word": "integrate",
+          "partOfSpeech": "verb",
+          "meaning": "to combine",
+          "example": "We need to integrate the systems."
+        },
+        {
+          "word": "microchip",
+          "partOfSpeech": "noun",
+          "meaning": "small electronic circuit",
+          "example": "The microchip is tiny."
+        },
+        {
+          "word": "modern",
+          "partOfSpeech": "adjective",
+          "meaning": "current or recent",
+          "example": "Modern technology is amazing."
+        },
+        {
+          "word": "process",
+          "partOfSpeech": "noun/verb",
+          "meaning": "series of steps; to handle",
+          "example": "The process takes time."
+        },
+        {
+          "word": "program",
+          "partOfSpeech": "noun/verb",
+          "meaning": "set of instructions; to code",
+          "example": "The program works well."
+        },
+        {
+          "word": "revolution",
+          "partOfSpeech": "noun",
+          "meaning": "major change",
+          "example": "The industrial revolution changed society."
+        },
+        {
+          "word": "science",
+          "partOfSpeech": "noun",
+          "meaning": "systematic study",
+          "example": "Science explains the world."
+        },
+        {
+          "word": "size",
+          "partOfSpeech": "noun",
+          "meaning": "how big something is",
+          "example": "The size is perfect."
+        },
+        {
+          "word": "small",
+          "partOfSpeech": "adjective",
+          "meaning": "not large",
+          "example": "The device is very small."
+        },
+        {
+          "word": "speed",
+          "partOfSpeech": "noun",
+          "meaning": "how fast something moves",
+          "example": "The speed was incredible."
+        },
+        {
+          "word": "system",
+          "partOfSpeech": "noun",
+          "meaning": "organized set of parts",
+          "example": "The system is efficient."
+        },
+        {
+          "word": "tiny",
+          "partOfSpeech": "adjective",
+          "meaning": "very small",
+          "example": "The chip is tiny."
+        },
+        {
+          "word": "wire",
+          "partOfSpeech": "noun",
+          "meaning": "thin metal thread",
+          "example": "The wire carries electricity."
+        }
+      ]
+    },
+    "16": {
+      "title": "Unit 16 - The new Bioco",
+      "words": [
+        {
+          "word": "business",
+          "partOfSpeech": "noun",
+          "meaning": "commercial activity",
+          "example": "The business is successful."
+        },
+        {
+          "word": "company",
+          "partOfSpeech": "noun",
+          "meaning": "organization for business",
+          "example": "The company hired new employees."
+        },
+        {
+          "word": "competition",
+          "partOfSpeech": "noun",
+          "meaning": "rivalry between businesses",
+          "example": "There is strong competition."
+        },
+        {
+          "word": "customer",
+          "partOfSpeech": "noun",
+          "meaning": "person who buys",
+          "example": "The customer was satisfied."
+        },
+        {
+          "word": "develop",
+          "partOfSpeech": "verb",
+          "meaning": "to grow or improve",
+          "example": "They developed a new product."
+        },
+        {
+          "word": "employee",
+          "partOfSpeech": "noun",
+          "meaning": "person who works",
+          "example": "The employee was promoted."
+        },
+        {
+          "word": "growth",
+          "partOfSpeech": "noun",
+          "meaning": "increase in size",
+          "example": "The company showed growth."
+        },
+        {
+          "word": "industry",
+          "partOfSpeech": "noun",
+          "meaning": "business sector",
+          "example": "The industry is changing."
+        },
+        {
+          "word": "innovation",
+          "partOfSpeech": "noun",
+          "meaning": "new idea or method",
+          "example": "Innovation drives progress."
+        },
+        {
+          "word": "market",
+          "partOfSpeech": "noun",
+          "meaning": "place to buy and sell",
+          "example": "The market is competitive."
+        },
+        {
+          "word": "product",
+          "partOfSpeech": "noun",
+          "meaning": "item made for sale",
+          "example": "The product is popular."
+        },
+        {
+          "word": "profit",
+          "partOfSpeech": "noun",
+          "meaning": "money earned",
+          "example": "The business made a profit."
+        },
+        {
+          "word": "service",
+          "partOfSpeech": "noun",
+          "meaning": "work done for others",
+          "example": "The service was excellent."
+        },
+        {
+          "word": "success",
+          "partOfSpeech": "noun",
+          "meaning": "achievement of goals",
+          "example": "Success requires hard work."
+        },
+        {
+          "word": "team",
+          "partOfSpeech": "noun",
+          "meaning": "group working together",
+          "example": "The team worked well."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Technology changes quickly."
+        },
+        {
+          "word": "value",
+          "partOfSpeech": "noun/verb",
+          "meaning": "worth; to appreciate",
+          "example": "The value increased."
+        },
+        {
+          "word": "vision",
+          "partOfSpeech": "noun",
+          "meaning": "future plan",
+          "example": "The company has a clear vision."
+        },
+        {
+          "word": "work",
+          "partOfSpeech": "noun/verb",
+          "meaning": "job; to do tasks",
+          "example": "The work is challenging."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world is connected."
+        }
+      ]
+    },
+    "17": {
+      "title": "Unit 17 - The Resourceful Landlord",
+      "words": [
+        {
+          "word": "apartment",
+          "partOfSpeech": "noun",
+          "meaning": "rented living space",
+          "example": "The apartment is spacious."
+        },
+        {
+          "word": "building",
+          "partOfSpeech": "noun",
+          "meaning": "structure with walls",
+          "example": "The building is old."
+        },
+        {
+          "word": "contract",
+          "partOfSpeech": "noun",
+          "meaning": "legal agreement",
+          "example": "The contract was signed."
+        },
+        {
+          "word": "cost",
+          "partOfSpeech": "noun/verb",
+          "meaning": "price; to require payment",
+          "example": "The cost was high."
+        },
+        {
+          "word": "fix",
+          "partOfSpeech": "verb",
+          "meaning": "to repair",
+          "example": "He fixed the problem."
+        },
+        {
+          "word": "home",
+          "partOfSpeech": "noun",
+          "meaning": "place where one lives",
+          "example": "Home is where the heart is."
+        },
+        {
+          "word": "house",
+          "partOfSpeech": "noun",
+          "meaning": "building for living",
+          "example": "The house is beautiful."
+        },
+        {
+          "word": "landlord",
+          "partOfSpeech": "noun",
+          "meaning": "owner of rental property",
+          "example": "The landlord was helpful."
+        },
+        {
+          "word": "maintain",
+          "partOfSpeech": "verb",
+          "meaning": "to keep in good condition",
+          "example": "He maintains the property."
+        },
+        {
+          "word": "money",
+          "partOfSpeech": "noun",
+          "meaning": "currency",
+          "example": "Money is important."
+        },
+        {
+          "word": "owner",
+          "partOfSpeech": "noun",
+          "meaning": "person who owns",
+          "example": "The owner was responsible."
+        },
+        {
+          "word": "pay",
+          "partOfSpeech": "verb",
+          "meaning": "to give money",
+          "example": "He pays rent monthly."
+        },
+        {
+          "word": "property",
+          "partOfSpeech": "noun",
+          "meaning": "land or buildings",
+          "example": "The property is valuable."
+        },
+        {
+          "word": "rent",
+          "partOfSpeech": "noun/verb",
+          "meaning": "payment for use; to lease",
+          "example": "The rent is due."
+        },
+        {
+          "word": "repair",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to fix; fixing",
+          "example": "The repair was quick."
+        },
+        {
+          "word": "resourceful",
+          "partOfSpeech": "adjective",
+          "meaning": "good at solving problems",
+          "example": "She is very resourceful."
+        },
+        {
+          "word": "responsible",
+          "partOfSpeech": "adjective",
+          "meaning": "accountable",
+          "example": "He is responsible."
+        },
+        {
+          "word": "room",
+          "partOfSpeech": "noun",
+          "meaning": "space in a building",
+          "example": "The room is clean."
+        },
+        {
+          "word": "tenant",
+          "partOfSpeech": "noun",
+          "meaning": "person who rents",
+          "example": "The tenant was happy."
+        },
+        {
+          "word": "value",
+          "partOfSpeech": "noun/verb",
+          "meaning": "worth; to appreciate",
+          "example": "The value increased."
+        }
+      ]
+    },
+    "18": {
+      "title": "Unit 18 - The First Organ Transplant",
+      "words": [
+        {
+          "word": "body",
+          "partOfSpeech": "noun",
+          "meaning": "physical structure",
+          "example": "The body needs rest."
+        },
+        {
+          "word": "doctor",
+          "partOfSpeech": "noun",
+          "meaning": "medical professional",
+          "example": "The doctor was skilled."
+        },
+        {
+          "word": "donor",
+          "partOfSpeech": "noun",
+          "meaning": "person who gives",
+          "example": "The donor was generous."
+        },
+        {
+          "word": "health",
+          "partOfSpeech": "noun",
+          "meaning": "physical condition",
+          "example": "Health is important."
+        },
+        {
+          "word": "heart",
+          "partOfSpeech": "noun",
+          "meaning": "organ that pumps blood",
+          "example": "The heart beats regularly."
+        },
+        {
+          "word": "hospital",
+          "partOfSpeech": "noun",
+          "meaning": "medical facility",
+          "example": "The hospital is modern."
+        },
+        {
+          "word": "life",
+          "partOfSpeech": "noun",
+          "meaning": "existence",
+          "example": "Life is precious."
+        },
+        {
+          "word": "medical",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to medicine",
+          "example": "Medical care is essential."
+        },
+        {
+          "word": "medicine",
+          "partOfSpeech": "noun",
+          "meaning": "treatment for illness",
+          "example": "The medicine helped."
+        },
+        {
+          "word": "organ",
+          "partOfSpeech": "noun",
+          "meaning": "part of the body",
+          "example": "The organ was healthy."
+        },
+        {
+          "word": "patient",
+          "partOfSpeech": "noun",
+          "meaning": "person receiving treatment",
+          "example": "The patient recovered."
+        },
+        {
+          "word": "receive",
+          "partOfSpeech": "verb",
+          "meaning": "to get",
+          "example": "He received the transplant."
+        },
+        {
+          "word": "recovery",
+          "partOfSpeech": "noun",
+          "meaning": "return to health",
+          "example": "The recovery was slow."
+        },
+        {
+          "word": "surgery",
+          "partOfSpeech": "noun",
+          "meaning": "medical operation",
+          "example": "The surgery was successful."
+        },
+        {
+          "word": "survive",
+          "partOfSpeech": "verb",
+          "meaning": "to stay alive",
+          "example": "He survived the operation."
+        },
+        {
+          "word": "team",
+          "partOfSpeech": "noun",
+          "meaning": "group working together",
+          "example": "The medical team was excellent."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Medical technology advanced."
+        },
+        {
+          "word": "transplant",
+          "partOfSpeech": "noun/verb",
+          "meaning": "organ transfer; to transfer",
+          "example": "The transplant was successful."
+        },
+        {
+          "word": "treatment",
+          "partOfSpeech": "noun",
+          "meaning": "medical care",
+          "example": "The treatment was effective."
+        },
+        {
+          "word": "wait",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to stay; period of waiting",
+          "example": "He had to wait for a donor."
+        }
+      ]
+    },
+    "19": {
+      "title": "Unit 19 - The North Star",
+      "words": [
+        {
+          "word": "astronomy",
+          "partOfSpeech": "noun",
+          "meaning": "study of stars",
+          "example": "Astronomy is fascinating."
+        },
+        {
+          "word": "bright",
+          "partOfSpeech": "adjective",
+          "meaning": "giving off light",
+          "example": "The star was bright."
+        },
+        {
+          "word": "constellation",
+          "partOfSpeech": "noun",
+          "meaning": "group of stars",
+          "example": "The constellation was visible."
+        },
+        {
+          "word": "direction",
+          "partOfSpeech": "noun",
+          "meaning": "way to go",
+          "example": "The direction was north."
+        },
+        {
+          "word": "distance",
+          "partOfSpeech": "noun",
+          "meaning": "space between things",
+          "example": "The distance was great."
+        },
+        {
+          "word": "earth",
+          "partOfSpeech": "noun",
+          "meaning": "our planet",
+          "example": "The earth rotates."
+        },
+        {
+          "word": "guide",
+          "partOfSpeech": "noun/verb",
+          "meaning": "person who helps; to lead",
+          "example": "The star was a guide."
+        },
+        {
+          "word": "light",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "brightness; not heavy",
+          "example": "The light was dim."
+        },
+        {
+          "word": "night",
+          "partOfSpeech": "noun",
+          "meaning": "time of darkness",
+          "example": "The night was clear."
+        },
+        {
+          "word": "north",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "direction toward pole",
+          "example": "The north star guided them."
+        },
+        {
+          "word": "planet",
+          "partOfSpeech": "noun",
+          "meaning": "celestial body",
+          "example": "Earth is a planet."
+        },
+        {
+          "word": "sky",
+          "partOfSpeech": "noun",
+          "meaning": "space above earth",
+          "example": "The sky was clear."
+        },
+        {
+          "word": "space",
+          "partOfSpeech": "noun",
+          "meaning": "area beyond earth",
+          "example": "Space is vast."
+        },
+        {
+          "word": "star",
+          "partOfSpeech": "noun",
+          "meaning": "bright object in sky",
+          "example": "The star twinkled."
+        },
+        {
+          "word": "system",
+          "partOfSpeech": "noun",
+          "meaning": "organized group",
+          "example": "The solar system has planets."
+        },
+        {
+          "word": "travel",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to go; journey",
+          "example": "They traveled by sea."
+        },
+        {
+          "word": "universe",
+          "partOfSpeech": "noun",
+          "meaning": "all of space",
+          "example": "The universe is infinite."
+        },
+        {
+          "word": "visible",
+          "partOfSpeech": "adjective",
+          "meaning": "able to be seen",
+          "example": "The star was visible."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world is beautiful."
+        },
+        {
+          "word": "year",
+          "partOfSpeech": "noun",
+          "meaning": "period of 365 days",
+          "example": "The year passed quickly."
+        }
+      ]
+    },
+    "20": {
+      "title": "Unit 20 - Dressed to Excess",
+      "words": [
+        {
+          "word": "appearance",
+          "partOfSpeech": "noun",
+          "meaning": "how someone looks",
+          "example": "Her appearance was elegant."
+        },
+        {
+          "word": "beautiful",
+          "partOfSpeech": "adjective",
+          "meaning": "pleasing to look at",
+          "example": "She looked beautiful."
+        },
+        {
+          "word": "clothing",
+          "partOfSpeech": "noun",
+          "meaning": "items worn on body",
+          "example": "The clothing was expensive."
+        },
+        {
+          "word": "dress",
+          "partOfSpeech": "noun/verb",
+          "meaning": "garment; to put on clothes",
+          "example": "The dress was elegant."
+        },
+        {
+          "word": "excess",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "too much; extra",
+          "example": "The excess was obvious."
+        },
+        {
+          "word": "fashion",
+          "partOfSpeech": "noun",
+          "meaning": "popular style",
+          "example": "Fashion changes quickly."
+        },
+        {
+          "word": "look",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to see; appearance",
+          "example": "She looked stunning."
+        },
+        {
+          "word": "material",
+          "partOfSpeech": "noun",
+          "meaning": "substance used to make things",
+          "example": "The material was silk."
+        },
+        {
+          "word": "money",
+          "partOfSpeech": "noun",
+          "meaning": "currency",
+          "example": "She spent a lot of money."
+        },
+        {
+          "word": "outfit",
+          "partOfSpeech": "noun",
+          "meaning": "set of clothes",
+          "example": "The outfit was perfect."
+        },
+        {
+          "word": "prefer",
+          "partOfSpeech": "verb",
+          "meaning": "to like better",
+          "example": "She prefers simple clothes."
+        },
+        {
+          "word": "price",
+          "partOfSpeech": "noun",
+          "meaning": "cost of something",
+          "example": "The price was high."
+        },
+        {
+          "word": "quality",
+          "partOfSpeech": "noun",
+          "meaning": "how good something is",
+          "example": "The quality was excellent."
+        },
+        {
+          "word": "simple",
+          "partOfSpeech": "adjective",
+          "meaning": "not complicated",
+          "example": "The design was simple."
+        },
+        {
+          "word": "style",
+          "partOfSpeech": "noun",
+          "meaning": "way of doing something",
+          "example": "Her style was unique."
+        },
+        {
+          "word": "taste",
+          "partOfSpeech": "noun",
+          "meaning": "preference or flavor",
+          "example": "She has good taste."
+        },
+        {
+          "word": "wear",
+          "partOfSpeech": "verb",
+          "meaning": "to have on body",
+          "example": "She wore a beautiful dress."
+        },
+        {
+          "word": "wealth",
+          "partOfSpeech": "noun",
+          "meaning": "large amount of money",
+          "example": "Her wealth was obvious."
+        },
+        {
+          "word": "wonderful",
+          "partOfSpeech": "adjective",
+          "meaning": "very good",
+          "example": "The dress was wonderful."
+        },
+        {
+          "word": "worth",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "value; deserving",
+          "example": "The dress was worth the price."
+        }
+      ]
+    },
+    "21": {
+      "title": "Unit 21 - Amazing Komodo Dragons",
+      "words": [
+        {
+          "word": "amazing",
+          "partOfSpeech": "adjective",
+          "meaning": "very surprising",
+          "example": "The dragon was amazing."
+        },
+        {
+          "word": "animal",
+          "partOfSpeech": "noun",
+          "meaning": "living creature",
+          "example": "The animal was large."
+        },
+        {
+          "word": "dangerous",
+          "partOfSpeech": "adjective",
+          "meaning": "likely to cause harm",
+          "example": "The dragon was dangerous."
+        },
+        {
+          "word": "dragon",
+          "partOfSpeech": "noun",
+          "meaning": "large lizard",
+          "example": "The dragon was huge."
+        },
+        {
+          "word": "hunt",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to search for food; searching",
+          "example": "The dragon hunts prey."
+        },
+        {
+          "word": "island",
+          "partOfSpeech": "noun",
+          "meaning": "land surrounded by water",
+          "example": "The island was remote."
+        },
+        {
+          "word": "large",
+          "partOfSpeech": "adjective",
+          "meaning": "big in size",
+          "example": "The dragon was large."
+        },
+        {
+          "word": "nature",
+          "partOfSpeech": "noun",
+          "meaning": "natural world",
+          "example": "Nature is beautiful."
+        },
+        {
+          "word": "prey",
+          "partOfSpeech": "noun",
+          "meaning": "animal hunted for food",
+          "example": "The prey was fast."
+        },
+        {
+          "word": "reptile",
+          "partOfSpeech": "noun",
+          "meaning": "cold-blooded animal",
+          "example": "The reptile was ancient."
+        },
+        {
+          "word": "size",
+          "partOfSpeech": "noun",
+          "meaning": "how big something is",
+          "example": "The size was impressive."
+        },
+        {
+          "word": "species",
+          "partOfSpeech": "noun",
+          "meaning": "type of animal",
+          "example": "The species was rare."
+        },
+        {
+          "word": "strong",
+          "partOfSpeech": "adjective",
+          "meaning": "having power",
+          "example": "The dragon was strong."
+        },
+        {
+          "word": "survive",
+          "partOfSpeech": "verb",
+          "meaning": "to stay alive",
+          "example": "The dragon survived."
+        },
+        {
+          "word": "territory",
+          "partOfSpeech": "noun",
+          "meaning": "area controlled by animal",
+          "example": "The territory was large."
+        },
+        {
+          "word": "wild",
+          "partOfSpeech": "adjective",
+          "meaning": "not tamed",
+          "example": "The dragon was wild."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world is diverse."
+        },
+        {
+          "word": "zoo",
+          "partOfSpeech": "noun",
+          "meaning": "place with animals",
+          "example": "The zoo was interesting."
+        },
+        {
+          "word": "creature",
+          "partOfSpeech": "noun",
+          "meaning": "living being",
+          "example": "The creature was fascinating."
+        },
+        {
+          "word": "unique",
+          "partOfSpeech": "adjective",
+          "meaning": "one of a kind",
+          "example": "The dragon was unique."
+        }
+      ]
+    },
+    "22": {
+      "title": "Unit 22 - Greek Magical Papyri",
+      "words": [
+        {
+          "word": "ancient",
+          "partOfSpeech": "adjective",
+          "meaning": "very old",
+          "example": "The papyri were ancient."
+        },
+        {
+          "word": "book",
+          "partOfSpeech": "noun",
+          "meaning": "written work",
+          "example": "The book was old."
+        },
+        {
+          "word": "culture",
+          "partOfSpeech": "noun",
+          "meaning": "way of life",
+          "example": "The culture was rich."
+        },
+        {
+          "word": "document",
+          "partOfSpeech": "noun",
+          "meaning": "written record",
+          "example": "The document was valuable."
+        },
+        {
+          "word": "greek",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "from Greece; person from Greece",
+          "example": "The Greek culture was ancient."
+        },
+        {
+          "word": "history",
+          "partOfSpeech": "noun",
+          "meaning": "past events",
+          "example": "The history was fascinating."
+        },
+        {
+          "word": "knowledge",
+          "partOfSpeech": "noun",
+          "meaning": "information learned",
+          "example": "The knowledge was valuable."
+        },
+        {
+          "word": "magical",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to magic",
+          "example": "The papyri were magical."
+        },
+        {
+          "word": "mystery",
+          "partOfSpeech": "noun",
+          "meaning": "something unexplained",
+          "example": "The mystery was deep."
+        },
+        {
+          "word": "papyri",
+          "partOfSpeech": "noun",
+          "meaning": "ancient paper",
+          "example": "The papyri were fragile."
+        },
+        {
+          "word": "preserve",
+          "partOfSpeech": "verb",
+          "meaning": "to keep safe",
+          "example": "They preserved the papyri."
+        },
+        {
+          "word": "read",
+          "partOfSpeech": "verb",
+          "meaning": "to look at words",
+          "example": "He read the papyri."
+        },
+        {
+          "word": "research",
+          "partOfSpeech": "noun/verb",
+          "meaning": "study; to study",
+          "example": "The research was thorough."
+        },
+        {
+          "word": "scholar",
+          "partOfSpeech": "noun",
+          "meaning": "educated person",
+          "example": "The scholar studied the papyri."
+        },
+        {
+          "word": "science",
+          "partOfSpeech": "noun",
+          "meaning": "systematic study",
+          "example": "The science was advanced."
+        },
+        {
+          "word": "study",
+          "partOfSpeech": "noun/verb",
+          "meaning": "learning; to learn",
+          "example": "The study was important."
+        },
+        {
+          "word": "text",
+          "partOfSpeech": "noun",
+          "meaning": "written words",
+          "example": "The text was difficult."
+        },
+        {
+          "word": "time",
+          "partOfSpeech": "noun",
+          "meaning": "period or moment",
+          "example": "The time was long ago."
+        },
+        {
+          "word": "understand",
+          "partOfSpeech": "verb",
+          "meaning": "to comprehend",
+          "example": "He understood the text."
+        },
+        {
+          "word": "write",
+          "partOfSpeech": "verb",
+          "meaning": "to put words on paper",
+          "example": "They wrote the papyri."
+        }
+      ]
+    },
+    "23": {
+      "title": "Unit 23 - Dangerous Bites",
+      "words": [
+        {
+          "word": "bite",
+          "partOfSpeech": "noun/verb",
+          "meaning": "act of biting; to use teeth",
+          "example": "The bite was painful."
+        },
+        {
+          "word": "dangerous",
+          "partOfSpeech": "adjective",
+          "meaning": "likely to cause harm",
+          "example": "The bite was dangerous."
+        },
+        {
+          "word": "deadly",
+          "partOfSpeech": "adjective",
+          "meaning": "causing death",
+          "example": "The venom was deadly."
+        },
+        {
+          "word": "doctor",
+          "partOfSpeech": "noun",
+          "meaning": "medical professional",
+          "example": "The doctor treated the bite."
+        },
+        {
+          "word": "health",
+          "partOfSpeech": "noun",
+          "meaning": "physical condition",
+          "example": "Health is important."
+        },
+        {
+          "word": "hospital",
+          "partOfSpeech": "noun",
+          "meaning": "medical facility",
+          "example": "The hospital was nearby."
+        },
+        {
+          "word": "injury",
+          "partOfSpeech": "noun",
+          "meaning": "physical harm",
+          "example": "The injury was serious."
+        },
+        {
+          "word": "medicine",
+          "partOfSpeech": "noun",
+          "meaning": "treatment for illness",
+          "example": "The medicine helped."
+        },
+        {
+          "word": "pain",
+          "partOfSpeech": "noun",
+          "meaning": "unpleasant feeling",
+          "example": "The pain was intense."
+        },
+        {
+          "word": "poison",
+          "partOfSpeech": "noun",
+          "meaning": "harmful substance",
+          "example": "The poison was deadly."
+        },
+        {
+          "word": "safety",
+          "partOfSpeech": "noun",
+          "meaning": "protection from harm",
+          "example": "Safety is important."
+        },
+        {
+          "word": "snake",
+          "partOfSpeech": "noun",
+          "meaning": "reptile without legs",
+          "example": "The snake was venomous."
+        },
+        {
+          "word": "spider",
+          "partOfSpeech": "noun",
+          "meaning": "eight-legged creature",
+          "example": "The spider was dangerous."
+        },
+        {
+          "word": "survive",
+          "partOfSpeech": "verb",
+          "meaning": "to stay alive",
+          "example": "He survived the bite."
+        },
+        {
+          "word": "treatment",
+          "partOfSpeech": "noun",
+          "meaning": "medical care",
+          "example": "The treatment was quick."
+        },
+        {
+          "word": "venom",
+          "partOfSpeech": "noun",
+          "meaning": "poison from animal",
+          "example": "The venom was deadly."
+        },
+        {
+          "word": "victim",
+          "partOfSpeech": "noun",
+          "meaning": "person harmed",
+          "example": "The victim was treated."
+        },
+        {
+          "word": "warning",
+          "partOfSpeech": "noun",
+          "meaning": "notice of danger",
+          "example": "The warning was clear."
+        },
+        {
+          "word": "wound",
+          "partOfSpeech": "noun/verb",
+          "meaning": "injury; to injure",
+          "example": "The wound was deep."
+        },
+        {
+          "word": "serious",
+          "partOfSpeech": "adjective",
+          "meaning": "important or severe",
+          "example": "The bite was serious."
+        }
+      ]
+    },
+    "24": {
+      "title": "Unit 24 - The Lydian King",
+      "words": [
+        {
+          "word": "ancient",
+          "partOfSpeech": "adjective",
+          "meaning": "very old",
+          "example": "The kingdom was ancient."
+        },
+        {
+          "word": "army",
+          "partOfSpeech": "noun",
+          "meaning": "military force",
+          "example": "The army was strong."
+        },
+        {
+          "word": "battle",
+          "partOfSpeech": "noun/verb",
+          "meaning": "fight; to fight",
+          "example": "The battle was fierce."
+        },
+        {
+          "word": "brave",
+          "partOfSpeech": "adjective",
+          "meaning": "courageous",
+          "example": "The king was brave."
+        },
+        {
+          "word": "conquer",
+          "partOfSpeech": "verb",
+          "meaning": "to defeat and control",
+          "example": "He conquered the land."
+        },
+        {
+          "word": "empire",
+          "partOfSpeech": "noun",
+          "meaning": "large territory ruled by one",
+          "example": "The empire was vast."
+        },
+        {
+          "word": "enemy",
+          "partOfSpeech": "noun",
+          "meaning": "opponent in war",
+          "example": "The enemy was defeated."
+        },
+        {
+          "word": "fight",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to battle; conflict",
+          "example": "They fought bravely."
+        },
+        {
+          "word": "king",
+          "partOfSpeech": "noun",
+          "meaning": "male ruler",
+          "example": "The king was powerful."
+        },
+        {
+          "word": "kingdom",
+          "partOfSpeech": "noun",
+          "meaning": "land ruled by king",
+          "example": "The kingdom was large."
+        },
+        {
+          "word": "lead",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to guide; metal",
+          "example": "He led the army."
+        },
+        {
+          "word": "military",
+          "partOfSpeech": "adjective/noun",
+          "meaning": "relating to armed forces",
+          "example": "Military power was important."
+        },
+        {
+          "word": "power",
+          "partOfSpeech": "noun",
+          "meaning": "ability to control",
+          "example": "The power was great."
+        },
+        {
+          "word": "rule",
+          "partOfSpeech": "noun/verb",
+          "meaning": "law; to govern",
+          "example": "He ruled wisely."
+        },
+        {
+          "word": "soldier",
+          "partOfSpeech": "noun",
+          "meaning": "member of army",
+          "example": "The soldier was loyal."
+        },
+        {
+          "word": "strength",
+          "partOfSpeech": "noun",
+          "meaning": "power or force",
+          "example": "The strength was impressive."
+        },
+        {
+          "word": "victory",
+          "partOfSpeech": "noun",
+          "meaning": "success in battle",
+          "example": "The victory was complete."
+        },
+        {
+          "word": "war",
+          "partOfSpeech": "noun",
+          "meaning": "armed conflict",
+          "example": "The war was long."
+        },
+        {
+          "word": "wealth",
+          "partOfSpeech": "noun",
+          "meaning": "large amount of money",
+          "example": "The wealth was great."
+        },
+        {
+          "word": "wise",
+          "partOfSpeech": "adjective",
+          "meaning": "having good judgment",
+          "example": "The king was wise."
+        }
+      ]
+    },
+    "25": {
+      "title": "Unit 25 - The End of Smallpox",
+      "words": [
+        {
+          "word": "cure",
+          "partOfSpeech": "noun/verb",
+          "meaning": "treatment that heals; to heal",
+          "example": "The cure was found."
+        },
+        {
+          "word": "disease",
+          "partOfSpeech": "noun",
+          "meaning": "illness",
+          "example": "The disease was deadly."
+        },
+        {
+          "word": "doctor",
+          "partOfSpeech": "noun",
+          "meaning": "medical professional",
+          "example": "The doctor helped."
+        },
+        {
+          "word": "end",
+          "partOfSpeech": "noun/verb",
+          "meaning": "finish; to finish",
+          "example": "The end was near."
+        },
+        {
+          "word": "health",
+          "partOfSpeech": "noun",
+          "meaning": "physical condition",
+          "example": "Health improved."
+        },
+        {
+          "word": "hospital",
+          "partOfSpeech": "noun",
+          "meaning": "medical facility",
+          "example": "The hospital treated patients."
+        },
+        {
+          "word": "medicine",
+          "partOfSpeech": "noun",
+          "meaning": "treatment for illness",
+          "example": "The medicine worked."
+        },
+        {
+          "word": "patient",
+          "partOfSpeech": "noun",
+          "meaning": "person receiving treatment",
+          "example": "The patient recovered."
+        },
+        {
+          "word": "prevent",
+          "partOfSpeech": "verb",
+          "meaning": "to stop from happening",
+          "example": "They prevented the disease."
+        },
+        {
+          "word": "research",
+          "partOfSpeech": "noun/verb",
+          "meaning": "study; to study",
+          "example": "The research was successful."
+        },
+        {
+          "word": "science",
+          "partOfSpeech": "noun",
+          "meaning": "systematic study",
+          "example": "Science found the cure."
+        },
+        {
+          "word": "smallpox",
+          "partOfSpeech": "noun",
+          "meaning": "deadly disease",
+          "example": "Smallpox was eliminated."
+        },
+        {
+          "word": "suffer",
+          "partOfSpeech": "verb",
+          "meaning": "to experience pain",
+          "example": "Many suffered from the disease."
+        },
+        {
+          "word": "survive",
+          "partOfSpeech": "verb",
+          "meaning": "to stay alive",
+          "example": "Some survived the disease."
+        },
+        {
+          "word": "treatment",
+          "partOfSpeech": "noun",
+          "meaning": "medical care",
+          "example": "The treatment was effective."
+        },
+        {
+          "word": "vaccine",
+          "partOfSpeech": "noun",
+          "meaning": "medicine to prevent disease",
+          "example": "The vaccine worked."
+        },
+        {
+          "word": "victim",
+          "partOfSpeech": "noun",
+          "meaning": "person harmed",
+          "example": "The victim was treated."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world was saved."
+        },
+        {
+          "word": "success",
+          "partOfSpeech": "noun",
+          "meaning": "achievement of goals",
+          "example": "The success was great."
+        },
+        {
+          "word": "hope",
+          "partOfSpeech": "noun/verb",
+          "meaning": "feeling of expectation; to want",
+          "example": "There was hope for a cure."
+        }
+      ]
+    },
+    "26": {
+      "title": "Unit 26 - Epidemic in Zimbabwe",
+      "words": [
+        {
+          "word": "africa",
+          "partOfSpeech": "noun",
+          "meaning": "continent",
+          "example": "Africa is diverse."
+        },
+        {
+          "word": "country",
+          "partOfSpeech": "noun",
+          "meaning": "nation",
+          "example": "The country was affected."
+        },
+        {
+          "word": "crisis",
+          "partOfSpeech": "noun",
+          "meaning": "serious problem",
+          "example": "The crisis was severe."
+        },
+        {
+          "word": "disease",
+          "partOfSpeech": "noun",
+          "meaning": "illness",
+          "example": "The disease spread quickly."
+        },
+        {
+          "word": "epidemic",
+          "partOfSpeech": "noun",
+          "meaning": "widespread disease",
+          "example": "The epidemic was serious."
+        },
+        {
+          "word": "government",
+          "partOfSpeech": "noun",
+          "meaning": "group that rules",
+          "example": "The government responded."
+        },
+        {
+          "word": "health",
+          "partOfSpeech": "noun",
+          "meaning": "physical condition",
+          "example": "Health was threatened."
+        },
+        {
+          "word": "help",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to assist; assistance",
+          "example": "Help was needed."
+        },
+        {
+          "word": "international",
+          "partOfSpeech": "adjective",
+          "meaning": "between countries",
+          "example": "International aid arrived."
+        },
+        {
+          "word": "medical",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to medicine",
+          "example": "Medical care was provided."
+        },
+        {
+          "word": "people",
+          "partOfSpeech": "noun",
+          "meaning": "human beings",
+          "example": "People were affected."
+        },
+        {
+          "word": "prevent",
+          "partOfSpeech": "verb",
+          "meaning": "to stop from happening",
+          "example": "They prevented spread."
+        },
+        {
+          "word": "problem",
+          "partOfSpeech": "noun",
+          "meaning": "difficulty",
+          "example": "The problem was serious."
+        },
+        {
+          "word": "public",
+          "partOfSpeech": "noun/adjective",
+          "meaning": "people; open to everyone",
+          "example": "Public health was important."
+        },
+        {
+          "word": "response",
+          "partOfSpeech": "noun",
+          "meaning": "reaction",
+          "example": "The response was quick."
+        },
+        {
+          "word": "spread",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to extend; extension",
+          "example": "The disease spread rapidly."
+        },
+        {
+          "word": "support",
+          "partOfSpeech": "noun/verb",
+          "meaning": "help; to help",
+          "example": "Support was provided."
+        },
+        {
+          "word": "treatment",
+          "partOfSpeech": "noun",
+          "meaning": "medical care",
+          "example": "Treatment was available."
+        },
+        {
+          "word": "victim",
+          "partOfSpeech": "noun",
+          "meaning": "person harmed",
+          "example": "Victims were treated."
+        },
+        {
+          "word": "zimbabwe",
+          "partOfSpeech": "noun",
+          "meaning": "country in Africa",
+          "example": "Zimbabwe was affected."
+        }
+      ]
+    },
+    "27": {
+      "title": "Unit 27 - Seizures Then and Now",
+      "words": [
+        {
+          "word": "attack",
+          "partOfSpeech": "noun/verb",
+          "meaning": "sudden illness; to assault",
+          "example": "The attack was sudden."
+        },
+        {
+          "word": "brain",
+          "partOfSpeech": "noun",
+          "meaning": "organ in head",
+          "example": "The brain controls the body."
+        },
+        {
+          "word": "condition",
+          "partOfSpeech": "noun",
+          "meaning": "medical state",
+          "example": "The condition was serious."
+        },
+        {
+          "word": "control",
+          "partOfSpeech": "noun/verb",
+          "meaning": "power over; to manage",
+          "example": "He lost control."
+        },
+        {
+          "word": "doctor",
+          "partOfSpeech": "noun",
+          "meaning": "medical professional",
+          "example": "The doctor helped."
+        },
+        {
+          "word": "epilepsy",
+          "partOfSpeech": "noun",
+          "meaning": "brain disorder",
+          "example": "Epilepsy causes seizures."
+        },
+        {
+          "word": "health",
+          "partOfSpeech": "noun",
+          "meaning": "physical condition",
+          "example": "Health is important."
+        },
+        {
+          "word": "medical",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to medicine",
+          "example": "Medical treatment helped."
+        },
+        {
+          "word": "medicine",
+          "partOfSpeech": "noun",
+          "meaning": "treatment for illness",
+          "example": "The medicine worked."
+        },
+        {
+          "word": "modern",
+          "partOfSpeech": "adjective",
+          "meaning": "current or recent",
+          "example": "Modern medicine is advanced."
+        },
+        {
+          "word": "nervous",
+          "partOfSpeech": "adjective",
+          "meaning": "relating to nerves",
+          "example": "The nervous system was affected."
+        },
+        {
+          "word": "patient",
+          "partOfSpeech": "noun",
+          "meaning": "person receiving treatment",
+          "example": "The patient improved."
+        },
+        {
+          "word": "seizure",
+          "partOfSpeech": "noun",
+          "meaning": "sudden attack",
+          "example": "The seizure was frightening."
+        },
+        {
+          "word": "symptom",
+          "partOfSpeech": "noun",
+          "meaning": "sign of illness",
+          "example": "The symptom was clear."
+        },
+        {
+          "word": "system",
+          "partOfSpeech": "noun",
+          "meaning": "organized group",
+          "example": "The nervous system was affected."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Technology improved treatment."
+        },
+        {
+          "word": "treatment",
+          "partOfSpeech": "noun",
+          "meaning": "medical care",
+          "example": "The treatment was effective."
+        },
+        {
+          "word": "understand",
+          "partOfSpeech": "verb",
+          "meaning": "to comprehend",
+          "example": "They understood the condition."
+        },
+        {
+          "word": "victim",
+          "partOfSpeech": "noun",
+          "meaning": "person harmed",
+          "example": "The victim was treated."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world has changed."
+        }
+      ]
+    },
+    "28": {
+      "title": "Unit 28 - The Ice House",
+      "words": [
+        {
+          "word": "build",
+          "partOfSpeech": "verb",
+          "meaning": "to construct",
+          "example": "They built the house."
+        },
+        {
+          "word": "business",
+          "partOfSpeech": "noun",
+          "meaning": "commercial activity",
+          "example": "The business was successful."
+        },
+        {
+          "word": "cold",
+          "partOfSpeech": "adjective",
+          "meaning": "low temperature",
+          "example": "The ice was cold."
+        },
+        {
+          "word": "company",
+          "partOfSpeech": "noun",
+          "meaning": "organization for business",
+          "example": "The company grew."
+        },
+        {
+          "word": "customer",
+          "partOfSpeech": "noun",
+          "meaning": "person who buys",
+          "example": "The customer was happy."
+        },
+        {
+          "word": "freeze",
+          "partOfSpeech": "verb",
+          "meaning": "to turn to ice",
+          "example": "Water freezes at zero."
+        },
+        {
+          "word": "house",
+          "partOfSpeech": "noun",
+          "meaning": "building for living",
+          "example": "The house was large."
+        },
+        {
+          "word": "ice",
+          "partOfSpeech": "noun",
+          "meaning": "frozen water",
+          "example": "The ice was clear."
+        },
+        {
+          "word": "industry",
+          "partOfSpeech": "noun",
+          "meaning": "business sector",
+          "example": "The industry developed."
+        },
+        {
+          "word": "invent",
+          "partOfSpeech": "verb",
+          "meaning": "to create something new",
+          "example": "He invented the process."
+        },
+        {
+          "word": "machine",
+          "partOfSpeech": "noun",
+          "meaning": "mechanical device",
+          "example": "The machine worked well."
+        },
+        {
+          "word": "money",
+          "partOfSpeech": "noun",
+          "meaning": "currency",
+          "example": "Money was made."
+        },
+        {
+          "word": "product",
+          "partOfSpeech": "noun",
+          "meaning": "item made for sale",
+          "example": "The product was popular."
+        },
+        {
+          "word": "sell",
+          "partOfSpeech": "verb",
+          "meaning": "to exchange for money",
+          "example": "They sold ice."
+        },
+        {
+          "word": "service",
+          "partOfSpeech": "noun",
+          "meaning": "work done for others",
+          "example": "The service was good."
+        },
+        {
+          "word": "store",
+          "partOfSpeech": "verb/noun",
+          "meaning": "to keep; a shop",
+          "example": "They stored the ice."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Technology improved."
+        },
+        {
+          "word": "temperature",
+          "partOfSpeech": "noun",
+          "meaning": "degree of heat",
+          "example": "The temperature was low."
+        },
+        {
+          "word": "work",
+          "partOfSpeech": "noun/verb",
+          "meaning": "job; to do tasks",
+          "example": "The work was hard."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world changed."
+        }
+      ]
+    },
+    "29": {
+      "title": "Unit 29 - Preparing for Future",
+      "words": [
+        {
+          "word": "change",
+          "partOfSpeech": "noun/verb",
+          "meaning": "difference; to make different",
+          "example": "Change is constant."
+        },
+        {
+          "word": "develop",
+          "partOfSpeech": "verb",
+          "meaning": "to grow or improve",
+          "example": "They developed skills."
+        },
+        {
+          "word": "education",
+          "partOfSpeech": "noun",
+          "meaning": "process of learning",
+          "example": "Education is important."
+        },
+        {
+          "word": "future",
+          "partOfSpeech": "noun",
+          "meaning": "time to come",
+          "example": "The future is uncertain."
+        },
+        {
+          "word": "goal",
+          "partOfSpeech": "noun",
+          "meaning": "aim or target",
+          "example": "The goal was clear."
+        },
+        {
+          "word": "improve",
+          "partOfSpeech": "verb",
+          "meaning": "to make better",
+          "example": "They improved skills."
+        },
+        {
+          "word": "learn",
+          "partOfSpeech": "verb",
+          "meaning": "to gain knowledge",
+          "example": "They learned quickly."
+        },
+        {
+          "word": "life",
+          "partOfSpeech": "noun",
+          "meaning": "existence",
+          "example": "Life is precious."
+        },
+        {
+          "word": "opportunity",
+          "partOfSpeech": "noun",
+          "meaning": "chance for success",
+          "example": "The opportunity was great."
+        },
+        {
+          "word": "plan",
+          "partOfSpeech": "noun/verb",
+          "meaning": "strategy; to prepare",
+          "example": "The plan was good."
+        },
+        {
+          "word": "prepare",
+          "partOfSpeech": "verb",
+          "meaning": "to get ready",
+          "example": "They prepared well."
+        },
+        {
+          "word": "progress",
+          "partOfSpeech": "noun",
+          "meaning": "advancement",
+          "example": "Progress was made."
+        },
+        {
+          "word": "skill",
+          "partOfSpeech": "noun",
+          "meaning": "ability to do something well",
+          "example": "The skill was useful."
+        },
+        {
+          "word": "study",
+          "partOfSpeech": "noun/verb",
+          "meaning": "learning; to learn",
+          "example": "The study was important."
+        },
+        {
+          "word": "success",
+          "partOfSpeech": "noun",
+          "meaning": "achievement of goals",
+          "example": "Success requires effort."
+        },
+        {
+          "word": "technology",
+          "partOfSpeech": "noun",
+          "meaning": "scientific knowledge",
+          "example": "Technology advances quickly."
+        },
+        {
+          "word": "time",
+          "partOfSpeech": "noun",
+          "meaning": "period or moment",
+          "example": "Time passes quickly."
+        },
+        {
+          "word": "training",
+          "partOfSpeech": "noun",
+          "meaning": "instruction",
+          "example": "The training was thorough."
+        },
+        {
+          "word": "work",
+          "partOfSpeech": "noun/verb",
+          "meaning": "job; to do tasks",
+          "example": "The work was challenging."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world is changing."
+        }
+      ]
+    },
+    "30": {
+      "title": "Unit 30 - Hundred Plays",
+      "words": [
+        {
+          "word": "act",
+          "partOfSpeech": "noun/verb",
+          "meaning": "part of play; to perform",
+          "example": "The act was dramatic."
+        },
+        {
+          "word": "actor",
+          "partOfSpeech": "noun",
+          "meaning": "person who performs",
+          "example": "The actor was talented."
+        },
+        {
+          "word": "art",
+          "partOfSpeech": "noun",
+          "meaning": "creative expression",
+          "example": "Art is beautiful."
+        },
+        {
+          "word": "audience",
+          "partOfSpeech": "noun",
+          "meaning": "people watching",
+          "example": "The audience clapped."
+        },
+        {
+          "word": "character",
+          "partOfSpeech": "noun",
+          "meaning": "person in story",
+          "example": "The character was interesting."
+        },
+        {
+          "word": "drama",
+          "partOfSpeech": "noun",
+          "meaning": "serious play",
+          "example": "The drama was intense."
+        },
+        {
+          "word": "entertain",
+          "partOfSpeech": "verb",
+          "meaning": "to amuse",
+          "example": "They entertained the crowd."
+        },
+        {
+          "word": "hundred",
+          "partOfSpeech": "noun",
+          "meaning": "number 100",
+          "example": "A hundred plays were written."
+        },
+        {
+          "word": "perform",
+          "partOfSpeech": "verb",
+          "meaning": "to present to audience",
+          "example": "They performed well."
+        },
+        {
+          "word": "performance",
+          "partOfSpeech": "noun",
+          "meaning": "presentation",
+          "example": "The performance was excellent."
+        },
+        {
+          "word": "play",
+          "partOfSpeech": "noun/verb",
+          "meaning": "dramatic work; to have fun",
+          "example": "The play was successful."
+        },
+        {
+          "word": "scene",
+          "partOfSpeech": "noun",
+          "meaning": "part of play",
+          "example": "The scene was dramatic."
+        },
+        {
+          "word": "stage",
+          "partOfSpeech": "noun",
+          "meaning": "platform for performance",
+          "example": "The stage was large."
+        },
+        {
+          "word": "story",
+          "partOfSpeech": "noun",
+          "meaning": "narrative",
+          "example": "The story was engaging."
+        },
+        {
+          "word": "theater",
+          "partOfSpeech": "noun",
+          "meaning": "place for performances",
+          "example": "The theater was full."
+        },
+        {
+          "word": "write",
+          "partOfSpeech": "verb",
+          "meaning": "to put words on paper",
+          "example": "He wrote the play."
+        },
+        {
+          "word": "writer",
+          "partOfSpeech": "noun",
+          "meaning": "person who writes",
+          "example": "The writer was famous."
+        },
+        {
+          "word": "show",
+          "partOfSpeech": "noun/verb",
+          "meaning": "performance; to display",
+          "example": "The show was great."
+        },
+        {
+          "word": "success",
+          "partOfSpeech": "noun",
+          "meaning": "achievement of goals",
+          "example": "The success was great."
+        },
+        {
+          "word": "world",
+          "partOfSpeech": "noun",
+          "meaning": "the earth and everything on it",
+          "example": "The world of theater."
+        }
+      ]
     }
   }
 };
