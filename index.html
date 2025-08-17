@@ -3,255 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4000 Essential English Words - Flashcard App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Working Flashcard App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .book-card { border: 1px solid #ccc; padding: 15px; margin: 10px; cursor: pointer; display: inline-block; }
+        .book-card:hover { background: #f0f0f0; }
+        .unit-card { border: 1px solid #ddd; padding: 10px; margin: 5px; cursor: pointer; display: inline-block; }
+        .unit-card:hover { background: #f5f5f5; }
+        .word-item { border: 1px solid #eee; padding: 8px; margin: 3px; background: #fafafa; }
+        #output { background: #f5f5f5; padding: 10px; margin: 10px 0; }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+        .section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        button { margin: 5px; padding: 8px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 id="mainTitle">4000 Essential English Words</h1>
-            <h1 id="bookTitle" style="display: none;">Book Study</h1>
-            <h1 id="unitTitle" style="display: none;">Unit Study</h1>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-            <div class="progress-text" id="progressText">0% Complete</div>
-            <div class="repository-status" id="repositoryStatus">Repository: checking...</div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="nav">
-            <button class="nav-btn active" data-mode="study">Study Mode</button>
-            <button class="nav-btn" data-mode="practice">Practice Mode</button>
-            <button class="nav-btn" data-mode="review">Review Mistakes</button>
-            <button class="nav-btn" data-mode="progress">Progress</button>
-        </nav>
-
-        <!-- Book Selection -->
-        <div class="book-selection" id="bookSelection">
-            <h2>Select a Book</h2>
-            <div class="books-grid">
-                <div class="book-card" data-book="3">
-                    <h3>Book 3</h3>
-                    <p>Pre-Intermediate Level</p>
-                    <div class="book-progress">0/30 units</div>
-                </div>
-                <div class="book-card" data-book="4">
-                    <h3>Book 4</h3>
-                    <p>Intermediate Level</p>
-                    <div class="book-progress">0/30 units</div>
-                </div>
-                <div class="book-card" data-book="5">
-                    <h3>Book 5</h3>
-                    <p>Upper-Intermediate Level</p>
-                    <div class="book-progress">0/30 units</div>
-                </div>
-                <div class="book-card" data-book="6">
-                    <h3>Book 6</h3>
-                    <p>Advanced Level</p>
-                    <div class="book-progress">0/30 units</div>
-                </div>
-            </div>
+    <h1>Working Flashcard App</h1>
+    
+    <div id="output">Loading...</div>
+    
+    <div class="section" id="bookSelection">
+        <h2>Select a Book</h2>
+        <div class="book-card" data-book="3" onclick="selectBook(3)">
+            <h3>Book 3</h3>
+            <p>Pre-Intermediate Level</p>
         </div>
-
-        <!-- Unit Selection -->
-        <div class="unit-selection" id="unitSelection" style="display: none;">
-            <h2>Select a Unit</h2>
-            <div class="back-btn" id="backToBooks">← Back to Books</div>
-            <div class="units-grid" id="unitsGrid"></div>
+        <div class="book-card" data-book="4" onclick="selectBook(4)">
+            <h3>Book 4</h3>
+            <p>Intermediate Level</p>
         </div>
-
-        <!-- Study Mode -->
-        <div class="study-mode" id="studyMode" style="display: none;">
-            <div class="back-btn" id="backToUnits">← Back to Units</div>
-            <div class="study-info">
-                <span id="studyProgress">1 / 20</span>
-                <span id="studyUnit">Unit 1</span>
-                <span id="wordCount">(0/20 words)</span>
-                <div class="study-mode-toggle">
-                    <button class="mode-btn active" id="reviewModeBtn">Review</button>
-                    <button class="mode-btn" id="studyModeBtn">Study</button>
-                </div>
-            </div>
-            
-            <!-- Review Section (Word List View) -->
-            <div class="word-list-view" id="wordListView">
-                <div class="word-list" id="wordList"></div>
-            </div>
-            
-            <!-- Study Section (Flashcard View) -->
-            <div class="study-flashcard-view" id="studyFlashcardView" style="display: none;">
-                <div class="study-flashcard" id="studyFlashcard">
-                    <div class="study-card-front">
-                        <h3 id="studyCardWord">Loading...</h3>
-                        <p id="studyCardPartOfSpeech">Loading...</p>
-                    </div>
-                    <div class="study-card-back">
-                        <h3 id="studyCardMeaning">Loading...</h3>
-                        <p id="studyCardExample">Loading...</p>
-                    </div>
-                </div>
-                <div class="study-flashcard-controls">
-                    <button class="btn btn-secondary" id="studyFlipCard">Flip Card</button>
-                    <button class="btn btn-primary" id="studyNextCard">Next Word</button>
-                </div>
-            </div>
-            
-            <!-- Flashcard View -->
-            <div class="flashcard-view" id="flashcardView" style="display: none;">
-                <div class="flashcard" id="flashcard">
-                    <!-- Normal Card (for existing words) -->
-                    <div id="normalCard">
-                        <div class="card-front">
-                            <h3 id="word">Loading...</h3>
-                            <p id="partOfSpeech">Loading...</p>
-                        </div>
-                        <div class="card-back">
-                            <h3 id="meaning">Loading...</h3>
-                            <p id="example">Loading...</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Editable Card (for new words) -->
-                    <div id="editableCard" style="display: none;">
-                        <div class="editable-card-content">
-                            <h3>Add New Word</h3>
-                            <div class="edit-form">
-                                <div class="form-group">
-                                    <label for="editWord">Word:</label>
-                                    <input type="text" id="editWord" placeholder="Enter the word">
-                                </div>
-                                <div class="form-group">
-                                    <label for="editPartOfSpeech">Part of Speech:</label>
-                                    <select id="editPartOfSpeech">
-                                        <option value="">Select part of speech...</option>
-                                        <option value="Noun">Noun</option>
-                                        <option value="Verb">Verb</option>
-                                        <option value="Adjective">Adjective</option>
-                                        <option value="Adverb">Adverb</option>
-                                        <option value="Pronoun">Pronoun</option>
-                                        <option value="Preposition">Preposition</option>
-                                        <option value="Conjunction">Conjunction</option>
-                                        <option value="Interjection">Interjection</option>
-                                        <option value="Article">Article</option>
-                                        <option value="Determiner">Determiner</option>
-                                        <option value="Numeral">Numeral</option>
-                                        <option value="Auxiliary Verb">Auxiliary Verb</option>
-                                        <option value="Modal Verb">Modal Verb</option>
-                                        <option value="Phrasal Verb">Phrasal Verb</option>
-                                        <option value="Idiom">Idiom</option>
-                                        <option value="Expression">Expression</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editMeaning">Meaning:</label>
-                                    <textarea id="editMeaning" placeholder="Enter the meaning"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="editExample">Example:</label>
-                                    <textarea id="editExample" placeholder="Enter an example sentence"></textarea>
-                                </div>
-                                <div class="edit-controls">
-                                    <button class="btn btn-secondary" id="cancelEdit">Cancel</button>
-                                    <button class="btn btn-primary" id="saveWord">Save Word</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="study-controls" id="studyControls">
-                    <button class="btn btn-secondary" id="flipCard">Flip Card</button>
-                    <button class="btn btn-primary" id="nextCard">Next Word</button>
-                </div>
-            </div>
+        <div class="book-card" data-book="5" onclick="selectBook(5)">
+            <h3>Book 5</h3>
+            <p>Upper-Intermediate Level</p>
         </div>
-
-        <!-- Practice Mode -->
-        <div class="practice-mode" id="practiceMode" style="display: none;">
-            <div class="back-btn" id="backToUnitsPractice">← Back to Units</div>
-            <div class="practice-info">
-                <span id="practiceProgress">1 / 10</span>
-                <span id="practiceUnit">Unit 1</span>
-            </div>
-            <div class="question-card">
-                <h3 id="questionText">Loading...</h3>
-                <div class="options" id="options"></div>
-            </div>
-            <div class="practice-controls">
-                <button class="btn btn-primary" id="submitAnswer" disabled>Submit Answer</button>
-                <button class="btn btn-secondary" id="nextQuestion" style="display: none;">Next Question</button>
-            </div>
+        <div class="book-card" data-book="6" onclick="selectBook(6)">
+            <h3>Book 6</h3>
+            <p>Advanced Level</p>
         </div>
-
-        <!-- Review Mode -->
-        <div class="review-mode" id="reviewMode" style="display: none;">
-            <h2>Review Mistakes</h2>
-            <div class="mistakes-list" id="mistakesList">
-                <p>No mistakes to review yet. Complete some practice sessions first!</p>
-            </div>
-        </div>
-
-        <!-- Progress Mode -->
-        <div class="progress-mode" id="progressMode" style="display: none;">
-            <h2>Your Progress</h2>
-            <div class="progress-stats">
-                <div class="stat-card">
-                    <h3>Total Words Studied</h3>
-                    <p id="totalStudied">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Practice Questions</h3>
-                    <p id="totalQuestions">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Correct Answers</h3>
-                    <p id="correctAnswers">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Accuracy</h3>
-                    <p id="accuracy">0%</p>
-                </div>
-            </div>
-            
-            <!-- Repository Statistics -->
-            <div class="repository-stats" id="repositoryStats" style="display: none;">
-                <h3>Repository Statistics</h3>
-                <div class="progress-stats">
-                    <div class="stat-card">
-                        <h3>Total Flashcards in Repository</h3>
-                        <p id="repoTotalFlashcards">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Last Updated</h3>
-                        <p id="repoLastUpdated">Never</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Repository Status</h3>
-                        <p id="repoStatus">Disconnected</p>
-                    </div>
-                </div>
-                
-                <!-- Git Status -->
-                <div class="git-status-section">
-                    <h3>Git Synchronization</h3>
-                    <div class="git-status-card">
-                        <div id="gitStatus" class="git-status-info">
-                            <strong>Git Status:</strong> Loading...
-                        </div>
-                        <button class="btn btn-primary" id="gitSyncButton" onclick="app.manualGitSync()" style="display: none;">
-                            Sync Git
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="book-progress-details" id="bookProgressDetails"></div>
-        </div>
+    </div>
+    
+    <div class="section" id="unitSelection" style="display: none;">
+        <h2>Select a Unit</h2>
+        <button onclick="showBooks()">← Back to Books</button>
+        <div id="unitsGrid"></div>
+    </div>
+    
+    <div class="section" id="wordSelection" style="display: none;">
+        <h2>Words in Unit</h2>
+        <button onclick="showUnits()">← Back to Units</button>
+        <div id="wordsList"></div>
     </div>
 
     <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script>
+        let currentBook = null;
+        let currentUnit = null;
+
+        function log(message, type = 'info') {
+            const output = document.getElementById('output');
+            output.innerHTML += `<div class="${type}">${message}</div>`;
+            console.log(message);
+        }
+
+        function selectBook(bookNum) {
+            log(`Selecting book ${bookNum}...`);
+            
+            if (!vocabularyData || !vocabularyData.books || !vocabularyData.books[bookNum]) {
+                log(`ERROR: Book ${bookNum} not found in vocabularyData`, 'error');
+                return;
+            }
+            
+            const book = vocabularyData.books[bookNum];
+            log(`Book ${bookNum} found: ${book.title}`);
+            
+            currentBook = bookNum;
+            
+            // Hide book selection, show unit selection
+            document.getElementById('bookSelection').style.display = 'none';
+            document.getElementById('unitSelection').style.display = 'block';
+            document.getElementById('wordSelection').style.display = 'none';
+            
+            // Render units
+            renderUnits(bookNum, book);
+        }
+
+        function renderUnits(bookNum, book) {
+            log(`Rendering units for book ${bookNum}...`);
+            
+            const unitsGrid = document.getElementById('unitsGrid');
+            unitsGrid.innerHTML = '';
+            
+            if (!book.units) {
+                log(`ERROR: Book ${bookNum} has no units property`, 'error');
+                return;
+            }
+            
+            const unitCount = Object.keys(book.units).length;
+            log(`Found ${unitCount} units in book ${bookNum}`);
+            
+            // Show all units
+            for (let i = 1; i <= unitCount; i++) {
+                const unit = book.units[i];
+                if (unit) {
+                    const unitCard = document.createElement('div');
+                    unitCard.className = 'unit-card';
+                    unitCard.onclick = () => selectUnit(bookNum, i, unit);
+                    unitCard.innerHTML = `
+                        <h4>Unit ${i}</h4>
+                        <p>${unit.title}</p>
+                        <p>${unit.words.length} words</p>
+                    `;
+                    unitsGrid.appendChild(unitCard);
+                    
+                    log(`Unit ${i}: "${unit.title}" (${unit.words.length} words)`);
+                }
+            }
+            
+            log(`✅ Rendered ${unitCount} units successfully`, 'success');
+        }
+
+        function selectUnit(bookNum, unitNum, unit) {
+            log(`Selecting unit ${unitNum} from book ${bookNum}...`);
+            log(`Unit: "${unit.title}"`);
+            log(`Words: ${unit.words.length}`);
+            
+            currentUnit = unitNum;
+            
+            // Hide unit selection, show word selection
+            document.getElementById('bookSelection').style.display = 'none';
+            document.getElementById('unitSelection').style.display = 'none';
+            document.getElementById('wordSelection').style.display = 'block';
+            
+            // Render words
+            renderWords(bookNum, unitNum, unit);
+        }
+
+        function renderWords(bookNum, unitNum, unit) {
+            log(`Rendering words for unit ${unitNum}...`);
+            
+            const wordsList = document.getElementById('wordsList');
+            wordsList.innerHTML = '';
+            
+            // Show all words
+            unit.words.forEach((word, index) => {
+                const wordItem = document.createElement('div');
+                wordItem.className = 'word-item';
+                wordItem.innerHTML = `
+                    <strong>${word.word}</strong> (${word.partOfSpeech})
+                    <br>Meaning: ${word.meaning}
+                    <br>Example: ${word.example}
+                `;
+                wordsList.appendChild(wordItem);
+                
+                log(`Word ${index + 1}: "${word.word}" (${word.partOfSpeech})`);
+            });
+            
+            log(`✅ Rendered ${unit.words.length} words successfully`, 'success');
+        }
+
+        function showBooks() {
+            document.getElementById('bookSelection').style.display = 'block';
+            document.getElementById('unitSelection').style.display = 'none';
+            document.getElementById('wordSelection').style.display = 'none';
+            currentBook = null;
+            currentUnit = null;
+            log('Returned to book selection');
+        }
+
+        function showUnits() {
+            document.getElementById('bookSelection').style.display = 'none';
+            document.getElementById('unitSelection').style.display = 'block';
+            document.getElementById('wordSelection').style.display = 'none';
+            currentUnit = null;
+            log('Returned to unit selection');
+        }
+
+        // Test data loading on page load
+        window.addEventListener('load', () => {
+            log('=== Page Loaded ===');
+            
+            if (typeof vocabularyData !== 'undefined') {
+                log('✅ vocabularyData is defined', 'success');
+                
+                if (vocabularyData.books) {
+                    const bookCount = Object.keys(vocabularyData.books).length;
+                    log(`Found ${bookCount} books`, 'success');
+                    
+                    Object.keys(vocabularyData.books).forEach(bookNum => {
+                        const book = vocabularyData.books[bookNum];
+                        if (book && book.units) {
+                            const unitCount = Object.keys(book.units).length;
+                            log(`Book ${bookNum}: ${unitCount} units`, 'info');
+                        }
+                    });
+                } else {
+                    log('❌ vocabularyData.books is not defined', 'error');
+                }
+            } else {
+                log('❌ vocabularyData is not defined', 'error');
+            }
+        });
+    </script>
 </body>
 </html>
