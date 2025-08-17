@@ -313,7 +313,7 @@ class FlashcardApp {
         // Update the unit title in the header
         const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Book ${this.currentBook}: Unit ${this.currentUnit}: ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
         
         // Update the back button text
         const backBtn = document.getElementById('backToUnitsPractice');
@@ -353,7 +353,7 @@ class FlashcardApp {
         // Update the unit title in the header
         const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Book ${this.currentBook}: Unit ${this.currentUnit}: ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
         
         // Show unit title, hide book title
         document.getElementById('bookTitle').style.display = 'none';
