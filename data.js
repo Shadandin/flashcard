@@ -8,8 +8,6 @@ const vocabularyData = {
 const book3Data = {
   "title": "Book 3 - Pre-Intermediate Level",
   "units": {
-    "title": "Book 3 - Pre-Intermediate Level",
-    "units": {
       "1": {
         "title": "Unit 1: The Great Pyramids of Egypt",
         "words": [
@@ -3769,8 +3767,6 @@ const book3Data = {
 const book4Data = {
   "title": "Book 4 - Intermediate Level",
   "units": {
-    "title": "Book 4 - Intermediate Level",
-    "units": {
       "1": {
         "title": "Unit 1 - Social Media",
         "words": [
