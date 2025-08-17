@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #87CEEB 0%, #5F9EA0 100%);
     min-height: 100vh;
     color: #333;
     position: relative;
@@ -53,7 +53,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #58cc02, #46b000, #58cc02);
+    background: linear-gradient(90deg, #87CEEB, #5F9EA0, #87CEEB);
     background-size: 200% 100%;
     animation: shimmer 2s ease-in-out infinite;
 }
@@ -100,7 +100,7 @@ body::before {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #58cc02, #46b000, #58cc02);
+    background: linear-gradient(90deg, #87CEEB, #5F9EA0, #87CEEB);
     background-size: 200% 100%;
     width: 0%;
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -146,9 +146,9 @@ body::before {
 }
 
 .repository-status.connected {
-    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-    color: #155724;
-    border: 2px solid #58cc02;
+    background: linear-gradient(135deg, #E6F3FF 0%, #CCE7FF 100%);
+    color: #1e3a8a;
+    border: 2px solid #87CEEB;
 }
 
 .repository-status.disconnected {
@@ -260,11 +260,11 @@ body::before {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .nav-btn.active {
-    background: linear-gradient(135deg, #58cc02, #46b000);
+    background: linear-gradient(135deg, #FFB366, #FF8C42);
     color: white;
     box-shadow: 0 6px 20px rgba(88, 204, 2, 0.4);
     transform: translateY(-2px);
@@ -297,7 +297,7 @@ body::before {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #58cc02, #46b000);
+    background: linear-gradient(90deg, #FFB366, #FF8C42);
     border-radius: 2px;
 }
 
@@ -326,7 +326,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #58cc02, #46b000);
+    background: linear-gradient(90deg, #FFB366, #FF8C42);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -338,7 +338,7 @@ body::before {
 .book-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .book-card h3 {
@@ -356,7 +356,7 @@ body::before {
 
 .book-progress {
     font-size: 0.9rem;
-    color: #58cc02;
+    color: #FFB366;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -458,7 +458,7 @@ body::before {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #58cc02, #46b000);
+    background: linear-gradient(90deg, #FFB366, #FF8C42);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -470,12 +470,12 @@ body::before {
 .unit-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .unit-card.completed {
     background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .unit-card h3 {
@@ -497,7 +497,7 @@ body::before {
 
 .word-count {
     display: inline-block;
-    background: linear-gradient(135deg, #58cc02, #46b000);
+    background: linear-gradient(135deg, #FFB366, #FF8C42);
     color: white;
     padding: 4px 8px;
     border-radius: 12px;
@@ -520,7 +520,7 @@ body::before {
 
 .unit-card.completed .unit-status {
     background: rgba(88, 204, 2, 0.1);
-    color: #58cc02;
+    color: #FFB366;
     border-color: rgba(88, 204, 2, 0.3);
 }
 
@@ -569,7 +569,7 @@ body::before {
 
 .mode-btn.active {
     background: white;
-    color: #58cc02;
+    color: #FFB366;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -615,7 +615,7 @@ body::before {
 }
 
 .card-back {
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -687,7 +687,7 @@ body::before {
 .word-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .word-item.empty {
@@ -702,9 +702,9 @@ body::before {
 }
 
 .word-item.empty:hover {
-    border-color: #58cc02;
+    border-color: #FFB366;
     background: #e8f5e8;
-    color: #58cc02;
+    color: #FFB366;
 }
 
 .word-item .word-title {
@@ -731,7 +731,7 @@ body::before {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #58cc02;
+    background: #FFB366;
     color: white;
     width: 24px;
     height: 24px;
@@ -785,7 +785,7 @@ body::before {
 }
 
 .study-card-back {
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -894,7 +894,7 @@ body::before {
 
 #saveWord {
     margin-top: 10px;
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
     border: none;
     color: white;
     font-weight: 600;
@@ -1015,13 +1015,13 @@ body::before {
 .option:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #58cc02;
+    border-color: #FFB366;
 }
 
 .option.selected {
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
     color: white;
-    border-color: #46b000;
+    border-color: #FF8C42;
     box-shadow: 0 8px 25px rgba(88, 204, 2, 0.4);
 }
 
@@ -1150,7 +1150,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #58cc02, #46b000);
+    background: linear-gradient(90deg, #FFB366, #FF8C42);
 }
 
 .stat-card:hover {
@@ -1170,7 +1170,7 @@ body::before {
 .stat-card p {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #58cc02;
+    color: #FFB366;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1211,7 +1211,7 @@ body::before {
 .unit-progress-item.completed {
     background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
     color: #155724;
-    border: 2px solid #58cc02;
+    border: 2px solid #FFB366;
 }
 
 .unit-progress-item.in-progress {
@@ -1258,7 +1258,7 @@ body::before {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
+    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
     color: white;
 }
 
