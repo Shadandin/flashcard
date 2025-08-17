@@ -343,9 +343,8 @@ class FlashcardApp {
         document.getElementById('unitTitle').style.display = 'block';
         
         // Update the unit title in the header
-        const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
         
         // Update the back button text
         const backBtn = document.getElementById('backToUnitsPractice');
@@ -383,9 +382,8 @@ class FlashcardApp {
         this.studyWordIndex = 0;
         
         // Update the unit title in the header
-        const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
         
         // Show unit title, hide book title
         document.getElementById('bookTitle').style.display = 'none';
@@ -1442,7 +1440,7 @@ class FlashcardApp {
 
     updateProgressDisplay() {
         const stats = this.calculateStats();
-        const totalWords = 4 * 30 * 20; // 4 books * 30 units * 20 words
+        const totalWords = 3 * 30 * 20; // 3 books * 30 units * 20 words
         const progressPercentage = Math.round((stats.totalStudied / totalWords) * 100);
         
         document.getElementById('progressFill').style.width = `${progressPercentage}%`;
