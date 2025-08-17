@@ -11200,5 +11200,34 @@ const book5Data = {
   }
 };
 
+// Generate books with actual data (Books 3-5) and empty structure (Book 6)
+function generateSampleData() {
+    // Add Book 3 with actual data
+    vocabularyData.books[3] = book3Data;
+    
+    // Add Book 4 with actual data
+    vocabularyData.books[4] = book4Data;
+    
+    // Add Book 5 with actual data
+    vocabularyData.books[5] = book5Data;
+    
+    // Add empty Book 6 (waiting for file upload)
+    vocabularyData.books[6] = {
+        title: "Book 6 - Advanced Level",
+        units: {}
+    };
+    
+    // Create 30 units for Book 6 with completely empty word lists
+    for (let unit = 1; unit <= 30; unit++) {
+        vocabularyData.books[6].units[unit] = {
+            title: "Unit " + unit + ": Basic Words",
+            words: []
+        };
+    }
+}
 
-// Book 5 data with real unit titles and complete word lists
+// Initialize the data
+generateSampleData();
+
+// Export the data
+window.vocabularyData = vocabularyData;
