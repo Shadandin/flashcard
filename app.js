@@ -20,8 +20,22 @@ class FlashcardApp {
         this.checkRepositoryStatus();
     }
 
+
     initializeEventListeners() {
+        // Ensure DOM is fully loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.attachEventListeners();
+            });
+        } else {
+            this.attachEventListeners();
+        }
+    }
+
+    attachEventListeners() {
         try {
+            console.log('Attaching event listeners...');
+            
             // Navigation
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
@@ -169,7 +183,7 @@ class FlashcardApp {
         }
     }
 
-    switchMode(mode) {
+        switchMode(mode) {
         this.currentMode = mode;
         
         // Clear word availability status when switching modes
