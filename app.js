@@ -21,11 +21,153 @@ class FlashcardApp {
     }
 
     initializeEventListeners() {
-        // Navigation
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                this.switchMode(e.target.dataset.mode);
+        try {
+            // Navigation
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    this.switchMode(e.target.dataset.mode);
+                });
             });
+
+            // Book selection
+            document.querySelectorAll('.book-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    // Don't trigger book selection if clicking on delete button
+                    if (e.target.classList.contains('delete-btn')) {
+                        return;
+                    }
+                    this.selectBook(parseInt(e.currentTarget.dataset.book));
+                });
+            });
+
+            // Delete buttons (using event delegation for dynamic elements)
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('delete-btn')) {
+                    e.stopPropagation(); // Prevent triggering book selection
+                    const bookNumber = parseInt(e.target.dataset.book);
+                    this.deleteBook(bookNumber);
+                }
+            });
+
+            // Back buttons
+            const backToBooks = document.getElementById('backToBooks');
+            if (backToBooks) {
+                backToBooks.addEventListener('click', () => {
+                    this.showBookSelection();
+                });
+            }
+
+            const backToUnits = document.getElementById('backToUnits');
+            if (backToUnits) {
+                backToUnits.addEventListener('click', () => {
+                    this.showUnitSelection();
+                });
+            }
+
+            const backToUnitsPractice = document.getElementById('backToUnitsPractice');
+            if (backToUnitsPractice) {
+                backToUnitsPractice.addEventListener('click', () => {
+                    this.showUnitSelection();
+                });
+            }
+
+            // Study mode controls
+            const flipCard = document.getElementById('flipCard');
+            if (flipCard) {
+                flipCard.addEventListener('click', () => {
+                    this.flipCard();
+                });
+            }
+
+            const nextCard = document.getElementById('nextCard');
+            if (nextCard) {
+                nextCard.addEventListener('click', () => {
+                    this.nextCard();
+                });
+            }
+
+            // Practice mode controls
+            const submitAnswer = document.getElementById('submitAnswer');
+            if (submitAnswer) {
+                submitAnswer.addEventListener('click', () => {
+                    this.submitAnswer();
+                });
+            }
+
+            const nextQuestion = document.getElementById('nextQuestion');
+            if (nextQuestion) {
+                nextQuestion.addEventListener('click', () => {
+                    this.nextQuestion();
+                });
+            }
+
+            // Flashcard click to flip
+            const flashcard = document.getElementById('flashcard');
+            if (flashcard) {
+                flashcard.addEventListener('click', () => {
+                    this.flipCard();
+                });
+            }
+
+            // Editable card save button
+            const saveWord = document.getElementById('saveWord');
+            if (saveWord) {
+                saveWord.addEventListener('click', () => {
+                    this.saveWord();
+                });
+            }
+
+            // Cancel edit button
+            const cancelEdit = document.getElementById('cancelEdit');
+            if (cancelEdit) {
+                cancelEdit.addEventListener('click', () => {
+                    this.showWordListView();
+                });
+            }
+
+            // Study mode toggle buttons
+            const reviewModeBtn = document.getElementById('reviewModeBtn');
+            if (reviewModeBtn) {
+                reviewModeBtn.addEventListener('click', () => {
+                    this.switchToReviewMode();
+                });
+            }
+
+            const studyModeBtn = document.getElementById('studyModeBtn');
+            if (studyModeBtn) {
+                studyModeBtn.addEventListener('click', () => {
+                    this.switchToStudyMode();
+                });
+            }
+
+            // Study flashcard controls
+            const studyFlipCard = document.getElementById('studyFlipCard');
+            if (studyFlipCard) {
+                studyFlipCard.addEventListener('click', () => {
+                    this.flipStudyCard();
+                });
+            }
+
+            const studyNextCard = document.getElementById('studyNextCard');
+            if (studyNextCard) {
+                studyNextCard.addEventListener('click', () => {
+                    this.nextStudyCard();
+                });
+            }
+
+            // Study flashcard click to flip
+            const studyFlashcard = document.getElementById('studyFlashcard');
+            if (studyFlashcard) {
+                studyFlashcard.addEventListener('click', () => {
+                    this.flipStudyCard();
+                });
+            }
+
+            console.log('Event listeners initialized successfully');
+        } catch (error) {
+            console.error('Error initializing event listeners:', error);
+        }
+    });
         });
 
         // Book selection
@@ -1481,5 +1623,5 @@ class FlashcardApp {
 
 // Initialize the application when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    new FlashcardApp();
+    window.app = new FlashcardApp();
 });
