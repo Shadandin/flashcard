@@ -72,20 +72,7 @@ body::before {
     position: relative;
 }
 
-.header h1::after {
-    content: '📚';
-    position: absolute;
-    top: -10px;
-    right: -40px;
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-}
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
 
 .progress-bar {
     width: 100%;
