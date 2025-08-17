@@ -69,8 +69,8 @@ function parseBookData(text, bookNumber) {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         
-        // Look for unit headers (Unit X: Title or Unit X - Title)
-        const unitMatch = line.match(/^Unit\s+(\d+)[:\-]\s*(.+)$/i);
+        // Look for unit headers (Unit X – Title with em dash)
+        const unitMatch = line.match(/^Unit\s+(\d+)\s*[–—]\s*(.+)$/i);
         if (unitMatch) {
             // Save previous unit if exists
             if (currentUnit && currentWords.length > 0) {
@@ -87,28 +87,30 @@ function parseBookData(text, bookNumber) {
             continue;
         }
         
-        // Look for word entries with the format: word (partOfSpeech) – meaning.Example
-        // The meaning and example are separated by a period but no space
-        const wordMatch = line.match(/^([A-Za-z]+)\s*\(([A-Za-z\/]+)\)\s*[-–]\s*(.+?)\.(.+)$/);
+        // Look for word entries with the format: word (partOfSpeech) – meaningExample
+        // The meaning and example are not separated by a period in Book 5
+        const wordMatch = line.match(/^([A-Za-z]+)\s*\(([A-Za-z\/]+)\)\s*[–—]\s*(.+)$/);
         if (wordMatch && currentUnit) {
+            const meaningAndExample = wordMatch[3].trim();
+            
+            // Try to separate meaning and example by looking for the first capital letter after the meaning
+            // This is a heuristic approach for Book 5 format
+            let meaning = meaningAndExample;
+            let example = "Example sentence not provided.";
+            
+            // Look for a pattern where the example starts with a capital letter
+            // and the meaning ends with a lowercase letter
+            const exampleMatch = meaningAndExample.match(/^(.+?)([A-Z][a-z].*)$/);
+            if (exampleMatch) {
+                meaning = exampleMatch[1].trim();
+                example = exampleMatch[2].trim();
+            }
+            
             const word = {
                 word: wordMatch[1].trim(),
                 partOfSpeech: normalizePartOfSpeech(wordMatch[2].trim()),
-                meaning: wordMatch[3].trim(),
-                example: wordMatch[4].trim()
-            };
-            currentWords.push(word);
-            continue;
-        }
-        
-        // Alternative word format: word (partOfSpeech) – meaning
-        const altWordMatch = line.match(/^([A-Za-z]+)\s*\(([A-Za-z\/]+)\)\s*[-–]\s*(.+)$/);
-        if (altWordMatch && currentUnit) {
-            const word = {
-                word: altWordMatch[1].trim(),
-                partOfSpeech: normalizePartOfSpeech(altWordMatch[2].trim()),
-                meaning: altWordMatch[3].trim(),
-                example: "Example sentence not provided."
+                meaning: meaning,
+                example: example
             };
             currentWords.push(word);
             continue;
