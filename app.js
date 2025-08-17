@@ -20,170 +20,138 @@ class FlashcardApp {
         this.checkRepositoryStatus();
     }
 
-
     initializeEventListeners() {
-        // Ensure DOM is fully loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                this.attachEventListeners();
+        // Navigation
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.switchMode(e.target.dataset.mode);
             });
-        } else {
-            this.attachEventListeners();
-        }
-    }
+        });
 
-    attachEventListeners() {
-        try {
-            console.log('Attaching event listeners...');
-            
-            // Navigation
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    this.switchMode(e.target.dataset.mode);
-                });
-            });
-
-            // Book selection
-            document.querySelectorAll('.book-card').forEach(card => {
-                card.addEventListener('click', (e) => {
-                    // Don't trigger book selection if clicking on delete button
-                    if (e.target.classList.contains('delete-btn')) {
-                        return;
-                    }
-                    this.selectBook(parseInt(e.currentTarget.dataset.book));
-                });
-            });
-
-            // Delete buttons (using event delegation for dynamic elements)
-            document.addEventListener('click', (e) => {
+        // Book selection
+        document.querySelectorAll('.book-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Don't trigger book selection if clicking on delete button
                 if (e.target.classList.contains('delete-btn')) {
-                    e.stopPropagation(); // Prevent triggering book selection
-                    const bookNumber = parseInt(e.target.dataset.book);
-                    this.deleteBook(bookNumber);
+                    return;
                 }
+                this.selectBook(parseInt(e.currentTarget.dataset.book));
             });
+        });
 
-            // Back buttons
-            const backToBooks = document.getElementById('backToBooks');
-            if (backToBooks) {
-                backToBooks.addEventListener('click', () => {
-                    this.showBookSelection();
-                });
+        // Delete buttons (using event delegation for dynamic elements)
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('delete-btn')) {
+                e.stopPropagation(); // Prevent triggering book selection
+                const bookNumber = parseInt(e.target.dataset.book);
+                this.deleteBook(bookNumber);
             }
+        });
 
-            const backToUnits = document.getElementById('backToUnits');
-            if (backToUnits) {
-                backToUnits.addEventListener('click', () => {
-                    this.showUnitSelection();
-                });
+        // Back buttons
+        document.getElementById('backToBooks').addEventListener('click', () => {
+            this.showBookSelection();
+        });
+
+        // Add breadcrumb navigation
+        document.getElementById('backToBooks').addEventListener('click', () => {
+            this.showBookSelection();
+        });
+
+        document.getElementById('backToUnits').addEventListener('click', () => {
+            this.showUnitSelection();
+        });
+
+        document.getElementById('backToUnitsPractice').addEventListener('click', () => {
+            this.showUnitSelection();
+        });
+
+        // Study mode controls
+        document.getElementById('flipCard').addEventListener('click', () => {
+            this.flipCard();
+        });
+
+        document.getElementById('nextCard').addEventListener('click', () => {
+            this.nextCard();
+        });
+
+        // Practice mode controls
+        document.getElementById('submitAnswer').addEventListener('click', () => {
+            this.submitAnswer();
+        });
+
+        document.getElementById('nextQuestion').addEventListener('click', () => {
+            this.nextQuestion();
+        });
+
+        // Flashcard click to flip
+        document.getElementById('flashcard').addEventListener('click', () => {
+            this.flipCard();
+        });
+
+        // Editable card save button
+        document.getElementById('saveWord').addEventListener('click', () => {
+            this.saveWord();
+        });
+
+        // Cancel edit button
+        document.getElementById('cancelEdit').addEventListener('click', () => {
+            this.showWordListView();
+        });
+
+        // Study mode toggle buttons
+        document.getElementById('reviewModeBtn').addEventListener('click', () => {
+            this.switchToReviewMode();
+        });
+
+        document.getElementById('studyModeBtn').addEventListener('click', () => {
+            this.switchToStudyMode();
+        });
+
+        // Study flashcard controls
+        document.getElementById('studyFlipCard').addEventListener('click', () => {
+            this.flipStudyCard();
+        });
+
+        document.getElementById('studyNextCard').addEventListener('click', () => {
+            this.nextStudyCard();
+        });
+
+        // Study flashcard click to flip
+        document.getElementById('studyFlashcard').addEventListener('click', () => {
+            this.flipStudyCard();
+        });
+
+
+
+        // Enter key to save word
+        document.getElementById('editWord').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
             }
+        });
 
-            const backToUnitsPractice = document.getElementById('backToUnitsPractice');
-            if (backToUnitsPractice) {
-                backToUnitsPractice.addEventListener('click', () => {
-                    this.showUnitSelection();
-                });
+        // Real-time duplicate checking as user types
+        document.getElementById('editWord').addEventListener('input', (e) => {
+            this.checkWordAvailability(e.target.value);
+        });
+        // Part of speech select change event
+        document.getElementById('editPartOfSpeech').addEventListener('change', () => {
+            // Optional: Add any validation or feedback here
+        });
+        document.getElementById('editMeaning').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
             }
-
-            // Study mode controls
-            const flipCard = document.getElementById('flipCard');
-            if (flipCard) {
-                flipCard.addEventListener('click', () => {
-                    this.flipCard();
-                });
+        });
+        document.getElementById('editExample').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.saveWord();
             }
-
-            const nextCard = document.getElementById('nextCard');
-            if (nextCard) {
-                nextCard.addEventListener('click', () => {
-                    this.nextCard();
-                });
-            }
-
-            // Practice mode controls
-            const submitAnswer = document.getElementById('submitAnswer');
-            if (submitAnswer) {
-                submitAnswer.addEventListener('click', () => {
-                    this.submitAnswer();
-                });
-            }
-
-            const nextQuestion = document.getElementById('nextQuestion');
-            if (nextQuestion) {
-                nextQuestion.addEventListener('click', () => {
-                    this.nextQuestion();
-                });
-            }
-
-            // Flashcard click to flip
-            const flashcard = document.getElementById('flashcard');
-            if (flashcard) {
-                flashcard.addEventListener('click', () => {
-                    this.flipCard();
-                });
-            }
-
-            // Editable card save button
-            const saveWord = document.getElementById('saveWord');
-            if (saveWord) {
-                saveWord.addEventListener('click', () => {
-                    this.saveWord();
-                });
-            }
-
-            // Cancel edit button
-            const cancelEdit = document.getElementById('cancelEdit');
-            if (cancelEdit) {
-                cancelEdit.addEventListener('click', () => {
-                    this.showWordListView();
-                });
-            }
-
-            // Study mode toggle buttons
-            const reviewModeBtn = document.getElementById('reviewModeBtn');
-            if (reviewModeBtn) {
-                reviewModeBtn.addEventListener('click', () => {
-                    this.switchToReviewMode();
-                });
-            }
-
-            const studyModeBtn = document.getElementById('studyModeBtn');
-            if (studyModeBtn) {
-                studyModeBtn.addEventListener('click', () => {
-                    this.switchToStudyMode();
-                });
-            }
-
-            // Study flashcard controls
-            const studyFlipCard = document.getElementById('studyFlipCard');
-            if (studyFlipCard) {
-                studyFlipCard.addEventListener('click', () => {
-                    this.flipStudyCard();
-                });
-            }
-
-            const studyNextCard = document.getElementById('studyNextCard');
-            if (studyNextCard) {
-                studyNextCard.addEventListener('click', () => {
-                    this.nextStudyCard();
-                });
-            }
-
-            // Study flashcard click to flip
-            const studyFlashcard = document.getElementById('studyFlashcard');
-            if (studyFlashcard) {
-                studyFlashcard.addEventListener('click', () => {
-                    this.flipStudyCard();
-                });
-            }
-
-            console.log('Event listeners initialized successfully');
-        } catch (error) {
-            console.error('Error initializing event listeners:', error);
-        }
+        });
     }
 
-        switchMode(mode) {
+    switchMode(mode) {
         this.currentMode = mode;
         
         // Clear word availability status when switching modes
@@ -343,8 +311,9 @@ class FlashcardApp {
         document.getElementById('unitTitle').style.display = 'block';
         
         // Update the unit title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
         
         // Update the back button text
         const backBtn = document.getElementById('backToUnitsPractice');
@@ -382,8 +351,9 @@ class FlashcardApp {
         this.studyWordIndex = 0;
         
         // Update the unit title in the header
+        const bookTitle = vocabularyData.books[this.currentBook].title;
         const unitTitle = vocabularyData.books[this.currentBook].units[this.currentUnit].title;
-        document.getElementById('unitTitle').textContent = `Unit ${this.currentUnit}: ${unitTitle}`;
+        document.getElementById('unitTitle').textContent = `Book ${this.currentBook} - ${unitTitle}`;
         
         // Show unit title, hide book title
         document.getElementById('bookTitle').style.display = 'none';
@@ -1440,7 +1410,7 @@ class FlashcardApp {
 
     updateProgressDisplay() {
         const stats = this.calculateStats();
-        const totalWords = 3 * 30 * 20; // 3 books * 30 units * 20 words
+        const totalWords = 4 * 30 * 20; // 4 books * 30 units * 20 words
         const progressPercentage = Math.round((stats.totalStudied / totalWords) * 100);
         
         document.getElementById('progressFill').style.width = `${progressPercentage}%`;
@@ -1511,5 +1481,5 @@ class FlashcardApp {
 
 // Initialize the application when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    window.app = new FlashcardApp();
+    new FlashcardApp();
 });

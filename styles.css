@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #87CEEB 0%, #5F9EA0 100%);
+    background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
     min-height: 100vh;
     color: #333;
     position: relative;
@@ -53,7 +53,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #E65100, #BF360C, #E65100);
+    background: linear-gradient(90deg, #87CEEB, #B0E0E6, #87CEEB);
     background-size: 200% 100%;
     animation: shimmer 2s ease-in-out infinite;
 }
@@ -72,22 +72,35 @@ body::before {
     position: relative;
 }
 
+.header h1::after {
+    content: '📚';
+    position: absolute;
+    top: -10px;
+    right: -40px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
 
 .progress-bar {
     width: 100%;
     height: 12px;
-    background: #FFF3E0;
+    background: #e8f5e8;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 15px;
-    border: 2px solid #FFE0B2;
+    border: 2px solid #d4edda;
     position: relative;
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #87CEEB, #5F9EA0, #87CEEB);
+    background: linear-gradient(90deg, #58cc02, #46b000, #58cc02);
     background-size: 200% 100%;
     width: 0%;
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,9 +146,9 @@ body::before {
 }
 
 .repository-status.connected {
-    background: linear-gradient(135deg, #E6F3FF 0%, #CCE7FF 100%);
-    color: #1e3a8a;
-    border: 2px solid #87CEEB;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border: 2px solid #58cc02;
 }
 
 .repository-status.disconnected {
@@ -247,13 +260,13 @@ body::before {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #FFB366;
+    border-color: #58cc02;
 }
 
 .nav-btn.active {
-    background: linear-gradient(135deg, #FFB366, #FF8C42);
+    background: linear-gradient(135deg, #87CEEB, #B0E0E6);
     color: white;
-    box-shadow: 0 6px 20px rgba(255, 179, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
     transform: translateY(-2px);
 }
 
@@ -284,7 +297,7 @@ body::before {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #FFB366, #FF8C42);
+    background: linear-gradient(90deg, #87CEEB, #B0E0E6);
     border-radius: 2px;
 }
 
@@ -313,7 +326,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #FFB366, #FF8C42);
+    background: linear-gradient(90deg, #87CEEB, #B0E0E6);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -325,7 +338,7 @@ body::before {
 .book-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: #FFB366;
+    border-color: #87CEEB;
 }
 
 .book-card h3 {
@@ -343,7 +356,7 @@ body::before {
 
 .book-progress {
     font-size: 0.9rem;
-    color: #FFB366;
+    color: #87CEEB;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -445,7 +458,7 @@ body::before {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #FFB366, #FF8C42);
+    background: linear-gradient(90deg, #58cc02, #46b000);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -457,12 +470,12 @@ body::before {
 .unit-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-    border-color: #FFB366;
+    border-color: #58cc02;
 }
 
 .unit-card.completed {
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
-    border-color: #FFB366;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-color: #58cc02;
 }
 
 .unit-card h3 {
@@ -484,7 +497,7 @@ body::before {
 
 .word-count {
     display: inline-block;
-    background: linear-gradient(135deg, #FFB366, #FF8C42);
+    background: linear-gradient(135deg, #58cc02, #46b000);
     color: white;
     padding: 4px 8px;
     border-radius: 12px;
@@ -506,9 +519,9 @@ body::before {
 }
 
 .unit-card.completed .unit-status {
-    background: rgba(255, 179, 102, 0.1);
-    color: #FFB366;
-    border-color: rgba(255, 179, 102, 0.3);
+    background: rgba(88, 204, 2, 0.1);
+    color: #58cc02;
+    border-color: rgba(88, 204, 2, 0.3);
 }
 
 /* Study Mode */
@@ -527,9 +540,9 @@ body::before {
     align-items: center;
     margin-bottom: 30px;
     padding: 15px 25px;
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
     border-radius: 16px;
-    border: 2px solid #FFCC80;
+    border: 2px solid #c3e6cb;
     gap: 15px;
 }
 
@@ -556,7 +569,7 @@ body::before {
 
 .mode-btn.active {
     background: white;
-    color: #FFB366;
+    color: #58cc02;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -602,7 +615,7 @@ body::before {
 }
 
 .card-back {
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -674,7 +687,7 @@ body::before {
 .word-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-color: #FFB366;
+    border-color: #58cc02;
 }
 
 .word-item.empty {
@@ -689,9 +702,9 @@ body::before {
 }
 
 .word-item.empty:hover {
-    border-color: #FFB366;
-    background: #FFF3E0;
-    color: #FFB366;
+    border-color: #58cc02;
+    background: #e8f5e8;
+    color: #58cc02;
 }
 
 .word-item .word-title {
@@ -718,7 +731,7 @@ body::before {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #FFB366;
+    background: #58cc02;
     color: white;
     width: 24px;
     height: 24px;
@@ -772,7 +785,7 @@ body::before {
 }
 
 .study-card-back {
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
     color: white;
     transform: rotateY(180deg);
 }
@@ -881,7 +894,7 @@ body::before {
 
 #saveWord {
     margin-top: 10px;
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
     border: none;
     color: white;
     font-weight: 600;
@@ -889,12 +902,12 @@ body::before {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 179, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(88, 204, 2, 0.3);
 }
 
 #saveWord:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 179, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(88, 204, 2, 0.4);
 }
 
 #saveWord:active {
@@ -937,9 +950,9 @@ body::before {
     align-items: center;
     margin-bottom: 30px;
     padding: 15px 25px;
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
     border-radius: 16px;
-    border: 2px solid #FFCC80;
+    border: 2px solid #c3e6cb;
 }
 
 .practice-info span {
@@ -991,7 +1004,7 @@ body::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 179, 102, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(88, 204, 2, 0.1), transparent);
     transition: left 0.5s;
 }
 
@@ -1002,14 +1015,14 @@ body::before {
 .option:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #FFB366;
+    border-color: #58cc02;
 }
 
 .option.selected {
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
     color: white;
-    border-color: #FF8C42;
-    box-shadow: 0 8px 25px rgba(255, 179, 102, 0.4);
+    border-color: #46b000;
+    box-shadow: 0 8px 25px rgba(88, 204, 2, 0.4);
 }
 
 .option.correct {
@@ -1137,7 +1150,7 @@ body::before {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #FFB366, #FF8C42);
+    background: linear-gradient(90deg, #58cc02, #46b000);
 }
 
 .stat-card:hover {
@@ -1157,7 +1170,7 @@ body::before {
 .stat-card p {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #FFB366;
+    color: #58cc02;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1196,9 +1209,9 @@ body::before {
 }
 
 .unit-progress-item.completed {
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
-    color: #E65100;
-    border: 2px solid #FFB366;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border: 2px solid #58cc02;
 }
 
 .unit-progress-item.in-progress {
@@ -1245,13 +1258,13 @@ body::before {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    background: linear-gradient(135deg, #58cc02 0%, #46b000 100%);
     color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 179, 102, 0.4);
+    box-shadow: 0 8px 25px rgba(88, 204, 2, 0.4);
 }
 
 .btn-primary:disabled {
