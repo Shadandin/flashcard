@@ -11200,19 +11200,7 @@ const book5Data = {
   }
 };
 
-// Generate books with actual data (Books 3-5) and empty structure (Book 6)
-function generateSampleData() {
-    // Add Book 3 with actual data
-    vocabularyData.books[3] = book3Data;
-    
-    // Add Book 4 with actual data
-    vocabularyData.books[4] = book4Data;
-    
-    // Add Book 5 with actual data
-    vocabularyData.books[5] = book5Data;
-    
-    // Add empty Book 6 (waiting for file upload)
-    vocabularyData.books[6] = {
+const book6Data = {
   "title": "Book 6 - Advanced Level",
   "units": {
     "1": {
@@ -11220,121 +11208,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "adverse",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "harmful, unfavorable.They had to cancel the picnic because of the adverse weather",
           "example": "Example not provided."
         },
         {
           "word": "alternate",
-          "partOfSpeech": "v/adj",
+          "partOfSpeech": "verb/adjective",
           "meaning": "to take turns; happening every other.She alternates between working at home and in the office",
           "example": "Example not provided."
         },
         {
           "word": "biodegradable",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "able to break down naturally.We should use biodegradable bags to protect the environment",
           "example": "Example not provided."
         },
         {
           "word": "boxed",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "contained in a box.She gave him a boxed set of novels",
           "example": "Example not provided."
         },
         {
           "word": "choke",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to be unable to breathe because something is blocking the throat.The child choked on a piece of candy",
           "example": "Example not provided."
         },
         {
           "word": "convenient",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "easy to use, suitable.Online shopping is very convenient for busy people",
           "example": "Example not provided."
         },
         {
           "word": "discard",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to throw away.He discarded his old shoes",
           "example": "Example not provided."
         },
         {
           "word": "dolphin",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a smart sea animal related to whales.We saw dolphins swimming near the boat",
           "example": "Example not provided."
         },
         {
           "word": "ecologically",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "related to the environment.The factory tries to operate ecologically by reducing waste",
           "example": "Example not provided."
         },
         {
           "word": "fatal",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "causing death.The driver suffered fatal injuries in the crash",
           "example": "Example not provided."
         },
         {
           "word": "incidence",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the rate or occurrence of something.The incidence of flu rises in winter",
           "example": "Example not provided."
         },
         {
           "word": "municipal",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to a town or city government.The municipal council approved the new park",
           "example": "Example not provided."
         },
         {
           "word": "overuse",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to use too much.Overuse of antibiotics can be dangerous",
           "example": "Example not provided."
         },
         {
           "word": "pond",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small body of still water.The ducks were swimming in the pond",
           "example": "Example not provided."
         },
         {
           "word": "recycle",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to reuse waste materials.We recycle plastic bottles to reduce trash",
           "example": "Example not provided."
         },
         {
           "word": "reusable",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "able to be used again.He carries a reusable water bottle",
           "example": "Example not provided."
         },
         {
           "word": "stuffed",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "filled with something.The teddy bear is stuffed with cotton",
           "example": "Example not provided."
         },
         {
           "word": "tragic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very sad, causing sorrow.The movie tells a tragic love story",
           "example": "Example not provided."
         },
         {
           "word": "utilize",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make use of something.We must utilize our resources wisely",
           "example": "Example not provided."
         },
         {
           "word": "whale",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the largest sea animal.The blue whale is the biggest animal on Earth",
           "example": "Example not provided."
         }
@@ -11345,121 +11333,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "amateur",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who does something for enjoyment, not professionally.He is an amateur photographer",
           "example": "Example not provided."
         },
         {
           "word": "ambiguous",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "unclear, having more than one meaning.His ambiguous answer confused everyone",
           "example": "Example not provided."
         },
         {
           "word": "anonymous",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "with no name given.The letter was written by an anonymous sender",
           "example": "Example not provided."
         },
         {
           "word": "attain",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to reach or achieve.She attained her goal of becoming a doctor",
           "example": "Example not provided."
         },
         {
           "word": "autonomy",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "independence, self-government.The region was granted autonomy from the central government",
           "example": "Example not provided."
         },
         {
           "word": "concession",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "something given up in an agreement.The union made concessions to reach a deal",
           "example": "Example not provided."
         },
         {
           "word": "decay",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to rot or break down.The fruit began to decay after a week",
           "example": "Example not provided."
         },
         {
           "word": "dwell",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to live in a place.They dwell in a small mountain village",
           "example": "Example not provided."
         },
         {
           "word": "enlighten",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to give knowledge or understanding.The book enlightened me about history",
           "example": "Example not provided."
         },
         {
           "word": "enrich",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to improve or make richer.Travel can enrich your life",
           "example": "Example not provided."
         },
         {
           "word": "flourish",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to grow well, succeed.Flowers flourish in warm climates",
           "example": "Example not provided."
         },
         {
           "word": "geometry",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the study of shapes and space.He is studying geometry in school",
           "example": "Example not provided."
         },
         {
           "word": "gleam",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to shine softly; a small bright light.Her eyes gleamed with excitement",
           "example": "Example not provided."
         },
         {
           "word": "greed",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a strong desire for more.His greed for money caused his downfall",
           "example": "Example not provided."
         },
         {
           "word": "harmony",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "agreement, peace.They live in harmony with nature",
           "example": "Example not provided."
         },
         {
           "word": "indigenous",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "native to a place.The kangaroo is indigenous to Australia",
           "example": "Example not provided."
         },
         {
           "word": "jurisdiction",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the legal power or authority.The case falls under federal jurisdiction",
           "example": "Example not provided."
         },
         {
           "word": "parade",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a public procession or celebration.We watched the parade on Independence Day",
           "example": "Example not provided."
         },
         {
           "word": "statue",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a carved or cast figure.The city has a statue of its founder",
           "example": "Example not provided."
         },
         {
           "word": "virgin",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "untouched, pure.The hikers explored the virgin forest",
           "example": "Example not provided."
         }
@@ -11470,121 +11458,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "abnormal",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "not normal, unusual.The doctor found an abnormal growth on the patient’s skin",
           "example": "Example not provided."
         },
         {
           "word": "absent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "not present.She was absent from class yesterday",
           "example": "Example not provided."
         },
         {
           "word": "adjacent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "next to something.The park is adjacent to the school",
           "example": "Example not provided."
         },
         {
           "word": "aluminum",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a light, silver-colored metal.The cans are made of aluminum",
           "example": "Example not provided."
         },
         {
           "word": "applicable",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "relevant, suitable.The rule is not applicable to this case",
           "example": "Example not provided."
         },
         {
           "word": "artificial",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "made by people, not natural.They decorated the room with artificial flowers",
           "example": "Example not provided."
         },
         {
           "word": "bicycle",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a vehicle with two wheels.He rides his bicycle to school",
           "example": "Example not provided."
         },
         {
           "word": "broker",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who arranges deals.She works as a stockbroker in the city",
           "example": "Example not provided."
         },
         {
           "word": "bureaucracy",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a system of many officials.The project was delayed by bureaucracy",
           "example": "Example not provided."
         },
         {
           "word": "configure",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to arrange or set up.The software is configured for beginners",
           "example": "Example not provided."
         },
         {
           "word": "consolidate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to combine or strengthen.The two companies consolidated to save money",
           "example": "Example not provided."
         },
         {
           "word": "convenience",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "ease of use.The store is open 24 hours for customers’ convenience",
           "example": "Example not provided."
         },
         {
           "word": "deduct",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to take away from a total.The bank deducts fees every month",
           "example": "Example not provided."
         },
         {
           "word": "deem",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to consider or judge.The teacher deemed his answer correct",
           "example": "Example not provided."
         },
         {
           "word": "entrepreneur",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who starts a business.The young entrepreneur opened a new café",
           "example": "Example not provided."
         },
         {
           "word": "evenly",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "in equal amounts.The cake was cut evenly among the children",
           "example": "Example not provided."
         },
         {
           "word": "fiscal",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to money or finance.The government announced new fiscal policies",
           "example": "Example not provided."
         },
         {
           "word": "franchise",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a business right given by a company.He owns a fast-food franchise",
           "example": "Example not provided."
         },
         {
           "word": "ideological",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "based on ideas or beliefs.The debate was driven by ideological differences",
           "example": "Example not provided."
         },
         {
           "word": "robot",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a machine that can do work.The factory uses robots to build cars",
           "example": "Example not provided."
         }
@@ -11595,121 +11583,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "abbey",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a religious building where monks or nuns live.Tourists visited the old abbey on the hill",
           "example": "Example not provided."
         },
         {
           "word": "abundant",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "existing in large amounts.The forest is abundant with wildlife",
           "example": "Example not provided."
         },
         {
           "word": "adjoin",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to be next to.Their land adjoins the river",
           "example": "Example not provided."
         },
         {
           "word": "ample",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "more than enough.We had ample food for everyone",
           "example": "Example not provided."
         },
         {
           "word": "arid",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very dry.Few plants grow in this arid climate",
           "example": "Example not provided."
         },
         {
           "word": "cathedral",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a large important church.The cathedral is famous for its stained glass windows",
           "example": "Example not provided."
         },
         {
           "word": "crisis",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a time of great difficulty.The country faced an economic crisis",
           "example": "Example not provided."
         },
         {
           "word": "deprive",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to take something away.The war deprived them of their homes",
           "example": "Example not provided."
         },
         {
           "word": "drought",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a long period without rain.The drought ruined the harvest",
           "example": "Example not provided."
         },
         {
           "word": "eligible",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "qualified, allowed.He is eligible to vote at 18",
           "example": "Example not provided."
         },
         {
           "word": "fast",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a period of not eating.Muslims observe a fast during Ramadan",
           "example": "Example not provided."
         },
         {
           "word": "grumble",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to complain quietly.The workers grumbled about low pay",
           "example": "Example not provided."
         },
         {
           "word": "inland",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "away from the sea.They traveled inland to avoid the storm",
           "example": "Example not provided."
         },
         {
           "word": "moisture",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "small amounts of water.Plants need moisture to grow",
           "example": "Example not provided."
         },
         {
           "word": "nonetheless",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "in spite of that.It was raining; nonetheless, we went hiking",
           "example": "Example not provided."
         },
         {
           "word": "oath",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a serious promise.The president swore an oath of office",
           "example": "Example not provided."
         },
         {
           "word": "prairie",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "flat grassland.Buffalo once roamed the prairie",
           "example": "Example not provided."
         },
         {
           "word": "rugged",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "rough, uneven.They climbed the rugged mountains",
           "example": "Example not provided."
         },
         {
           "word": "scarce",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "rare, not enough.Water is scarce in deserts",
           "example": "Example not provided."
         },
         {
           "word": "speculate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to guess or think about.Scientists speculate about life on other planets",
           "example": "Example not provided."
         }
@@ -11720,121 +11708,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "aquatic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "living in water.Fish are aquatic animals",
           "example": "Example not provided."
         },
         {
           "word": "biosphere",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the regions of Earth where life exists.Pollution harms the biosphere",
           "example": "Example not provided."
         },
         {
           "word": "bizarre",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very strange.He wore a bizarre costume to the party",
           "example": "Example not provided."
         },
         {
           "word": "Celsius",
-          "partOfSpeech": "adj/n",
+          "partOfSpeech": "adjective/noun",
           "meaning": "a temperature scale.The temperature was 20 degrees Celsius",
           "example": "Example not provided."
         },
         {
           "word": "coarse",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "rough in texture.The cloth felt coarse to the touch",
           "example": "Example not provided."
         },
         {
           "word": "companion",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a friend.The dog is her constant companion",
           "example": "Example not provided."
         },
         {
           "word": "digest",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to break down food in the stomach.It takes time to digest a big meal",
           "example": "Example not provided."
         },
         {
           "word": "duration",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the length of time something lasts.He stayed for the duration of the movie",
           "example": "Example not provided."
         },
         {
           "word": "ecology",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the study of the environment.She studies ecology at university",
           "example": "Example not provided."
         },
         {
           "word": "feat",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an amazing achievement.Climbing Everest is a great feat",
           "example": "Example not provided."
         },
         {
           "word": "infinite",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "without end.The universe seems infinite",
           "example": "Example not provided."
         },
         {
           "word": "nucleus",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the center part of a cell or atom.The cell’s nucleus controls its activity",
           "example": "Example not provided."
         },
         {
           "word": "parasite",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an organism that lives off another.The parasite feeds on the host animal",
           "example": "Example not provided."
         },
         {
           "word": "prominent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "important, well-known.She is a prominent scientist",
           "example": "Example not provided."
         },
         {
           "word": "repetitive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "happening again and again.The job is boring and repetitive",
           "example": "Example not provided."
         },
         {
           "word": "reproductive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to producing offspring.The reproductive system is essential for life",
           "example": "Example not provided."
         },
         {
           "word": "temperate",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "mild, not extreme.They enjoy the temperate climate of the region",
           "example": "Example not provided."
         },
         {
           "word": "tolerance",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the ability to accept differences.We should show tolerance toward others",
           "example": "Example not provided."
         },
         {
           "word": "undergo",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to experience or go through.He will undergo surgery tomorrow",
           "example": "Example not provided."
         },
         {
           "word": "vulnerable",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "easily hurt or harmed.Children are vulnerable to illness",
           "example": "Example not provided."
         }
@@ -11845,121 +11833,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "archaic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very old, no longer in use.That archaic law is no longer enforced",
           "example": "Example not provided."
         },
         {
           "word": "brass",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a bright yellow metal made of copper and zinc.The door handles were made of brass",
           "example": "Example not provided."
         },
         {
           "word": "capitalism",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an economic system where businesses are privately owned.Capitalism encourages competition in the market",
           "example": "Example not provided."
         },
         {
           "word": "component",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a part of something.The engine has many small components",
           "example": "Example not provided."
         },
         {
           "word": "dependence",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "reliance on something.His dependence on coffee is worrying",
           "example": "Example not provided."
         },
         {
           "word": "diminish",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to become smaller.The pain diminished after taking medicine",
           "example": "Example not provided."
         },
         {
           "word": "drawback",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a disadvantage.The only drawback of the car is its high cost",
           "example": "Example not provided."
         },
         {
           "word": "impose",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to force something on others.The government imposed new taxes",
           "example": "Example not provided."
         },
         {
           "word": "industry",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "business or trade.Tourism is a major industry in Italy",
           "example": "Example not provided."
         },
         {
           "word": "managerial",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "relating to managers.She was promoted to a managerial position",
           "example": "Example not provided."
         },
         {
           "word": "medieval",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "from the Middle Ages.The castle is a medieval building",
           "example": "Example not provided."
         },
         {
           "word": "obsolete",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "no longer in use.CD players are becoming obsolete",
           "example": "Example not provided."
         },
         {
           "word": "oriented",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "directed toward something.The course is job-oriented",
           "example": "Example not provided."
         },
         {
           "word": "peninsula",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "land almost surrounded by water.Italy is a peninsula in southern Europe",
           "example": "Example not provided."
         },
         {
           "word": "prestige",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "respect or admiration.The award gave her prestige in her field",
           "example": "Example not provided."
         },
         {
           "word": "proportion",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a part compared to the whole.A large proportion of the class passed",
           "example": "Example not provided."
         },
         {
           "word": "radical",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "extreme or revolutionary.He proposed a radical change in policy",
           "example": "Example not provided."
         },
         {
           "word": "refute",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to prove wrong.The lawyer refuted the witness’s story",
           "example": "Example not provided."
         },
         {
           "word": "spectacular",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very impressive.We enjoyed a spectacular fireworks display",
           "example": "Example not provided."
         },
         {
           "word": "weave",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make cloth by crossing threads.She weaved a basket from reeds",
           "example": "Example not provided."
         }
@@ -11970,121 +11958,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "accountant",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who manages financial records.The accountant prepared the company’s tax returns",
           "example": "Example not provided."
         },
         {
           "word": "capitalist",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a supporter of capitalism.The capitalist invested in new businesses",
           "example": "Example not provided."
         },
         {
           "word": "contempt",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a strong dislike or lack of respect.He looked at the liar with contempt",
           "example": "Example not provided."
         },
         {
           "word": "crop",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "plants grown for food.Wheat is an important crop",
           "example": "Example not provided."
         },
         {
           "word": "dedicate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to devote effort or time.She dedicated her life to helping the poor",
           "example": "Example not provided."
         },
         {
           "word": "ditch",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a narrow hole dug in the ground.The farmer dug a ditch for irrigation",
           "example": "Example not provided."
         },
         {
           "word": "enterprise",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a business or project.The new enterprise created many jobs",
           "example": "Example not provided."
         },
         {
           "word": "finance",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "the management of money.She works in the finance department",
           "example": "Example not provided."
         },
         {
           "word": "indifferent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "not caring.He was indifferent to the outcome",
           "example": "Example not provided."
         },
         {
           "word": "irrigate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to supply water to land.The farmer irrigated the dry fields",
           "example": "Example not provided."
         },
         {
           "word": "maximize",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to increase to the most.We need to maximize efficiency at work",
           "example": "Example not provided."
         },
         {
           "word": "monetary",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to money.The central bank sets monetary policy",
           "example": "Example not provided."
         },
         {
           "word": "precaution",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "something done to prevent harm.He wore a mask as a precaution",
           "example": "Example not provided."
         },
         {
           "word": "preliminary",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "happening before the main event.They held a preliminary meeting",
           "example": "Example not provided."
         },
         {
           "word": "saturate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to soak completely.The rain saturated the ground",
           "example": "Example not provided."
         },
         {
           "word": "simplicity",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the state of being simple.The simplicity of the design impressed us",
           "example": "Example not provided."
         },
         {
           "word": "sow",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to plant seeds.Farmers sow wheat in the spring",
           "example": "Example not provided."
         },
         {
           "word": "spade",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a tool for digging.He dug the soil with a spade",
           "example": "Example not provided."
         },
         {
           "word": "tomato",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a red fruit often eaten as a vegetable.She made a salad with fresh tomatoes",
           "example": "Example not provided."
         },
         {
           "word": "upcoming",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "happening soon.They are excited for the upcoming holiday",
           "example": "Example not provided."
         }
@@ -12095,121 +12083,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "anthropology",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the study of human societies and cultures.She is taking a class in anthropology",
           "example": "Example not provided."
         },
         {
           "word": "applaud",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to clap hands in approval.The audience applauded after the performance",
           "example": "Example not provided."
         },
         {
           "word": "appoint",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to officially choose someone.They appointed her as the new manager",
           "example": "Example not provided."
         },
         {
           "word": "compatible",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "able to work or exist together.This software is not compatible with my computer",
           "example": "Example not provided."
         },
         {
           "word": "competence",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the ability to do something well.Her competence as a teacher impressed everyone",
           "example": "Example not provided."
         },
         {
           "word": "confer",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to discuss and exchange ideas.The scientists conferred about the discovery",
           "example": "Example not provided."
         },
         {
           "word": "consecutive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "following one after another.He won the award for three consecutive years",
           "example": "Example not provided."
         },
         {
           "word": "crude",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "simple, not well made.They lived in a crude wooden hut",
           "example": "Example not provided."
         },
         {
           "word": "cube",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a solid shape with six equal square sides.The box was shaped like a cube",
           "example": "Example not provided."
         },
         {
           "word": "feedback",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "opinions about performance.The teacher gave the students feedback on their essays",
           "example": "Example not provided."
         },
         {
           "word": "ignorance",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "lack of knowledge.His ignorance of the law caused him problems",
           "example": "Example not provided."
         },
         {
           "word": "masculine",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "having qualities of a man.The shirt has a masculine style",
           "example": "Example not provided."
         },
         {
           "word": "monument",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a structure built to honor something.The monument was built to honor the soldiers",
           "example": "Example not provided."
         },
         {
           "word": "muscular",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "having strong muscles.The athlete is very muscular",
           "example": "Example not provided."
         },
         {
           "word": "posture",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the way one holds the body.Good posture is important for health",
           "example": "Example not provided."
         },
         {
           "word": "situate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to place in a position.The school is situated near the park",
           "example": "Example not provided."
         },
         {
           "word": "supervise",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to watch and guide others.The teacher supervised the exam",
           "example": "Example not provided."
         },
         {
           "word": "symmetry",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "balance between two sides.The butterfly’s wings show perfect symmetry",
           "example": "Example not provided."
         },
         {
           "word": "tattoo",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a design marked on the skin.He has a dragon tattoo on his arm",
           "example": "Example not provided."
         },
         {
           "word": "undergraduate",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a university student before graduation.She is an undergraduate studying biology",
           "example": "Example not provided."
         }
@@ -12220,121 +12208,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "cater",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to provide food or service.The restaurant catered the wedding",
           "example": "Example not provided."
         },
         {
           "word": "considerate",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "thoughtful, caring about others.He is considerate of his neighbors",
           "example": "Example not provided."
         },
         {
           "word": "consumption",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the act of using something.Water consumption is high during summer",
           "example": "Example not provided."
         },
         {
           "word": "criteria",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "standards used for judging.The applicants must meet certain criteria",
           "example": "Example not provided."
         },
         {
           "word": "crust",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the hard outer part.The bread’s crust was golden brown",
           "example": "Example not provided."
         },
         {
           "word": "entitle",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to give a right to.The ticket entitles you to a free drink",
           "example": "Example not provided."
         },
         {
           "word": "escort",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to go with someone for protection.The guard escorted the president",
           "example": "Example not provided."
         },
         {
           "word": "external",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "outer, on the outside.The building’s external walls need painting",
           "example": "Example not provided."
         },
         {
           "word": "facility",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a place built for a purpose.The city has good sports facilities",
           "example": "Example not provided."
         },
         {
           "word": "faculty",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "teachers at a university.The faculty voted to change the curriculum",
           "example": "Example not provided."
         },
         {
           "word": "heap",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a pile of things.There was a heap of clothes on the floor",
           "example": "Example not provided."
         },
         {
           "word": "hemisphere",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "half of the earth.Australia is in the southern hemisphere",
           "example": "Example not provided."
         },
         {
           "word": "hound",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a type of dog for hunting.The hound chased the rabbit",
           "example": "Example not provided."
         },
         {
           "word": "impersonal",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "not showing feelings.The letter was impersonal and formal",
           "example": "Example not provided."
         },
         {
           "word": "lick",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to pass the tongue over something.The dog licked my hand",
           "example": "Example not provided."
         },
         {
           "word": "ornament",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a decorative object.The Christmas tree had many ornaments",
           "example": "Example not provided."
         },
         {
           "word": "pedestrian",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person walking.The car almost hit a pedestrian",
           "example": "Example not provided."
         },
         {
           "word": "sanctuary",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a safe place.The temple is a sanctuary for worshippers",
           "example": "Example not provided."
         },
         {
           "word": "spectator",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "someone who watches an event.Thousands of spectators attended the match",
           "example": "Example not provided."
         },
         {
           "word": "yell",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to shout loudly.The coach yelled instructions to the players",
           "example": "Example not provided."
         }
@@ -12345,115 +12333,115 @@ function generateSampleData() {
       "words": [
         {
           "word": "accessory",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "something added for decoration or usefulness.She bought a new accessory for her phone",
           "example": "Example not provided."
         },
         {
           "word": "acquisition",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the act of getting something.Language acquisition happens in childhood",
           "example": "Example not provided."
         },
         {
           "word": "cardboard",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "thick, stiff paper.The box was made of cardboard",
           "example": "Example not provided."
         },
         {
           "word": "dilemma",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a difficult choice.He faced the dilemma of whether to stay or leave",
           "example": "Example not provided."
         },
         {
           "word": "elaborate",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "detailed and complicated.She made an elaborate plan for the trip",
           "example": "Example not provided."
         },
         {
           "word": "facilitate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make easier.The new system facilitates communication",
           "example": "Example not provided."
         },
         {
           "word": "fleet",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a group of ships or vehicles.The navy has a large fleet",
           "example": "Example not provided."
         },
         {
           "word": "grid",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a pattern of squares.The city streets form a grid",
           "example": "Example not provided."
         },
         {
           "word": "import",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to bring goods from another country.The country imports oil from abroad",
           "example": "Example not provided."
         },
         {
           "word": "infer",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to reach a conclusion from evidence.From her tone, I inferred she was upset",
           "example": "Example not provided."
         },
         {
           "word": "inflate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to fill with air.He inflated the balloon",
           "example": "Example not provided."
         },
         {
           "word": "innate",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "natural, existing from birth.She has an innate talent for music",
           "example": "Example not provided."
         },
         {
           "word": "marble",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a type of hard stone.The statue was made of marble",
           "example": "Example not provided."
         },
         {
           "word": "mast",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a tall pole on a ship.The sails were tied to the mast",
           "example": "Example not provided."
         },
         {
           "word": "nausea",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a sick feeling in the stomach.The boat ride gave him nausea",
           "example": "Example not provided."
         },
         {
           "word": "naval",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to ships or navy.The country has strong naval forces",
           "example": "Example not provided."
         },
         {
           "word": "pouch",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small bag.She carried coins in a leather pouch",
           "example": "Example not provided."
         },
         {
           "word": "saturated",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "completely full of liquid.The ground was saturated with rain",
           "example": "Example not provided."
         },
         {
           "word": "update",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to make current.They updated the software last night",
           "example": "Example not provided."
         }
@@ -12464,115 +12452,115 @@ function generateSampleData() {
       "words": [
         {
           "word": "attorney",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a lawyer.She hired an attorney to handle the case",
           "example": "Example not provided."
         },
         {
           "word": "chronic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "lasting for a long time.He suffers from chronic pain",
           "example": "Example not provided."
         },
         {
           "word": "discipline",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "training to follow rules.Good discipline is important in school",
           "example": "Example not provided."
         },
         {
           "word": "donor",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who gives something.The hospital thanked the blood donor",
           "example": "Example not provided."
         },
         {
           "word": "fellow",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person in the same group.He’s a fellow student at my school",
           "example": "Example not provided."
         },
         {
           "word": "gossip",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "talk about others’ private lives.They enjoy gossiping about celebrities",
           "example": "Example not provided."
         },
         {
           "word": "graduate",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to finish school; a person who finished school.She graduated from college last year",
           "example": "Example not provided."
         },
         {
           "word": "graffiti",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "writings or drawings on walls.The wall was covered in graffiti",
           "example": "Example not provided."
         },
         {
           "word": "guardian",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "someone who protects or cares for another.The child’s guardian signed the form",
           "example": "Example not provided."
         },
         {
           "word": "implicate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to show someone is involved.The evidence implicated him in the crime",
           "example": "Example not provided."
         },
         {
           "word": "kin",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "family, relatives.She is visiting her kin in the country",
           "example": "Example not provided."
         },
         {
           "word": "referee",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a sports official.The referee blew the whistle",
           "example": "Example not provided."
         },
         {
           "word": "sever",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to cut off.The storm severed the power lines",
           "example": "Example not provided."
         },
         {
           "word": "shaft",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a long narrow part.Light came through a shaft in the ceiling",
           "example": "Example not provided."
         },
         {
           "word": "stimulus",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "something causing a reaction.Light is a stimulus for plants to grow",
           "example": "Example not provided."
         },
         {
           "word": "suspicion",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a feeling that something is wrong.She had a suspicion he was lying",
           "example": "Example not provided."
         },
         {
           "word": "terminate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to end.The contract was terminated early",
           "example": "Example not provided."
         },
         {
           "word": "theme",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the main subject.The theme of the story is friendship",
           "example": "Example not provided."
         },
         {
           "word": "tuition",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "money paid for instruction.Tuition at the university is expensive",
           "example": "Example not provided."
         }
@@ -12583,97 +12571,97 @@ function generateSampleData() {
       "words": [
         {
           "word": "aggressive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "ready to attack.The dog is aggressive toward strangers",
           "example": "Example not provided."
         },
         {
           "word": "amnesty",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "forgiveness for crimes.The government gave amnesty to the rebels",
           "example": "Example not provided."
         },
         {
           "word": "arena",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a place for sports or shows.The concert was held in the arena",
           "example": "Example not provided."
         },
         {
           "word": "auditorium",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a large hall for events.The school assembly met in the auditorium",
           "example": "Example not provided."
         },
         {
           "word": "captive",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person kept prisoner.The soldiers kept the enemy captive",
           "example": "Example not provided."
         },
         {
           "word": "combat",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "fighting or battle.The soldiers prepared for combat",
           "example": "Example not provided."
         },
         {
           "word": "corps",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a group of people working together.She joined the medical corps during the war",
           "example": "Example not provided."
         },
         {
           "word": "distract",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to take attention away.Noise distracted the students",
           "example": "Example not provided."
         },
         {
           "word": "dumb",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "unable to speak; foolish.The boy was born dumb",
           "example": "Example not provided."
         },
         {
           "word": "foe",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an enemy.They fought bravely against their foes",
           "example": "Example not provided."
         },
         {
           "word": "meditate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to think deeply or pray.She meditates every morning",
           "example": "Example not provided."
         },
         {
           "word": "nick",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a small cut.He got a nick on his finger while cooking",
           "example": "Example not provided."
         },
         {
           "word": "provoke",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make someone angry.The insult provoked him",
           "example": "Example not provided."
         },
         {
           "word": "reign",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "the rule of a king or queen.The queen’s reign lasted 50 years",
           "example": "Example not provided."
         },
         {
           "word": "rust",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "reddish coating on metal.The bike chain is covered in rust",
           "example": "Example not provided."
         },
         {
           "word": "sacred",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "holy.The temple is a sacred place",
           "example": "Example not provided."
         }
@@ -12684,19 +12672,19 @@ function generateSampleData() {
       "words": [
         {
           "word": "aesthetic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "concerned with beauty.The painting has aesthetic value",
           "example": "Example not provided."
         },
         {
           "word": "arrogant",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "too proud, thinking highly of oneself.The arrogant man ignored everyone",
           "example": "Example not provided."
         },
         {
           "word": "drill",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a tool for making holes; to practice.He used a drill to fix the chair",
           "example": "Example not provided."
         }
@@ -12707,19 +12695,19 @@ function generateSampleData() {
       "words": [
         {
           "word": "behalf",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "representing someone.He spoke on behalf of the students",
           "example": "Example not provided."
         },
         {
           "word": "inward",
-          "partOfSpeech": "adj/adv",
+          "partOfSpeech": "adjective/adverb",
           "meaning": "toward the inside.She turned her gaze inward in thought",
           "example": "Example not provided."
         },
         {
           "word": "loaf",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a shaped mass of bread.She baked a loaf of bread",
           "example": "Example not provided."
         }
@@ -12730,115 +12718,115 @@ function generateSampleData() {
       "words": [
         {
           "word": "aquarium",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a glass container for fish.They keep tropical fish in a large aquarium",
           "example": "Example not provided."
         },
         {
           "word": "arbitrary",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "based on chance or personal choice, not reason.The decision seemed arbitrary and unfair",
           "example": "Example not provided."
         },
         {
           "word": "autobiography",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person’s life story written by themselves.She published her autobiography at 60",
           "example": "Example not provided."
         },
         {
           "word": "convention",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a formal meeting.Thousands attended the business convention",
           "example": "Example not provided."
         },
         {
           "word": "gracious",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "kind, polite.The hostess was gracious to her guests",
           "example": "Example not provided."
         },
         {
           "word": "improve",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make better.He improved his English by reading daily",
           "example": "Example not provided."
         },
         {
           "word": "insulate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to cover to keep heat or cold in.They insulated the house to save energy",
           "example": "Example not provided."
         },
         {
           "word": "intrigue",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to interest greatly; secret plot.The story intrigued me with its mystery",
           "example": "Example not provided."
         },
         {
           "word": "longevity",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a long life.Healthy habits lead to longevity",
           "example": "Example not provided."
         },
         {
           "word": "misplace",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to lose temporarily.I misplaced my keys this morning",
           "example": "Example not provided."
         },
         {
           "word": "naughty",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "badly behaved.The naughty child refused to listen",
           "example": "Example not provided."
         },
         {
           "word": "orangutan",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a large ape with red hair.An orangutan swung from tree to tree",
           "example": "Example not provided."
         },
         {
           "word": "overload",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to put too much on.The truck was overloaded with goods",
           "example": "Example not provided."
         },
         {
           "word": "philanthropy",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "giving money or help to others.The millionaire was known for his philanthropy",
           "example": "Example not provided."
         },
         {
           "word": "probe",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to investigate; a tool for exploration.The police probed the mystery",
           "example": "Example not provided."
         },
         {
           "word": "recipient",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who receives something.She was the recipient of the award",
           "example": "Example not provided."
         },
         {
           "word": "reptile",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a cold-blooded animal (snake, lizard).Crocodiles are reptiles",
           "example": "Example not provided."
         },
         {
           "word": "thrive",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to grow well, succeed.Children thrive in a loving home",
           "example": "Example not provided."
         },
         {
           "word": "ultimate",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "final, best.Winning the championship was the ultimate goal",
           "example": "Example not provided."
         }
@@ -12849,121 +12837,121 @@ function generateSampleData() {
       "words": [
         {
           "word": "antique",
-          "partOfSpeech": "adj/n",
+          "partOfSpeech": "adjective/noun",
           "meaning": "very old; an old object.She collects antique furniture",
           "example": "Example not provided."
         },
         {
           "word": "applicant",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "someone who applies for something.The job had many applicants",
           "example": "Example not provided."
         },
         {
           "word": "artifact",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an object made in the past.The museum displayed ancient artifacts",
           "example": "Example not provided."
         },
         {
           "word": "authentic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "real, genuine.The signature was authentic",
           "example": "Example not provided."
         },
         {
           "word": "chronology",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the order of events.The historian studied the chronology of wars",
           "example": "Example not provided."
         },
         {
           "word": "diplomat",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who represents their country abroad.The diplomat attended the peace talks",
           "example": "Example not provided."
         },
         {
           "word": "epic",
-          "partOfSpeech": "n/adj",
+          "partOfSpeech": "noun/adjective",
           "meaning": "a long heroic story; grand.The Iliad is an epic poem",
           "example": "Example not provided."
         },
         {
           "word": "excerpt",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small part taken from a text.He read an excerpt from the book",
           "example": "Example not provided."
         },
         {
           "word": "fossil",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "remains of ancient plants/animals in rock.They found a dinosaur fossil",
           "example": "Example not provided."
         },
         {
           "word": "humiliate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make someone feel ashamed.He was humiliated in front of his friends",
           "example": "Example not provided."
         },
         {
           "word": "lyric",
-          "partOfSpeech": "n/adj",
+          "partOfSpeech": "noun/adjective",
           "meaning": "the words of a song; poetic.She wrote the lyrics for the song",
           "example": "Example not provided."
         },
         {
           "word": "majesty",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "greatness, royal power.They admired the majesty of the mountains",
           "example": "Example not provided."
         },
         {
           "word": "monarch",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a king or queen.The monarch ruled the country",
           "example": "Example not provided."
         },
         {
           "word": "precede",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to come before.The introduction precedes the first chapter",
           "example": "Example not provided."
         },
         {
           "word": "punctual",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "on time.She is always punctual to meetings",
           "example": "Example not provided."
         },
         {
           "word": "recruit",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to enlist new members; a new member.The army recruits soldiers every year",
           "example": "Example not provided."
         },
         {
           "word": "refund",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "money returned; to return money.They gave him a refund for the broken item",
           "example": "Example not provided."
         },
         {
           "word": "register",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to record information; an official list.You must register before voting",
           "example": "Example not provided."
         },
         {
           "word": "renown",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "fame, honor.The scientist gained renown for her research",
           "example": "Example not provided."
         },
         {
           "word": "tusk",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a long, pointed tooth of an elephant, etc.The elephant has long tusks",
           "example": "Example not provided."
         }
@@ -12974,91 +12962,91 @@ function generateSampleData() {
       "words": [
         {
           "word": "coexist",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to live together peacefully.Different groups must learn to coexist",
           "example": "Example not provided."
         },
         {
           "word": "conceive",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to imagine or create an idea.She conceived a plan for the trip",
           "example": "Example not provided."
         },
         {
           "word": "dubious",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "doubtful.His story sounds dubious",
           "example": "Example not provided."
         },
         {
           "word": "ego",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "one’s self-esteem.His ego was hurt when he lost",
           "example": "Example not provided."
         },
         {
           "word": "endeavor",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an effort or attempt.Her writing endeavor paid off",
           "example": "Example not provided."
         },
         {
           "word": "engrave",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to carve into a surface.They engraved their initials on the tree",
           "example": "Example not provided."
         },
         {
           "word": "excavate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to dig for something.The team excavated ancient ruins",
           "example": "Example not provided."
         },
         {
           "word": "jagged",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "uneven, sharp-edged.He cut his hand on the jagged rock",
           "example": "Example not provided."
         },
         {
           "word": "locale",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a place or setting.The beach was a perfect locale for the film",
           "example": "Example not provided."
         },
         {
           "word": "magnitude",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "size or importance.The magnitude of the problem was clear",
           "example": "Example not provided."
         },
         {
           "word": "mold",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a fungus; to shape.The old bread was covered in mold",
           "example": "Example not provided."
         },
         {
           "word": "periphery",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "outer edge.They built houses at the city’s periphery",
           "example": "Example not provided."
         },
         {
           "word": "plaster",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "material for walls; to cover with it.They used plaster to repair the wall",
           "example": "Example not provided."
         },
         {
           "word": "shovel",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a tool for digging.He dug with a shovel",
           "example": "Example not provided."
         },
         {
           "word": "thigh",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the part of the leg above the knee.He injured his thigh while running",
           "example": "Example not provided."
         }
@@ -13069,103 +13057,103 @@ function generateSampleData() {
       "words": [
         {
           "word": "attic",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the space under a roof.Old toys were found in the attic",
           "example": "Example not provided."
         },
         {
           "word": "chunk",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a large piece.He ate a chunk of bread",
           "example": "Example not provided."
         },
         {
           "word": "civic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "relating to a city.The mayor spoke about civic duties",
           "example": "Example not provided."
         },
         {
           "word": "descent",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "downward movement.The plane began its descent",
           "example": "Example not provided."
         },
         {
           "word": "din",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "loud noise.The din of traffic was constant",
           "example": "Example not provided."
         },
         {
           "word": "dissatisfy",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make unhappy.The service dissatisfied the customer",
           "example": "Example not provided."
         },
         {
           "word": "fuss",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "unnecessary concern.She made a fuss about the small mistake",
           "example": "Example not provided."
         },
         {
           "word": "glamorous",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "attractive, stylish.The actress wore a glamorous dress",
           "example": "Example not provided."
         },
         {
           "word": "gourmet",
-          "partOfSpeech": "adj/n",
+          "partOfSpeech": "adjective/noun",
           "meaning": "fancy, high-quality food.They enjoyed a gourmet meal",
           "example": "Example not provided."
         },
         {
           "word": "hence",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "therefore, for that reason.It rained, hence the game was canceled",
           "example": "Example not provided."
         },
         {
           "word": "intrinsic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "essential, natural.Curiosity is intrinsic to learning",
           "example": "Example not provided."
         },
         {
           "word": "kettle",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a pot for boiling water.She boiled tea in the kettle",
           "example": "Example not provided."
         },
         {
           "word": "ministry",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a government department.He works for the Ministry of Health",
           "example": "Example not provided."
         },
         {
           "word": "ordeal",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a difficult experience.Losing her job was an ordeal",
           "example": "Example not provided."
         },
         {
           "word": "overwork",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to work too much.He became ill from overwork",
           "example": "Example not provided."
         },
         {
           "word": "soundly",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "deeply, firmly.The baby slept soundly",
           "example": "Example not provided."
         },
         {
           "word": "superintendent",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a building manager.The superintendent repaired the heater",
           "example": "Example not provided."
         }
@@ -13176,85 +13164,85 @@ function generateSampleData() {
       "words": [
         {
           "word": "congested",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "overcrowded.The streets were congested with cars",
           "example": "Example not provided."
         },
         {
           "word": "courier",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a delivery person.The courier delivered the package",
           "example": "Example not provided."
         },
         {
           "word": "deform",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to change shape badly.Heat deformed the plastic toy",
           "example": "Example not provided."
         },
         {
           "word": "etiquette",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "polite behavior.Good etiquette is important at formal dinners",
           "example": "Example not provided."
         },
         {
           "word": "exclusive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "limited, special.They stayed at an exclusive hotel",
           "example": "Example not provided."
         },
         {
           "word": "freight",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "goods carried by train, ship, etc.The train carried freight across the country",
           "example": "Example not provided."
         },
         {
           "word": "garment",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a piece of clothing.The shop sells garments of fine quality",
           "example": "Example not provided."
         },
         {
           "word": "insomnia",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "inability to sleep.She suffered from insomnia for months",
           "example": "Example not provided."
         },
         {
           "word": "intuitive",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "understood naturally.He has an intuitive sense of design",
           "example": "Example not provided."
         },
         {
           "word": "premium",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an extra payment.They paid a premium for early delivery",
           "example": "Example not provided."
         },
         {
           "word": "privilege",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a special right.Education is a privilege, not a burden",
           "example": "Example not provided."
         },
         {
           "word": "propel",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to push forward.The motor propels the boat",
           "example": "Example not provided."
         },
         {
           "word": "socialize",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to spend time with others.He loves to socialize at parties",
           "example": "Example not provided."
         },
         {
           "word": "tram",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a streetcar.They rode the tram through the city",
           "example": "Example not provided."
         }
@@ -13265,91 +13253,91 @@ function generateSampleData() {
       "words": [
         {
           "word": "accumulate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to collect or gather.He accumulated wealth over many years",
           "example": "Example not provided."
         },
         {
           "word": "aerial",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to the air.They took aerial photos from the plane",
           "example": "Example not provided."
         },
         {
           "word": "apparatus",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "equipment.The lab has scientific apparatus",
           "example": "Example not provided."
         },
         {
           "word": "avalanche",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a mass of snow falling down.The avalanche buried the cabin",
           "example": "Example not provided."
         },
         {
           "word": "consistency",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "steadiness, regularity.She paints with consistency",
           "example": "Example not provided."
         },
         {
           "word": "discharge",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to release.The factory discharged waste into the river",
           "example": "Example not provided."
         },
         {
           "word": "episode",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an incident, event.The book tells about a tragic episode in history",
           "example": "Example not provided."
         },
         {
           "word": "intact",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "whole, not broken.The vase survived intact",
           "example": "Example not provided."
         },
         {
           "word": "omen",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a sign of the future.The black cat was a bad omen",
           "example": "Example not provided."
         },
         {
           "word": "overcast",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "cloudy.The sky was overcast with clouds",
           "example": "Example not provided."
         },
         {
           "word": "ranger",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a forest guard.The ranger showed us the trail",
           "example": "Example not provided."
         },
         {
           "word": "rubble",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "broken stone, debris.The house collapsed into rubble",
           "example": "Example not provided."
         },
         {
           "word": "sober",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "serious, not drunk.He looked sober after the meeting",
           "example": "Example not provided."
         },
         {
           "word": "speck",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small spot.There was a speck of dust on the lens",
           "example": "Example not provided."
         },
         {
           "word": "upbringing",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the way someone is raised.She had a strict upbringing",
           "example": "Example not provided."
         }
@@ -13360,115 +13348,115 @@ function generateSampleData() {
       "words": [
         {
           "word": "bliss",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "great happiness.They lived in marital bliss",
           "example": "Example not provided."
         },
         {
           "word": "butler",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the main male servant in a house.The butler opened the door for the guests",
           "example": "Example not provided."
         },
         {
           "word": "cramp",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a sudden, painful tightening of muscle.He got a cramp in his leg while swimming",
           "example": "Example not provided."
         },
         {
           "word": "decorate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to make attractive.They decorated the room for the party",
           "example": "Example not provided."
         },
         {
           "word": "dilapidated",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "in poor condition.They lived in a dilapidated old house",
           "example": "Example not provided."
         },
         {
           "word": "evoke",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to bring to mind.The song evoked memories of childhood",
           "example": "Example not provided."
         },
         {
           "word": "faucet",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a device that controls water flow.Turn off the faucet to save water",
           "example": "Example not provided."
         },
         {
           "word": "filth",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "dirt, foul matter.The room was full of filth",
           "example": "Example not provided."
         },
         {
           "word": "flaw",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an imperfection.There is a flaw in your reasoning",
           "example": "Example not provided."
         },
         {
           "word": "grin",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to smile broadly; a big smile.He grinned with excitement",
           "example": "Example not provided."
         },
         {
           "word": "housekeeping",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the management of a house.She does all the housekeeping",
           "example": "Example not provided."
         },
         {
           "word": "mound",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small hill or pile.He stood on a mound of earth",
           "example": "Example not provided."
         },
         {
           "word": "numb",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "without feeling.My fingers were numb from the cold",
           "example": "Example not provided."
         },
         {
           "word": "reckless",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "careless, dangerous.He drove at reckless speed",
           "example": "Example not provided."
         },
         {
           "word": "slate",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a type of dark rock used for writing.The old school used slate boards",
           "example": "Example not provided."
         },
         {
           "word": "stool",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a seat without a back.He sat on a wooden stool",
           "example": "Example not provided."
         },
         {
           "word": "testament",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "proof of something.Her success is a testament to hard work",
           "example": "Example not provided."
         },
         {
           "word": "timber",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "wood for building.The cabin was built with timber",
           "example": "Example not provided."
         },
         {
           "word": "valve",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a device to control flow of liquid or gas.The plumber replaced the valve",
           "example": "Example not provided."
         }
@@ -13479,85 +13467,85 @@ function generateSampleData() {
       "words": [
         {
           "word": "camouflage",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "disguise that makes things blend in.The soldiers wore camouflage uniforms",
           "example": "Example not provided."
         },
         {
           "word": "confront",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to face boldly.She confronted him about the lie",
           "example": "Example not provided."
         },
         {
           "word": "contemplate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to think deeply.He contemplated moving abroad",
           "example": "Example not provided."
         },
         {
           "word": "contend",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to compete or argue.Three teams will contend for the prize",
           "example": "Example not provided."
         },
         {
           "word": "cot",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small, light bed.The baby slept in a cot",
           "example": "Example not provided."
         },
         {
           "word": "enlist",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to join the army.He enlisted in the navy at 18",
           "example": "Example not provided."
         },
         {
           "word": "frontier",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "border or edge.They crossed the frontier into France",
           "example": "Example not provided."
         },
         {
           "word": "guerilla",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a fighter using irregular tactics.The guerilla fighters attacked at night",
           "example": "Example not provided."
         },
         {
           "word": "handbook",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a guidebook with instructions.She carried a student handbook",
           "example": "Example not provided."
         },
         {
           "word": "hesitant",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "unsure, not confident.He was hesitant to speak in class",
           "example": "Example not provided."
         },
         {
           "word": "lush",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "richly green, full.The garden was lush with flowers",
           "example": "Example not provided."
         },
         {
           "word": "splendid",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very impressive.We enjoyed a splendid view from the mountain",
           "example": "Example not provided."
         },
         {
           "word": "substantial",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "large, important.She made a substantial donation",
           "example": "Example not provided."
         },
         {
           "word": "weary",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very tired.She felt weary after the long trip",
           "example": "Example not provided."
         }
@@ -13568,97 +13556,97 @@ function generateSampleData() {
       "words": [
         {
           "word": "amid",
-          "partOfSpeech": "prep",
+          "partOfSpeech": "preposition",
           "meaning": "in the middle of.He stood amid the crowd",
           "example": "Example not provided."
         },
         {
           "word": "backstage",
-          "partOfSpeech": "adv/n",
+          "partOfSpeech": "adverb/noun",
           "meaning": "behind the stage.The actors waited backstage",
           "example": "Example not provided."
         },
         {
           "word": "billionaire",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a very rich person.The billionaire donated millions to charity",
           "example": "Example not provided."
         },
         {
           "word": "brute",
-          "partOfSpeech": "n/adj",
+          "partOfSpeech": "noun/adjective",
           "meaning": "a cruel, rough person; rough.He acted like a brute",
           "example": "Example not provided."
         },
         {
           "word": "clumsy",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "awkward, ungraceful.The clumsy boy dropped the vase",
           "example": "Example not provided."
         },
         {
           "word": "collide",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to crash together.The cars collided on the highway",
           "example": "Example not provided."
         },
         {
           "word": "culprit",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the guilty person.The police caught the culprit",
           "example": "Example not provided."
         },
         {
           "word": "evacuate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to leave a dangerous place.They evacuated the building after the fire alarm",
           "example": "Example not provided."
         },
         {
           "word": "flammable",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "able to catch fire easily.Keep flammable liquids away from heat",
           "example": "Example not provided."
         },
         {
           "word": "premature",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "happening too early.The baby was born premature",
           "example": "Example not provided."
         },
         {
           "word": "resent",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to feel anger about.He resented being treated unfairly",
           "example": "Example not provided."
         },
         {
           "word": "satire",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "humorous criticism.The play was a satire on politics",
           "example": "Example not provided."
         },
         {
           "word": "scrutiny",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "close examination.The plan is under public scrutiny",
           "example": "Example not provided."
         },
         {
           "word": "segregate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to separate.Schools were once segregated by race",
           "example": "Example not provided."
         },
         {
           "word": "tumult",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "loud disorder.The crowd caused a tumult outside",
           "example": "Example not provided."
         },
         {
           "word": "uproar",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "loud noise, confusion.The joke caused an uproar of laughter",
           "example": "Example not provided."
         }
@@ -13669,103 +13657,103 @@ function generateSampleData() {
       "words": [
         {
           "word": "accelerate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to speed up.The car accelerated quickly",
           "example": "Example not provided."
         },
         {
           "word": "anew",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "again, in a new way.She started her life anew in another city",
           "example": "Example not provided."
         },
         {
           "word": "dreary",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "boring, dull.It was a dreary, rainy day",
           "example": "Example not provided."
         },
         {
           "word": "duplicate",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to copy; a copy.He duplicated the report for everyone",
           "example": "Example not provided."
         },
         {
           "word": "electromagnetic",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to electricity and magnetism.Radio waves are electromagnetic",
           "example": "Example not provided."
         },
         {
           "word": "glide",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to move smoothly.The bird glided across the sky",
           "example": "Example not provided."
         },
         {
           "word": "ingenious",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very clever.She found an ingenious solution",
           "example": "Example not provided."
         },
         {
           "word": "innovative",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "creative, new.They designed an innovative product",
           "example": "Example not provided."
         },
         {
           "word": "launch",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to start, set into motion.They launched the new rocket",
           "example": "Example not provided."
         },
         {
           "word": "meteorological",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "related to weather study.Meteorological data showed a storm",
           "example": "Example not provided."
         },
         {
           "word": "meteorology",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the study of weather.She studied meteorology at university",
           "example": "Example not provided."
         },
         {
           "word": "penetrate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to enter or go through.The bullet penetrated the wall",
           "example": "Example not provided."
         },
         {
           "word": "persistent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "continuing without giving up.Her persistent efforts led to success",
           "example": "Example not provided."
         },
         {
           "word": "propulsion",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "force to move forward.The engine provides propulsion for the plane",
           "example": "Example not provided."
         },
         {
           "word": "simulate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to imitate.The pilot trained on a flight simulator",
           "example": "Example not provided."
         },
         {
           "word": "spur",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to encourage; a motivation.His words spurred her to action",
           "example": "Example not provided."
         },
         {
           "word": "stimulate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to excite, to activate.The teacher stimulated discussion",
           "example": "Example not provided."
         }
@@ -13776,43 +13764,43 @@ function generateSampleData() {
       "words": [
         {
           "word": "beforehand",
-          "partOfSpeech": "adv",
+          "partOfSpeech": "adverb",
           "meaning": "earlier, in advance.We prepared beforehand for the trip",
           "example": "Example not provided."
         },
         {
           "word": "blurred",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "unclear.Her vision was blurred after the accident",
           "example": "Example not provided."
         },
         {
           "word": "centigrade",
-          "partOfSpeech": "adj/n",
+          "partOfSpeech": "adjective/noun",
           "meaning": "Celsius scale of temperature.It was 30 degrees centigrade",
           "example": "Example not provided."
         },
         {
           "word": "chatter",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to talk quickly; fast talk.The kids chattered happily",
           "example": "Example not provided."
         },
         {
           "word": "concerto",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a musical piece for solo and orchestra.The pianist performed a concerto",
           "example": "Example not provided."
         },
         {
           "word": "deteriorate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to get worse.The building deteriorated over time",
           "example": "Example not provided."
         },
         {
           "word": "zip",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to fasten with a zipper; speed.She zipped her jacket",
           "example": "Example not provided."
         }
@@ -13823,25 +13811,25 @@ function generateSampleData() {
       "words": [
         {
           "word": "abolish",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to officially end.They abolished the unfair law",
           "example": "Example not provided."
         },
         {
           "word": "amend",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to change for the better.They amended the constitution",
           "example": "Example not provided."
         },
         {
           "word": "aspire",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to hope for, aim.She aspires to be a doctor",
           "example": "Example not provided."
         },
         {
           "word": "poll",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a survey; to ask opinions.The poll showed rising support",
           "example": "Example not provided."
         }
@@ -13852,37 +13840,37 @@ function generateSampleData() {
       "words": [
         {
           "word": "coward",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person who lacks courage.The coward ran away from the fight",
           "example": "Example not provided."
         },
         {
           "word": "delete",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to remove.She deleted the old files",
           "example": "Example not provided."
         },
         {
           "word": "exclude",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to leave out.They excluded him from the meeting",
           "example": "Example not provided."
         },
         {
           "word": "patriot",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "someone loyal to their country.The patriots fought for independence",
           "example": "Example not provided."
         },
         {
           "word": "prosecute",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to bring legal action against.The company was prosecuted for fraud",
           "example": "Example not provided."
         },
         {
           "word": "undermine",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to weaken.His lies undermined their trust",
           "example": "Example not provided."
         }
@@ -13893,109 +13881,109 @@ function generateSampleData() {
       "words": [
         {
           "word": "constrain",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to limit or restrict.His illness constrained his activities",
           "example": "Example not provided."
         },
         {
           "word": "depot",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a storage place or transport station.The bus depot is near the city center",
           "example": "Example not provided."
         },
         {
           "word": "emulate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to imitate or follow.Children often emulate their parents",
           "example": "Example not provided."
         },
         {
           "word": "forefinger",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "the index finger.He pointed with his forefinger",
           "example": "Example not provided."
         },
         {
           "word": "guts",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "bravery, courage.She had the guts to speak out",
           "example": "Example not provided."
         },
         {
           "word": "inherent",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "naturally part of something.Freedom is an inherent right",
           "example": "Example not provided."
         },
         {
           "word": "intimidate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to scare or threaten.The bully intimidated the younger kids",
           "example": "Example not provided."
         },
         {
           "word": "janitor",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a caretaker of a building.The janitor cleaned the school hallways",
           "example": "Example not provided."
         },
         {
           "word": "moist",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "slightly wet.The soil was moist after the rain",
           "example": "Example not provided."
         },
         {
           "word": "nope",
-          "partOfSpeech": "interj",
+          "partOfSpeech": "interjection",
           "meaning": "informal “no.”“Did you finish it?” — “Nope.”",
           "example": "Example not provided."
         },
         {
           "word": "ransom",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "money paid for release.The kidnappers demanded a ransom",
           "example": "Example not provided."
         },
         {
           "word": "restrain",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to hold back.Police restrained the suspect",
           "example": "Example not provided."
         },
         {
           "word": "saliva",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "liquid in the mouth.The sight of food made his mouth fill with saliva",
           "example": "Example not provided."
         },
         {
           "word": "sprint",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to run quickly; a short fast run.She sprinted to catch the bus",
           "example": "Example not provided."
         },
         {
           "word": "stunt",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a dangerous trick; to prevent growth.The movie had amazing stunts",
           "example": "Example not provided."
         },
         {
           "word": "tolerant",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "accepting of others.We should be tolerant of different cultures",
           "example": "Example not provided."
         },
         {
           "word": "vampire",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a mythical creature that drinks blood.The movie was about a vampire",
           "example": "Example not provided."
         },
         {
           "word": "yawn",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to open mouth when tired; the act itself.He yawned during the lecture",
           "example": "Example not provided."
         }
@@ -14006,109 +13994,109 @@ function generateSampleData() {
       "words": [
         {
           "word": "adjoining",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "next to or connected.Our rooms are adjoining",
           "example": "Example not provided."
         },
         {
           "word": "allege",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to claim without proof.They alleged he was guilty",
           "example": "Example not provided."
         },
         {
           "word": "arch",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a curved structure; to form a curve.The bridge had a stone arch",
           "example": "Example not provided."
         },
         {
           "word": "assemble",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to gather or put together.The students assembled in the hall",
           "example": "Example not provided."
         },
         {
           "word": "casualty",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a person hurt or killed.There were many casualties in the accident",
           "example": "Example not provided."
         },
         {
           "word": "hectare",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a unit of land area (10,000 m²).The farm covers 20 hectares",
           "example": "Example not provided."
         },
         {
           "word": "heighten",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to increase.The news heightened fears of war",
           "example": "Example not provided."
         },
         {
           "word": "hospitality",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "warm, friendly treatment of guests.We enjoyed their hospitality",
           "example": "Example not provided."
         },
         {
           "word": "mansion",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a very large house.The actor lives in a mansion",
           "example": "Example not provided."
         },
         {
           "word": "outnumber",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to be more numerous.The soldiers were outnumbered 2 to 1",
           "example": "Example not provided."
         },
         {
           "word": "overjoyed",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "very happy.She was overjoyed at the news",
           "example": "Example not provided."
         },
         {
           "word": "pasture",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "land for animals to graze.Cows were eating grass in the pasture",
           "example": "Example not provided."
         },
         {
           "word": "petition",
-          "partOfSpeech": "n/v",
+          "partOfSpeech": "noun/verb",
           "meaning": "a formal request; to request formally.They signed a petition for cleaner air",
           "example": "Example not provided."
         },
         {
           "word": "renovate",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to repair or improve.They renovated the old house",
           "example": "Example not provided."
         },
         {
           "word": "revise",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to change or update.She revised her essay before submitting",
           "example": "Example not provided."
         },
         {
           "word": "slab",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a large, flat piece.The sidewalk was made of concrete slabs",
           "example": "Example not provided."
         },
         {
           "word": "terrace",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a flat outdoor area.They had lunch on the terrace",
           "example": "Example not provided."
         },
         {
           "word": "turf",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "grass-covered ground.The soccer players ran on the turf",
           "example": "Example not provided."
         }
@@ -14119,73 +14107,73 @@ function generateSampleData() {
       "words": [
         {
           "word": "analogous",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "similar, comparable.The human brain is analogous to a computer",
           "example": "Example not provided."
         },
         {
           "word": "binoculars",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "an optical device for both eyes.He used binoculars to watch birds",
           "example": "Example not provided."
         },
         {
           "word": "comprise",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to consist of.The class comprises 20 students",
           "example": "Example not provided."
         },
         {
           "word": "depict",
-          "partOfSpeech": "v",
+          "partOfSpeech": "verb",
           "meaning": "to represent in art.The painting depicts a countryside scene",
           "example": "Example not provided."
         },
         {
           "word": "dual",
-          "partOfSpeech": "adj",
+          "partOfSpeech": "adjective",
           "meaning": "having two parts.She has dual citizenship",
           "example": "Example not provided."
         },
         {
           "word": "Fahrenheit",
-          "partOfSpeech": "n/adj",
+          "partOfSpeech": "noun/adjective",
           "meaning": "a temperature scale.It was 90 degrees Fahrenheit today",
           "example": "Example not provided."
         },
         {
           "word": "grove",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a small group of trees.They walked through an olive grove",
           "example": "Example not provided."
         },
         {
           "word": "ore",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "rock containing metal.The miners extracted iron ore",
           "example": "Example not provided."
         },
         {
           "word": "paradox",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a statement that seems contradictory.It’s a paradox that silence can be loud",
           "example": "Example not provided."
         },
         {
           "word": "pier",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a structure extending into water.We walked to the end of the pier",
           "example": "Example not provided."
         },
         {
           "word": "thermometer",
-          "partOfSpeech": "n",
+          "partOfSpeech": "noun",
           "meaning": "a device for measuring temperature.The thermometer shows it’s 10 degrees",
           "example": "Example not provided."
         },
         {
           "word": "tilt",
-          "partOfSpeech": "v/n",
+          "partOfSpeech": "verb/noun",
           "meaning": "to lean to one side; a slant.The picture tilted to the left",
           "example": "Example not provided."
         }
@@ -14193,22 +14181,20 @@ function generateSampleData() {
     }
   }
 };;
+
+// Generate books with actual data (Books 3-6)
+function generateSampleData() {
+    // Add Book 3 with actual data
+    vocabularyData.books[3] = book3Data;
     
-    // Create 30 units for Book 6 with completely empty word lists
-    for (let unit = 1; unit <= 30; unit++) {
-        vocabularyData.books[6].units[unit] = {
-            title: "Unit " + unit + ": Basic Words",
-            words: []
-        };
-    };;
-        
-    // Create 30 units for Book 6 with completely empty word lists
-                    for (let unit = 1; unit <= 30; unit++) {
-        vocabularyData.books[6].units[unit] = {
-            title: "Unit " + unit + ": Basic Words",
-                            words: []
-                        };
-    }
+    // Add Book 4 with actual data
+    vocabularyData.books[4] = book4Data;
+    
+    // Add Book 5 with actual data
+    vocabularyData.books[5] = book5Data;
+    
+    // Add Book 6 with actual data
+    vocabularyData.books[6] = book6Data;
 }
 
 // Initialize the data
