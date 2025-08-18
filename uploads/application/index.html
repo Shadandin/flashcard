@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 id="mainTitle">📚 Flashcard App</h1>
+                <h1 id="bookTitle" style="display: none;">Book Title</h1>
+                <h1 id="unitTitle" style="display: none;">Unit Title</h1>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <span class="progress-text" id="progressText">0% Complete</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <button class="nav-btn active" data-mode="study">Study</button>
+            <button class="nav-btn" data-mode="practice">Practice</button>
+            <button class="nav-btn" data-mode="review">Review</button>
+            <button class="nav-btn" data-mode="progress">Progress</button>
+        </nav>
+
+        <!-- Book Selection -->
+        <div class="book-selection" id="bookSelection">
+            <h2>Select a Book</h2>
+            <div class="books-grid">
+                <div class="book-card" data-book="3">
+                    <h3>Book 3</h3>
+                    <p>Pre-Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="4">
+                    <h3>Book 4</h3>
+                    <p>Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="5">
+                    <h3>Book 5</h3>
+                    <p>Upper-Intermediate Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+                <div class="book-card" data-book="6">
+                    <h3>Book 6</h3>
+                    <p>Advanced Level</p>
+                    <div class="book-progress">0/30 units</div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Unit Selection -->
+        <div class="unit-selection" id="unitSelection" style="display: none;">
+            <h2>Select a Unit</h2>
+            <div class="back-btn" id="backToBooks">← Back to Books</div>
+            <div class="units-grid" id="unitsGrid"></div>
+        </div>
+
+        <!-- Study Mode -->
+        <div class="study-mode" id="studyMode" style="display: none;">
+            <div class="back-btn" id="backToUnits">← Back to Units</div>
+            <div class="study-info">
+                <span id="studyProgress">1 / 20</span>
+                <span id="studyUnit">Unit 1</span>
+                <span id="wordCount">(0/20 words)</span>
+                <div class="study-mode-toggle">
+                    <button class="mode-btn active" id="reviewModeBtn">Review</button>
+                    <button class="mode-btn" id="studyModeBtn">Study</button>
+                </div>
+            </div>
+            
+            <!-- Review Section (Word List View) -->
+            <div class="word-list-view" id="wordListView">
+                <div class="word-list" id="wordList"></div>
+            </div>
+            
+            <!-- Study Section (Flashcard View) -->
+            <div class="study-flashcard-view" id="studyFlashcardView" style="display: none;">
+                <div class="study-flashcard" id="studyFlashcard">
+                    <div class="study-card-front">
+                        <h3 id="studyCardWord">Loading...</h3>
+                        <p id="studyCardPartOfSpeech">Loading...</p>
+                    </div>
+                    <div class="study-card-back">
+                        <h3 id="studyCardMeaning">Loading...</h3>
+                        <p id="studyCardExample">Loading...</p>
+                    </div>
+                </div>
+                <div class="study-flashcard-controls">
+                    <button class="btn btn-secondary" id="studyFlipCard">Flip Card</button>
+                    <button class="btn btn-primary" id="studyNextCard">Next Word</button>
+                </div>
+            </div>
+            
+            <!-- Flashcard View -->
+            <div class="flashcard-view" id="flashcardView" style="display: none;">
+                <div class="flashcard" id="flashcard">
+                    <!-- Normal Card (for existing words) -->
+                    <div id="normalCard">
+                        <div class="card-front">
+                            <h3 id="word">Loading...</h3>
+                            <p id="partOfSpeech">Loading...</p>
+                        </div>
+                        <div class="card-back">
+                            <h3 id="meaning">Loading...</h3>
+                            <p id="example">Loading...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Editable Card (for new words) -->
+                    <div id="editableCard" style="display: none;">
+                        <div class="editable-card-content">
+                            <h3>Add New Word</h3>
+                            <div class="edit-form">
+                                <div class="form-group">
+                                    <label for="editWord">Word:</label>
+                                    <input type="text" id="editWord" placeholder="Enter the word">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPartOfSpeech">Part of Speech:</label>
+                                    <select id="editPartOfSpeech">
+                                        <option value="">Select part of speech...</option>
+                                        <option value="noun">Noun</option>
+                                        <option value="verb">Verb</option>
+                                        <option value="adjective">Adjective</option>
+                                        <option value="adverb">Adverb</option>
+                                        <option value="preposition">Preposition</option>
+                                        <option value="conjunction">Conjunction</option>
+                                        <option value="pronoun">Pronoun</option>
+                                        <option value="interjection">Interjection</option>
+                                        <optgroup label="Compound Forms">
+                                            <option value="noun/adjective">Noun/Adjective</option>
+                                            <option value="adjective/noun">Adjective/Noun</option>
+                                            <option value="verb/noun">Verb/Noun</option>
+                                            <option value="noun/verb">Noun/Verb</option>
+                                            <option value="verb/adjective">Verb/Adjective</option>
+                                            <option value="adjective/verb">Adjective/Verb</option>
+                                            <option value="adverb/adjective">Adverb/Adjective</option>
+                                            <option value="adjective/adverb">Adjective/Adverb</option>
+                                            <option value="adverb/noun">Adverb/Noun</option>
+                                            <option value="noun/adverb">Noun/Adverb</option>
+                                            <option value="verb/adverb">Verb/Adverb</option>
+                                            <option value="adverb/verb">Adverb/Verb</option>
+                                            <option value="preposition/noun">Preposition/Noun</option>
+                                            <option value="noun/preposition">Noun/Preposition</option>
+                                            <option value="conjunction/noun">Conjunction/Noun</option>
+                                            <option value="noun/conjunction">Noun/Conjunction</option>
+                                            <option value="interjection/noun">Interjection/Noun</option>
+                                            <option value="noun/interjection">Noun/Interjection</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editMeaning">Meaning:</label>
+                                    <textarea id="editMeaning" placeholder="Enter the meaning"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editExample">Example:</label>
+                                    <textarea id="editExample" placeholder="Enter an example sentence"></textarea>
+                                </div>
+                                <div class="edit-buttons">
+                                    <button class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                                    <button class="btn btn-primary" id="saveWord">Save Word</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="study-controls" id="studyControls">
+                    <button class="btn btn-secondary" id="flipCard">Flip Card</button>
+                    <button class="btn btn-primary" id="nextCard">Next Word</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Mode -->
+        <div class="practice-mode" id="practiceMode" style="display: none;">
+            <div class="back-btn" id="backToUnitsPractice">← Back to Units</div>
+            <div class="practice-info">
+                <span id="practiceProgress">1 / 10</span>
+                <span id="practiceUnit">Unit 1</span>
+            </div>
+            <div class="question-card">
+                <h3 id="questionText">Loading...</h3>
+                <div class="options" id="options"></div>
+            </div>
+            <div class="practice-controls">
+                <button class="btn btn-primary" id="submitAnswer" disabled>Submit Answer</button>
+                <button class="btn btn-secondary" id="nextQuestion" style="display: none;">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Review Mode -->
+        <div class="review-mode" id="reviewMode" style="display: none;">
+            <h2>Review Mistakes</h2>
+            <div class="mistakes-list" id="mistakesList">
+                <p>No mistakes to review yet. Complete some practice sessions first!</p>
+            </div>
+        </div>
+
+        <!-- Progress Mode -->
+        <div class="progress-mode" id="progressMode" style="display: none;">
+            <h2>Your Progress</h2>
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <h3>Total Words Studied</h3>
+                    <p id="totalStudied">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Practice Questions</h3>
+                    <p id="totalQuestions">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Correct Answers</h3>
+                    <p id="correctAnswers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accuracy</h3>
+                    <p id="accuracy">0%</p>
+                </div>
+            </div>
+            
+            <!-- Repository Statistics -->
+            <div class="repository-stats" id="repositoryStats" style="display: none;">
+                <h3>Repository Statistics</h3>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <h3>Total Flashcards in Repository</h3>
+                        <p id="repoTotalFlashcards">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Last Updated</h3>
+                        <p id="repoLastUpdated">Never</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Repository Status</h3>
+                        <p id="repoStatus">Disconnected</p>
+                    </div>
+                </div>
+                
+                <!-- Git Status -->
+                <div class="git-status-section">
+                    <h3>Git Synchronization</h3>
+                    <div class="git-status-card">
+                        <div id="gitStatus" class="git-status-info">
+                            <strong>Git Status:</strong> Loading...
+                        </div>
+                        <button class="btn btn-primary" id="gitSyncButton" onclick="app.manualGitSync()" style="display: none;">
+                            Sync Git
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-progress-details" id="bookProgressDetails"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
