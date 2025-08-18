@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duolingo-Style Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">Flashcard Learning</h1>
+                <div class="progress-indicator">
+                    <span class="progress-text">Progress: <span id="progress-percentage">0%</span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Book Selection Screen -->
+            <div id="book-selection" class="screen active">
+                <h2 class="screen-title">Choose Your Book</h2>
+                <div class="books-grid">
+                    <div class="book-card" data-book="3">
+                        <div class="book-icon">📚</div>
+                        <h3>Book 3</h3>
+                        <p>30 Units • 600 Words</p>
+                        <div class="book-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="book-card" data-book="4">
+                        <div class="book-icon">📖</div>
+                        <h3>Book 4</h3>
+                        <p>30 Units • 600 Words</p>
+                        <div class="book-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="book-card" data-book="5">
+                        <div class="book-icon">📘</div>
+                        <h3>Book 5</h3>
+                        <p>30 Units • 600 Words</p>
+                        <div class="book-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="book-card" data-book="6">
+                        <div class="book-icon">📙</div>
+                        <h3>Book 6</h3>
+                        <p>30 Units • 600 Words</p>
+                        <div class="book-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unit Selection Screen -->
+            <div id="unit-selection" class="screen">
+                <div class="screen-header">
+                    <button class="back-btn" id="back-to-books">← Back to Books</button>
+                    <h2 class="screen-title">Book <span id="current-book-number"></span> - Units</h2>
+                </div>
+                <div class="units-grid" id="units-container">
+                    <!-- Units will be generated dynamically -->
+                </div>
+            </div>
+
+            <!-- Flashcard Screen -->
+            <div id="flashcard-screen" class="screen">
+                <div class="screen-header">
+                    <button class="back-btn" id="back-to-units">← Back to Units</button>
+                    <div class="unit-info">
+                        <h2 class="screen-title">Unit <span id="current-unit-number"></span></h2>
+                        <div class="progress-indicator">
+                            <span class="progress-text">Word <span id="current-word-number">1</span> of 20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashcard-container">
+                    <div class="flashcard" id="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-section">
+                                <h3 class="word" id="word-text">Word</h3>
+                                <span class="part-of-speech" id="part-of-speech">Part of Speech</span>
+                            </div>
+                            <div class="meaning-section">
+                                <p class="meaning" id="meaning-text">Meaning</p>
+                            </div>
+                            <div class="example-section">
+                                <p class="example" id="example-text">Example sentence</p>
+                            </div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-section">
+                                <h3 class="word" id="word-text-back">Word</h3>
+                                <span class="part-of-speech" id="part-of-speech-back">Part of Speech</span>
+                            </div>
+                            <div class="meaning-section">
+                                <p class="meaning" id="meaning-text-back">Meaning</p>
+                            </div>
+                            <div class="example-section">
+                                <p class="example" id="example-text-back">Example sentence</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flashcard-controls">
+                        <button class="control-btn flip-btn" id="flip-card">
+                            <span class="btn-icon">🔄</span>
+                            <span class="btn-text">Flip Card</span>
+                        </button>
+                        <div class="navigation-buttons">
+                            <button class="control-btn prev-btn" id="prev-card">
+                                <span class="btn-icon">←</span>
+                                <span class="btn-text">Previous</span>
+                            </button>
+                            <button class="control-btn next-btn" id="next-card">
+                                <span class="btn-text">Next</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="word-progress">
+                        <div class="progress-dots" id="progress-dots">
+                            <!-- Progress dots will be generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation Footer -->
+        <footer class="footer">
+            <div class="nav-buttons">
+                <button class="nav-btn active" data-screen="book-selection">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Books</span>
+                </button>
+                <button class="nav-btn" data-screen="progress">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Progress</span>
+                </button>
+                <button class="nav-btn" data-screen="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
