@@ -91,6 +91,19 @@ function showWordInputScreen() {
     document.getElementById('inputUnitNumber').textContent = currentUnit;
     updateWordInputProgress();
     displayCurrentWords();
+    generatePlaceholderCards(); // Initialize placeholder cards
+}
+
+function togglePlaceholderCards() {
+    const container = document.getElementById('placeholderCardsContainer');
+    const isVisible = container.style.display !== 'none';
+    
+    if (isVisible) {
+        container.style.display = 'none';
+    } else {
+        container.style.display = 'block';
+        generatePlaceholderCards(); // Regenerate cards when showing
+    }
 }
 
 function hideAllScreens() {
@@ -833,6 +846,9 @@ function addNewWord() {
     
     // Save to localStorage
     saveProgressToStorage();
+    
+    // Update placeholder cards to show the new word
+    updatePlaceholderCards();
 }
 
 function clearWordForm() {
@@ -846,4 +862,66 @@ window.showWordInputScreen = showWordInputScreen;
 window.addNewWord = addNewWord;
 window.clearWordForm = clearWordForm;
 window.selectUnitForWordInput = selectUnitForWordInput;
+
+// Placeholder card functions
+function generatePlaceholderCards() {
+    if (!currentBook || !currentUnit) return;
+    
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const placeholderGrid = document.getElementById('placeholderCardsGrid');
+    if (!placeholderGrid) return;
+    
+    placeholderGrid.innerHTML = '';
+    
+    if (unitWords.length >= 20) {
+        placeholderGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">This unit is complete with 20 words!</p>';
+        return;
+    }
+    
+    // Generate cards for all 20 positions
+    for (let i = 1; i <= 20; i++) {
+        const card = document.createElement('div');
+        const wordIndex = i - 1; // 0-based index
+        const existingWord = unitWords[wordIndex];
+        
+        if (existingWord) {
+            // Show actual word
+            card.className = 'word-card';
+            card.innerHTML = `
+                <div class="word-header">
+                    <span class="word-number">#${i}</span>
+                    <span class="word-status">Added</span>
+                </div>
+                <div class="word-content">
+                    <div class="word-text">${existingWord.word}</div>
+                    <div class="word-pos">${existingWord.partOfSpeech}</div>
+                    <div class="word-meaning">${existingWord.meaning}</div>
+                    <div class="word-example">${existingWord.example}</div>
+                </div>
+            `;
+        } else {
+            // Show placeholder
+            card.className = 'placeholder-card';
+            card.innerHTML = `
+                <div class="placeholder-header">
+                    <span class="placeholder-number">#${i}</span>
+                    <span class="placeholder-status">Placeholder</span>
+                </div>
+                <div class="placeholder-content">
+                    <div class="placeholder-word">Word ${i}</div>
+                    <div class="placeholder-pos">noun</div>
+                    <div class="placeholder-meaning">Placeholder meaning for word ${i}</div>
+                    <div class="placeholder-example">This is a placeholder example sentence for word ${i}.</div>
+                </div>
+            `;
+        }
+        
+        placeholderGrid.appendChild(card);
+    }
+}
+
+function updatePlaceholderCards() {
+    // Regenerate the placeholder cards to reflect the new word
+    generatePlaceholderCards();
+}
 

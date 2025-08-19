@@ -1,6 +1,6 @@
 // Book Data Structure - Extracted from Word Documents
 // Real vocabulary content from user-provided files
-// All 4 books with complete vocabulary and placeholders
+// All 4 books with complete vocabulary (placeholders removed)
 
 const bookData = {
   "3": {
@@ -120,12 +120,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "the outside or top layer of something",
           "example": "Ice covered the surface of the lake."
-        },
-        {
-          "word": "placeholder_1_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 1",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "2": [
@@ -3907,12 +3901,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to move from one place to another",
           "example": "Trucks transport goods across the country."
-        },
-        {
-          "word": "placeholder_2_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 2",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "3": [
@@ -4273,12 +4261,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "how wide something is",
           "example": "The width of the table is 2 meters."
-        },
-        {
-          "word": "placeholder_5_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 5",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "6": [
@@ -12213,12 +12195,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to make current",
           "example": "They updated the software last night."
-        },
-        {
-          "word": "placeholder_10_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 10",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "11": [
@@ -12335,12 +12311,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "money paid for instruction",
           "example": "Tuition at the university is expensive."
-        },
-        {
-          "word": "placeholder_11_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 11",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "12": [
@@ -12439,30 +12409,6 @@ const bookData = {
           "partOfSpeech": "adjective",
           "meaning": "holy",
           "example": "The temple is a sacred place."
-        },
-        {
-          "word": "placeholder_12_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 12",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_12_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 12",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_12_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 12",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_12_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 12",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "13": [
@@ -12483,108 +12429,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a tool for making holes; to practice",
           "example": "He used a drill to fix the chair."
-        },
-        {
-          "word": "placeholder_13_4",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 4 for Unit 13",
-          "example": "This is placeholder 4 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_5",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 5 for Unit 13",
-          "example": "This is placeholder 5 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_6",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 6 for Unit 13",
-          "example": "This is placeholder 6 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_7",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 7 for Unit 13",
-          "example": "This is placeholder 7 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_8",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 8 for Unit 13",
-          "example": "This is placeholder 8 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_9",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 9 for Unit 13",
-          "example": "This is placeholder 9 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_10",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 10 for Unit 13",
-          "example": "This is placeholder 10 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_11",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 11 for Unit 13",
-          "example": "This is placeholder 11 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_12",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 12 for Unit 13",
-          "example": "This is placeholder 12 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 13",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 13",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 13",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 13",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 13",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 13",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 13",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_13_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 13",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "14": [
@@ -12605,108 +12449,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a shaped mass of bread",
           "example": "She baked a loaf of bread."
-        },
-        {
-          "word": "placeholder_14_4",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 4 for Unit 14",
-          "example": "This is placeholder 4 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_5",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 5 for Unit 14",
-          "example": "This is placeholder 5 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_6",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 6 for Unit 14",
-          "example": "This is placeholder 6 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_7",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 7 for Unit 14",
-          "example": "This is placeholder 7 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_8",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 8 for Unit 14",
-          "example": "This is placeholder 8 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_9",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 9 for Unit 14",
-          "example": "This is placeholder 9 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_10",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 10 for Unit 14",
-          "example": "This is placeholder 10 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_11",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 11 for Unit 14",
-          "example": "This is placeholder 11 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_12",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 12 for Unit 14",
-          "example": "This is placeholder 12 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 14",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 14",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 14",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 14",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 14",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 14",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 14",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_14_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 14",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "15": [
@@ -12823,12 +12565,6 @@ const bookData = {
           "partOfSpeech": "adjective",
           "meaning": "final, best",
           "example": "Winning the championship was the ultimate goal."
-        },
-        {
-          "word": "placeholder_15_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 15",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "16": [
@@ -13043,36 +12779,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "the part of the leg above the knee",
           "example": "He injured his thigh while running."
-        },
-        {
-          "word": "placeholder_17_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 17",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_17_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 17",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_17_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 17",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_17_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 17",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_17_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 17",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "18": [
@@ -13177,24 +12883,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a building manager",
           "example": "The superintendent repaired the heater."
-        },
-        {
-          "word": "placeholder_18_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 18",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_18_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 18",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_18_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 18",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "19": [
@@ -13281,42 +12969,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a streetcar",
           "example": "They rode the tram through the city."
-        },
-        {
-          "word": "placeholder_19_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 19",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_19_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 19",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_19_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 19",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_19_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 19",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_19_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 19",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_19_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 19",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "20": [
@@ -13409,36 +13061,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "the way someone is raised",
           "example": "She had a strict upbringing."
-        },
-        {
-          "word": "placeholder_20_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 20",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_20_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 20",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_20_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 20",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_20_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 20",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_20_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 20",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "21": [
@@ -13555,12 +13177,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a device to control flow of liquid or gas",
           "example": "The plumber replaced the valve."
-        },
-        {
-          "word": "placeholder_21_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 21",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "22": [
@@ -13647,42 +13263,6 @@ const bookData = {
           "partOfSpeech": "adjective",
           "meaning": "very tired",
           "example": "She felt weary after the long trip."
-        },
-        {
-          "word": "placeholder_22_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 22",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_22_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 22",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_22_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 22",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_22_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 22",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_22_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 22",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_22_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 22",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "23": [
@@ -13781,30 +13361,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "loud noise, confusion",
           "example": "The joke caused an uproar of laughter."
-        },
-        {
-          "word": "placeholder_23_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 23",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_23_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 23",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_23_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 23",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_23_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 23",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "24": [
@@ -13909,24 +13465,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to excite, to activate",
           "example": "The teacher stimulated discussion."
-        },
-        {
-          "word": "placeholder_24_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 24",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_24_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 24",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_24_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 24",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "25": [
@@ -13971,84 +13509,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to fasten with a zipper; speed",
           "example": "She zipped her jacket."
-        },
-        {
-          "word": "placeholder_25_8",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 8 for Unit 25",
-          "example": "This is placeholder 8 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_9",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 9 for Unit 25",
-          "example": "This is placeholder 9 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_10",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 10 for Unit 25",
-          "example": "This is placeholder 10 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_11",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 11 for Unit 25",
-          "example": "This is placeholder 11 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_12",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 12 for Unit 25",
-          "example": "This is placeholder 12 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 25",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 25",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 25",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 25",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 25",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 25",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 25",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_25_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 25",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "26": [
@@ -14075,102 +13535,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "a survey; to ask opinions",
           "example": "The poll showed rising support."
-        },
-        {
-          "word": "placeholder_26_5",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 5 for Unit 26",
-          "example": "This is placeholder 5 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_6",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 6 for Unit 26",
-          "example": "This is placeholder 6 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_7",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 7 for Unit 26",
-          "example": "This is placeholder 7 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_8",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 8 for Unit 26",
-          "example": "This is placeholder 8 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_9",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 9 for Unit 26",
-          "example": "This is placeholder 9 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_10",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 10 for Unit 26",
-          "example": "This is placeholder 10 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_11",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 11 for Unit 26",
-          "example": "This is placeholder 11 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_12",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 12 for Unit 26",
-          "example": "This is placeholder 12 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 26",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 26",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 26",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 26",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 26",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 26",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 26",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_26_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 26",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "27": [
@@ -14209,90 +13573,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to weaken",
           "example": "His lies undermined their trust"
-        },
-        {
-          "word": "placeholder_27_7",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 7 for Unit 27",
-          "example": "This is placeholder 7 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_8",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 8 for Unit 27",
-          "example": "This is placeholder 8 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_9",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 9 for Unit 27",
-          "example": "This is placeholder 9 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_10",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 10 for Unit 27",
-          "example": "This is placeholder 10 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_11",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 11 for Unit 27",
-          "example": "This is placeholder 11 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_12",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 12 for Unit 27",
-          "example": "This is placeholder 12 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 27",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 27",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 27",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 27",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 27",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 27",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 27",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_27_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 27",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "28": [
@@ -14397,24 +13677,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to open mouth when tired; the act itself",
           "example": "He yawned during the lecture."
-        },
-        {
-          "word": "placeholder_28_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 28",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_28_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 28",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_28_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 28",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "29": [
@@ -14525,18 +13787,6 @@ const bookData = {
           "partOfSpeech": "noun",
           "meaning": "grass-covered ground",
           "example": "The soccer players ran on the turf."
-        },
-        {
-          "word": "placeholder_29_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 29",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_29_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 29",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ],
       "30": [
@@ -14611,54 +13861,6 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to lean to one side; a slant",
           "example": "The picture tilted to the left."
-        },
-        {
-          "word": "placeholder_30_13",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 13 for Unit 30",
-          "example": "This is placeholder 13 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_14",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 14 for Unit 30",
-          "example": "This is placeholder 14 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_15",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 15 for Unit 30",
-          "example": "This is placeholder 15 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_16",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 16 for Unit 30",
-          "example": "This is placeholder 16 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_17",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 17 for Unit 30",
-          "example": "This is placeholder 17 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_18",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 18 for Unit 30",
-          "example": "This is placeholder 18 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_19",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 19 for Unit 30",
-          "example": "This is placeholder 19 for learning purposes."
-        },
-        {
-          "word": "placeholder_30_20",
-          "partOfSpeech": "noun",
-          "meaning": "Placeholder word 20 for Unit 30",
-          "example": "This is placeholder 20 for learning purposes."
         }
       ]
     }
