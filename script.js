@@ -85,24 +85,35 @@ function showFlashcardScreen() {
     generateIndicatorDots();
 }
 
-function showWordInputScreen() {
+function showUnitPreviewScreen() {
     hideAllScreens();
-    document.getElementById('wordInputScreen').classList.add('active');
-    document.getElementById('inputUnitNumber').textContent = currentUnit;
-    updateWordInputProgress();
+    document.getElementById('unitPreviewScreen').classList.add('active');
+    document.getElementById('previewUnitNumber').textContent = currentUnit;
+    updatePreviewProgress();
     displayCurrentWords();
-    generatePlaceholderCards(); // Initialize placeholder cards
+    generateMissingWordsCards(); // Initialize missing words cards
 }
 
-function togglePlaceholderCards() {
-    const container = document.getElementById('placeholderCardsContainer');
+function toggleAddWordForm() {
+    const wordInputSection = document.getElementById('wordInputSection');
+    const isVisible = wordInputSection.style.display !== 'none';
+    
+    if (isVisible) {
+        wordInputSection.style.display = 'none';
+    } else {
+        wordInputSection.style.display = 'block';
+    }
+}
+
+function toggleMissingWordsCards() {
+    const container = document.getElementById('missingWordsContainer');
     const isVisible = container.style.display !== 'none';
     
     if (isVisible) {
         container.style.display = 'none';
     } else {
         container.style.display = 'block';
-        generatePlaceholderCards(); // Regenerate cards when showing
+        generateMissingWordsCards(); // Regenerate cards when showing
     }
 }
 
@@ -156,8 +167,8 @@ function createUnitCard(unitNumber) {
             <button class="action-btn study-btn" onclick="event.stopPropagation(); selectUnit(${unitNumber})">
                 <i class="fas fa-play"></i> Study
             </button>
-            <button class="action-btn add-words-btn" onclick="event.stopPropagation(); selectUnitForWordInput(${unitNumber})">
-                <i class="fas fa-plus"></i> Add Words
+            <button class="action-btn preview-btn" onclick="event.stopPropagation(); selectUnitForPreview(${unitNumber})">
+                <i class="fas fa-eye"></i> Preview
             </button>
         </div>
     `;
@@ -206,9 +217,9 @@ function selectUnit(unitNumber) {
     showFlashcardScreen();
 }
 
-function selectUnitForWordInput(unitNumber) {
+function selectUnitForPreview(unitNumber) {
     currentUnit = unitNumber;
-    showWordInputScreen();
+    showUnitPreviewScreen();
 }
 
 // Enhanced Flashcard Management
@@ -762,16 +773,16 @@ window.showUnitSelection = showUnitSelection;
 window.exportProgress = exportProgress;
 window.importProgress = importProgress;
 
-// Word Input Functions
-function updateWordInputProgress() {
+// Preview and Word Input Functions
+function updatePreviewProgress() {
     if (!currentBook || !currentUnit) return;
     
     const unitWords = bookData[currentBook].units[currentUnit] || [];
     const currentCount = unitWords.length;
     const progressPercentage = (currentCount / 20) * 100;
     
-    document.getElementById('inputProgressText').textContent = `${currentCount}/20 words completed`;
-    document.getElementById('inputProgressBar').style.width = `${progressPercentage}%`;
+    document.getElementById('previewProgressText').textContent = `${currentCount}/20 words completed`;
+    document.getElementById('previewProgressBar').style.width = `${progressPercentage}%`;
 }
 
 function displayCurrentWords() {
@@ -832,7 +843,7 @@ function addNewWord() {
     bookData[currentBook].units[currentUnit].push(newWord);
     
     // Update displays
-    updateWordInputProgress();
+    updatePreviewProgress();
     displayCurrentWords();
     updateProgressDisplay();
     
@@ -845,10 +856,10 @@ function addNewWord() {
     }
     
     // Save to localStorage
-    saveProgressToStorage();
+    saveUserProgress();
     
-    // Update placeholder cards to show the new word
-    updatePlaceholderCards();
+    // Update missing words cards to show the new word
+    generateMissingWordsCards();
 }
 
 function clearWordForm() {
@@ -857,71 +868,61 @@ function clearWordForm() {
     document.getElementById('newMeaning').value = '';
     document.getElementById('newExample').value = '';
 }
-// Add word input functions to global scope
-window.showWordInputScreen = showWordInputScreen;
+// Add preview and word input functions to global scope
+window.showUnitPreviewScreen = showUnitPreviewScreen;
 window.addNewWord = addNewWord;
 window.clearWordForm = clearWordForm;
-window.selectUnitForWordInput = selectUnitForWordInput;
+window.selectUnitForPreview = selectUnitForPreview;
+window.startStudying = startStudying;
+window.toggleAddWordForm = toggleAddWordForm;
+window.toggleMissingWordsCards = toggleMissingWordsCards;
 
-// Placeholder card functions
-function generatePlaceholderCards() {
+function startStudying() {
+    showFlashcardScreen();
+}
+
+// Missing words card functions
+function generateMissingWordsCards() {
     if (!currentBook || !currentUnit) return;
     
     const unitWords = bookData[currentBook].units[currentUnit] || [];
-    const placeholderGrid = document.getElementById('placeholderCardsGrid');
-    if (!placeholderGrid) return;
+    const missingWordsGrid = document.getElementById('missingWordsGrid');
+    if (!missingWordsGrid) return;
     
-    placeholderGrid.innerHTML = '';
+    missingWordsGrid.innerHTML = '';
     
     if (unitWords.length >= 20) {
-        placeholderGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">This unit is complete with 20 words!</p>';
+        missingWordsGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">This unit is complete with 20 words!</p>';
         return;
     }
     
-    // Generate cards for all 20 positions
+    // Generate cards for missing word positions
     for (let i = 1; i <= 20; i++) {
-        const card = document.createElement('div');
         const wordIndex = i - 1; // 0-based index
         const existingWord = unitWords[wordIndex];
         
-        if (existingWord) {
-            // Show actual word
-            card.className = 'word-card';
+        if (!existingWord) {
+            // Show missing word card
+            const card = document.createElement('div');
+            card.className = 'missing-word-card';
             card.innerHTML = `
-                <div class="word-header">
-                    <span class="word-number">#${i}</span>
-                    <span class="word-status">Added</span>
+                <div class="missing-word-header">
+                    <span class="missing-word-number">#${i}</span>
+                    <span class="missing-word-status">Missing</span>
                 </div>
-                <div class="word-content">
-                    <div class="word-text">${existingWord.word}</div>
-                    <div class="word-pos">${existingWord.partOfSpeech}</div>
-                    <div class="word-meaning">${existingWord.meaning}</div>
-                    <div class="word-example">${existingWord.example}</div>
+                <div class="missing-word-content">
+                    <div class="missing-word-text">Word ${i}</div>
+                    <div class="missing-word-pos">noun</div>
+                    <div class="missing-word-meaning">This word needs to be added manually</div>
+                    <div class="missing-word-example">Click "Add Word" to fill this position</div>
                 </div>
             `;
-        } else {
-            // Show placeholder
-            card.className = 'placeholder-card';
-            card.innerHTML = `
-                <div class="placeholder-header">
-                    <span class="placeholder-number">#${i}</span>
-                    <span class="placeholder-status">Placeholder</span>
-                </div>
-                <div class="placeholder-content">
-                    <div class="placeholder-word">Word ${i}</div>
-                    <div class="placeholder-pos">noun</div>
-                    <div class="placeholder-meaning">Placeholder meaning for word ${i}</div>
-                    <div class="placeholder-example">This is a placeholder example sentence for word ${i}.</div>
-                </div>
-            `;
+            missingWordsGrid.appendChild(card);
         }
-        
-        placeholderGrid.appendChild(card);
     }
-}
-
-function updatePlaceholderCards() {
-    // Regenerate the placeholder cards to reflect the new word
-    generatePlaceholderCards();
+    
+    if (missingWordsGrid.children.length === 0) {
+        missingWordsGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">No missing words! This unit is complete.</p>';
+    }
 }
 

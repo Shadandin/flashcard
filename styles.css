@@ -405,13 +405,13 @@ body {
     transform: translateY(-1px);
 }
 
-.add-words-btn {
-    background: #28a745;
+.preview-btn {
+    background: #17a2b8;
     color: white;
 }
 
-.add-words-btn:hover {
-    background: #218838;
+.preview-btn:hover {
+    background: #138496;
     transform: translateY(-1px);
 }
 
@@ -877,14 +877,14 @@ body {
     }
 }
 
-/* Word Input Screen Styles */
-.word-input-container {
-    max-width: 800px;
+/* Unit Preview Screen Styles */
+.unit-preview-container {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.input-progress {
+.preview-header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -892,15 +892,39 @@ body {
     margin-bottom: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
-.input-progress .progress-info {
+.preview-info {
+    flex: 1;
+}
+
+.preview-info .progress-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
     font-weight: 600;
     color: #333;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.word-input-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .word-input-form {
@@ -1056,8 +1080,8 @@ body {
     font-size: 0.85rem;
 }
 
-/* Placeholder Cards Section */
-.placeholder-cards-section {
+/* Missing Words Section */
+.missing-words-section {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -1065,6 +1089,92 @@ body {
     margin-top: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.missing-words-container {
+    margin-top: 1rem;
+}
+
+.missing-words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.missing-word-card {
+    background: #fff3cd;
+    border: 2px dashed #ffc107;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.missing-word-card:hover {
+    border-color: #e0a800;
+    background: #fff8e1;
+    transform: translateY(-2px);
+}
+
+.missing-word-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.missing-word-number {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #856404;
+}
+
+.missing-word-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #856404;
+    color: white;
+}
+
+.missing-word-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.missing-word-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #856404;
+}
+
+.missing-word-pos {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.missing-word-meaning {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #495057;
+}
+
+.missing-word-example {
+    font-style: italic;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #6c757d;
+    background: #e9ecef;
 }
 
 .section-header {
@@ -1226,8 +1336,18 @@ body {
 }
 
 @media (max-width: 768px) {
-    .word-input-container {
+    .unit-preview-container {
         padding: 1rem;
+    }
+    
+    .preview-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .preview-actions {
+        width: 100%;
+        justify-content: center;
     }
     
     .form-row {
@@ -1242,7 +1362,7 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .placeholder-cards-grid {
+    .missing-words-grid {
         grid-template-columns: 1fr;
     }
     
