@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Placeholders - Flashcard App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .stats {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .unit-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .unit-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .unit-card.complete {
+            border-left: 4px solid #00b894;
+        }
+        
+        .unit-card.incomplete {
+            border-left: 4px solid #fdcb6e;
+        }
+        
+        .unit-card.selected {
+            background: rgba(52, 152, 219, 0.3);
+            border: 2px solid #74b9ff;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00b894, #00cec9);
+            transition: width 0.3s ease;
+        }
+        
+        .placeholder-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        input, textarea, select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .placeholder-list {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .placeholder-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #fdcb6e;
+        }
+        
+        .placeholder-item .word {
+            font-weight: bold;
+            color: #fdcb6e;
+            margin-bottom: 5px;
+        }
+        
+        .placeholder-item .pos {
+            color: #74b9ff;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .placeholder-item .meaning {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .placeholder-item .example {
+            color: #ddd;
+            font-style: italic;
+        }
+        
+        .log {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .log-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .log-entry.info {
+            background: rgba(52, 152, 219, 0.2);
+            color: #74b9ff;
+        }
+        
+        .log-entry.success {
+            background: rgba(46, 204, 113, 0.2);
+            color: #55a3ff;
+        }
+        
+        .log-entry.warning {
+            background: rgba(243, 156, 18, 0.2);
+            color: #fdcb6e;
+        }
+        
+        .log-entry.error {
+            background: rgba(231, 76, 60, 0.2);
+            color: #ff7675;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Flashcard Placeholder Manager</h1>
+        
+        <div class="stats">
+            <h3>Current Statistics</h3>
+            <div id="currentStats">Loading...</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button class="button" onclick="analyzeCurrentData()">📊 Analyze Current Data</button>
+            <button class="button" onclick="addAutoPlaceholders()">➕ Add Auto Placeholders</button>
+            <button class="button" onclick="downloadUpdatedData()">💾 Download Updated Data</button>
+        </div>
+        
+        <div class="unit-stats" id="unitStats"></div>
+        
+        <div class="placeholder-form" id="placeholderForm">
+            <h3>📝 Add Manual Placeholder for <span id="selectedUnit"></span></h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="wordName">Word Name:</label>
+                    <input type="text" id="wordName" placeholder="Enter word name">
+                </div>
+                <div class="form-group">
+                    <label for="partOfSpeech">Part of Speech:</label>
+                    <select id="partOfSpeech">
+                        <option value="noun">Noun</option>
+                        <option value="verb">Verb</option>
+                        <option value="adjective">Adjective</option>
+                        <option value="adverb">Adverb</option>
+                        <option value="preposition">Preposition</option>
+                        <option value="conjunction">Conjunction</option>
+                        <option value="pronoun">Pronoun</option>
+                        <option value="interjection">Interjection</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="meaning">Meaning:</label>
+                <textarea id="meaning" placeholder="Enter the meaning of the word"></textarea>
+            </div>
+            <div class="form-group full-width">
+                <label for="example">Example Sentence:</label>
+                <textarea id="example" placeholder="Enter an example sentence using the word"></textarea>
+            </div>
+            <div style="text-align: center;">
+                <button class="button" onclick="addManualPlaceholder()">➕ Add This Placeholder</button>
+                <button class="button" onclick="closePlaceholderForm()">❌ Cancel</button>
+            </div>
+        </div>
+        
+        <div class="placeholder-list" id="placeholderList" style="display: none;">
+            <h3>📋 Current Placeholders</h3>
+            <div id="placeholderItems"></div>
+        </div>
+        
+        <div class="log" id="log"></div>
+    </div>
+
+    <script>
+        let currentData = null;
+        let updatedData = null;
+        let selectedBook = null;
+        let selectedUnit = null;
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function analyzeCurrentData() {
+            log('Starting analysis of current data...', 'info');
+            
+            // Try to load the current bookData.js
+            fetch('bookData.js')
+                .then(response => response.text())
+                .then(content => {
+                    try {
+                        // Extract the bookData object
+                        const start = content.indexOf('const bookData = ') + 'const bookData = '.length;
+                        const end = content.indexOf(';\n\n// Export', start);
+                        
+                        if (start === -1 || end === -1) {
+                            throw new Error('Could not find bookData in file');
+                        }
+                        
+                        const jsonStr = content.substring(start, end);
+                        currentData = JSON.parse(jsonStr);
+                        
+                        displayStats(currentData);
+                        log('✅ Successfully loaded current data', 'success');
+                        
+                    } catch (error) {
+                        log(`❌ Error parsing data: ${error.message}`, 'error');
+                        // Create sample data structure
+                        currentData = createSampleData();
+                        displayStats(currentData);
+                        log('📝 Created sample data structure', 'warning');
+                    }
+                })
+                .catch(error => {
+                    log(`❌ Error loading bookData.js: ${error.message}`, 'error');
+                    // Create sample data structure
+                    currentData = createSampleData();
+                    displayStats(currentData);
+                    log('📝 Created sample data structure', 'warning');
+                });
+        }
+
+        function createSampleData() {
+            const data = {};
+            for (let bookNum = 3; bookNum <= 6; bookNum++) {
+                data[bookNum] = {
+                    title: `Book ${bookNum} - Academic Vocabulary`,
+                    units: {}
+                };
+                
+                // Add some sample units with varying word counts
+                for (let unitNum = 1; unitNum <= 30; unitNum++) {
+                    const wordCount = Math.floor(Math.random() * 20) + 5; // 5-24 words
+                    const words = [];
+                    
+                    for (let i = 1; i <= wordCount; i++) {
+                        words.push({
+                            word: `sample_word_${unitNum}_${i}`,
+                            partOfSpeech: "noun",
+                            meaning: `Sample meaning ${i} for unit ${unitNum}`,
+                            example: `This is a sample example ${i} for learning.`
+                        });
+                    }
+                    
+                    data[bookNum].units[unitNum] = words;
+                }
+            }
+            return data;
+        }
+
+        function displayStats(data) {
+            const statsDiv = document.getElementById('currentStats');
+            const unitStatsDiv = document.getElementById('unitStats');
+            
+            let totalBooks = Object.keys(data).length;
+            let totalUnits = 0;
+            let totalWords = 0;
+            let incompleteUnits = 0;
+            
+            let statsHTML = '';
+            let unitStatsHTML = '';
+            
+            for (const [bookNum, bookInfo] of Object.entries(data)) {
+                const bookUnits = Object.keys(bookInfo.units).length;
+                const bookWords = Object.values(bookInfo.units).reduce((sum, unit) => sum + unit.length, 0);
+                totalUnits += bookUnits;
+                totalWords += bookWords;
+                
+                statsHTML += `<p><strong>Book ${bookNum}:</strong> ${bookWords} words across ${bookUnits} units</p>`;
+                
+                // Check each unit
+                for (const [unitNum, unitWords] of Object.entries(bookInfo.units)) {
+                    const wordCount = unitWords.length;
+                    const isComplete = wordCount === 20;
+                    const progress = (wordCount / 20) * 100;
+                    
+                    if (!isComplete) {
+                        incompleteUnits++;
+                    }
+                    
+                    unitStatsHTML += `
+                        <div class="unit-card ${isComplete ? 'complete' : 'incomplete'}" 
+                             onclick="selectUnit('${bookNum}', '${unitNum}')" 
+                             data-book="${bookNum}" 
+                             data-unit="${unitNum}">
+                            <h4>Book ${bookNum} - Unit ${unitNum}</h4>
+                            <p>${wordCount}/20 words</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${progress}%"></div>
+                            </div>
+                            ${!isComplete ? `<p style="color: #fdcb6e;">Needs ${20 - wordCount} placeholders</p>` : '<p style="color: #00b894;">✓ Complete</p>'}
+                        </div>
+                    `;
+                }
+            }
+            
+            statsHTML = `
+                <p><strong>Total Books:</strong> ${totalBooks}</p>
+                <p><strong>Total Units:</strong> ${totalUnits}</p>
+                <p><strong>Total Words:</strong> ${totalWords}</p>
+                <p><strong>Incomplete Units:</strong> ${incompleteUnits}</p>
+            ` + statsHTML;
+            
+            statsDiv.innerHTML = statsHTML;
+            unitStatsDiv.innerHTML = unitStatsHTML;
+        }
+
+        function selectUnit(bookNum, unitNum) {
+            // Remove previous selection
+            document.querySelectorAll('.unit-card.selected').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selection to clicked card
+            const card = document.querySelector(`[data-book="${bookNum}"][data-unit="${unitNum}"]`);
+            if (card) {
+                card.classList.add('selected');
+            }
+            
+            selectedBook = bookNum;
+            selectedUnit = unitNum;
+            
+            // Show placeholder form
+            document.getElementById('selectedUnit').textContent = `Book ${bookNum} - Unit ${unitNum}`;
+            document.getElementById('placeholderForm').style.display = 'block';
+            
+            // Clear form fields
+            document.getElementById('wordName').value = '';
+            document.getElementById('partOfSpeech').value = 'noun';
+            document.getElementById('meaning').value = '';
+            document.getElementById('example').value = '';
+            
+            // Show current placeholders for this unit
+            showPlaceholdersForUnit(bookNum, unitNum);
+            
+            log(`Selected Book ${bookNum} - Unit ${unitNum}`, 'info');
+        }
+
+        function showPlaceholdersForUnit(bookNum, unitNum) {
+            const placeholderList = document.getElementById('placeholderList');
+            const placeholderItems = document.getElementById('placeholderItems');
+            
+            if (!currentData || !currentData[bookNum] || !currentData[bookNum].units[unitNum]) {
+                placeholderList.style.display = 'none';
+                return;
+            }
+            
+            const unitWords = currentData[bookNum].units[unitNum];
+            const placeholderWords = unitWords.filter(word => word.word.startsWith('placeholder_'));
+            
+            if (placeholderWords.length === 0) {
+                placeholderList.style.display = 'none';
+                return;
+            }
+            
+            let itemsHTML = '';
+            placeholderWords.forEach((word, index) => {
+                itemsHTML += `
+                    <div class="placeholder-item">
+                        <div class="word">${word.word}</div>
+                        <div class="pos">${word.partOfSpeech}</div>
+                        <div class="meaning">${word.meaning}</div>
+                        <div class="example">${word.example}</div>
+                    </div>
+                `;
+            });
+            
+            placeholderItems.innerHTML = itemsHTML;
+            placeholderList.style.display = 'block';
+        }
+
+        function addManualPlaceholder() {
+            if (!selectedBook || !selectedUnit) {
+                log('❌ Please select a unit first', 'error');
+                return;
+            }
+            
+            const wordName = document.getElementById('wordName').value.trim();
+            const partOfSpeech = document.getElementById('partOfSpeech').value;
+            const meaning = document.getElementById('meaning').value.trim();
+            const example = document.getElementById('example').value.trim();
+            
+            if (!wordName || !meaning || !example) {
+                log('❌ Please fill in all fields', 'error');
+                return;
+            }
+            
+            // Initialize updatedData if not exists
+            if (!updatedData) {
+                updatedData = JSON.parse(JSON.stringify(currentData));
+            }
+            
+            // Add the placeholder
+            const newPlaceholder = {
+                word: wordName,
+                partOfSpeech: partOfSpeech,
+                meaning: meaning,
+                example: example
+            };
+            
+            updatedData[selectedBook].units[selectedUnit].push(newPlaceholder);
+            
+            log(`✅ Added placeholder "${wordName}" to Book ${selectedBook} - Unit ${selectedUnit}`, 'success');
+            
+            // Update display
+            displayStats(updatedData);
+            showPlaceholdersForUnit(selectedBook, selectedUnit);
+            
+            // Clear form
+            document.getElementById('wordName').value = '';
+            document.getElementById('partOfSpeech').value = 'noun';
+            document.getElementById('meaning').value = '';
+            document.getElementById('example').value = '';
+        }
+
+        function closePlaceholderForm() {
+            document.getElementById('placeholderForm').style.display = 'none';
+            document.getElementById('placeholderList').style.display = 'none';
+            document.querySelectorAll('.unit-card.selected').forEach(card => {
+                card.classList.remove('selected');
+            });
+            selectedBook = null;
+            selectedUnit = null;
+        }
+
+        function addAutoPlaceholders() {
+            if (!currentData) {
+                log('❌ Please analyze current data first', 'error');
+                return;
+            }
+            
+            log('Adding auto placeholders to incomplete units...', 'info');
+            
+            updatedData = JSON.parse(JSON.stringify(currentData)); // Deep copy
+            
+            let totalPlaceholdersAdded = 0;
+            
+            for (const [bookNum, bookInfo] of Object.entries(updatedData)) {
+                log(`Processing Book ${bookNum}...`, 'info');
+                
+                for (const [unitNum, unitWords] of Object.entries(bookInfo.units)) {
+                    const currentCount = unitWords.length;
+                    
+                    if (currentCount < 20) {
+                        const placeholdersNeeded = 20 - currentCount;
+                        log(`  Unit ${unitNum}: ${currentCount} words, adding ${placeholdersNeeded} placeholders`, 'warning');
+                        
+                        for (let i = 0; i < placeholdersNeeded; i++) {
+                            const placeholderNum = currentCount + i + 1;
+                            const placeholderWord = `placeholder_${unitNum}_${placeholderNum}`;
+                            
+                            unitWords.push({
+                                word: placeholderWord,
+                                partOfSpeech: "noun",
+                                meaning: `Placeholder word ${placeholderNum} for Unit ${unitNum}`,
+                                example: `This is placeholder ${placeholderNum} for learning purposes.`
+                            });
+                        }
+                        
+                        totalPlaceholdersAdded += placeholdersNeeded;
+                    } else {
+                        log(`  Unit ${unitNum}: ${currentCount} words ✓`, 'success');
+                    }
+                }
+            }
+            
+            log(`✅ Added ${totalPlaceholdersAdded} auto placeholders total`, 'success');
+            displayStats(updatedData);
+        }
+
+        function downloadUpdatedData() {
+            if (!updatedData) {
+                log('❌ Please add placeholders first', 'error');
+                return;
+            }
+            
+            const content = `// Book Data Structure - Extracted from Word Documents
+// Real vocabulary content from user-provided files
+// All 4 books with complete vocabulary and placeholders
+
+const bookData = ${JSON.stringify(updatedData, null, 2)};
+
+// Export the data for use in the main script
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = bookData;
+}`;
+            
+            const blob = new Blob([content], { type: 'application/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'bookData_updated.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            log('💾 Downloaded updated bookData.js', 'success');
+        }
+
+        // Auto-analyze on page load
+        window.onload = function() {
+            log('🚀 Placeholder Manager loaded', 'info');
+            analyzeCurrentData();
+        };
+    </script>
+</body>
+</html>

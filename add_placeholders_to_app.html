@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Placeholders to Current App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .log {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .log-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .log-entry.info {
+            background: rgba(52, 152, 219, 0.2);
+            color: #74b9ff;
+        }
+        
+        .log-entry.success {
+            background: rgba(46, 204, 113, 0.2);
+            color: #55a3ff;
+        }
+        
+        .log-entry.warning {
+            background: rgba(243, 156, 18, 0.2);
+            color: #fdcb6e;
+        }
+        
+        .log-entry.error {
+            background: rgba(231, 76, 60, 0.2);
+            color: #ff7675;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Add Placeholders to Current App</h1>
+        
+        <div class="status">
+            <h3>Current Status</h3>
+            <div id="status">Click "Analyze Current App" to check your flashcard app</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <button class="button" onclick="analyzeCurrentApp()">📊 Analyze Current App</button>
+            <button class="button" onclick="addPlaceholdersToApp()">➕ Add Placeholders to App</button>
+            <button class="button" onclick="openFlashcardApp()">🚀 Open Flashcard App</button>
+        </div>
+        
+        <div class="log" id="log"></div>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function analyzeCurrentApp() {
+            log('Analyzing current flashcard app...', 'info');
+            
+            // Check if we can access the flashcard app
+            try {
+                // Try to access the current bookData from the flashcard app
+                if (typeof bookData !== 'undefined') {
+                    log('✅ Found bookData in current app', 'success');
+                    displayAppStatus(bookData);
+                } else {
+                    log('❌ bookData not found in current app', 'error');
+                    log('Please make sure you are on the flashcard app page', 'warning');
+                }
+            } catch (error) {
+                log(`❌ Error accessing app data: ${error.message}`, 'error');
+            }
+        }
+
+        function displayAppStatus(data) {
+            const statusDiv = document.getElementById('status');
+            let totalBooks = Object.keys(data).length;
+            let totalUnits = 0;
+            let totalWords = 0;
+            let incompleteUnits = 0;
+            
+            let statusHTML = '';
+            
+            for (const [bookNum, bookInfo] of Object.entries(data)) {
+                const bookUnits = Object.keys(bookInfo.units).length;
+                const bookWords = Object.values(bookInfo.units).reduce((sum, unit) => sum + unit.length, 0);
+                totalUnits += bookUnits;
+                totalWords += bookWords;
+                
+                statusHTML += `<p><strong>Book ${bookNum}:</strong> ${bookWords} words across ${bookUnits} units</p>`;
+                
+                // Check each unit
+                for (const [unitNum, unitWords] of Object.entries(bookInfo.units)) {
+                    const wordCount = unitWords.length;
+                    if (wordCount < 20) {
+                        incompleteUnits++;
+                    }
+                }
+            }
+            
+            statusHTML = `
+                <p><strong>Total Books:</strong> ${totalBooks}</p>
+                <p><strong>Total Units:</strong> ${totalUnits}</p>
+                <p><strong>Total Words:</strong> ${totalWords}</p>
+                <p><strong>Incomplete Units:</strong> ${incompleteUnits}</p>
+            ` + statusHTML;
+            
+            statusDiv.innerHTML = statusHTML;
+        }
+
+        function addPlaceholdersToApp() {
+            log('Adding placeholders to current app...', 'info');
+            
+            try {
+                if (typeof bookData === 'undefined') {
+                    log('❌ bookData not found. Please make sure you are on the flashcard app page', 'error');
+                    return;
+                }
+                
+                let totalPlaceholdersAdded = 0;
+                
+                // Process each book
+                for (const [bookNum, bookInfo] of Object.entries(bookData)) {
+                    log(`Processing Book ${bookNum}...`, 'info');
+                    
+                    // Process each unit
+                    for (const [unitNum, unitWords] of Object.entries(bookInfo.units)) {
+                        const currentCount = unitWords.length;
+                        
+                        if (currentCount < 20) {
+                            const placeholdersNeeded = 20 - currentCount;
+                            log(`  Unit ${unitNum}: ${currentCount} words, adding ${placeholdersNeeded} placeholders`, 'warning');
+                            
+                            // Add placeholders
+                            for (let i = 0; i < placeholdersNeeded; i++) {
+                                const placeholderNum = currentCount + i + 1;
+                                const placeholderWord = `placeholder_${unitNum}_${placeholderNum}`;
+                                
+                                unitWords.push({
+                                    word: placeholderWord,
+                                    partOfSpeech: "noun",
+                                    meaning: `Placeholder word ${placeholderNum} for Unit ${unitNum}`,
+                                    example: `This is placeholder ${placeholderNum} for learning purposes.`
+                                });
+                            }
+                            
+                            totalPlaceholdersAdded += placeholdersNeeded;
+                        } else {
+                            log(`  Unit ${unitNum}: ${currentCount} words ✓`, 'success');
+                        }
+                    }
+                }
+                
+                log(`✅ Added ${totalPlaceholdersAdded} placeholders total`, 'success');
+                log('🔄 Updating app display...', 'info');
+                
+                // Update the app display
+                if (typeof updateDisplay === 'function') {
+                    updateDisplay();
+                    log('✅ App display updated', 'success');
+                } else {
+                    log('⚠️ updateDisplay function not found, please refresh the page', 'warning');
+                }
+                
+                // Update status
+                displayAppStatus(bookData);
+                
+            } catch (error) {
+                log(`❌ Error adding placeholders: ${error.message}`, 'error');
+            }
+        }
+
+        function openFlashcardApp() {
+            log('Opening flashcard app...', 'info');
+            window.open('index.html', '_blank');
+        }
+
+        // Auto-analyze on page load
+        window.onload = function() {
+            log('🚀 Placeholder Manager loaded', 'info');
+            log('Please make sure you are on the flashcard app page (index.html)', 'info');
+            log('Or click "Open Flashcard App" to open it in a new tab', 'info');
+        };
+    </script>
+</body>
+</html>

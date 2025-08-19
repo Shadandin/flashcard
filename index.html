@@ -122,6 +122,75 @@
                 </div>
             </div>
 
+            <!-- Word Input Screen -->
+            <div id="wordInputScreen" class="screen">
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showUnitSelection()">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Units
+                    </button>
+                    <h2 class="screen-title">Add Missing Words - Unit <span id="inputUnitNumber"></span></h2>
+                </div>
+                
+                <div class="word-input-container">
+                    <div class="input-progress">
+                        <div class="progress-info">
+                            <span id="inputProgressText">0/20 words completed</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="inputProgressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="word-input-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="newWord">Word:</label>
+                                <input type="text" id="newWord" placeholder="Enter the word">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPartOfSpeech">Part of Speech:</label>
+                                <select id="newPartOfSpeech">
+                                    <option value="noun">Noun</option>
+                                    <option value="verb">Verb</option>
+                                    <option value="adjective">Adjective</option>
+                                    <option value="adverb">Adverb</option>
+                                    <option value="preposition">Preposition</option>
+                                    <option value="conjunction">Conjunction</option>
+                                    <option value="pronoun">Pronoun</option>
+                                    <option value="interjection">Interjection</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="newMeaning">Meaning:</label>
+                            <textarea id="newMeaning" placeholder="Enter the meaning of the word"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="newExample">Example Sentence:</label>
+                            <textarea id="newExample" placeholder="Enter an example sentence using the word"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" onclick="addNewWord()">
+                                <i class="fas fa-plus"></i>
+                                Add Word
+                            </button>
+                            <button class="btn btn-secondary" onclick="clearWordForm()">
+                                <i class="fas fa-eraser"></i>
+                                Clear Form
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="current-words-display">
+                        <h3>Current Words in Unit:</h3>
+                        <div class="words-list" id="currentWordsList">
+                            <!-- Current words will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Flashcard Study Screen -->
             <div id="flashcardScreen" class="screen">
                 <div class="screen-header">

@@ -85,6 +85,14 @@ function showFlashcardScreen() {
     generateIndicatorDots();
 }
 
+function showWordInputScreen() {
+    hideAllScreens();
+    document.getElementById('wordInputScreen').classList.add('active');
+    document.getElementById('inputUnitNumber').textContent = currentUnit;
+    updateWordInputProgress();
+    displayCurrentWords();
+}
+
 function hideAllScreens() {
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.remove('active');
@@ -131,6 +139,14 @@ function createUnitCard(unitNumber) {
             <span class="difficulty-text">${difficulty > 0.7 ? 'Hard' : difficulty > 0.4 ? 'Medium' : 'Easy'}</span>
         </div>
         ${progress > 0 ? `<div class="completion-badge">${Math.round((progress/wordCount)*100)}%</div>` : ''}
+        <div class="unit-actions">
+            <button class="action-btn study-btn" onclick="event.stopPropagation(); selectUnit(${unitNumber})">
+                <i class="fas fa-play"></i> Study
+            </button>
+            <button class="action-btn add-words-btn" onclick="event.stopPropagation(); selectUnitForWordInput(${unitNumber})">
+                <i class="fas fa-plus"></i> Add Words
+            </button>
+        </div>
     `;
     
     if (isUnlocked) {
@@ -175,6 +191,11 @@ function selectUnit(unitNumber) {
     studyMode = 'normal';
     document.getElementById('currentUnitNumber').textContent = unitNumber;
     showFlashcardScreen();
+}
+
+function selectUnitForWordInput(unitNumber) {
+    currentUnit = unitNumber;
+    showWordInputScreen();
 }
 
 // Enhanced Flashcard Management
@@ -727,3 +748,102 @@ window.showBookSelection = showBookSelection;
 window.showUnitSelection = showUnitSelection;
 window.exportProgress = exportProgress;
 window.importProgress = importProgress;
+
+// Word Input Functions
+function updateWordInputProgress() {
+    if (!currentBook || !currentUnit) return;
+    
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const currentCount = unitWords.length;
+    const progressPercentage = (currentCount / 20) * 100;
+    
+    document.getElementById('inputProgressText').textContent = `${currentCount}/20 words completed`;
+    document.getElementById('inputProgressBar').style.width = `${progressPercentage}%`;
+}
+
+function displayCurrentWords() {
+    if (!currentBook || !currentUnit) return;
+    
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const wordsList = document.getElementById('currentWordsList');
+    
+    if (unitWords.length === 0) {
+        wordsList.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">No words in this unit yet. Add your first word!</p>';
+        return;
+    }
+    
+    let wordsHTML = '';
+    unitWords.forEach((word, index) => {
+        wordsHTML += `
+            <div class="word-item">
+                <div class="word">${word.word}</div>
+                <div class="pos">${word.partOfSpeech}</div>
+                <div class="meaning">${word.meaning}</div>
+                <div class="example">${word.example}</div>
+            </div>
+        `;
+    });
+    
+    wordsList.innerHTML = wordsHTML;
+}
+
+function addNewWord() {
+    if (!currentBook || !currentUnit) {
+        alert('Please select a book and unit first.');
+        return;
+    }
+    
+    const word = document.getElementById('newWord').value.trim();
+    const partOfSpeech = document.getElementById('newPartOfSpeech').value;
+    const meaning = document.getElementById('newMeaning').value.trim();
+    const example = document.getElementById('newExample').value.trim();
+    
+    if (!word || !meaning || !example) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Initialize unit if it doesn't exist
+    if (!bookData[currentBook].units[currentUnit]) {
+        bookData[currentBook].units[currentUnit] = [];
+    }
+    
+    // Add the new word
+    const newWord = {
+        word: word,
+        partOfSpeech: partOfSpeech,
+        meaning: meaning,
+        example: example
+    };
+    
+    bookData[currentBook].units[currentUnit].push(newWord);
+    
+    // Update displays
+    updateWordInputProgress();
+    displayCurrentWords();
+    updateProgressDisplay();
+    
+    // Clear form
+    clearWordForm();
+    
+    // Check if unit is complete
+    if (bookData[currentBook].units[currentUnit].length >= 20) {
+        alert('Congratulations! This unit is now complete with 20 words.');
+    }
+    
+    // Save to localStorage
+    saveProgressToStorage();
+}
+
+function clearWordForm() {
+    document.getElementById('newWord').value = '';
+    document.getElementById('newPartOfSpeech').value = 'noun';
+    document.getElementById('newMeaning').value = '';
+    document.getElementById('newExample').value = '';
+}
+// Add word input functions to global scope
+window.showWordInputScreen = showWordInputScreen;
+window.addNewWord = addNewWord;
+window.clearWordForm = clearWordForm;
+window.selectUnitForWordInput = selectUnitForWordInput;
+
