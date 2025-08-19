@@ -7509,9 +7509,9 @@ const bookData = {
         },
         {
           "word": "inland",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "away from the coast\nThey traveled inland from the port.",
-          "example": "The inland approach was very effective."
+          "example": "The inland is important for success."
         },
         {
           "word": "moisture",
@@ -8187,9 +8187,9 @@ const bookData = {
         },
         {
           "word": "ceramic",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "made of clay and hardened by heat\nShe bought a ceramic vase.",
-          "example": "The ceramic approach was very effective."
+          "example": "The ceramic is important for success."
         },
         {
           "word": "culinary",
@@ -8637,9 +8637,9 @@ const bookData = {
         },
         {
           "word": "overall",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "in general\nOverall, the trip was a success.",
-          "example": "The overall approach was very effective."
+          "example": "The overall is important for success."
         },
         {
           "word": "partiality",
@@ -9059,9 +9059,9 @@ const bookData = {
         },
         {
           "word": "elaborate",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "detailed; to explain in detail\nHe gave an elaborate description of the plan.",
-          "example": "The elaborate approach was very effective."
+          "example": "The elaborate is important for success."
         },
         {
           "word": "facilitate",
@@ -9143,9 +9143,9 @@ const bookData = {
         },
         {
           "word": "updated",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "made more modern or current\nThe app was updated with new features.",
-          "example": "The updated approach was very effective."
+          "example": "The updated is important for success."
         }
       ],
       "16": [
@@ -9675,9 +9675,9 @@ const bookData = {
         },
         {
           "word": "equivalent",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "equal in value\nTen dimes are equivalent to a dollar.",
-          "example": "The equivalent approach was very effective."
+          "example": "The equivalent is important for success."
         },
         {
           "word": "immune",
@@ -10413,9 +10413,9 @@ const bookData = {
         },
         {
           "word": "inward",
-          "partOfSpeech": "adjective",
+          "partOfSpeech": "adj",
           "meaning": "directed inside\nHe took a deep inward breath.",
-          "example": "The inward approach was very effective."
+          "example": "The inward is important for success."
         },
         {
           "word": "loaf",
