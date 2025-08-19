@@ -1,160 +1,184 @@
-# Duolingo-Style Flashcard App
+# 📚 Enhanced Flashcard App
 
-A modern, interactive flashcard learning application inspired by Duolingo's design and functionality. Built with vanilla JavaScript, HTML, and CSS.
+A modern, feature-rich flashcard application designed for vocabulary learning with study statistics, spaced repetition, and progress tracking. Built with HTML, CSS, and JavaScript.
 
-## Features
+## ✨ Features
 
-### 📚 Book Structure
-- **4 Books**: Books 3, 4, 5, and 6
-- **30 Units per Book**: Each book contains 30 learning units
-- **20 Words per Unit**: Every unit has 20 flashcards to study
-- **Total**: 2,400 flashcards across all books (4 × 30 × 20)
+### 🎯 Core Learning Features
+- **4 Books with 30 Units Each**: Comprehensive vocabulary organized by difficulty levels
+- **Interactive Flashcards**: Beautiful flip animations with word, meaning, and example sentences
+- **Progress Tracking**: Save your learning progress automatically
+- **Unit Unlocking System**: Complete 80% of a unit to unlock the next one
 
-### 🎯 Learning Features
-- **Interactive Flashcards**: Flip cards to reveal meanings and examples
-- **Progress Tracking**: Automatic progress saving using localStorage
-- **Visual Progress Indicators**: See your completion status for each book and unit
-- **Navigation Controls**: Easy navigation between words and units
-- **Keyboard Support**: Use arrow keys and spacebar for navigation
-- **Touch/Swipe Support**: Mobile-friendly swipe gestures
+### 📊 Study Statistics
+- **Study Streaks**: Track your daily learning streak
+- **Total Study Time**: Monitor how long you've been studying
+- **Session Counter**: Keep track of your study sessions
+- **Global Statistics**: View your overall learning progress
 
-### 🎨 Design Features
-- **Duolingo-Inspired UI**: Modern, clean interface with smooth animations
-- **Color Scheme**: Light blue (#87CEEB) and sour red (#FF6B6B) theme
+### 🧠 Smart Learning Features
+- **Difficulty Tracking**: Mark words as easy (1), medium (2), or difficult (3)
+- **Difficult Words List**: Automatically track words you struggle with
+- **Unit Difficulty Indicators**: Visual indicators showing unit difficulty levels
+- **Completion Badges**: See your progress at a glance
+
+### 💾 Data Management
+- **Export Progress**: Download your learning data as JSON
+- **Import Progress**: Restore your progress from backup files
+- **Local Storage**: Automatic saving of your progress
+- **Cross-device Sync**: Transfer progress between devices
+
+### 🎮 User Experience
+- **Keyboard Shortcuts**: 
+  - `← →` Navigate cards
+  - `Space` Next card
+  - `F` Flip card
+  - `1-3` Mark difficulty
+- **Touch/Swipe Support**: Swipe left/right to navigate on mobile
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **Smooth Animations**: Card flip animations and transition effects
-- **Progress Visualization**: Visual progress bars and completion indicators
+- **Beautiful Animations**: Smooth transitions and hover effects
 
-## File Structure
+### 🏆 Gamification
+- **Completion Modals**: Celebrate unit completions with statistics
+- **Progress Bars**: Visual progress indicators for books and units
+- **Streak Counter**: Maintain motivation with daily streaks
+- **Achievement Tracking**: Monitor your learning milestones
 
-```
-flashcard/
-├── index.html          # Main HTML structure
-├── styles.css          # CSS styling and animations
-├── script.js           # JavaScript functionality
-├── README.md           # This file
-├── Book 3.docx         # Book content (placeholder)
-├── Book 4.docx         # Book content (placeholder)
-├── Book 5.docx         # Book content (placeholder)
-└── Book 6.docx         # Book content (placeholder)
-```
+## 🚀 Installation
 
-## Flashcard Structure
+1. **Clone or Download** the repository
+2. **Open** `index.html` in your web browser
+3. **Start Learning** immediately - no installation required!
 
-Each flashcard contains four fields:
-1. **Word**: The vocabulary word to learn
-2. **Part of Speech**: Grammatical category (noun, verb, adjective, etc.)
-3. **Meaning**: Definition or translation
-4. **Example**: Sample sentence showing usage
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- No additional software required
 
-## How to Use
+## 📖 Usage Guide
 
 ### Getting Started
-1. Open `index.html` in your web browser
-2. The app will load with the book selection screen
-3. Your progress is automatically saved in the browser
+1. **Choose a Book**: Select from Books 3-6 based on your level
+2. **Select a Unit**: Start with Unit 1 (automatically unlocked)
+3. **Study Flashcards**: Click "Show Meaning" to reveal definitions
+4. **Navigate**: Use arrow keys or click navigation buttons
+5. **Track Progress**: Monitor your statistics in the header
 
-### Navigation
-1. **Select a Book**: Click on any of the four books (3, 4, 5, or 6)
-2. **Choose a Unit**: Select a unit from 1-30 within the book
-3. **Study Flashcards**: Navigate through the 20 words in the unit
+### Study Tips
+- **Use Keyboard Shortcuts**: Faster navigation with keyboard
+- **Mark Difficulty**: Press 1-3 to mark word difficulty
+- **Review Difficult Words**: Focus on words marked as difficult
+- **Maintain Streaks**: Study daily to build your streak
+- **Export Regularly**: Backup your progress periodically
 
-### Flashcard Controls
-- **Flip Card**: Click the "Flip Card" button or press Spacebar/Enter
-- **Previous Word**: Click "Previous" button or press Left Arrow
-- **Next Word**: Click "Next" button or press Right Arrow
-- **Progress Dots**: Click any dot to jump to a specific word
-- **Swipe**: On mobile, swipe left/right to navigate between words
+### Advanced Features
+- **Export Progress**: Click the download icon in the header
+- **Import Progress**: Click the upload icon to restore data
+- **Mobile Study**: Swipe left/right to navigate on touch devices
+- **Track Statistics**: Monitor your learning metrics in real-time
 
-### Progress Tracking
-- **Book Progress**: See completion percentage for each book
-- **Unit Progress**: Visual indicators show completed units
-- **Word Progress**: Progress dots show your position in the current unit
-- **Auto-Save**: Progress is automatically saved to localStorage
+## 🎨 Customization
 
-## Technical Details
-
-### Browser Compatibility
-- Modern browsers with ES6+ support
-- LocalStorage for progress persistence
-- CSS Grid and Flexbox for responsive layout
-- CSS animations and transitions
-
-### Performance Features
-- Efficient DOM manipulation
-- Event delegation for better performance
-- Smooth animations with CSS transforms
-- Responsive design with mobile-first approach
-
-### Data Structure
-The app uses a structured data format:
+### Adding New Vocabulary
+1. Edit `bookData.js` to add new words
+2. Follow the existing data structure:
 ```javascript
 {
-  "3": {  // Book 3
-    "1": {  // Unit 1
-      "completed": false,
-      "wordsCompleted": 0,
-      "totalWords": 20
-    }
-    // ... more units
-  }
-  // ... more books
+    word: "example",
+    partOfSpeech: "noun",
+    meaning: "a thing characteristic of its kind",
+    example: "This is an example sentence."
 }
 ```
 
-## Customization
+### Styling
+- Modify `styles.css` to change colors, fonts, and layout
+- The app uses CSS custom properties for easy theming
+- Responsive design adapts to different screen sizes
 
-### Adding Real Content
-To add actual vocabulary content:
-1. Modify the `loadFlashcard()` method in `script.js`
-2. Replace placeholder data with real word data
-3. Consider integrating with external data sources or APIs
+## 📱 Browser Support
 
-### Styling Changes
-- Modify CSS variables in `styles.css` for color changes
-- Adjust animations and transitions
-- Customize responsive breakpoints
+- ✅ Chrome 60+
+- ✅ Firefox 55+
+- ✅ Safari 12+
+- ✅ Edge 79+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
-### Feature Extensions
-The app is designed to be easily extensible:
-- Add audio pronunciation
-- Implement spaced repetition algorithms
-- Add user accounts and cloud sync
-- Include gamification elements (streaks, points, achievements)
+## 🔧 Technical Details
 
-## Browser Storage
+### File Structure
+```
+flashcard/
+├── index.html          # Main application
+├── styles.css          # Styling and animations
+├── script.js           # Core functionality
+├── bookData.js         # Vocabulary data
+├── extract_content.py  # Word document parser
+└── README.md          # This file
+```
 
-The app uses localStorage to save:
-- Progress for each book and unit
-- Completion status
-- Words completed per unit
+### Data Storage
+- **Local Storage**: Progress saved automatically in browser
+- **JSON Format**: Export/import uses standard JSON
+- **No Server Required**: Works completely offline
 
-Data persists between browser sessions and is stored locally on the user's device.
+### Performance
+- **Lightweight**: Minimal dependencies, fast loading
+- **Offline Capable**: Works without internet connection
+- **Memory Efficient**: Optimized for smooth performance
 
-## Future Enhancements
+## 🎯 Learning Methodology
 
-Potential features for future versions:
-- **Audio Support**: Pronunciation for each word
-- **Spaced Repetition**: Intelligent review scheduling
-- **User Accounts**: Cloud synchronization
-- **Statistics**: Detailed learning analytics
-- **Custom Decks**: User-created flashcard sets
-- **Offline Support**: Service worker for offline access
-- **Social Features**: Share progress and compete with friends
+### Spaced Repetition
+The app implements basic spaced repetition principles:
+- Track word difficulty automatically
+- Focus on difficult words
+- Progressive unit unlocking
 
-## License
+### Active Recall
+- Flashcards encourage active recall
+- Multiple interaction methods (click, keyboard, touch)
+- Immediate feedback on progress
 
-This project is open source and available under the MIT License.
+### Gamification
+- Streak tracking for motivation
+- Visual progress indicators
+- Achievement-based unit unlocking
 
-## Contributing
+## 🤝 Contributing
 
-Feel free to contribute by:
-- Adding new features
-- Improving the UI/UX
-- Fixing bugs
-- Adding more language support
-- Optimizing performance
+### Adding Features
+1. Fork the repository
+2. Create a feature branch
+3. Implement your changes
+4. Test thoroughly
+5. Submit a pull request
+
+### Reporting Issues
+- Use GitHub Issues for bug reports
+- Include browser and OS information
+- Describe steps to reproduce
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- **Font Awesome** for icons
+- **Google Fonts** for typography
+- **Inter font family** for clean design
+- **CSS Grid & Flexbox** for responsive layout
+
+## 📞 Support
+
+For questions or support:
+- Check the usage guide above
+- Review browser compatibility
+- Ensure JavaScript is enabled
+- Try clearing browser cache if issues persist
 
 ---
 
-**Note**: This is a template/placeholder app. The actual word content needs to be populated based on your specific learning materials from the Book 3-6 documents.
+**Happy Learning! 🎓**
+
+*Built with ❤️ for effective vocabulary learning*
