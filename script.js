@@ -1629,54 +1629,45 @@ function generateQuestion(unitWords, allWords) {
     const correctWord = unitWords[Math.floor(Math.random() * unitWords.length)];
     const incorrectWords = allWords.filter(word => word.word !== correctWord.word);
     
-    // Shuffle and get 3 random incorrect words
-    const shuffledIncorrect = incorrectWords.sort(() => 0.5 - Math.random()).slice(0, 3);
-    
     let question, correctAnswer, options;
     
     switch (questionType) {
         case 'meaning':
             question = `What is the meaning of "${correctWord.word}"?`;
             correctAnswer = correctWord.meaning;
-            options = [
-                correctWord.meaning,
-                shuffledIncorrect[0].meaning,
-                shuffledIncorrect[1].meaning,
-                shuffledIncorrect[2].meaning
-            ];
+            
+            // Get unique meanings for options
+            const uniqueMeanings = getUniqueOptions(incorrectWords, 'meaning', correctAnswer, 3);
+            options = [correctAnswer, ...uniqueMeanings];
             break;
             
         case 'word':
             question = `Which word means "${correctWord.meaning}"?`;
             correctAnswer = correctWord.word;
-            options = [
-                correctWord.word,
-                shuffledIncorrect[0].word,
-                shuffledIncorrect[1].word,
-                shuffledIncorrect[2].word
-            ];
+            
+            // Get unique words for options
+            const uniqueWords = getUniqueOptions(incorrectWords, 'word', correctAnswer, 3);
+            options = [correctAnswer, ...uniqueWords];
             break;
             
         case 'partOfSpeech':
             question = `What part of speech is "${correctWord.word}"?`;
             correctAnswer = correctWord.partOfSpeech;
-            options = [
-                correctWord.partOfSpeech,
-                'noun',
-                'verb',
-                'adjective'
-            ];
+            
+            // Create unique part of speech options
+            const posOptions = ['noun', 'verb', 'adjective', 'adverb'];
+            const uniquePos = posOptions.filter(pos => pos !== correctAnswer);
+            const shuffledPos = uniquePos.sort(() => 0.5 - Math.random()).slice(0, 3);
+            options = [correctAnswer, ...shuffledPos];
             break;
             
         case 'example':
             question = `Complete the sentence: "${correctWord.example.replace(correctWord.word, '_____')}"`;
             correctAnswer = correctWord.word;
-            options = [
-                correctWord.word,
-                shuffledIncorrect[0].word,
-                shuffledIncorrect[1].word,
-                shuffledIncorrect[2].word
-            ];
+            
+            // Get unique words for options
+            const uniqueWordsForExample = getUniqueOptions(incorrectWords, 'word', correctAnswer, 3);
+            options = [correctAnswer, ...uniqueWordsForExample];
             break;
     }
     
@@ -1692,6 +1683,34 @@ function generateQuestion(unitWords, allWords) {
         correctIndex: correctIndex,
         word: correctWord.word
     };
+}
+
+// Helper function to get unique options
+function getUniqueOptions(words, property, excludeValue, count) {
+    const uniqueValues = new Set();
+    const shuffledWords = words.sort(() => 0.5 - Math.random());
+    
+    for (const word of shuffledWords) {
+        const value = word[property];
+        if (value && value !== excludeValue && !uniqueValues.has(value)) {
+            uniqueValues.add(value);
+            if (uniqueValues.size >= count) {
+                break;
+            }
+        }
+    }
+    
+    // If we don't have enough unique values, add some fallback options
+    const result = Array.from(uniqueValues);
+    while (result.length < count) {
+        if (property === 'meaning') {
+            result.push(`Different meaning ${result.length + 1}`);
+        } else if (property === 'word') {
+            result.push(`word${result.length + 1}`);
+        }
+    }
+    
+    return result.slice(0, count);
 }
 
 function loadCurrentQuestion() {
