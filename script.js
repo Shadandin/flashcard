@@ -1117,8 +1117,83 @@ function saveBookDataToLocalStorage() {
     try {
         localStorage.setItem('bookData', JSON.stringify(bookData));
         console.log('Book data saved to localStorage');
+        
+        // Auto-commit to Git repository
+        commitToGit();
     } catch (error) {
         console.error('Error saving book data:', error);
+    }
+}
+
+function commitToGit() {
+    // Create a data file with the updated book data
+    const dataToSave = JSON.stringify(bookData, null, 2);
+    const blob = new Blob([dataToSave], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    // Create download link for the updated data
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'updated-book-data.json';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    // Show instructions for manual Git commit
+    showGitCommitInstructions();
+}
+
+function showGitCommitInstructions() {
+    const instructions = `
+        <div class="git-instructions-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>📁 Git Upload Instructions</h3>
+                    <button class="close-btn" onclick="closeGitInstructions()">×</button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Your changes have been saved locally and a file has been downloaded.</strong></p>
+                    
+                    <div class="git-steps">
+                        <h4>To upload to Git repository:</h4>
+                        <ol>
+                            <li>Replace the <code>bookData.js</code> file with the downloaded <code>updated-book-data.json</code></li>
+                            <li>Open terminal/command prompt in your project folder</li>
+                            <li>Run these commands:</li>
+                        </ol>
+                        
+                        <div class="git-commands">
+                            <code>git add .</code><br>
+                            <code>git commit -m "Update vocabulary data - ${new Date().toLocaleString()}"</code><br>
+                            <code>git push origin main</code>
+                        </div>
+                        
+                        <div class="git-note">
+                            <p><strong>Note:</strong> For automatic Git uploads, you can:</p>
+                            <ul>
+                                <li>Set up a webhook in your repository</li>
+                                <li>Use GitHub Actions for automated commits</li>
+                                <li>Configure a local Git hook</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="closeGitInstructions()">Got it!</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', instructions);
+}
+
+function closeGitInstructions() {
+    const modal = document.querySelector('.git-instructions-modal');
+    if (modal) {
+        modal.remove();
     }
 }
 
