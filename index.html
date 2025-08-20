@@ -142,60 +142,15 @@
                                 <div class="progress" id="previewProgressBar" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="preview-actions">
-                            <button class="btn btn-primary" onclick="startStudying()">
-                                <i class="fas fa-play"></i>
-                                Start Studying
-                            </button>
-                            <button class="btn btn-secondary" onclick="toggleAddWordForm()">
-                                <i class="fas fa-plus"></i>
-                                Add Word
-                            </button>
-                        </div>
+                                                 <div class="preview-actions">
+                             <button class="btn btn-primary" onclick="startStudying()">
+                                 <i class="fas fa-play"></i>
+                                 Start Studying
+                             </button>
+                         </div>
                     </div>
                     
-                    <div class="word-input-section" id="wordInputSection" style="display: none;">
-                        <div class="word-input-form">
-                            <h3>Add New Word</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="newWord">Word:</label>
-                                    <input type="text" id="newWord" placeholder="Enter the word">
-                                </div>
-                                <div class="form-group">
-                                    <label for="newPartOfSpeech">Part of Speech:</label>
-                                    <select id="newPartOfSpeech">
-                                        <option value="noun">Noun</option>
-                                        <option value="verb">Verb</option>
-                                        <option value="adjective">Adjective</option>
-                                        <option value="adverb">Adverb</option>
-                                        <option value="preposition">Preposition</option>
-                                        <option value="conjunction">Conjunction</option>
-                                        <option value="pronoun">Pronoun</option>
-                                        <option value="interjection">Interjection</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="newMeaning">Meaning:</label>
-                                <textarea id="newMeaning" placeholder="Enter the meaning of the word"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="newExample">Example Sentence:</label>
-                                <textarea id="newExample" placeholder="Enter an example sentence using the word"></textarea>
-                            </div>
-                            <div class="form-actions">
-                                <button class="btn btn-primary" onclick="addNewWord()">
-                                    <i class="fas fa-plus"></i>
-                                    Add Word
-                                </button>
-                                <button class="btn btn-secondary" onclick="clearWordForm()">
-                                    <i class="fas fa-eraser"></i>
-                                    Clear Form
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    
                     
                     <div class="current-words-display">
                         <h3>Current Words in Unit:</h3>
@@ -204,20 +159,7 @@
                         </div>
                     </div>
                     
-                    <div class="missing-words-section">
-                        <div class="section-header">
-                            <h3>Missing Words (Need Manual Entry)</h3>
-                            <button class="btn btn-secondary" onclick="toggleMissingWordsCards()">
-                                <i class="fas fa-eye"></i>
-                                Show/Hide Missing Words
-                            </button>
-                        </div>
-                        <div class="missing-words-container" id="missingWordsContainer" style="display: none;">
-                            <div class="missing-words-grid" id="missingWordsGrid">
-                                <!-- Missing word cards will be generated here -->
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 

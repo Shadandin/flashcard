@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "bookNumber": 3,
+      "title": "Book 3 - Academic Vocabulary",
+      "fileName": "book3.json",
+      "unitCount": 30,
+      "wordCount": 599
+    },
+    {
+      "bookNumber": 4,
+      "title": "Book 4 - Academic Vocabulary",
+      "fileName": "book4.json",
+      "unitCount": 30,
+      "wordCount": 598
+    },
+    {
+      "bookNumber": 5,
+      "title": "Book 5 - Academic Vocabulary",
+      "fileName": "book5.json",
+      "unitCount": 30,
+      "wordCount": 600
+    },
+    {
+      "bookNumber": 6,
+      "title": "Book 6 - Academic Vocabulary",
+      "fileName": "book6.json",
+      "unitCount": 30,
+      "wordCount": 470
+    }
+  ]
+}

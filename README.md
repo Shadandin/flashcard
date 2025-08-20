@@ -180,5 +180,5 @@ For questions or support:
 ---
 
 **Happy Learning! 🎓**
-
 *Built with ❤️ for effective vocabulary learning*
+

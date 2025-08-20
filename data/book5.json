@@ -1,0 +1,3666 @@
+{
+  "bookNumber": 5,
+  "title": "Book 5 - Academic Vocabulary",
+  "units": {
+    "1": [
+      {
+        "word": "allot",
+        "partOfSpeech": "verb",
+        "meaning": "to assign or give a portion\nThe teacher allotted five minutes for each presentation.",
+        "example": "The team will allot the project successfully."
+      },
+      {
+        "word": "appall",
+        "partOfSpeech": "verb",
+        "meaning": "to shock or horrify\nThe crime scene appalled the investigators.",
+        "example": "The team will appall the project successfully."
+      },
+      {
+        "word": "cache",
+        "partOfSpeech": "noun",
+        "meaning": "a hidden storage of items\nThe pirates discovered a cache of gold coins.",
+        "example": "The cache is important for success."
+      },
+      {
+        "word": "convenience",
+        "partOfSpeech": "noun",
+        "meaning": "ease or usefulness\nMicrowave ovens provide great convenience in cooking.",
+        "example": "The convenience is important for success."
+      },
+      {
+        "word": "dearth",
+        "partOfSpeech": "noun",
+        "meaning": "a lack of something\nThe village faced a dearth of clean drinking water.",
+        "example": "The dearth is important for success."
+      },
+      {
+        "word": "deliberate",
+        "partOfSpeech": "adjective",
+        "meaning": "intentional; planned\nHis insult was a deliberate attempt to start a fight.",
+        "example": "The deliberate approach was very effective."
+      },
+      {
+        "word": "dire",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely serious or urgent\nThe refugees were in dire need of food.",
+        "example": "The dire approach was very effective."
+      },
+      {
+        "word": "elapse",
+        "partOfSpeech": "verb",
+        "meaning": "(of time) to pass\nHours elapsed before help arrived.",
+        "example": "The team will elapse the project successfully."
+      },
+      {
+        "word": "empathy",
+        "partOfSpeech": "noun",
+        "meaning": "the ability to share feelings\nHer empathy made her a good counselor.",
+        "example": "The empathy is important for success."
+      },
+      {
+        "word": "fanciful",
+        "partOfSpeech": "adjective",
+        "meaning": "imaginative but unrealistic\nHe had fanciful dreams of living on the moon.",
+        "example": "The fanciful approach was very effective."
+      },
+      {
+        "word": "gripe",
+        "partOfSpeech": "verb",
+        "meaning": "to complain\nThe students griped about the heavy homework.",
+        "example": "The team will gripe the project successfully."
+      },
+      {
+        "word": "grueling",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely tiring\nThe marathon was grueling but rewarding.",
+        "example": "The grueling approach was very effective."
+      },
+      {
+        "word": "mundane",
+        "partOfSpeech": "adjective",
+        "meaning": "ordinary, dull\nFiling papers is a mundane task.",
+        "example": "The mundane approach was very effective."
+      },
+      {
+        "word": "opt",
+        "partOfSpeech": "verb",
+        "meaning": "to choose\nShe opted to walk instead of taking the bus.",
+        "example": "The team will opt the project successfully."
+      },
+      {
+        "word": "outrage",
+        "partOfSpeech": "noun",
+        "meaning": "strong anger\nThe unfair decision caused public outrage.",
+        "example": "The outrage is important for success."
+      },
+      {
+        "word": "paltry",
+        "partOfSpeech": "adjective",
+        "meaning": "very small, insignificant\nThey received a paltry reward for their efforts.",
+        "example": "The paltry approach was very effective."
+      },
+      {
+        "word": "rectify",
+        "partOfSpeech": "verb",
+        "meaning": "to fix or correct\nHe rectified the error in the report.",
+        "example": "The team will rectify the project successfully."
+      },
+      {
+        "word": "resourceful",
+        "partOfSpeech": "adjective",
+        "meaning": "skilled at problem-solving\nThe resourceful girl fixed the car with basic tools.",
+        "example": "The resourceful approach was very effective."
+      },
+      {
+        "word": "sustenance",
+        "partOfSpeech": "noun",
+        "meaning": "nourishment or food\nThey carried bread and water for sustenance.",
+        "example": "The sustenance is important for success."
+      },
+      {
+        "word": "tedious",
+        "partOfSpeech": "adjective",
+        "meaning": "boring, repetitive\nCopying the data was a tedious task.",
+        "example": "The tedious approach was very effective."
+      }
+    ],
+    "2": [
+      {
+        "word": "abbey",
+        "partOfSpeech": "noun",
+        "meaning": "a building for monks or nuns\nThe old abbey stood on a hilltop.",
+        "example": "The abbey is important for success."
+      },
+      {
+        "word": "abundant",
+        "partOfSpeech": "adjective",
+        "meaning": "plentiful\nThe garden produced abundant vegetables.",
+        "example": "The abundant approach was very effective."
+      },
+      {
+        "word": "adjoin",
+        "partOfSpeech": "verb",
+        "meaning": "to be next to something\nTheir land adjoins the river.",
+        "example": "The team will adjoin the project successfully."
+      },
+      {
+        "word": "ample",
+        "partOfSpeech": "adjective",
+        "meaning": "more than enough\nThe room provides ample space for meetings.",
+        "example": "The ample approach was very effective."
+      },
+      {
+        "word": "arid",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely dry\nCamels survive in arid deserts.",
+        "example": "The arid approach was very effective."
+      },
+      {
+        "word": "cathedral",
+        "partOfSpeech": "noun",
+        "meaning": "a large important church\nTourists visited the famous cathedral in Rome.",
+        "example": "The cathedral is important for success."
+      },
+      {
+        "word": "deprive",
+        "partOfSpeech": "verb",
+        "meaning": "to take away from\nThe blackout deprived them of light.",
+        "example": "The team will deprive the project successfully."
+      },
+      {
+        "word": "drought",
+        "partOfSpeech": "noun",
+        "meaning": "long period without rain\nThe crops died during the drought.",
+        "example": "The drought is important for success."
+      },
+      {
+        "word": "eligible",
+        "partOfSpeech": "adjective",
+        "meaning": "qualified, allowed\nOnly adults are eligible to vote.",
+        "example": "The eligible approach was very effective."
+      },
+      {
+        "word": "fast",
+        "partOfSpeech": "verb",
+        "meaning": "to go without food; a period of no eating\nMuslims fast during Ramadan.",
+        "example": "The team will fast the project successfully."
+      },
+      {
+        "word": "grumble",
+        "partOfSpeech": "verb",
+        "meaning": "to complain quietly\nThe workers grumbled about low wages.",
+        "example": "The team will grumble the project successfully."
+      },
+      {
+        "word": "inland",
+        "partOfSpeech": "adj",
+        "meaning": "away from the coast\nThey traveled inland from the port.",
+        "example": "The inland is important for success."
+      },
+      {
+        "word": "moisture",
+        "partOfSpeech": "noun",
+        "meaning": "small amount of water\nThe soil had enough moisture for growth.",
+        "example": "The moisture is important for success."
+      },
+      {
+        "word": "nonetheless",
+        "partOfSpeech": "adverb",
+        "meaning": "in spite of that\nIt rained, but they played nonetheless.",
+        "example": "The nonetheless is important for success."
+      },
+      {
+        "word": "oath",
+        "partOfSpeech": "noun",
+        "meaning": "a serious promise\nHe took an oath of loyalty.",
+        "example": "The oath is important for success."
+      },
+      {
+        "word": "prairie",
+        "partOfSpeech": "noun",
+        "meaning": "a wide, flat grassland\nBuffalo roamed across the prairie.",
+        "example": "The prairie is important for success."
+      },
+      {
+        "word": "ragged",
+        "partOfSpeech": "adjective",
+        "meaning": "torn, worn out\nHe wore ragged old clothes.",
+        "example": "The ragged approach was very effective."
+      },
+      {
+        "word": "rugged",
+        "partOfSpeech": "adjective",
+        "meaning": "rough, uneven\nThe hikers climbed the rugged terrain.",
+        "example": "The rugged approach was very effective."
+      },
+      {
+        "word": "scarce",
+        "partOfSpeech": "adjective",
+        "meaning": "rare, hard to find\nFood was scarce in winter.",
+        "example": "The scarce approach was very effective."
+      },
+      {
+        "word": "speculate",
+        "partOfSpeech": "verb",
+        "meaning": "to guess or wonder\nScientists speculate about life on Mars.",
+        "example": "The team will speculate the project successfully."
+      }
+    ],
+    "3": [
+      {
+        "word": "analytic",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to logical analysis\nHe used analytic skills to solve the puzzle.",
+        "example": "The analytic approach was very effective."
+      },
+      {
+        "word": "assert",
+        "partOfSpeech": "verb",
+        "meaning": "to state firmly\nShe asserted her right to speak.",
+        "example": "The team will assert the project successfully."
+      },
+      {
+        "word": "bachelor",
+        "partOfSpeech": "noun",
+        "meaning": "an unmarried man or undergraduate degree holder\nHe remained a bachelor all his life.",
+        "example": "The bachelor is important for success."
+      },
+      {
+        "word": "calculus",
+        "partOfSpeech": "noun",
+        "meaning": "a branch of mathematics\nShe studied calculus at university.",
+        "example": "The calculus is important for success."
+      },
+      {
+        "word": "celestial",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to the sky or outer space\nAstronomers study celestial bodies.",
+        "example": "The celestial approach was very effective."
+      },
+      {
+        "word": "cognitive",
+        "partOfSpeech": "adjective",
+        "meaning": "related to thinking\nSleep affects cognitive performance.",
+        "example": "The cognitive approach was very effective."
+      },
+      {
+        "word": "collision",
+        "partOfSpeech": "noun",
+        "meaning": "crash\nTwo cars had a collision at the junction.",
+        "example": "The collision is important for success."
+      },
+      {
+        "word": "competent",
+        "partOfSpeech": "adjective",
+        "meaning": "skilled enough\nShe is a competent pianist.",
+        "example": "The competent approach was very effective."
+      },
+      {
+        "word": "diploma",
+        "partOfSpeech": "noun",
+        "meaning": "certificate of graduation\nHe received his diploma at the ceremony.",
+        "example": "The diploma is important for success."
+      },
+      {
+        "word": "excel",
+        "partOfSpeech": "verb",
+        "meaning": "to be very good at something\nShe excels in mathematics.",
+        "example": "The team will excel the project successfully."
+      },
+      {
+        "word": "geology",
+        "partOfSpeech": "noun",
+        "meaning": "study of the earth\nHe teaches geology at the university.",
+        "example": "The geology is important for success."
+      },
+      {
+        "word": "harness",
+        "partOfSpeech": "verb",
+        "meaning": "to control and use\nThey harnessed solar power for electricity.",
+        "example": "The team will harness the project successfully."
+      },
+      {
+        "word": "intellect",
+        "partOfSpeech": "noun",
+        "meaning": "intelligence\nEinstein had a brilliant intellect.",
+        "example": "The intellect is important for success."
+      },
+      {
+        "word": "keen",
+        "partOfSpeech": "adjective",
+        "meaning": "eager; sharp\nShe is keen to learn new skills.",
+        "example": "The keen approach was very effective."
+      },
+      {
+        "word": "mythology",
+        "partOfSpeech": "noun",
+        "meaning": "traditional myths\nGreek mythology is fascinating.",
+        "example": "The mythology is important for success."
+      },
+      {
+        "word": "physiology",
+        "partOfSpeech": "noun",
+        "meaning": "study of body functions\nPhysiology explains how organs work.",
+        "example": "The physiology is important for success."
+      },
+      {
+        "word": "radioactive",
+        "partOfSpeech": "adjective",
+        "meaning": "emitting radiation\nUranium is a radioactive element.",
+        "example": "The radioactive approach was very effective."
+      },
+      {
+        "word": "relativity",
+        "partOfSpeech": "noun",
+        "meaning": "Einstein’s theory of space and time\nRelativity changed modern physics.",
+        "example": "The relativity is important for success."
+      },
+      {
+        "word": "sociology",
+        "partOfSpeech": "noun",
+        "meaning": "study of society\nHe majors in sociology.",
+        "example": "The sociology is important for success."
+      },
+      {
+        "word": "theoretical",
+        "partOfSpeech": "adjective",
+        "meaning": "based on ideas, not practice\nThe plan is still theoretical.",
+        "example": "The theoretical approach was very effective."
+      }
+    ],
+    "4": [
+      {
+        "word": "administrator",
+        "partOfSpeech": "noun",
+        "meaning": "a person who manages business\nThe school administrator hired new teachers.",
+        "example": "The administrator is important for success."
+      },
+      {
+        "word": "affluent",
+        "partOfSpeech": "adjective",
+        "meaning": "wealthy\nThey live in an affluent neighborhood.",
+        "example": "The affluent approach was very effective."
+      },
+      {
+        "word": "audit",
+        "partOfSpeech": "noun",
+        "meaning": "formal examination of accounts\nThe company requested a financial audit.",
+        "example": "The audit is important for success."
+      },
+      {
+        "word": "automate",
+        "partOfSpeech": "verb",
+        "meaning": "to make automatic\nThey automated the factory with machines.",
+        "example": "The team will automate the project successfully."
+      },
+      {
+        "word": "bribe",
+        "partOfSpeech": "verb",
+        "meaning": "to give money illegally for influence\nThe officer was caught taking a bribe.",
+        "example": "The team will bribe the project successfully."
+      },
+      {
+        "word": "corrupt",
+        "partOfSpeech": "adjective",
+        "meaning": "dishonest, immoral\nThe corrupt official was arrested.",
+        "example": "The corrupt approach was very effective."
+      },
+      {
+        "word": "dispose",
+        "partOfSpeech": "verb",
+        "meaning": "to throw away\nThey disposed of the old furniture.",
+        "example": "The team will dispose the project successfully."
+      },
+      {
+        "word": "headquarters",
+        "partOfSpeech": "noun",
+        "meaning": "main office\nThe company’s headquarters are in London.",
+        "example": "The headquarters is important for success."
+      },
+      {
+        "word": "incentive",
+        "partOfSpeech": "noun",
+        "meaning": "something that motivates\nThe bonus was an incentive to work harder.",
+        "example": "The incentive is important for success."
+      },
+      {
+        "word": "infrastructure",
+        "partOfSpeech": "noun",
+        "meaning": "basic systems of society\nThe city improved its transport infrastructure.",
+        "example": "The infrastructure is important for success."
+      },
+      {
+        "word": "legislate",
+        "partOfSpeech": "verb",
+        "meaning": "to make laws\nThe government legislated new tax rules.",
+        "example": "The team will legislate the project successfully."
+      },
+      {
+        "word": "legitimate",
+        "partOfSpeech": "adjective",
+        "meaning": "lawful, proper\nHe had a legitimate reason to be late.",
+        "example": "The legitimate approach was very effective."
+      },
+      {
+        "word": "manipulate",
+        "partOfSpeech": "verb",
+        "meaning": "to control unfairly\nHe manipulated the data to his advantage.",
+        "example": "The team will manipulate the project successfully."
+      },
+      {
+        "word": "merchandise",
+        "partOfSpeech": "noun",
+        "meaning": "goods for sale\nThe shop sells sports merchandise.",
+        "example": "The merchandise is important for success."
+      },
+      {
+        "word": "retail",
+        "partOfSpeech": "noun",
+        "meaning": "selling goods directly to consumers\nThe company operates in the retail sector.",
+        "example": "The retail is important for success."
+      },
+      {
+        "word": "revenue",
+        "partOfSpeech": "noun",
+        "meaning": "income\nTourism generates revenue for the city.",
+        "example": "The revenue is important for success."
+      },
+      {
+        "word": "rubbish",
+        "partOfSpeech": "noun",
+        "meaning": "trash, garbage\nThe park was full of rubbish.",
+        "example": "The rubbish is important for success."
+      },
+      {
+        "word": "subsidy",
+        "partOfSpeech": "noun",
+        "meaning": "money given by government to help costs\nThe farmer received a government subsidy.",
+        "example": "The subsidy is important for success."
+      },
+      {
+        "word": "transaction",
+        "partOfSpeech": "noun",
+        "meaning": "business deal\nThe transaction was completed online.",
+        "example": "The transaction is important for success."
+      },
+      {
+        "word": "violate",
+        "partOfSpeech": "verb",
+        "meaning": "to break a law or rule\nThey violated the agreement.",
+        "example": "The team will violate the project successfully."
+      }
+    ],
+    "5": [
+      {
+        "word": "assess",
+        "partOfSpeech": "verb",
+        "meaning": "to evaluate\nThe teacher assessed the students’ work.",
+        "example": "The team will assess the project successfully."
+      },
+      {
+        "word": "astonish",
+        "partOfSpeech": "verb",
+        "meaning": "to surprise greatly\nHer singing voice astonished the judges.",
+        "example": "The team will astonish the project successfully."
+      },
+      {
+        "word": "commence",
+        "partOfSpeech": "verb",
+        "meaning": "to begin\nThe meeting will commence at 10 a.m.",
+        "example": "The team will commence the project successfully."
+      },
+      {
+        "word": "essence",
+        "partOfSpeech": "noun",
+        "meaning": "the most important quality\nFreedom is the essence of democracy.",
+        "example": "The essence is important for success."
+      },
+      {
+        "word": "extract",
+        "partOfSpeech": "verb",
+        "meaning": "to remove or take out\nThey extracted oil from the seeds.",
+        "example": "The team will extract the project successfully."
+      },
+      {
+        "word": "fabulous",
+        "partOfSpeech": "adjective",
+        "meaning": "wonderful, amazing\nShe wore a fabulous dress to the party.",
+        "example": "The fabulous approach was very effective."
+      },
+      {
+        "word": "haste",
+        "partOfSpeech": "noun",
+        "meaning": "speed, hurry\nHe left in haste after the call.",
+        "example": "The haste is important for success."
+      },
+      {
+        "word": "impulse",
+        "partOfSpeech": "noun",
+        "meaning": "sudden desire or urge\nShe bought the shoes on impulse.",
+        "example": "The impulse is important for success."
+      },
+      {
+        "word": "latter",
+        "partOfSpeech": "noun",
+        "meaning": "the second of two\nI prefer tea rather than the latter choice, coffee.",
+        "example": "The latter is important for success."
+      },
+      {
+        "word": "molecule",
+        "partOfSpeech": "noun",
+        "meaning": "smallest unit of matter\nWater is made of molecules of hydrogen and oxygen.",
+        "example": "The molecule is important for success."
+      },
+      {
+        "word": "ongoing",
+        "partOfSpeech": "adjective",
+        "meaning": "continuing\nThere is an ongoing investigation.",
+        "example": "The ongoing approach was very effective."
+      },
+      {
+        "word": "pharmaceutical",
+        "partOfSpeech": "adjective",
+        "meaning": "related to medicine\nHe works for a pharmaceutical company.",
+        "example": "The pharmaceutical approach was very effective."
+      },
+      {
+        "word": "precise",
+        "partOfSpeech": "adjective",
+        "meaning": "exact\nShe gave a precise description of the thief.",
+        "example": "The precise approach was very effective."
+      },
+      {
+        "word": "proximity",
+        "partOfSpeech": "noun",
+        "meaning": "closeness\nThe school’s proximity to my house is convenient.",
+        "example": "The proximity is important for success."
+      },
+      {
+        "word": "publicity",
+        "partOfSpeech": "noun",
+        "meaning": "public attention\nThe movie gained much publicity before release.",
+        "example": "The publicity is important for success."
+      },
+      {
+        "word": "remedy",
+        "partOfSpeech": "noun",
+        "meaning": "medicine or cure\nHerbal tea is a remedy for colds.",
+        "example": "The remedy is important for success."
+      },
+      {
+        "word": "significance",
+        "partOfSpeech": "noun",
+        "meaning": "importance\nThis discovery has great significance.",
+        "example": "The significance is important for success."
+      },
+      {
+        "word": "subsequent",
+        "partOfSpeech": "adjective",
+        "meaning": "coming after\nThe subsequent events were surprising.",
+        "example": "The subsequent approach was very effective."
+      },
+      {
+        "word": "synthetic",
+        "partOfSpeech": "adjective",
+        "meaning": "artificial\nThe bag was made of synthetic leather.",
+        "example": "The synthetic approach was very effective."
+      },
+      {
+        "word": "terminal",
+        "partOfSpeech": "noun",
+        "meaning": "end point; fatal\nHe waited at the bus terminal.",
+        "example": "The terminal is important for success."
+      }
+    ],
+    "6": [
+      {
+        "word": "altitude",
+        "partOfSpeech": "noun",
+        "meaning": "height above sea level\nThe plane flew at a high altitude.",
+        "example": "The altitude is important for success."
+      },
+      {
+        "word": "coastline",
+        "partOfSpeech": "noun",
+        "meaning": "the edge of land by the sea\nThey walked along the rocky coastline.",
+        "example": "The coastline is important for success."
+      },
+      {
+        "word": "deter",
+        "partOfSpeech": "verb",
+        "meaning": "to discourage\nThe guard dog deterred the thief.",
+        "example": "The team will deter the project successfully."
+      },
+      {
+        "word": "devise",
+        "partOfSpeech": "verb",
+        "meaning": "to invent, plan\nThe engineers devised a new machine.",
+        "example": "The team will devise the project successfully."
+      },
+      {
+        "word": "expertise",
+        "partOfSpeech": "noun",
+        "meaning": "special skill or knowledge\nShe has expertise in finance.",
+        "example": "The expertise is important for success."
+      },
+      {
+        "word": "fracture",
+        "partOfSpeech": "noun",
+        "meaning": "a broken bone\nHe suffered a leg fracture.",
+        "example": "The fracture is important for success."
+      },
+      {
+        "word": "impair",
+        "partOfSpeech": "verb",
+        "meaning": "to damage or weaken\nLoud music can impair your hearing.",
+        "example": "The team will impair the project successfully."
+      },
+      {
+        "word": "implement",
+        "partOfSpeech": "verb",
+        "meaning": "to put into effect\nThe company implemented new policies.",
+        "example": "The team will implement the project successfully."
+      },
+      {
+        "word": "indigenous",
+        "partOfSpeech": "adjective",
+        "meaning": "native, original\nThe kangaroo is indigenous to Australia.",
+        "example": "The indigenous approach was very effective."
+      },
+      {
+        "word": "insight",
+        "partOfSpeech": "noun",
+        "meaning": "deep understanding\nThe book gave insight into human behavior.",
+        "example": "The insight is important for success."
+      },
+      {
+        "word": "limb",
+        "partOfSpeech": "noun",
+        "meaning": "arm or leg\nThe monkey climbed with strong limbs.",
+        "example": "The limb is important for success."
+      },
+      {
+        "word": "migraine",
+        "partOfSpeech": "noun",
+        "meaning": "severe headache\nShe stayed home due to a migraine.",
+        "example": "The migraine is important for success."
+      },
+      {
+        "word": "optimism",
+        "partOfSpeech": "noun",
+        "meaning": "hopefulness\nHe faced challenges with optimism.",
+        "example": "The optimism is important for success."
+      },
+      {
+        "word": "peculiar",
+        "partOfSpeech": "adjective",
+        "meaning": "strange, unusual\nThere was a peculiar smell in the room.",
+        "example": "The peculiar approach was very effective."
+      },
+      {
+        "word": "proficient",
+        "partOfSpeech": "adjective",
+        "meaning": "skilled\nShe is proficient in French.",
+        "example": "The proficient approach was very effective."
+      },
+      {
+        "word": "quest",
+        "partOfSpeech": "noun",
+        "meaning": "search, pursuit\nThe knights went on a quest for treasure.",
+        "example": "The quest is important for success."
+      },
+      {
+        "word": "ridge",
+        "partOfSpeech": "noun",
+        "meaning": "long narrow hilltop\nThey hiked along the mountain ridge.",
+        "example": "The ridge is important for success."
+      },
+      {
+        "word": "spouse",
+        "partOfSpeech": "noun",
+        "meaning": "husband or wife\nShe attended the event with her spouse.",
+        "example": "The spouse is important for success."
+      },
+      {
+        "word": "thrust",
+        "partOfSpeech": "verb",
+        "meaning": "to push strongly\nHe thrust the door open.",
+        "example": "The team will thrust the project successfully."
+      },
+      {
+        "word": "tolerate",
+        "partOfSpeech": "verb",
+        "meaning": "to accept without protest\nShe couldn’t tolerate the noise.",
+        "example": "The team will tolerate the project successfully."
+      }
+    ],
+    "7": [
+      {
+        "word": "aquatic",
+        "partOfSpeech": "adjective",
+        "meaning": "living in water\nDolphins are aquatic animals.",
+        "example": "The aquatic approach was very effective."
+      },
+      {
+        "word": "biosphere",
+        "partOfSpeech": "noun",
+        "meaning": "part of earth with life\nThe biosphere includes all ecosystems.",
+        "example": "The biosphere is important for success."
+      },
+      {
+        "word": "bizarre",
+        "partOfSpeech": "adjective",
+        "meaning": "strange, unusual\nHe told a bizarre story about aliens.",
+        "example": "The bizarre approach was very effective."
+      },
+      {
+        "word": "celsius",
+        "partOfSpeech": "noun",
+        "meaning": "temperature scale\nWater freezes at 0 degrees Celsius.",
+        "example": "The celsius is important for success."
+      },
+      {
+        "word": "coarse",
+        "partOfSpeech": "adjective",
+        "meaning": "rough, not smooth\nThe fabric felt coarse.",
+        "example": "The coarse approach was very effective."
+      },
+      {
+        "word": "companion",
+        "partOfSpeech": "noun",
+        "meaning": "friend\nThe dog was his faithful companion.",
+        "example": "The companion is important for success."
+      },
+      {
+        "word": "digest",
+        "partOfSpeech": "verb",
+        "meaning": "to break down food\nIt takes time to digest a meal.",
+        "example": "The team will digest the project successfully."
+      },
+      {
+        "word": "duration",
+        "partOfSpeech": "noun",
+        "meaning": "length of time\nThe meeting’s duration was two hours.",
+        "example": "The duration is important for success."
+      },
+      {
+        "word": "ecology",
+        "partOfSpeech": "noun",
+        "meaning": "study of environment\nShe studies ecology at university.",
+        "example": "The ecology is important for success."
+      },
+      {
+        "word": "feat",
+        "partOfSpeech": "noun",
+        "meaning": "an impressive act\nClimbing Everest is a great feat.",
+        "example": "The feat is important for success."
+      },
+      {
+        "word": "infinite",
+        "partOfSpeech": "adjective",
+        "meaning": "without end\nThe universe seems infinite.",
+        "example": "The infinite approach was very effective."
+      },
+      {
+        "word": "nucleus",
+        "partOfSpeech": "noun",
+        "meaning": "central part of atom or cell\nThe nucleus controls cell activities.",
+        "example": "The nucleus is important for success."
+      },
+      {
+        "word": "parasite",
+        "partOfSpeech": "noun",
+        "meaning": "organism living off another\nTicks are parasites on animals.",
+        "example": "The parasite is important for success."
+      },
+      {
+        "word": "prominent",
+        "partOfSpeech": "adjective",
+        "meaning": "important, well-known\nShe is a prominent scientist.",
+        "example": "The prominent approach was very effective."
+      },
+      {
+        "word": "repetitive",
+        "partOfSpeech": "adjective",
+        "meaning": "repeated, boring\nThe job involved repetitive tasks.",
+        "example": "The repetitive approach was very effective."
+      },
+      {
+        "word": "reproductive",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to producing offspring\nThey studied the reproductive system of frogs.",
+        "example": "The reproductive approach was very effective."
+      },
+      {
+        "word": "temperate",
+        "partOfSpeech": "adjective",
+        "meaning": "mild, moderate climate\nThey live in a temperate zone.",
+        "example": "The temperate approach was very effective."
+      },
+      {
+        "word": "tolerance",
+        "partOfSpeech": "noun",
+        "meaning": "acceptance of differences\nTolerance is important in diverse societies.",
+        "example": "The tolerance is important for success."
+      },
+      {
+        "word": "undergo",
+        "partOfSpeech": "verb",
+        "meaning": "to experience\nShe will undergo surgery next week.",
+        "example": "The team will undergo the project successfully."
+      },
+      {
+        "word": "vulnerable",
+        "partOfSpeech": "adjective",
+        "meaning": "easily harmed\nYoung animals are vulnerable to predators.",
+        "example": "The vulnerable approach was very effective."
+      }
+    ],
+    "8": [
+      {
+        "word": "adept",
+        "partOfSpeech": "adjective",
+        "meaning": "very skilled\nShe is adept at solving math problems quickly.",
+        "example": "The adept approach was very effective."
+      },
+      {
+        "word": "barren",
+        "partOfSpeech": "adjective",
+        "meaning": "unable to produce plants/children\nThe desert is a barren land.",
+        "example": "The barren approach was very effective."
+      },
+      {
+        "word": "ceramic",
+        "partOfSpeech": "adj",
+        "meaning": "made of clay and hardened by heat\nShe bought a ceramic vase.",
+        "example": "The ceramic is important for success."
+      },
+      {
+        "word": "culinary",
+        "partOfSpeech": "adjective",
+        "meaning": "related to cooking\nHe went to culinary school to become a chef.",
+        "example": "The culinary approach was very effective."
+      },
+      {
+        "word": "dense",
+        "partOfSpeech": "adjective",
+        "meaning": "thick, packed closely\nThe forest was so dense that little sunlight entered.",
+        "example": "The dense approach was very effective."
+      },
+      {
+        "word": "dignity",
+        "partOfSpeech": "noun",
+        "meaning": "self-respect, honor\nShe handled the criticism with dignity.",
+        "example": "The dignity is important for success."
+      },
+      {
+        "word": "dominate",
+        "partOfSpeech": "verb",
+        "meaning": "to control or have power over\nThe team dominated the match from start to finish.",
+        "example": "The team will dominate the project successfully."
+      },
+      {
+        "word": "edible",
+        "partOfSpeech": "adjective",
+        "meaning": "safe to eat\nThe berries are edible, but not very tasty.",
+        "example": "The edible approach was very effective."
+      },
+      {
+        "word": "hostile",
+        "partOfSpeech": "adjective",
+        "meaning": "unfriendly, aggressive\nThe soldiers entered hostile territory.",
+        "example": "The hostile approach was very effective."
+      },
+      {
+        "word": "intake",
+        "partOfSpeech": "noun",
+        "meaning": "amount consumed\nToo much sugar intake is unhealthy.",
+        "example": "The intake is important for success."
+      },
+      {
+        "word": "likewise",
+        "partOfSpeech": "adverb",
+        "meaning": "in the same way\nShe smiled, and he likewise returned the gesture.",
+        "example": "The likewise is important for success."
+      },
+      {
+        "word": "malnutrition",
+        "partOfSpeech": "noun",
+        "meaning": "poor health from lack of food\nChildren suffered from malnutrition during the famine.",
+        "example": "The malnutrition is important for success."
+      },
+      {
+        "word": "medication",
+        "partOfSpeech": "noun",
+        "meaning": "medicine for treatment\nHe takes daily medication for his blood pressure.",
+        "example": "The medication is important for success."
+      },
+      {
+        "word": "misconception",
+        "partOfSpeech": "noun",
+        "meaning": "wrong idea\nIt’s a misconception that bats are blind.",
+        "example": "The misconception is important for success."
+      },
+      {
+        "word": "obscure",
+        "partOfSpeech": "adjective",
+        "meaning": "unclear, little known\nThe rules of the game were obscure.",
+        "example": "The obscure approach was very effective."
+      },
+      {
+        "word": "oppress",
+        "partOfSpeech": "verb",
+        "meaning": "to treat unfairly or cruelly\nThe regime oppressed its people.",
+        "example": "The team will oppress the project successfully."
+      },
+      {
+        "word": "peel",
+        "partOfSpeech": "verb",
+        "meaning": "to remove the skin; the skin itself\nShe peeled an orange.",
+        "example": "The team will peel the project successfully."
+      },
+      {
+        "word": "prescription",
+        "partOfSpeech": "noun",
+        "meaning": "doctor’s written order for medicine\nThe pharmacist filled her prescription.",
+        "example": "The prescription is important for success."
+      },
+      {
+        "word": "respirator",
+        "partOfSpeech": "noun",
+        "meaning": "device to help breathing\nThe patient was put on a respirator.",
+        "example": "The respirator is important for success."
+      },
+      {
+        "word": "strive",
+        "partOfSpeech": "verb",
+        "meaning": "to try hard\nShe strives for excellence in her studies.",
+        "example": "The team will strive the project successfully."
+      }
+    ],
+    "9": [
+      {
+        "word": "archaic",
+        "partOfSpeech": "adjective",
+        "meaning": "very old, outdated\nHe used archaic words no one understood.",
+        "example": "The archaic approach was very effective."
+      },
+      {
+        "word": "benevolent",
+        "partOfSpeech": "adjective",
+        "meaning": "kind, generous\nThe benevolent man donated money to charity.",
+        "example": "The benevolent approach was very effective."
+      },
+      {
+        "word": "brass",
+        "partOfSpeech": "noun",
+        "meaning": "a metal made of copper and zinc\nThe door handle was made of brass.",
+        "example": "The brass is important for success."
+      },
+      {
+        "word": "capitalism",
+        "partOfSpeech": "noun",
+        "meaning": "economic system based on private ownership\nCapitalism encourages competition.",
+        "example": "The capitalism is important for success."
+      },
+      {
+        "word": "component",
+        "partOfSpeech": "noun",
+        "meaning": "part of something\nA CPU is a key component of a computer.",
+        "example": "The component is important for success."
+      },
+      {
+        "word": "dependence",
+        "partOfSpeech": "noun",
+        "meaning": "reliance on something\nHis dependence on coffee was unhealthy.",
+        "example": "The dependence is important for success."
+      },
+      {
+        "word": "diminish",
+        "partOfSpeech": "verb",
+        "meaning": "to reduce or make less\nHis influence diminished after retirement.",
+        "example": "The team will diminish the project successfully."
+      },
+      {
+        "word": "drawback",
+        "partOfSpeech": "noun",
+        "meaning": "disadvantage\nThe only drawback of the plan was the cost.",
+        "example": "The drawback is important for success."
+      },
+      {
+        "word": "fad",
+        "partOfSpeech": "noun",
+        "meaning": "a temporary fashion or trend\nFidget spinners were a short-lived fad.",
+        "example": "The fad is important for success."
+      },
+      {
+        "word": "impose",
+        "partOfSpeech": "verb",
+        "meaning": "to force something on others\nThe government imposed new taxes.",
+        "example": "The team will impose the project successfully."
+      },
+      {
+        "word": "managerial",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to management\nShe got promoted to a managerial role.",
+        "example": "The managerial approach was very effective."
+      },
+      {
+        "word": "medieval",
+        "partOfSpeech": "adjective",
+        "meaning": "from the Middle Ages\nThe castle was built in medieval times.",
+        "example": "The medieval approach was very effective."
+      },
+      {
+        "word": "obsolete",
+        "partOfSpeech": "adjective",
+        "meaning": "no longer in use\nTypewriters are now obsolete.",
+        "example": "The obsolete approach was very effective."
+      },
+      {
+        "word": "peninsula",
+        "partOfSpeech": "noun",
+        "meaning": "land almost surrounded by water\nItaly is a peninsula.",
+        "example": "The peninsula is important for success."
+      },
+      {
+        "word": "prestige",
+        "partOfSpeech": "noun",
+        "meaning": "respect, status\nWinning the prize gave her prestige.",
+        "example": "The prestige is important for success."
+      },
+      {
+        "word": "proportion",
+        "partOfSpeech": "noun",
+        "meaning": "part compared to the whole\nA large proportion of the budget goes to defense.",
+        "example": "The proportion is important for success."
+      },
+      {
+        "word": "radical",
+        "partOfSpeech": "adjective",
+        "meaning": "extreme, very new\nThey proposed radical changes to the law.",
+        "example": "The radical approach was very effective."
+      },
+      {
+        "word": "refute",
+        "partOfSpeech": "verb",
+        "meaning": "to prove wrong\nThe lawyer refuted the accusations.",
+        "example": "The team will refute the project successfully."
+      },
+      {
+        "word": "spectacular",
+        "partOfSpeech": "adjective",
+        "meaning": "very impressive\nThe fireworks show was spectacular.",
+        "example": "The spectacular approach was very effective."
+      },
+      {
+        "word": "weave",
+        "partOfSpeech": "verb",
+        "meaning": "to make by interlacing threads\nShe weaved a basket from reeds.",
+        "example": "The team will weave the project successfully."
+      }
+    ],
+    "10": [
+      {
+        "word": "accountant",
+        "partOfSpeech": "noun",
+        "meaning": "person who manages financial records\nThe accountant prepared the company’s taxes.",
+        "example": "The accountant is important for success."
+      },
+      {
+        "word": "capitalist",
+        "partOfSpeech": "noun",
+        "meaning": "supporter of capitalism\nHe became a wealthy capitalist through trade.",
+        "example": "The capitalist is important for success."
+      },
+      {
+        "word": "contempt",
+        "partOfSpeech": "noun",
+        "meaning": "strong dislike, disrespect\nShe looked at him with contempt.",
+        "example": "The contempt is important for success."
+      },
+      {
+        "word": "dedicate",
+        "partOfSpeech": "verb",
+        "meaning": "to devote\nHe dedicated his life to science.",
+        "example": "The team will dedicate the project successfully."
+      },
+      {
+        "word": "ditch",
+        "partOfSpeech": "noun",
+        "meaning": "narrow channel dug in the ground\nThe car fell into a ditch.",
+        "example": "The ditch is important for success."
+      },
+      {
+        "word": "enterprise",
+        "partOfSpeech": "noun",
+        "meaning": "business or project\nThe new enterprise created jobs.",
+        "example": "The enterprise is important for success."
+      },
+      {
+        "word": "exquisite",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely beautiful\nShe wore an exquisite diamond necklace.",
+        "example": "The exquisite approach was very effective."
+      },
+      {
+        "word": "finance",
+        "partOfSpeech": "verb",
+        "meaning": "provide money; money management\nThe project was financed by investors.",
+        "example": "The team will finance the project successfully."
+      },
+      {
+        "word": "indifferent",
+        "partOfSpeech": "adjective",
+        "meaning": "not caring\nHe seemed indifferent to the results.",
+        "example": "The indifferent approach was very effective."
+      },
+      {
+        "word": "irrigate",
+        "partOfSpeech": "verb",
+        "meaning": "to supply water to land\nFarmers irrigated the fields.",
+        "example": "The team will irrigate the project successfully."
+      },
+      {
+        "word": "maximize",
+        "partOfSpeech": "verb",
+        "meaning": "to increase as much as possible\nShe maximized her study time before exams.",
+        "example": "The team will maximize the project successfully."
+      },
+      {
+        "word": "monetary",
+        "partOfSpeech": "adjective",
+        "meaning": "related to money\nThe country faced monetary problems.",
+        "example": "The monetary approach was very effective."
+      },
+      {
+        "word": "precaution",
+        "partOfSpeech": "noun",
+        "meaning": "action taken to prevent harm\nThey wore helmets as a precaution.",
+        "example": "The precaution is important for success."
+      },
+      {
+        "word": "preliminary",
+        "partOfSpeech": "adjective",
+        "meaning": "happening before something important\nThey held a preliminary meeting.",
+        "example": "The preliminary approach was very effective."
+      },
+      {
+        "word": "saturate",
+        "partOfSpeech": "verb",
+        "meaning": "to soak completely\nThe sponge was saturated with water.",
+        "example": "The team will saturate the project successfully."
+      },
+      {
+        "word": "simplicity",
+        "partOfSpeech": "noun",
+        "meaning": "being simple\nShe admired the design’s simplicity.",
+        "example": "The simplicity is important for success."
+      },
+      {
+        "word": "sow",
+        "partOfSpeech": "verb",
+        "meaning": "to plant seeds\nFarmers sow wheat in spring.",
+        "example": "The team will sow the project successfully."
+      },
+      {
+        "word": "soy",
+        "partOfSpeech": "noun",
+        "meaning": "a plant used for food\nSoy milk is a dairy alternative.",
+        "example": "The soy is important for success."
+      },
+      {
+        "word": "spade",
+        "partOfSpeech": "noun",
+        "meaning": "tool for digging\nHe dug the soil with a spade.",
+        "example": "The spade is important for success."
+      },
+      {
+        "word": "upcoming",
+        "partOfSpeech": "adjective",
+        "meaning": "happening soon\nThe upcoming concert was sold out.",
+        "example": "The upcoming approach was very effective."
+      }
+    ],
+    "11": [
+      {
+        "word": "acute",
+        "partOfSpeech": "adjective",
+        "meaning": "severe, sharp\nShe suffered acute pain in her leg.",
+        "example": "The acute approach was very effective."
+      },
+      {
+        "word": "aggression",
+        "partOfSpeech": "noun",
+        "meaning": "violent behavior\nThe dog showed aggression toward strangers.",
+        "example": "The aggression is important for success."
+      },
+      {
+        "word": "banquet",
+        "partOfSpeech": "noun",
+        "meaning": "large formal meal\nThey attended a wedding banquet.",
+        "example": "The banquet is important for success."
+      },
+      {
+        "word": "biography",
+        "partOfSpeech": "noun",
+        "meaning": "life story of a person\nI read a biography of Nelson Mandela.",
+        "example": "The biography is important for success."
+      },
+      {
+        "word": "boost",
+        "partOfSpeech": "verb",
+        "meaning": "to increase; an increase\nThe new job boosted his confidence.",
+        "example": "The team will boost the project successfully."
+      },
+      {
+        "word": "clap",
+        "partOfSpeech": "verb",
+        "meaning": "to strike hands together; applause\nThe audience clapped loudly.",
+        "example": "The team will clap the project successfully."
+      },
+      {
+        "word": "compel",
+        "partOfSpeech": "verb",
+        "meaning": "to force\nThe law compels citizens to pay taxes.",
+        "example": "The team will compel the project successfully."
+      },
+      {
+        "word": "dominance",
+        "partOfSpeech": "noun",
+        "meaning": "control, power\nThe company gained dominance in the market.",
+        "example": "The dominance is important for success."
+      },
+      {
+        "word": "gorgeous",
+        "partOfSpeech": "adjective",
+        "meaning": "very beautiful\nThe sunset was gorgeous.",
+        "example": "The gorgeous approach was very effective."
+      },
+      {
+        "word": "inevitable",
+        "partOfSpeech": "adjective",
+        "meaning": "certain to happen\nDeath is inevitable.",
+        "example": "The inevitable approach was very effective."
+      },
+      {
+        "word": "legacy",
+        "partOfSpeech": "noun",
+        "meaning": "something left behind\nHis book is his legacy.",
+        "example": "The legacy is important for success."
+      },
+      {
+        "word": "masterpiece",
+        "partOfSpeech": "noun",
+        "meaning": "outstanding work of art\nMona Lisa is a masterpiece.",
+        "example": "The masterpiece is important for success."
+      },
+      {
+        "word": "multiple",
+        "partOfSpeech": "adjective",
+        "meaning": "many\nShe made multiple attempts.",
+        "example": "The multiple approach was very effective."
+      },
+      {
+        "word": "narrate",
+        "partOfSpeech": "verb",
+        "meaning": "to tell a story\nThe actor narrated the film.",
+        "example": "The team will narrate the project successfully."
+      },
+      {
+        "word": "notorious",
+        "partOfSpeech": "adjective",
+        "meaning": "famous for something bad\nThe area is notorious for crime.",
+        "example": "The notorious approach was very effective."
+      },
+      {
+        "word": "outdated",
+        "partOfSpeech": "adjective",
+        "meaning": "old-fashioned\nThese rules are outdated.",
+        "example": "The outdated approach was very effective."
+      },
+      {
+        "word": "overall",
+        "partOfSpeech": "adj",
+        "meaning": "in general\nOverall, the trip was a success.",
+        "example": "The overall is important for success."
+      },
+      {
+        "word": "partiality",
+        "partOfSpeech": "noun",
+        "meaning": "unfair preference\nThe judge showed partiality toward the rich.",
+        "example": "The partiality is important for success."
+      },
+      {
+        "word": "spontaneous",
+        "partOfSpeech": "adjective",
+        "meaning": "unplanned\nThey had a spontaneous celebration.",
+        "example": "The spontaneous approach was very effective."
+      },
+      {
+        "word": "virtue",
+        "partOfSpeech": "noun",
+        "meaning": "good quality\nHonesty is a virtue.",
+        "example": "The virtue is important for success."
+      }
+    ],
+    "12": [
+      {
+        "word": "anthropology",
+        "partOfSpeech": "noun",
+        "meaning": "study of humans\nShe studied anthropology at university.",
+        "example": "The anthropology is important for success."
+      },
+      {
+        "word": "applaud",
+        "partOfSpeech": "verb",
+        "meaning": "to clap, praise\nThe audience applauded the performance.",
+        "example": "The team will applaud the project successfully."
+      },
+      {
+        "word": "appoint",
+        "partOfSpeech": "verb",
+        "meaning": "to officially choose\nHe was appointed manager.",
+        "example": "The team will appoint the project successfully."
+      },
+      {
+        "word": "compatible",
+        "partOfSpeech": "adjective",
+        "meaning": "able to work together\nThese parts are compatible with the machine.",
+        "example": "The compatible approach was very effective."
+      },
+      {
+        "word": "competence",
+        "partOfSpeech": "noun",
+        "meaning": "ability, skill\nShe has competence in languages.",
+        "example": "The competence is important for success."
+      },
+      {
+        "word": "confer",
+        "partOfSpeech": "verb",
+        "meaning": "to discuss, exchange opinions\nThe leaders conferred about the issue.",
+        "example": "The team will confer the project successfully."
+      },
+      {
+        "word": "consecutive",
+        "partOfSpeech": "adjective",
+        "meaning": "following one after another\nThey won three consecutive games.",
+        "example": "The consecutive approach was very effective."
+      },
+      {
+        "word": "crude",
+        "partOfSpeech": "adjective",
+        "meaning": "rough, unrefined\nHe gave a crude drawing of the design.",
+        "example": "The crude approach was very effective."
+      },
+      {
+        "word": "cube",
+        "partOfSpeech": "noun",
+        "meaning": "a solid shape with 6 equal sides\nHe cut the cheese into cubes.",
+        "example": "The cube is important for success."
+      },
+      {
+        "word": "feedback",
+        "partOfSpeech": "noun",
+        "meaning": "response, opinion\nThe teacher gave feedback on essays.",
+        "example": "The feedback is important for success."
+      },
+      {
+        "word": "ignorance",
+        "partOfSpeech": "noun",
+        "meaning": "lack of knowledge\nHis ignorance of history was surprising.",
+        "example": "The ignorance is important for success."
+      },
+      {
+        "word": "masculine",
+        "partOfSpeech": "adjective",
+        "meaning": "manly\nThe actor had a masculine voice.",
+        "example": "The masculine approach was very effective."
+      },
+      {
+        "word": "monument",
+        "partOfSpeech": "noun",
+        "meaning": "structure honoring someone\nThey visited the war monument.",
+        "example": "The monument is important for success."
+      },
+      {
+        "word": "muscular",
+        "partOfSpeech": "adjective",
+        "meaning": "strong muscles\nHe is a muscular athlete.",
+        "example": "The muscular approach was very effective."
+      },
+      {
+        "word": "posture",
+        "partOfSpeech": "noun",
+        "meaning": "body position\nGood posture prevents back pain.",
+        "example": "The posture is important for success."
+      },
+      {
+        "word": "situate",
+        "partOfSpeech": "verb",
+        "meaning": "to place in position\nThe school is situated near the park.",
+        "example": "The team will situate the project successfully."
+      },
+      {
+        "word": "supervise",
+        "partOfSpeech": "verb",
+        "meaning": "to watch over work\nThe manager supervised the workers.",
+        "example": "The team will supervise the project successfully."
+      },
+      {
+        "word": "symmetry",
+        "partOfSpeech": "noun",
+        "meaning": "balanced proportions\nThe building has perfect symmetry.",
+        "example": "The symmetry is important for success."
+      },
+      {
+        "word": "tattoo",
+        "partOfSpeech": "noun",
+        "meaning": "permanent design on skin\nHe got a tattoo on his arm.",
+        "example": "The tattoo is important for success."
+      },
+      {
+        "word": "undergraduate",
+        "partOfSpeech": "noun",
+        "meaning": "student before a degree\nShe is an undergraduate at Harvard.",
+        "example": "The undergraduate is important for success."
+      }
+    ],
+    "13": [
+      {
+        "word": "brook",
+        "partOfSpeech": "noun",
+        "meaning": "small stream\nThe brook flows through the forest.",
+        "example": "The brook is important for success."
+      },
+      {
+        "word": "cater",
+        "partOfSpeech": "verb",
+        "meaning": "to provide food/service\nThe company catered the wedding.",
+        "example": "The team will cater the project successfully."
+      },
+      {
+        "word": "considerate",
+        "partOfSpeech": "adjective",
+        "meaning": "thoughtful of others\nHe is always considerate of his neighbors.",
+        "example": "The considerate approach was very effective."
+      },
+      {
+        "word": "consumption",
+        "partOfSpeech": "noun",
+        "meaning": "the use of something\nWater consumption increased in summer.",
+        "example": "The consumption is important for success."
+      },
+      {
+        "word": "criteria",
+        "partOfSpeech": "noun",
+        "meaning": "standards for judgment\nThe school has criteria for admission.",
+        "example": "The criteria is important for success."
+      },
+      {
+        "word": "crust",
+        "partOfSpeech": "noun",
+        "meaning": "hard outer layer\nHe cut off the bread’s crust.",
+        "example": "The crust is important for success."
+      },
+      {
+        "word": "degrade",
+        "partOfSpeech": "verb",
+        "meaning": "to lower in value\nPollution degrades the environment.",
+        "example": "The team will degrade the project successfully."
+      },
+      {
+        "word": "entitle",
+        "partOfSpeech": "verb",
+        "meaning": "to give a right to\nThe ticket entitles you to entry.",
+        "example": "The team will entitle the project successfully."
+      },
+      {
+        "word": "escort",
+        "partOfSpeech": "verb",
+        "meaning": "to accompany, a guard\nThe police escorted the politician.",
+        "example": "The team will escort the project successfully."
+      },
+      {
+        "word": "external",
+        "partOfSpeech": "adjective",
+        "meaning": "outer\nThe building’s external walls are painted white.",
+        "example": "The external approach was very effective."
+      },
+      {
+        "word": "facility",
+        "partOfSpeech": "noun",
+        "meaning": "place or equipment for a purpose\nThe sports facility is new.",
+        "example": "The facility is important for success."
+      },
+      {
+        "word": "faculty",
+        "partOfSpeech": "noun",
+        "meaning": "teaching staff of a school\nShe works on the law faculty.",
+        "example": "The faculty is important for success."
+      },
+      {
+        "word": "heap",
+        "partOfSpeech": "noun",
+        "meaning": "pile\nThere was a heap of clothes on the bed.",
+        "example": "The heap is important for success."
+      },
+      {
+        "word": "hemisphere",
+        "partOfSpeech": "noun",
+        "meaning": "half of the Earth\nAustralia is in the southern hemisphere.",
+        "example": "The hemisphere is important for success."
+      },
+      {
+        "word": "hound",
+        "partOfSpeech": "noun",
+        "meaning": "a hunting dog\nThe hound barked loudly.",
+        "example": "The hound is important for success."
+      },
+      {
+        "word": "impersonal",
+        "partOfSpeech": "adjective",
+        "meaning": "without human warmth\nThe letter was impersonal in tone.",
+        "example": "The impersonal approach was very effective."
+      },
+      {
+        "word": "ornament",
+        "partOfSpeech": "noun",
+        "meaning": "decoration\nThe Christmas tree was full of ornaments.",
+        "example": "The ornament is important for success."
+      },
+      {
+        "word": "pedestrian",
+        "partOfSpeech": "noun",
+        "meaning": "a person walking\nThe car nearly hit a pedestrian.",
+        "example": "The pedestrian is important for success."
+      },
+      {
+        "word": "sanctuary",
+        "partOfSpeech": "noun",
+        "meaning": "safe place\nThe refugees found sanctuary in the church.",
+        "example": "The sanctuary is important for success."
+      },
+      {
+        "word": "spectator",
+        "partOfSpeech": "noun",
+        "meaning": "person who watches\nThe spectators cheered at the match.",
+        "example": "The spectator is important for success."
+      }
+    ],
+    "14": [
+      {
+        "word": "asset",
+        "partOfSpeech": "noun",
+        "meaning": "useful thing or person\nHer language skills are an asset to the team.",
+        "example": "The asset is important for success."
+      },
+      {
+        "word": "aspect",
+        "partOfSpeech": "noun",
+        "meaning": "a part or feature\nWe considered every aspect of the plan.",
+        "example": "The aspect is important for success."
+      },
+      {
+        "word": "braille",
+        "partOfSpeech": "noun",
+        "meaning": "writing system for the blind\nThe book was printed in Braille.",
+        "example": "The braille is important for success."
+      },
+      {
+        "word": "bud",
+        "partOfSpeech": "noun",
+        "meaning": "undeveloped plant shoot\nThe rosebud will bloom soon.",
+        "example": "The bud is important for success."
+      },
+      {
+        "word": "coordinate",
+        "partOfSpeech": "verb",
+        "meaning": "to organize activities\nThey coordinated the rescue effort.",
+        "example": "The team will coordinate the project successfully."
+      },
+      {
+        "word": "disprove",
+        "partOfSpeech": "verb",
+        "meaning": "to show something is false\nThe scientist disproved the theory.",
+        "example": "The team will disprove the project successfully."
+      },
+      {
+        "word": "humanitarian",
+        "partOfSpeech": "adjective",
+        "meaning": "concerned with human welfare\nShe worked in humanitarian aid.",
+        "example": "The humanitarian approach was very effective."
+      },
+      {
+        "word": "hypothesis",
+        "partOfSpeech": "noun",
+        "meaning": "an untested idea\nThe experiment tested the hypothesis.",
+        "example": "The hypothesis is important for success."
+      },
+      {
+        "word": "imprint",
+        "partOfSpeech": "verb",
+        "meaning": "to leave a mark; a mark itself\nHis words left an imprint on her mind.",
+        "example": "The team will imprint the project successfully."
+      },
+      {
+        "word": "informative",
+        "partOfSpeech": "adjective",
+        "meaning": "giving useful knowledge\nThe lecture was informative.",
+        "example": "The informative approach was very effective."
+      },
+      {
+        "word": "optic",
+        "partOfSpeech": "adjective",
+        "meaning": "related to vision/eyes\nThe optic nerve connects the eye to the brain.",
+        "example": "The optic approach was very effective."
+      },
+      {
+        "word": "premise",
+        "partOfSpeech": "noun",
+        "meaning": "basic idea, assumption\nThe book is based on the premise of equality.",
+        "example": "The premise is important for success."
+      },
+      {
+        "word": "rack",
+        "partOfSpeech": "noun",
+        "meaning": "a frame for holding things\nHe put the magazines on the rack.",
+        "example": "The rack is important for success."
+      },
+      {
+        "word": "renaissance",
+        "partOfSpeech": "noun",
+        "meaning": "period of art/science rebirth\nDa Vinci was a genius of the Renaissance.",
+        "example": "The renaissance is important for success."
+      },
+      {
+        "word": "revere",
+        "partOfSpeech": "verb",
+        "meaning": "to deeply respect\nThe people revered their leader.",
+        "example": "The team will revere the project successfully."
+      },
+      {
+        "word": "simultaneous",
+        "partOfSpeech": "adjective",
+        "meaning": "happening at the same time\nThe attacks were simultaneous.",
+        "example": "The simultaneous approach was very effective."
+      },
+      {
+        "word": "skeptic",
+        "partOfSpeech": "noun",
+        "meaning": "person who doubts\nHe is a skeptic of UFO stories.",
+        "example": "The skeptic is important for success."
+      },
+      {
+        "word": "spatial",
+        "partOfSpeech": "adjective",
+        "meaning": "related to space/position\nThe test measured spatial awareness.",
+        "example": "The spatial approach was very effective."
+      },
+      {
+        "word": "specify",
+        "partOfSpeech": "verb",
+        "meaning": "to state clearly\nPlease specify your address on the form.",
+        "example": "The team will specify the project successfully."
+      },
+      {
+        "word": "wax",
+        "partOfSpeech": "noun",
+        "meaning": "substance from bees/candles; to polish\nShe melted wax to make candles.",
+        "example": "The wax is important for success."
+      }
+    ],
+    "15": [
+      {
+        "word": "accessory",
+        "partOfSpeech": "noun",
+        "meaning": "an extra item for use with something\nShe bought matching accessories for her outfit.",
+        "example": "The accessory is important for success."
+      },
+      {
+        "word": "acquisition",
+        "partOfSpeech": "noun",
+        "meaning": "the act of getting something\nLanguage acquisition is easier in childhood.",
+        "example": "The acquisition is important for success."
+      },
+      {
+        "word": "adequate",
+        "partOfSpeech": "adjective",
+        "meaning": "enough, sufficient\nHe received an adequate amount of food.",
+        "example": "The adequate approach was very effective."
+      },
+      {
+        "word": "cardboard",
+        "partOfSpeech": "noun",
+        "meaning": "thick, stiff paper\nThe box was made of cardboard.",
+        "example": "The cardboard is important for success."
+      },
+      {
+        "word": "dilemma",
+        "partOfSpeech": "noun",
+        "meaning": "a difficult choice\nShe faced a dilemma about moving abroad.",
+        "example": "The dilemma is important for success."
+      },
+      {
+        "word": "elaborate",
+        "partOfSpeech": "adj",
+        "meaning": "detailed; to explain in detail\nHe gave an elaborate description of the plan.",
+        "example": "The elaborate is important for success."
+      },
+      {
+        "word": "facilitate",
+        "partOfSpeech": "verb",
+        "meaning": "to make easier\nThe new system facilitates communication.",
+        "example": "The team will facilitate the project successfully."
+      },
+      {
+        "word": "fleet",
+        "partOfSpeech": "noun",
+        "meaning": "a group of ships or vehicles\nThe navy has a large fleet of warships.",
+        "example": "The fleet is important for success."
+      },
+      {
+        "word": "grid",
+        "partOfSpeech": "noun",
+        "meaning": "a pattern of squares or lines\nThe city was built on a grid of streets.",
+        "example": "The grid is important for success."
+      },
+      {
+        "word": "import",
+        "partOfSpeech": "verb",
+        "meaning": "to bring in goods; goods brought in\nThey import cars from Germany.",
+        "example": "The team will import the project successfully."
+      },
+      {
+        "word": "infer",
+        "partOfSpeech": "verb",
+        "meaning": "to conclude from evidence\nWe inferred that he was tired from his tone.",
+        "example": "The team will infer the project successfully."
+      },
+      {
+        "word": "inflate",
+        "partOfSpeech": "verb",
+        "meaning": "to fill with air\nShe inflated the balloons.",
+        "example": "The team will inflate the project successfully."
+      },
+      {
+        "word": "innate",
+        "partOfSpeech": "adjective",
+        "meaning": "natural, existing from birth\nHe has an innate talent for music.",
+        "example": "The innate approach was very effective."
+      },
+      {
+        "word": "marble",
+        "partOfSpeech": "noun",
+        "meaning": "a type of stone\nThe statue was carved from marble.",
+        "example": "The marble is important for success."
+      },
+      {
+        "word": "mast",
+        "partOfSpeech": "noun",
+        "meaning": "tall pole on a ship for sails\nThe mast of the ship was broken in the storm.",
+        "example": "The mast is important for success."
+      },
+      {
+        "word": "nausea",
+        "partOfSpeech": "noun",
+        "meaning": "a sick feeling in the stomach\nThe medicine caused nausea.",
+        "example": "The nausea is important for success."
+      },
+      {
+        "word": "naval",
+        "partOfSpeech": "adjective",
+        "meaning": "related to a country’s navy\nThey built a new naval base.",
+        "example": "The naval approach was very effective."
+      },
+      {
+        "word": "pouch",
+        "partOfSpeech": "noun",
+        "meaning": "a small bag or pocket\nThe kangaroo carries its baby in a pouch.",
+        "example": "The pouch is important for success."
+      },
+      {
+        "word": "saturated",
+        "partOfSpeech": "adjective",
+        "meaning": "completely soaked\nThe sponge was saturated with water.",
+        "example": "The saturated approach was very effective."
+      },
+      {
+        "word": "updated",
+        "partOfSpeech": "adj",
+        "meaning": "made more modern or current\nThe app was updated with new features.",
+        "example": "The updated is important for success."
+      }
+    ],
+    "16": [
+      {
+        "word": "addict",
+        "partOfSpeech": "noun",
+        "meaning": "person dependent on a substance\nThe addict sought help to stop using drugs.",
+        "example": "The addict is important for success."
+      },
+      {
+        "word": "archeological",
+        "partOfSpeech": "adjective",
+        "meaning": "related to archaeology\nThey studied archeological remains.",
+        "example": "The archeological approach was very effective."
+      },
+      {
+        "word": "archeology",
+        "partOfSpeech": "noun",
+        "meaning": "study of past human life\nArcheology reveals ancient civilizations.",
+        "example": "The archeology is important for success."
+      },
+      {
+        "word": "brainstorm",
+        "partOfSpeech": "verb",
+        "meaning": "to generate ideas freely\nThe team brainstormed solutions together.",
+        "example": "The team will brainstorm the project successfully."
+      },
+      {
+        "word": "budget",
+        "partOfSpeech": "noun",
+        "meaning": "financial plan\nWe must stick to our budget this month.",
+        "example": "The budget is important for success."
+      },
+      {
+        "word": "chaotic",
+        "partOfSpeech": "adjective",
+        "meaning": "completely disordered\nThe market was chaotic during the sale.",
+        "example": "The chaotic approach was very effective."
+      },
+      {
+        "word": "cite",
+        "partOfSpeech": "verb",
+        "meaning": "to quote as evidence\nHe cited a famous scientist in his paper.",
+        "example": "The team will cite the project successfully."
+      },
+      {
+        "word": "correspond",
+        "partOfSpeech": "verb",
+        "meaning": "to match or communicate\nThe results correspond with our theory.",
+        "example": "The team will correspond the project successfully."
+      },
+      {
+        "word": "courtyard",
+        "partOfSpeech": "noun",
+        "meaning": "open space surrounded by buildings\nThe children played in the courtyard.",
+        "example": "The courtyard is important for success."
+      },
+      {
+        "word": "estate",
+        "partOfSpeech": "noun",
+        "meaning": "large property or land\nThe old estate was sold at auction.",
+        "example": "The estate is important for success."
+      },
+      {
+        "word": "fraud",
+        "partOfSpeech": "noun",
+        "meaning": "deception for gain\nThe businessman was charged with fraud.",
+        "example": "The fraud is important for success."
+      },
+      {
+        "word": "hydrogen",
+        "partOfSpeech": "noun",
+        "meaning": "a chemical element (H)\nWater is made of hydrogen and oxygen.",
+        "example": "The hydrogen is important for success."
+      },
+      {
+        "word": "integrity",
+        "partOfSpeech": "noun",
+        "meaning": "honesty, strong morals\nHer integrity earned everyone’s trust.",
+        "example": "The integrity is important for success."
+      },
+      {
+        "word": "knit",
+        "partOfSpeech": "verb",
+        "meaning": "to make clothing by looping yarn\nShe knitted a sweater for winter.",
+        "example": "The team will knit the project successfully."
+      },
+      {
+        "word": "outlook",
+        "partOfSpeech": "noun",
+        "meaning": "attitude or perspective\nHe has a positive outlook on life.",
+        "example": "The outlook is important for success."
+      },
+      {
+        "word": "parachute",
+        "partOfSpeech": "noun",
+        "meaning": "device to slow a fall\nThe soldier jumped with a parachute.",
+        "example": "The parachute is important for success."
+      },
+      {
+        "word": "prehistoric",
+        "partOfSpeech": "adjective",
+        "meaning": "before written history\nThey found prehistoric cave paintings.",
+        "example": "The prehistoric approach was very effective."
+      },
+      {
+        "word": "proponent",
+        "partOfSpeech": "noun",
+        "meaning": "supporter of an idea\nShe is a proponent of renewable energy.",
+        "example": "The proponent is important for success."
+      },
+      {
+        "word": "refine",
+        "partOfSpeech": "verb",
+        "meaning": "to improve or purify\nThey refined the oil for use.",
+        "example": "The team will refine the project successfully."
+      },
+      {
+        "word": "restrict",
+        "partOfSpeech": "verb",
+        "meaning": "to limit\nThe rules restrict smoking indoors.",
+        "example": "The team will restrict the project successfully."
+      }
+    ],
+    "17": [
+      {
+        "word": "attorney",
+        "partOfSpeech": "noun",
+        "meaning": "lawyer\nThe attorney defended her client in court.",
+        "example": "The attorney is important for success."
+      },
+      {
+        "word": "chronic",
+        "partOfSpeech": "adjective",
+        "meaning": "lasting for a long time\nHe suffers from chronic back pain.",
+        "example": "The chronic approach was very effective."
+      },
+      {
+        "word": "discipline",
+        "partOfSpeech": "noun",
+        "meaning": "training or control\nMartial arts require discipline.",
+        "example": "The discipline is important for success."
+      },
+      {
+        "word": "donor",
+        "partOfSpeech": "noun",
+        "meaning": "giver, especially of blood or organs\nThe donor gave money to charity.",
+        "example": "The donor is important for success."
+      },
+      {
+        "word": "fellow",
+        "partOfSpeech": "noun",
+        "meaning": "companion, colleague\nShe helped her fellow students.",
+        "example": "The fellow is important for success."
+      },
+      {
+        "word": "gossip",
+        "partOfSpeech": "noun",
+        "meaning": "idle talk about others\nThey gossiped about their neighbors.",
+        "example": "The gossip is important for success."
+      },
+      {
+        "word": "graduate",
+        "partOfSpeech": "noun",
+        "meaning": "person who finished school; to finish school\nShe graduated from university in 2020.",
+        "example": "The graduate is important for success."
+      },
+      {
+        "word": "graffiti",
+        "partOfSpeech": "noun",
+        "meaning": "drawings on public surfaces\nThe wall was covered in graffiti.",
+        "example": "The graffiti is important for success."
+      },
+      {
+        "word": "guardian",
+        "partOfSpeech": "noun",
+        "meaning": "protector\nHer aunt became her legal guardian.",
+        "example": "The guardian is important for success."
+      },
+      {
+        "word": "implicate",
+        "partOfSpeech": "verb",
+        "meaning": "to involve in wrongdoing\nThe report implicated him in the crime.",
+        "example": "The team will implicate the project successfully."
+      },
+      {
+        "word": "kin",
+        "partOfSpeech": "noun",
+        "meaning": "family, relatives\nShe invited all her kin to the wedding.",
+        "example": "The kin is important for success."
+      },
+      {
+        "word": "referee",
+        "partOfSpeech": "noun",
+        "meaning": "official in a sports game\nThe referee blew the whistle.",
+        "example": "The referee is important for success."
+      },
+      {
+        "word": "sever",
+        "partOfSpeech": "verb",
+        "meaning": "to cut off\nHe severed the rope with a knife.",
+        "example": "The team will sever the project successfully."
+      },
+      {
+        "word": "shaft",
+        "partOfSpeech": "noun",
+        "meaning": "long, narrow part of something\nLight came through a shaft in the roof.",
+        "example": "The shaft is important for success."
+      },
+      {
+        "word": "stab",
+        "partOfSpeech": "verb",
+        "meaning": "to pierce with a sharp object\nThe man stabbed the meat with a fork.",
+        "example": "The team will stab the project successfully."
+      },
+      {
+        "word": "stimulus",
+        "partOfSpeech": "noun",
+        "meaning": "something causing action or response\nThe loud noise was a stimulus to wake up.",
+        "example": "The stimulus is important for success."
+      },
+      {
+        "word": "suspicion",
+        "partOfSpeech": "noun",
+        "meaning": "a feeling something is wrong\nPolice acted on suspicion of theft.",
+        "example": "The suspicion is important for success."
+      },
+      {
+        "word": "terminate",
+        "partOfSpeech": "verb",
+        "meaning": "to end\nThe company terminated his contract.",
+        "example": "The team will terminate the project successfully."
+      },
+      {
+        "word": "theme",
+        "partOfSpeech": "noun",
+        "meaning": "central idea\nThe theme of the book is friendship.",
+        "example": "The theme is important for success."
+      },
+      {
+        "word": "tuition",
+        "partOfSpeech": "noun",
+        "meaning": "payment for instruction\nUniversity tuition fees are high.",
+        "example": "The tuition is important for success."
+      }
+    ],
+    "18": [
+      {
+        "word": "aggressive",
+        "partOfSpeech": "adjective",
+        "meaning": "ready to attack\nThe dog became aggressive toward strangers.",
+        "example": "The aggressive approach was very effective."
+      },
+      {
+        "word": "amnesty",
+        "partOfSpeech": "noun",
+        "meaning": "pardon for offenses\nThe prisoners were given amnesty.",
+        "example": "The amnesty is important for success."
+      },
+      {
+        "word": "arena",
+        "partOfSpeech": "noun",
+        "meaning": "area for events\nThe concert took place in a large arena.",
+        "example": "The arena is important for success."
+      },
+      {
+        "word": "auditorium",
+        "partOfSpeech": "noun",
+        "meaning": "large hall for audiences\nThe lecture was in the school auditorium.",
+        "example": "The auditorium is important for success."
+      },
+      {
+        "word": "captive",
+        "partOfSpeech": "noun",
+        "meaning": "prisoner\nThe soldiers freed the captives.",
+        "example": "The captive is important for success."
+      },
+      {
+        "word": "combat",
+        "partOfSpeech": "noun",
+        "meaning": "fight, battle\nThey fought in hand-to-hand combat.",
+        "example": "The combat is important for success."
+      },
+      {
+        "word": "commonplace",
+        "partOfSpeech": "adjective",
+        "meaning": "ordinary\nCell phones are commonplace today.",
+        "example": "The commonplace approach was very effective."
+      },
+      {
+        "word": "compound",
+        "partOfSpeech": "noun",
+        "meaning": "enclosed area with buildings\nThey lived inside a military compound.",
+        "example": "The compound is important for success."
+      },
+      {
+        "word": "corps",
+        "partOfSpeech": "noun",
+        "meaning": "organized group, especially military\nHe served in the medical corps.",
+        "example": "The corps is important for success."
+      },
+      {
+        "word": "distract",
+        "partOfSpeech": "verb",
+        "meaning": "to draw attention away\nNoise distracted the students during exams.",
+        "example": "The team will distract the project successfully."
+      },
+      {
+        "word": "dumb",
+        "partOfSpeech": "adjective",
+        "meaning": "unable to speak; very foolish\nHe felt dumb for making that mistake.",
+        "example": "The dumb approach was very effective."
+      },
+      {
+        "word": "foe",
+        "partOfSpeech": "noun",
+        "meaning": "enemy\nThe knight defeated his foe.",
+        "example": "The foe is important for success."
+      },
+      {
+        "word": "hack",
+        "partOfSpeech": "verb",
+        "meaning": "to cut roughly; break into computers\nHe hacked the wood with an axe.",
+        "example": "The team will hack the project successfully."
+      },
+      {
+        "word": "meditate",
+        "partOfSpeech": "verb",
+        "meaning": "to focus the mind calmly\nShe meditates every morning.",
+        "example": "The team will meditate the project successfully."
+      },
+      {
+        "word": "nick",
+        "partOfSpeech": "verb",
+        "meaning": "to cut slightly; a small cut\nHe nicked his finger with the knife.",
+        "example": "The team will nick the project successfully."
+      },
+      {
+        "word": "provoke",
+        "partOfSpeech": "verb",
+        "meaning": "to anger deliberately\nHis rude remarks provoked her.",
+        "example": "The team will provoke the project successfully."
+      },
+      {
+        "word": "realm",
+        "partOfSpeech": "noun",
+        "meaning": "kingdom, area\nThe king ruled over a vast realm.",
+        "example": "The realm is important for success."
+      },
+      {
+        "word": "reign",
+        "partOfSpeech": "verb",
+        "meaning": "period of rule\nThe queen’s reign lasted 50 years.",
+        "example": "The team will reign the project successfully."
+      },
+      {
+        "word": "rust",
+        "partOfSpeech": "noun",
+        "meaning": "reddish corrosion on metal\nThe bike rusted in the rain.",
+        "example": "The rust is important for success."
+      },
+      {
+        "word": "sacred",
+        "partOfSpeech": "adjective",
+        "meaning": "holy\nThe temple is a sacred place.",
+        "example": "The sacred approach was very effective."
+      }
+    ],
+    "19": [
+      {
+        "word": "accordingly",
+        "partOfSpeech": "adverb",
+        "meaning": "in a suitable way\nHe acted accordingly to the rules.",
+        "example": "The accordingly is important for success."
+      },
+      {
+        "word": "anchor",
+        "partOfSpeech": "noun",
+        "meaning": "heavy object to hold a ship; to secure\nThe ship dropped its anchor.",
+        "example": "The anchor is important for success."
+      },
+      {
+        "word": "buoy",
+        "partOfSpeech": "noun",
+        "meaning": "floating object on water\nThe buoy marked the swimming area.",
+        "example": "The buoy is important for success."
+      },
+      {
+        "word": "catastrophe",
+        "partOfSpeech": "noun",
+        "meaning": "disaster\nThe flood was a catastrophe for the town.",
+        "example": "The catastrophe is important for success."
+      },
+      {
+        "word": "context",
+        "partOfSpeech": "noun",
+        "meaning": "situation of something\nThe meaning changes in different contexts.",
+        "example": "The context is important for success."
+      },
+      {
+        "word": "designate",
+        "partOfSpeech": "verb",
+        "meaning": "to assign, point out\nHe was designated team leader.",
+        "example": "The team will designate the project successfully."
+      },
+      {
+        "word": "distort",
+        "partOfSpeech": "verb",
+        "meaning": "to twist out of shape or meaning\nThe funhouse mirror distorted his reflection.",
+        "example": "The team will distort the project successfully."
+      },
+      {
+        "word": "dock",
+        "partOfSpeech": "noun",
+        "meaning": "platform for ships; to park a ship\nThe ship docked at the harbor.",
+        "example": "The dock is important for success."
+      },
+      {
+        "word": "fore",
+        "partOfSpeech": "adjective",
+        "meaning": "situated in the front\nThe fore part of the ship was damaged.",
+        "example": "The fore approach was very effective."
+      },
+      {
+        "word": "frequent",
+        "partOfSpeech": "verb",
+        "meaning": "to visit often; happening often\nThey frequent the café daily.",
+        "example": "The team will frequent the project successfully."
+      },
+      {
+        "word": "genuine",
+        "partOfSpeech": "adjective",
+        "meaning": "real, authentic\nThe signature was genuine.",
+        "example": "The genuine approach was very effective."
+      },
+      {
+        "word": "grease",
+        "partOfSpeech": "noun",
+        "meaning": "oily substance; to oil\nHe greased the pan before cooking.",
+        "example": "The grease is important for success."
+      },
+      {
+        "word": "intricate",
+        "partOfSpeech": "adjective",
+        "meaning": "complicated, detailed\nThe watch had an intricate design.",
+        "example": "The intricate approach was very effective."
+      },
+      {
+        "word": "offset",
+        "partOfSpeech": "verb",
+        "meaning": "to balance, compensate\nThe gains offset the losses.",
+        "example": "The team will offset the project successfully."
+      },
+      {
+        "word": "overlap",
+        "partOfSpeech": "verb",
+        "meaning": "to cover partly\nThe curtains overlap in the middle.",
+        "example": "The team will overlap the project successfully."
+      },
+      {
+        "word": "precipitate",
+        "partOfSpeech": "verb",
+        "meaning": "to cause to happen quickly\nThe argument precipitated a fight.",
+        "example": "The team will precipitate the project successfully."
+      },
+      {
+        "word": "secondhand",
+        "partOfSpeech": "adjective",
+        "meaning": "used before; not new\nHe bought a secondhand car.",
+        "example": "The secondhand approach was very effective."
+      },
+      {
+        "word": "slot",
+        "partOfSpeech": "noun",
+        "meaning": "narrow opening; scheduled time\nShe put the letter in the mail slot.",
+        "example": "The slot is important for success."
+      },
+      {
+        "word": "submerge",
+        "partOfSpeech": "verb",
+        "meaning": "to put under water\nThe submarine submerged.",
+        "example": "The team will submerge the project successfully."
+      },
+      {
+        "word": "tactic",
+        "partOfSpeech": "noun",
+        "meaning": "strategy, plan\nThe coach discussed game tactics.",
+        "example": "The tactic is important for success."
+      }
+    ],
+    "20": [
+      {
+        "word": "aggregate",
+        "partOfSpeech": "noun",
+        "meaning": "total, collection\nThe aggregate of votes decided the winner.",
+        "example": "The aggregate is important for success."
+      },
+      {
+        "word": "antibiotic",
+        "partOfSpeech": "noun",
+        "meaning": "medicine that kills bacteria\nThe doctor prescribed an antibiotic.",
+        "example": "The antibiotic is important for success."
+      },
+      {
+        "word": "circuit",
+        "partOfSpeech": "noun",
+        "meaning": "path for electricity\nThe light didn’t work due to a broken circuit.",
+        "example": "The circuit is important for success."
+      },
+      {
+        "word": "complement",
+        "partOfSpeech": "verb",
+        "meaning": "to complete; something that completes\nHer red shoes complemented her dress.",
+        "example": "The team will complement the project successfully."
+      },
+      {
+        "word": "compress",
+        "partOfSpeech": "verb",
+        "meaning": "to press together\nShe compressed the file to save space.",
+        "example": "The team will compress the project successfully."
+      },
+      {
+        "word": "database",
+        "partOfSpeech": "noun",
+        "meaning": "organized collection of data\nThe company maintains a customer database.",
+        "example": "The database is important for success."
+      },
+      {
+        "word": "equivalent",
+        "partOfSpeech": "adj",
+        "meaning": "equal in value\nTen dimes are equivalent to a dollar.",
+        "example": "The equivalent is important for success."
+      },
+      {
+        "word": "immune",
+        "partOfSpeech": "adjective",
+        "meaning": "protected from disease\nSome people are immune to the virus.",
+        "example": "The immune approach was very effective."
+      },
+      {
+        "word": "input",
+        "partOfSpeech": "noun",
+        "meaning": "contribution of ideas; to enter data\nHe valued her input in the discussion.",
+        "example": "The input is important for success."
+      },
+      {
+        "word": "intimate",
+        "partOfSpeech": "adjective",
+        "meaning": "very close, personal\nThey have an intimate friendship.",
+        "example": "The intimate approach was very effective."
+      },
+      {
+        "word": "magnet",
+        "partOfSpeech": "noun",
+        "meaning": "object that attracts metal\nThe magnet stuck to the fridge.",
+        "example": "The magnet is important for success."
+      },
+      {
+        "word": "metabolism",
+        "partOfSpeech": "noun",
+        "meaning": "body process of using energy\nExercise increases metabolism.",
+        "example": "The metabolism is important for success."
+      },
+      {
+        "word": "microchip",
+        "partOfSpeech": "noun",
+        "meaning": "small electronic circuit\nThe pet has a microchip for identification.",
+        "example": "The microchip is important for success."
+      },
+      {
+        "word": "phase",
+        "partOfSpeech": "noun",
+        "meaning": "stage\nThe moon has different phases.",
+        "example": "The phase is important for success."
+      },
+      {
+        "word": "pinch",
+        "partOfSpeech": "verb",
+        "meaning": "to squeeze between fingers; a small amount\nShe pinched her nose shut.",
+        "example": "The team will pinch the project successfully."
+      },
+      {
+        "word": "prevalent",
+        "partOfSpeech": "adjective",
+        "meaning": "common, widespread\nSmartphones are prevalent today.",
+        "example": "The prevalent approach was very effective."
+      },
+      {
+        "word": "quantum",
+        "partOfSpeech": "noun",
+        "meaning": "smallest unit in physics\nHe studied quantum mechanics.",
+        "example": "The quantum is important for success."
+      },
+      {
+        "word": "ratio",
+        "partOfSpeech": "noun",
+        "meaning": "comparison of two numbers\nThe ratio of boys to girls is 2:1.",
+        "example": "The ratio is important for success."
+      },
+      {
+        "word": "spiral",
+        "partOfSpeech": "noun",
+        "meaning": "winding curve; to wind around\nSmoke rose in a spiral.",
+        "example": "The spiral is important for success."
+      },
+      {
+        "word": "viral",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to a virus; spreading quickly\nThe video went viral online.",
+        "example": "The viral approach was very effective."
+      }
+    ],
+    "21": [
+      {
+        "word": "astounded",
+        "partOfSpeech": "adjective",
+        "meaning": "amazed, shocked\nShe was astounded by the news.",
+        "example": "The astounded approach was very effective."
+      },
+      {
+        "word": "attribute",
+        "partOfSpeech": "verb",
+        "meaning": "to regard as caused by; quality\nShe attributed her success to hard work.",
+        "example": "The team will attribute the project successfully."
+      },
+      {
+        "word": "bilingual",
+        "partOfSpeech": "adjective",
+        "meaning": "able to speak two languages\nHe is bilingual in English and French.",
+        "example": "The bilingual approach was very effective."
+      },
+      {
+        "word": "clone",
+        "partOfSpeech": "noun",
+        "meaning": "identical copy; to make a copy\nScientists cloned a sheep named Dolly.",
+        "example": "The clone is important for success."
+      },
+      {
+        "word": "colloquial",
+        "partOfSpeech": "adjective",
+        "meaning": "informal language\n“Gonna” is a colloquial word.",
+        "example": "The colloquial approach was very effective."
+      },
+      {
+        "word": "cosmetics",
+        "partOfSpeech": "noun",
+        "meaning": "beauty products\nShe bought new cosmetics at the store.",
+        "example": "The cosmetics is important for success."
+      },
+      {
+        "word": "dash",
+        "partOfSpeech": "verb",
+        "meaning": "to run quickly; a quick movement\nHe dashed across the street.",
+        "example": "The team will dash the project successfully."
+      },
+      {
+        "word": "disgust",
+        "partOfSpeech": "noun",
+        "meaning": "strong dislike; to sicken\nThe rotten smell disgusted her.",
+        "example": "The disgust is important for success."
+      },
+      {
+        "word": "fluorescent",
+        "partOfSpeech": "adjective",
+        "meaning": "glowing brightly\nThe fluorescent lights lit the room.",
+        "example": "The fluorescent approach was very effective."
+      },
+      {
+        "word": "furious",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely angry\nHe was furious at the mistake.",
+        "example": "The furious approach was very effective."
+      },
+      {
+        "word": "gulf",
+        "partOfSpeech": "noun",
+        "meaning": "large difference or deep bay\nThere is a gulf between rich and poor.",
+        "example": "The gulf is important for success."
+      },
+      {
+        "word": "humanities",
+        "partOfSpeech": "noun",
+        "meaning": "studies of human culture\nShe majored in the humanities.",
+        "example": "The humanities is important for success."
+      },
+      {
+        "word": "knot",
+        "partOfSpeech": "noun",
+        "meaning": "tied loop\nHe tied a knot in the rope.",
+        "example": "The knot is important for success."
+      },
+      {
+        "word": "linguist",
+        "partOfSpeech": "noun",
+        "meaning": "person who studies languages\nThe linguist speaks six languages.",
+        "example": "The linguist is important for success."
+      },
+      {
+        "word": "participant",
+        "partOfSpeech": "noun",
+        "meaning": "one who takes part\nEach participant received a medal.",
+        "example": "The participant is important for success."
+      },
+      {
+        "word": "plausible",
+        "partOfSpeech": "adjective",
+        "meaning": "believable\nHer excuse sounded plausible.",
+        "example": "The plausible approach was very effective."
+      },
+      {
+        "word": "ritual",
+        "partOfSpeech": "noun",
+        "meaning": "ceremonial act\nThe tribe performs a ritual dance.",
+        "example": "The ritual is important for success."
+      },
+      {
+        "word": "sibling",
+        "partOfSpeech": "noun",
+        "meaning": "brother or sister\nHe has three siblings.",
+        "example": "The sibling is important for success."
+      },
+      {
+        "word": "skinny",
+        "partOfSpeech": "adjective",
+        "meaning": "very thin\nThe cat was skinny after being lost.",
+        "example": "The skinny approach was very effective."
+      },
+      {
+        "word": "vague",
+        "partOfSpeech": "adjective",
+        "meaning": "unclear, not specific\nHe gave a vague answer.",
+        "example": "The vague approach was very effective."
+      }
+    ],
+    "22": [
+      {
+        "word": "acid",
+        "partOfSpeech": "noun",
+        "meaning": "a sour liquid, often corrosive\nLemon juice contains citric acid.",
+        "example": "The acid is important for success."
+      },
+      {
+        "word": "administration",
+        "partOfSpeech": "noun",
+        "meaning": "management of an organization\nThe school administration set new rules.",
+        "example": "The administration is important for success."
+      },
+      {
+        "word": "administrative",
+        "partOfSpeech": "adjective",
+        "meaning": "related to management\nShe works in an administrative position.",
+        "example": "The administrative approach was very effective."
+      },
+      {
+        "word": "biotechnology",
+        "partOfSpeech": "noun",
+        "meaning": "technology using living systems\nBiotechnology is used to create new medicines.",
+        "example": "The biotechnology is important for success."
+      },
+      {
+        "word": "cholesterol",
+        "partOfSpeech": "noun",
+        "meaning": "a fatty substance in the blood\nHigh cholesterol can cause heart disease.",
+        "example": "The cholesterol is important for success."
+      },
+      {
+        "word": "coalition",
+        "partOfSpeech": "noun",
+        "meaning": "an alliance for joint action\nThe parties formed a coalition government.",
+        "example": "The coalition is important for success."
+      },
+      {
+        "word": "deceptive",
+        "partOfSpeech": "adjective",
+        "meaning": "misleading\nThe advertisement was deceptive.",
+        "example": "The deceptive approach was very effective."
+      },
+      {
+        "word": "diabetes",
+        "partOfSpeech": "noun",
+        "meaning": "disease with high blood sugar\nHe takes insulin for his diabetes.",
+        "example": "The diabetes is important for success."
+      },
+      {
+        "word": "eliminate",
+        "partOfSpeech": "verb",
+        "meaning": "to remove completely\nThey eliminated errors from the report.",
+        "example": "The team will eliminate the project successfully."
+      },
+      {
+        "word": "erosion",
+        "partOfSpeech": "noun",
+        "meaning": "gradual wearing away\nSoil erosion damaged the farmland.",
+        "example": "The erosion is important for success."
+      },
+      {
+        "word": "ethics",
+        "partOfSpeech": "noun",
+        "meaning": "moral principles\nBusiness ethics are important for trust.",
+        "example": "The ethics is important for success."
+      },
+      {
+        "word": "explicit",
+        "partOfSpeech": "adjective",
+        "meaning": "clear, exact\nThe teacher gave explicit instructions.",
+        "example": "The explicit approach was very effective."
+      },
+      {
+        "word": "framework",
+        "partOfSpeech": "noun",
+        "meaning": "basic structure\nThe law provides a framework for reforms.",
+        "example": "The framework is important for success."
+      },
+      {
+        "word": "manufacture",
+        "partOfSpeech": "verb",
+        "meaning": "to produce in large numbers\nThe factory manufactures cars.",
+        "example": "The team will manufacture the project successfully."
+      },
+      {
+        "word": "mechanism",
+        "partOfSpeech": "noun",
+        "meaning": "a system of parts working together\nThe clock’s mechanism stopped working.",
+        "example": "The mechanism is important for success."
+      },
+      {
+        "word": "minimize",
+        "partOfSpeech": "verb",
+        "meaning": "to reduce to the least amount\nHe minimized his expenses by cooking at home.",
+        "example": "The team will minimize the project successfully."
+      },
+      {
+        "word": "nectar",
+        "partOfSpeech": "noun",
+        "meaning": "sweet liquid in flowers\nBees collect nectar to make honey.",
+        "example": "The nectar is important for success."
+      },
+      {
+        "word": "notion",
+        "partOfSpeech": "noun",
+        "meaning": "an idea or belief\nShe had a notion to start her own business.",
+        "example": "The notion is important for success."
+      },
+      {
+        "word": "prone",
+        "partOfSpeech": "adjective",
+        "meaning": "likely to suffer or do something\nHe is prone to catching colds in winter.",
+        "example": "The prone approach was very effective."
+      },
+      {
+        "word": "straightforward",
+        "partOfSpeech": "adjective",
+        "meaning": "simple, honest\nThe process was straightforward and quick.",
+        "example": "The straightforward approach was very effective."
+      }
+    ],
+    "23": [
+      {
+        "word": "astronomical",
+        "partOfSpeech": "adjective",
+        "meaning": "extremely large; relating to astronomy\nThey discovered an astronomical increase in costs.",
+        "example": "The astronomical approach was very effective."
+      },
+      {
+        "word": "atom",
+        "partOfSpeech": "noun",
+        "meaning": "the smallest unit of matter\nAtoms combine to form molecules.",
+        "example": "The atom is important for success."
+      },
+      {
+        "word": "breadth",
+        "partOfSpeech": "noun",
+        "meaning": "width or extent\nThe breadth of his knowledge amazed me.",
+        "example": "The breadth is important for success."
+      },
+      {
+        "word": "circumference",
+        "partOfSpeech": "noun",
+        "meaning": "the distance around a circle\nThe circumference of the circle is 20 cm.",
+        "example": "The circumference is important for success."
+      },
+      {
+        "word": "comet",
+        "partOfSpeech": "noun",
+        "meaning": "an icy body in space with a tail\nHalley’s Comet appears every 76 years.",
+        "example": "The comet is important for success."
+      },
+      {
+        "word": "crater",
+        "partOfSpeech": "noun",
+        "meaning": "a large hole in the ground\nThe meteor left a crater on the surface.",
+        "example": "The crater is important for success."
+      },
+      {
+        "word": "crescent",
+        "partOfSpeech": "noun",
+        "meaning": "a moon phase, curved shape\nThe crescent moon lit the sky.",
+        "example": "The crescent is important for success."
+      },
+      {
+        "word": "debris",
+        "partOfSpeech": "noun",
+        "meaning": "scattered remains\nThe explosion left debris everywhere.",
+        "example": "The debris is important for success."
+      },
+      {
+        "word": "despair",
+        "partOfSpeech": "noun",
+        "meaning": "complete hopelessness\nHe was in despair after losing his job.",
+        "example": "The despair is important for success."
+      },
+      {
+        "word": "embed",
+        "partOfSpeech": "verb",
+        "meaning": "to fix firmly inside\nThe jewel was embedded in gold.",
+        "example": "The team will embed the project successfully."
+      },
+      {
+        "word": "fragment",
+        "partOfSpeech": "noun",
+        "meaning": "a small broken piece\nShe found a fragment of glass.",
+        "example": "The fragment is important for success."
+      },
+      {
+        "word": "galaxy",
+        "partOfSpeech": "noun",
+        "meaning": "a system of stars\nThe Milky Way is our galaxy.",
+        "example": "The galaxy is important for success."
+      },
+      {
+        "word": "gigantic",
+        "partOfSpeech": "adjective",
+        "meaning": "very large\nThey saw a gigantic elephant.",
+        "example": "The gigantic approach was very effective."
+      },
+      {
+        "word": "gloom",
+        "partOfSpeech": "noun",
+        "meaning": "darkness, sadness\nThe room was filled with gloom.",
+        "example": "The gloom is important for success."
+      },
+      {
+        "word": "radiate",
+        "partOfSpeech": "verb",
+        "meaning": "to give off heat or energy\nThe sun radiates light and warmth.",
+        "example": "The team will radiate the project successfully."
+      },
+      {
+        "word": "roam",
+        "partOfSpeech": "verb",
+        "meaning": "to wander without direction\nThe cows roamed across the field.",
+        "example": "The team will roam the project successfully."
+      },
+      {
+        "word": "solitary",
+        "partOfSpeech": "adjective",
+        "meaning": "alone\nHe lived a solitary life in the cabin.",
+        "example": "The solitary approach was very effective."
+      },
+      {
+        "word": "spectrum",
+        "partOfSpeech": "noun",
+        "meaning": "a wide range; band of colors\nThe rainbow shows the color spectrum.",
+        "example": "The spectrum is important for success."
+      },
+      {
+        "word": "sphere",
+        "partOfSpeech": "noun",
+        "meaning": "round 3D shape\nThe Earth is a sphere.",
+        "example": "The sphere is important for success."
+      },
+      {
+        "word": "status",
+        "partOfSpeech": "noun",
+        "meaning": "position or rank\nShe gained social status after her success.",
+        "example": "The status is important for success."
+      }
+    ],
+    "24": [
+      {
+        "word": "bankrupt",
+        "partOfSpeech": "adjective",
+        "meaning": "without money\nThe company went bankrupt.",
+        "example": "The bankrupt approach was very effective."
+      },
+      {
+        "word": "conform",
+        "partOfSpeech": "verb",
+        "meaning": "to follow rules or norms\nHe refused to conform to tradition.",
+        "example": "The team will conform the project successfully."
+      },
+      {
+        "word": "employ",
+        "partOfSpeech": "verb",
+        "meaning": "to give someone work\nThe factory employs 300 workers.",
+        "example": "The team will employ the project successfully."
+      },
+      {
+        "word": "expel",
+        "partOfSpeech": "verb",
+        "meaning": "to force out\nThe student was expelled for cheating.",
+        "example": "The team will expel the project successfully."
+      },
+      {
+        "word": "extension",
+        "partOfSpeech": "noun",
+        "meaning": "additional part\nThey built an extension to the house.",
+        "example": "The extension is important for success."
+      },
+      {
+        "word": "forthcoming",
+        "partOfSpeech": "adjective",
+        "meaning": "about to happen\nHer forthcoming book will be released soon.",
+        "example": "The forthcoming approach was very effective."
+      },
+      {
+        "word": "furnish",
+        "partOfSpeech": "verb",
+        "meaning": "to provide furniture or equipment\nThey furnished the apartment with modern items.",
+        "example": "The team will furnish the project successfully."
+      },
+      {
+        "word": "hygiene",
+        "partOfSpeech": "noun",
+        "meaning": "cleanliness\nGood hygiene prevents disease.",
+        "example": "The hygiene is important for success."
+      },
+      {
+        "word": "hygienic",
+        "partOfSpeech": "adjective",
+        "meaning": "clean, sanitary\nThe kitchen must remain hygienic.",
+        "example": "The hygienic approach was very effective."
+      },
+      {
+        "word": "landlord",
+        "partOfSpeech": "noun",
+        "meaning": "owner who rents property\nThe landlord raised the rent.",
+        "example": "The landlord is important for success."
+      },
+      {
+        "word": "lease",
+        "partOfSpeech": "noun",
+        "meaning": "rental contract\nHe signed a one-year lease.",
+        "example": "The lease is important for success."
+      },
+      {
+        "word": "mandatory",
+        "partOfSpeech": "adjective",
+        "meaning": "required by law\nWearing helmets is mandatory.",
+        "example": "The mandatory approach was very effective."
+      },
+      {
+        "word": "mend",
+        "partOfSpeech": "verb",
+        "meaning": "to fix\nShe mended the broken chair.",
+        "example": "The team will mend the project successfully."
+      },
+      {
+        "word": "mortgage",
+        "partOfSpeech": "noun",
+        "meaning": "a loan for buying property\nThey pay a mortgage every month.",
+        "example": "The mortgage is important for success."
+      },
+      {
+        "word": "personnel",
+        "partOfSpeech": "noun",
+        "meaning": "staff, employees\nThe company hired more personnel.",
+        "example": "The personnel is important for success."
+      },
+      {
+        "word": "plumbing",
+        "partOfSpeech": "noun",
+        "meaning": "water pipes system\nThe plumber repaired the plumbing.",
+        "example": "The plumbing is important for success."
+      },
+      {
+        "word": "tenant",
+        "partOfSpeech": "noun",
+        "meaning": "person renting property\nThe tenant pays rent monthly.",
+        "example": "The tenant is important for success."
+      },
+      {
+        "word": "trendy",
+        "partOfSpeech": "adjective",
+        "meaning": "fashionable\nShe wore trendy clothes.",
+        "example": "The trendy approach was very effective."
+      },
+      {
+        "word": "utility",
+        "partOfSpeech": "noun",
+        "meaning": "service like water, gas, electricity\nThe rent includes utility bills.",
+        "example": "The utility is important for success."
+      },
+      {
+        "word": "whereby",
+        "partOfSpeech": "adverb",
+        "meaning": "by which\nThey signed a contract whereby he agreed to pay.",
+        "example": "The whereby is important for success."
+      }
+    ],
+    "25": [
+      {
+        "word": "aesthetic",
+        "partOfSpeech": "adjective",
+        "meaning": "concerned with beauty\nThe design is both practical and aesthetic.",
+        "example": "The aesthetic approach was very effective."
+      },
+      {
+        "word": "arrogant",
+        "partOfSpeech": "adjective",
+        "meaning": "too proud, self-important\nThe arrogant man ignored everyone else.",
+        "example": "The arrogant approach was very effective."
+      },
+      {
+        "word": "bias",
+        "partOfSpeech": "noun",
+        "meaning": "unfair preference\nThe judge showed bias in the trial.",
+        "example": "The bias is important for success."
+      },
+      {
+        "word": "canyon",
+        "partOfSpeech": "noun",
+        "meaning": "deep valley with steep sides\nThe Grand Canyon is famous worldwide.",
+        "example": "The canyon is important for success."
+      },
+      {
+        "word": "creek",
+        "partOfSpeech": "noun",
+        "meaning": "small stream\nThe children played near the creek.",
+        "example": "The creek is important for success."
+      },
+      {
+        "word": "drill",
+        "partOfSpeech": "noun",
+        "meaning": "tool for boring holes; practice\nThey practiced a fire drill at school.",
+        "example": "The drill is important for success."
+      },
+      {
+        "word": "executive",
+        "partOfSpeech": "noun",
+        "meaning": "high-level manager\nThe executive made the final decision.",
+        "example": "The executive is important for success."
+      },
+      {
+        "word": "fatigue",
+        "partOfSpeech": "noun",
+        "meaning": "extreme tiredness\nHe felt fatigue after the long hike.",
+        "example": "The fatigue is important for success."
+      },
+      {
+        "word": "incline",
+        "partOfSpeech": "noun",
+        "meaning": "slope; to lean toward\nThey walked up a steep incline.",
+        "example": "The incline is important for success."
+      },
+      {
+        "word": "nasty",
+        "partOfSpeech": "adjective",
+        "meaning": "very unpleasant\nHe caught a nasty cold.",
+        "example": "The nasty approach was very effective."
+      },
+      {
+        "word": "perceive",
+        "partOfSpeech": "verb",
+        "meaning": "to notice or understand\nShe perceived a strange sound in the night.",
+        "example": "The team will perceive the project successfully."
+      },
+      {
+        "word": "primate",
+        "partOfSpeech": "noun",
+        "meaning": "group of animals including monkeys\nHumans are primates.",
+        "example": "The primate is important for success."
+      },
+      {
+        "word": "primitive",
+        "partOfSpeech": "adjective",
+        "meaning": "very simple, early stage\nThey lived in primitive huts.",
+        "example": "The primitive approach was very effective."
+      },
+      {
+        "word": "stereotype",
+        "partOfSpeech": "noun",
+        "meaning": "oversimplified belief about a group\nThe stereotype about artists is not always true.",
+        "example": "The stereotype is important for success."
+      },
+      {
+        "word": "sticky",
+        "partOfSpeech": "adjective",
+        "meaning": "tending to stick\nThe floor was sticky after the spill.",
+        "example": "The sticky approach was very effective."
+      },
+      {
+        "word": "termite",
+        "partOfSpeech": "noun",
+        "meaning": "insect that eats wood\nTermites damaged the furniture.",
+        "example": "The termite is important for success."
+      },
+      {
+        "word": "thereby",
+        "partOfSpeech": "adverb",
+        "meaning": "as a result\nHe improved his health, thereby living longer.",
+        "example": "The thereby is important for success."
+      },
+      {
+        "word": "trail",
+        "partOfSpeech": "noun",
+        "meaning": "path; to follow behind\nThey hiked along the mountain trail.",
+        "example": "The trail is important for success."
+      },
+      {
+        "word": "twig",
+        "partOfSpeech": "noun",
+        "meaning": "small branch\nThe bird built a nest with twigs.",
+        "example": "The twig is important for success."
+      },
+      {
+        "word": "welfare",
+        "partOfSpeech": "noun",
+        "meaning": "health and well-being\nThe government cares about child welfare.",
+        "example": "The welfare is important for success."
+      }
+    ],
+    "26": [
+      {
+        "word": "behalf",
+        "partOfSpeech": "noun",
+        "meaning": "in the interest of someone\nShe spoke on behalf of the group.",
+        "example": "The behalf is important for success."
+      },
+      {
+        "word": "flap",
+        "partOfSpeech": "verb",
+        "meaning": "to move up and down; a loose piece\nThe flag flapped in the wind.",
+        "example": "The team will flap the project successfully."
+      },
+      {
+        "word": "glacier",
+        "partOfSpeech": "noun",
+        "meaning": "large mass of moving ice\nThe glacier slowly melted over centuries.",
+        "example": "The glacier is important for success."
+      },
+      {
+        "word": "globe",
+        "partOfSpeech": "noun",
+        "meaning": "the Earth; a spherical map\nHe spun the globe to choose a destination.",
+        "example": "The globe is important for success."
+      },
+      {
+        "word": "horizontal",
+        "partOfSpeech": "adjective",
+        "meaning": "flat, level\nDraw a horizontal line across the page.",
+        "example": "The horizontal approach was very effective."
+      },
+      {
+        "word": "hum",
+        "partOfSpeech": "verb",
+        "meaning": "to make a continuous sound\nThe bees hummed in the garden.",
+        "example": "The team will hum the project successfully."
+      },
+      {
+        "word": "inventory",
+        "partOfSpeech": "noun",
+        "meaning": "list of goods\nThe store checked its inventory.",
+        "example": "The inventory is important for success."
+      },
+      {
+        "word": "inward",
+        "partOfSpeech": "adj",
+        "meaning": "directed inside\nHe took a deep inward breath.",
+        "example": "The inward is important for success."
+      },
+      {
+        "word": "loaf",
+        "partOfSpeech": "noun",
+        "meaning": "a shaped mass of bread\nShe baked a loaf of bread.",
+        "example": "The loaf is important for success."
+      },
+      {
+        "word": "oracle",
+        "partOfSpeech": "noun",
+        "meaning": "a wise person giving advice\nThey consulted the oracle for guidance.",
+        "example": "The oracle is important for success."
+      },
+      {
+        "word": "orbit",
+        "partOfSpeech": "noun",
+        "meaning": "path around something; to circle\nThe Earth orbits the Sun.",
+        "example": "The orbit is important for success."
+      },
+      {
+        "word": "overview",
+        "partOfSpeech": "noun",
+        "meaning": "summary, general view\nThe manager gave an overview of the plan.",
+        "example": "The overview is important for success."
+      },
+      {
+        "word": "preview",
+        "partOfSpeech": "noun",
+        "meaning": "a sneak look; to show early\nWe watched a movie preview.",
+        "example": "The preview is important for success."
+      },
+      {
+        "word": "previous",
+        "partOfSpeech": "adjective",
+        "meaning": "earlier\nShe met him on a previous trip.",
+        "example": "The previous approach was very effective."
+      },
+      {
+        "word": "provide",
+        "partOfSpeech": "verb",
+        "meaning": "to supply\nThe teacher provided extra help.",
+        "example": "The team will provide the project successfully."
+      },
+      {
+        "word": "recur",
+        "partOfSpeech": "verb",
+        "meaning": "to happen again\nThe problem may recur next year.",
+        "example": "The team will recur the project successfully."
+      },
+      {
+        "word": "relevant",
+        "partOfSpeech": "adjective",
+        "meaning": "connected to the topic\nHer comment was not relevant to the discussion.",
+        "example": "The relevant approach was very effective."
+      },
+      {
+        "word": "rite",
+        "partOfSpeech": "noun",
+        "meaning": "a religious or formal ceremony\nThe rite of marriage was performed.",
+        "example": "The rite is important for success."
+      },
+      {
+        "word": "stall",
+        "partOfSpeech": "noun",
+        "meaning": "small shop; to delay\nThey bought food from a market stall.",
+        "example": "The stall is important for success."
+      },
+      {
+        "word": "supernatural",
+        "partOfSpeech": "adjective",
+        "meaning": "beyond natural laws\nThe movie was about supernatural powers.",
+        "example": "The supernatural approach was very effective."
+      }
+    ],
+    "27": [
+      {
+        "word": "adapt",
+        "partOfSpeech": "verb",
+        "meaning": "to adjust to new conditions\nHe adapted quickly to his new job.",
+        "example": "The team will adapt the project successfully."
+      },
+      {
+        "word": "biological",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to biology or life\nShe studies biological sciences.",
+        "example": "The biological approach was very effective."
+      },
+      {
+        "word": "cellular",
+        "partOfSpeech": "adjective",
+        "meaning": "relating to cells\nThe scientist examined cellular structures.",
+        "example": "The cellular approach was very effective."
+      },
+      {
+        "word": "dynamic",
+        "partOfSpeech": "adjective",
+        "meaning": "constantly changing, energetic\nThe dynamic city never sleeps.",
+        "example": "The dynamic approach was very effective."
+      },
+      {
+        "word": "fantasy",
+        "partOfSpeech": "noun",
+        "meaning": "imagination, unreal ideas\nHe lives in a fantasy world.",
+        "example": "The fantasy is important for success."
+      },
+      {
+        "word": "heredity",
+        "partOfSpeech": "noun",
+        "meaning": "passing traits from parents to offspring\nEye color is determined by heredity.",
+        "example": "The heredity is important for success."
+      },
+      {
+        "word": "internal",
+        "partOfSpeech": "adjective",
+        "meaning": "inside\nHe had internal injuries.",
+        "example": "The internal approach was very effective."
+      },
+      {
+        "word": "minimal",
+        "partOfSpeech": "adjective",
+        "meaning": "very small in amount\nThe damage to the car was minimal.",
+        "example": "The minimal approach was very effective."
+      },
+      {
+        "word": "pioneer",
+        "partOfSpeech": "noun",
+        "meaning": "trailblazer; to develop first\nShe pioneered new medical treatments.",
+        "example": "The pioneer is important for success."
+      },
+      {
+        "word": "prescribe",
+        "partOfSpeech": "verb",
+        "meaning": "to order medicine officially\nThe doctor prescribed antibiotics.",
+        "example": "The team will prescribe the project successfully."
+      },
+      {
+        "word": "respective",
+        "partOfSpeech": "adjective",
+        "meaning": "belonging separately to each\nThey returned to their respective homes.",
+        "example": "The respective approach was very effective."
+      },
+      {
+        "word": "revive",
+        "partOfSpeech": "verb",
+        "meaning": "to bring back to life\nThe lifeguard revived the swimmer.",
+        "example": "The team will revive the project successfully."
+      },
+      {
+        "word": "rigid",
+        "partOfSpeech": "adjective",
+        "meaning": "stiff, inflexible\nThe cardboard was too rigid to bend.",
+        "example": "The rigid approach was very effective."
+      },
+      {
+        "word": "sequence",
+        "partOfSpeech": "noun",
+        "meaning": "an ordered series\nThe dance followed a sequence of steps.",
+        "example": "The sequence is important for success."
+      },
+      {
+        "word": "substitute",
+        "partOfSpeech": "noun",
+        "meaning": "replacement; to replace\nShe substituted sugar with honey.",
+        "example": "The substitute is important for success."
+      },
+      {
+        "word": "surgeon",
+        "partOfSpeech": "noun",
+        "meaning": "a doctor who performs surgery\nThe surgeon operated on his heart.",
+        "example": "The surgeon is important for success."
+      },
+      {
+        "word": "therapy",
+        "partOfSpeech": "noun",
+        "meaning": "treatment for illness\nHe is undergoing therapy for his injury.",
+        "example": "The therapy is important for success."
+      },
+      {
+        "word": "transfer",
+        "partOfSpeech": "verb",
+        "meaning": "to move from one place to another\nHe transferred money to her account.",
+        "example": "The team will transfer the project successfully."
+      },
+      {
+        "word": "transition",
+        "partOfSpeech": "noun",
+        "meaning": "change from one state to another\nThe country is in a transition to democracy.",
+        "example": "The transition is important for success."
+      },
+      {
+        "word": "transplant",
+        "partOfSpeech": "noun",
+        "meaning": "to move an organ; the organ itself\nShe received a heart transplant.",
+        "example": "The transplant is important for success."
+      }
+    ],
+    "28": [
+      {
+        "word": "aquarium",
+        "partOfSpeech": "noun",
+        "meaning": "a tank for keeping fish\nThey visited the aquarium to see sharks.",
+        "example": "The aquarium is important for success."
+      },
+      {
+        "word": "arbitrary",
+        "partOfSpeech": "adjective",
+        "meaning": "based on random choice\nThe rules seemed arbitrary and unfair.",
+        "example": "The arbitrary approach was very effective."
+      },
+      {
+        "word": "autobiography",
+        "partOfSpeech": "noun",
+        "meaning": "a person’s life story written by themselves\nShe published her autobiography.",
+        "example": "The autobiography is important for success."
+      },
+      {
+        "word": "convention",
+        "partOfSpeech": "noun",
+        "meaning": "a large formal meeting\nHe attended a business convention.",
+        "example": "The convention is important for success."
+      },
+      {
+        "word": "gracious",
+        "partOfSpeech": "adjective",
+        "meaning": "polite, kind\nThe hostess was very gracious.",
+        "example": "The gracious approach was very effective."
+      },
+      {
+        "word": "improve",
+        "partOfSpeech": "verb",
+        "meaning": "to make better\nHe improved his grades this year.",
+        "example": "The team will improve the project successfully."
+      },
+      {
+        "word": "insulate",
+        "partOfSpeech": "verb",
+        "meaning": "to cover for protection\nThey insulated the house against cold.",
+        "example": "The team will insulate the project successfully."
+      },
+      {
+        "word": "intrigue",
+        "partOfSpeech": "verb",
+        "meaning": "to interest; a secret plot\nThe mystery intrigued the readers.",
+        "example": "The team will intrigue the project successfully."
+      },
+      {
+        "word": "longevity",
+        "partOfSpeech": "noun",
+        "meaning": "long life\nExercise increases longevity.",
+        "example": "The longevity is important for success."
+      },
+      {
+        "word": "misplace",
+        "partOfSpeech": "verb",
+        "meaning": "to put in the wrong place\nI misplaced my keys again.",
+        "example": "The team will misplace the project successfully."
+      },
+      {
+        "word": "naughty",
+        "partOfSpeech": "adjective",
+        "meaning": "badly behaved\nThe naughty child broke the vase.",
+        "example": "The naughty approach was very effective."
+      },
+      {
+        "word": "norm",
+        "partOfSpeech": "noun",
+        "meaning": "standard of behavior\nHelping others is the norm in this community.",
+        "example": "The norm is important for success."
+      },
+      {
+        "word": "orangutan",
+        "partOfSpeech": "noun",
+        "meaning": "a large ape from Asia\nThe orangutan swung through the trees.",
+        "example": "The orangutan is important for success."
+      },
+      {
+        "word": "overload",
+        "partOfSpeech": "verb",
+        "meaning": "to burden too much; excess load\nThe truck was overloaded with goods.",
+        "example": "The team will overload the project successfully."
+      },
+      {
+        "word": "philanthropy",
+        "partOfSpeech": "noun",
+        "meaning": "giving to charity\nThe millionaire was known for his philanthropy.",
+        "example": "The philanthropy is important for success."
+      },
+      {
+        "word": "probe",
+        "partOfSpeech": "verb",
+        "meaning": "to investigate; a tool for investigation\nThe scientist probed the soil samples.",
+        "example": "The team will probe the project successfully."
+      },
+      {
+        "word": "recipient",
+        "partOfSpeech": "noun",
+        "meaning": "person who receives\nThe award recipient thanked the committee.",
+        "example": "The recipient is important for success."
+      },
+      {
+        "word": "reptile",
+        "partOfSpeech": "noun",
+        "meaning": "cold-blooded animal like snakes\nThe zoo had many reptiles.",
+        "example": "The reptile is important for success."
+      },
+      {
+        "word": "thrive",
+        "partOfSpeech": "verb",
+        "meaning": "to grow strongly\nThe plants thrived in the greenhouse.",
+        "example": "The team will thrive the project successfully."
+      },
+      {
+        "word": "ultimate",
+        "partOfSpeech": "adjective",
+        "meaning": "final, best\nWinning the trophy was his ultimate goal.",
+        "example": "The ultimate approach was very effective."
+      }
+    ],
+    "29": [
+      {
+        "word": "antique",
+        "partOfSpeech": "noun",
+        "meaning": "old and valuable\nThey collect antique furniture from the 18th century.",
+        "example": "The antique is important for success."
+      },
+      {
+        "word": "applicant",
+        "partOfSpeech": "noun",
+        "meaning": "person who applies for something\nEach applicant must submit a résumé.",
+        "example": "The applicant is important for success."
+      },
+      {
+        "word": "artifact",
+        "partOfSpeech": "noun",
+        "meaning": "object from the past\nThe museum displayed ancient artifacts.",
+        "example": "The artifact is important for success."
+      },
+      {
+        "word": "authentic",
+        "partOfSpeech": "adjective",
+        "meaning": "genuine, real\nThe signature was confirmed as authentic.",
+        "example": "The authentic approach was very effective."
+      },
+      {
+        "word": "chronology",
+        "partOfSpeech": "noun",
+        "meaning": "order of events in time\nThe book explains the chronology of the war.",
+        "example": "The chronology is important for success."
+      },
+      {
+        "word": "diplomat",
+        "partOfSpeech": "noun",
+        "meaning": "official representing a country\nThe diplomat attended the peace talks.",
+        "example": "The diplomat is important for success."
+      },
+      {
+        "word": "epic",
+        "partOfSpeech": "noun",
+        "meaning": "long heroic story; grand\nHomer’s Iliad is an epic poem.",
+        "example": "The epic is important for success."
+      },
+      {
+        "word": "excerpt",
+        "partOfSpeech": "noun",
+        "meaning": "a short part taken from text\nShe read an excerpt from the novel.",
+        "example": "The excerpt is important for success."
+      },
+      {
+        "word": "fossil",
+        "partOfSpeech": "noun",
+        "meaning": "preserved remains of ancient life\nThey found a dinosaur fossil in the desert.",
+        "example": "The fossil is important for success."
+      },
+      {
+        "word": "humiliate",
+        "partOfSpeech": "verb",
+        "meaning": "to deeply embarrass\nHe was humiliated in front of his classmates.",
+        "example": "The team will humiliate the project successfully."
+      },
+      {
+        "word": "lyric",
+        "partOfSpeech": "noun",
+        "meaning": "words of a song\nThe lyrics of that song are beautiful.",
+        "example": "The lyric is important for success."
+      },
+      {
+        "word": "majesty",
+        "partOfSpeech": "noun",
+        "meaning": "greatness, royal dignity\nThe mountain rose in all its majesty.",
+        "example": "The majesty is important for success."
+      },
+      {
+        "word": "monarch",
+        "partOfSpeech": "noun",
+        "meaning": "king or queen\nThe monarch ruled for forty years.",
+        "example": "The monarch is important for success."
+      },
+      {
+        "word": "precede",
+        "partOfSpeech": "verb",
+        "meaning": "to come before\nA short speech preceded the ceremony.",
+        "example": "The team will precede the project successfully."
+      },
+      {
+        "word": "punctual",
+        "partOfSpeech": "adjective",
+        "meaning": "on time\nShe is always punctual for meetings.",
+        "example": "The punctual approach was very effective."
+      },
+      {
+        "word": "recruit",
+        "partOfSpeech": "verb",
+        "meaning": "to enlist new people; a new member\nThe army recruited 500 soldiers.",
+        "example": "The team will recruit the project successfully."
+      },
+      {
+        "word": "refund",
+        "partOfSpeech": "noun",
+        "meaning": "money returned; to give back money\nShe received a refund for the broken phone.",
+        "example": "The refund is important for success."
+      },
+      {
+        "word": "register",
+        "partOfSpeech": "verb",
+        "meaning": "to sign up; official list\nThey registered for the language course.",
+        "example": "The team will register the project successfully."
+      },
+      {
+        "word": "renown",
+        "partOfSpeech": "noun",
+        "meaning": "fame, honor\nThe scientist achieved worldwide renown.",
+        "example": "The renown is important for success."
+      },
+      {
+        "word": "tusk",
+        "partOfSpeech": "noun",
+        "meaning": "long tooth of an elephant\nThe elephant’s tusks were huge.",
+        "example": "The tusk is important for success."
+      }
+    ],
+    "30": [
+      {
+        "word": "burden",
+        "partOfSpeech": "noun",
+        "meaning": "heavy load; to cause hardship\nHe carried the burden of responsibility.",
+        "example": "The burden is important for success."
+      },
+      {
+        "word": "compromise",
+        "partOfSpeech": "noun",
+        "meaning": "agreement through concession; to settle\nThey reached a compromise after hours of debate.",
+        "example": "The compromise is important for success."
+      },
+      {
+        "word": "craft",
+        "partOfSpeech": "noun",
+        "meaning": "skill in making; to make skillfully\nThe artist crafted a wooden bowl.",
+        "example": "The craft is important for success."
+      },
+      {
+        "word": "crook",
+        "partOfSpeech": "noun",
+        "meaning": "criminal, dishonest person\nThe police arrested the crook for theft.",
+        "example": "The crook is important for success."
+      },
+      {
+        "word": "currency",
+        "partOfSpeech": "noun",
+        "meaning": "system of money\nThe dollar is the official currency of the US.",
+        "example": "The currency is important for success."
+      },
+      {
+        "word": "enigma",
+        "partOfSpeech": "noun",
+        "meaning": "puzzle, mystery\nThe cause of the fire remains an enigma.",
+        "example": "The enigma is important for success."
+      },
+      {
+        "word": "fragile",
+        "partOfSpeech": "adjective",
+        "meaning": "easily broken\nThe vase was fragile and broke easily.",
+        "example": "The fragile approach was very effective."
+      },
+      {
+        "word": "hybrid",
+        "partOfSpeech": "noun",
+        "meaning": "mixture, combination\nThe car is a hybrid of gas and electricity.",
+        "example": "The hybrid is important for success."
+      },
+      {
+        "word": "innocence",
+        "partOfSpeech": "noun",
+        "meaning": "the state of not being guilty\nThe child’s innocence was touching.",
+        "example": "The innocence is important for success."
+      },
+      {
+        "word": "merge",
+        "partOfSpeech": "verb",
+        "meaning": "to combine into one\nThe two companies merged last year.",
+        "example": "The team will merge the project successfully."
+      },
+      {
+        "word": "moderate",
+        "partOfSpeech": "adjective",
+        "meaning": "not extreme\nShe takes a moderate approach to politics.",
+        "example": "The moderate approach was very effective."
+      },
+      {
+        "word": "overwhelm",
+        "partOfSpeech": "verb",
+        "meaning": "to overpower or flood\nHe was overwhelmed with work.",
+        "example": "The team will overwhelm the project successfully."
+      },
+      {
+        "word": "perception",
+        "partOfSpeech": "noun",
+        "meaning": "understanding through the senses\nHer perception of art is unique.",
+        "example": "The perception is important for success."
+      },
+      {
+        "word": "reunion",
+        "partOfSpeech": "noun",
+        "meaning": "a meeting after separation\nThey planned a school reunion.",
+        "example": "The reunion is important for success."
+      },
+      {
+        "word": "rig",
+        "partOfSpeech": "verb",
+        "meaning": "to arrange unfairly; equipment\nThey rigged the election results.",
+        "example": "The team will rig the project successfully."
+      },
+      {
+        "word": "shiver",
+        "partOfSpeech": "verb",
+        "meaning": "to shake from cold or fear\nShe shivered in the freezing wind.",
+        "example": "The team will shiver the project successfully."
+      },
+      {
+        "word": "sociable",
+        "partOfSpeech": "adjective",
+        "meaning": "friendly, liking company\nHe is a sociable and outgoing man.",
+        "example": "The sociable approach was very effective."
+      },
+      {
+        "word": "talkative",
+        "partOfSpeech": "adjective",
+        "meaning": "fond of talking\nThe child was very talkative in class.",
+        "example": "The talkative approach was very effective."
+      },
+      {
+        "word": "tow",
+        "partOfSpeech": "verb",
+        "meaning": "to pull a vehicle; the act of pulling\nThe truck towed the broken car.",
+        "example": "The team will tow the project successfully."
+      },
+      {
+        "word": "tramp",
+        "partOfSpeech": "noun",
+        "meaning": "homeless person; to walk heavily\nThey heard the tramp of soldiers’ boots.",
+        "example": "The tramp is important for success."
+      }
+    ]
+  }
+}

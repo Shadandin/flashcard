@@ -91,31 +91,9 @@ function showUnitPreviewScreen() {
     document.getElementById('previewUnitNumber').textContent = currentUnit;
     updatePreviewProgress();
     displayCurrentWords();
-    generateMissingWordsCards(); // Initialize missing words cards
 }
 
-function toggleAddWordForm() {
-    const wordInputSection = document.getElementById('wordInputSection');
-    const isVisible = wordInputSection.style.display !== 'none';
-    
-    if (isVisible) {
-        wordInputSection.style.display = 'none';
-    } else {
-        wordInputSection.style.display = 'block';
-    }
-}
 
-function toggleMissingWordsCards() {
-    const container = document.getElementById('missingWordsContainer');
-    const isVisible = container.style.display !== 'none';
-    
-    if (isVisible) {
-        container.style.display = 'none';
-    } else {
-        container.style.display = 'block';
-        generateMissingWordsCards(); // Regenerate cards when showing
-    }
-}
 
 function hideAllScreens() {
     document.querySelectorAll('.screen').forEach(screen => {
@@ -811,118 +789,15 @@ function displayCurrentWords() {
     wordsList.innerHTML = wordsHTML;
 }
 
-function addNewWord() {
-    if (!currentBook || !currentUnit) {
-        alert('Please select a book and unit first.');
-        return;
-    }
-    
-    const word = document.getElementById('newWord').value.trim();
-    const partOfSpeech = document.getElementById('newPartOfSpeech').value;
-    const meaning = document.getElementById('newMeaning').value.trim();
-    const example = document.getElementById('newExample').value.trim();
-    
-    if (!word || !meaning || !example) {
-        alert('Please fill in all fields.');
-        return;
-    }
-    
-    // Initialize unit if it doesn't exist
-    if (!bookData[currentBook].units[currentUnit]) {
-        bookData[currentBook].units[currentUnit] = [];
-    }
-    
-    // Add the new word
-    const newWord = {
-        word: word,
-        partOfSpeech: partOfSpeech,
-        meaning: meaning,
-        example: example
-    };
-    
-    bookData[currentBook].units[currentUnit].push(newWord);
-    
-    // Update displays
-    updatePreviewProgress();
-    displayCurrentWords();
-    updateProgressDisplay();
-    
-    // Clear form
-    clearWordForm();
-    
-    // Check if unit is complete
-    if (bookData[currentBook].units[currentUnit].length >= 20) {
-        alert('Congratulations! This unit is now complete with 20 words.');
-    }
-    
-    // Save to localStorage
-    saveUserProgress();
-    
-    // Update missing words cards to show the new word
-    generateMissingWordsCards();
-}
 
-function clearWordForm() {
-    document.getElementById('newWord').value = '';
-    document.getElementById('newPartOfSpeech').value = 'noun';
-    document.getElementById('newMeaning').value = '';
-    document.getElementById('newExample').value = '';
-}
 // Add preview and word input functions to global scope
 window.showUnitPreviewScreen = showUnitPreviewScreen;
-window.addNewWord = addNewWord;
-window.clearWordForm = clearWordForm;
 window.selectUnitForPreview = selectUnitForPreview;
 window.startStudying = startStudying;
-window.toggleAddWordForm = toggleAddWordForm;
-window.toggleMissingWordsCards = toggleMissingWordsCards;
 
 function startStudying() {
     showFlashcardScreen();
 }
 
-// Missing words card functions
-function generateMissingWordsCards() {
-    if (!currentBook || !currentUnit) return;
-    
-    const unitWords = bookData[currentBook].units[currentUnit] || [];
-    const missingWordsGrid = document.getElementById('missingWordsGrid');
-    if (!missingWordsGrid) return;
-    
-    missingWordsGrid.innerHTML = '';
-    
-    if (unitWords.length >= 20) {
-        missingWordsGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">This unit is complete with 20 words!</p>';
-        return;
-    }
-    
-    // Generate cards for missing word positions
-    for (let i = 1; i <= 20; i++) {
-        const wordIndex = i - 1; // 0-based index
-        const existingWord = unitWords[wordIndex];
-        
-        if (!existingWord) {
-            // Show missing word card
-            const card = document.createElement('div');
-            card.className = 'missing-word-card';
-            card.innerHTML = `
-                <div class="missing-word-header">
-                    <span class="missing-word-number">#${i}</span>
-                    <span class="missing-word-status">Missing</span>
-                </div>
-                <div class="missing-word-content">
-                    <div class="missing-word-text">Word ${i}</div>
-                    <div class="missing-word-pos">noun</div>
-                    <div class="missing-word-meaning">This word needs to be added manually</div>
-                    <div class="missing-word-example">Click "Add Word" to fill this position</div>
-                </div>
-            `;
-            missingWordsGrid.appendChild(card);
-        }
-    }
-    
-    if (missingWordsGrid.children.length === 0) {
-        missingWordsGrid.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">No missing words! This unit is complete.</p>';
-    }
-}
+
 
