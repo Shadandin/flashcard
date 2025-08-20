@@ -1135,6 +1135,47 @@ body {
     font-size: 0.85rem;
 }
 
+.word-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.word-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-word-btn,
+.delete-word-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.edit-word-btn {
+    color: #17a2b8;
+}
+
+.edit-word-btn:hover {
+    background: rgba(23, 162, 184, 0.1);
+    color: #138496;
+}
+
+.delete-word-btn {
+    color: #dc3545;
+}
+
+.delete-word-btn:hover {
+    background: rgba(220, 53, 69, 0.1);
+    color: #c82333;
+}
+
 /* Missing Words Section */
 .missing-words-section {
     background: rgba(255, 255, 255, 0.95);
@@ -1793,5 +1834,250 @@ body {
     
     .study-btn {
         grid-column: 1;
+    }
+}
+
+/* Word Management Styles */
+.empty-unit-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.add-words-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.missing-words-info {
+    margin-bottom: 1rem;
+}
+
+.missing-words-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.notification.info {
+    background: linear-gradient(135deg, #17a2b8, #6f42c1);
+    color: white;
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #dc3545, #e83e8c);
+    color: white;
+}
+
+.notification-content {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.notification-content button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.notification-content button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Word Input Modal Styles */
+.word-input-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.word-input-modal .modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.form-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.word-input-form-group {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.word-input-form-group h4 {
+    margin: 0 0 1rem 0;
+    color: #FF8C42;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.word-input-form-group .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.word-input-form-group .form-group {
+    margin-bottom: 1rem;
+}
+
+.word-input-form-group .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.word-input-form-group .form-group input,
+.word-input-form-group .form-group select,
+.word-input-form-group .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+    box-sizing: border-box;
+}
+
+.word-input-form-group .form-group input:focus,
+.word-input-form-group .form-group select:focus,
+.word-input-form-group .form-group textarea:focus {
+    outline: none;
+    border-color: #FF8C42;
+    box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+}
+
+.word-input-form-group .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .word-input-modal .modal-content {
+        max-height: 95vh;
+    }
+    
+    .word-input-form-group .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
     }
 }

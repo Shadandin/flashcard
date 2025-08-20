@@ -28,6 +28,7 @@ let userProgress = {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
+    loadBookDataFromLocalStorage(); // Load any locally saved words
     initializeApp();
     loadUserProgress();
     setupEventListeners();
@@ -773,7 +774,15 @@ function displayCurrentWords() {
     const wordsList = document.getElementById('currentWordsList');
     
     if (unitWords.length === 0) {
-        wordsList.innerHTML = '<p style="color: #666; text-align: center; padding: 2rem;">No words in this unit yet. Add your first word!</p>';
+        wordsList.innerHTML = `
+            <div class="empty-unit-message">
+                <p style="color: #666; text-align: center; padding: 2rem;">No words in this unit yet. Add your first word!</p>
+                <button class="btn btn-primary" onclick="addMissingWords()">
+                    <i class="fas fa-plus"></i>
+                    Add 20 Words
+                </button>
+            </div>
+        `;
         return;
     }
     
@@ -781,13 +790,39 @@ function displayCurrentWords() {
     unitWords.forEach((word, index) => {
         wordsHTML += `
             <div class="word-item">
-                <div class="word">${word.word}</div>
+                <div class="word-header">
+                    <div class="word">${word.word}</div>
+                    <div class="word-actions">
+                        <button class="edit-word-btn" onclick="editWord(${index})" title="Edit word">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="delete-word-btn" onclick="deleteWord(${index})" title="Delete word">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="pos">${word.partOfSpeech}</div>
                 <div class="meaning">${word.meaning}</div>
                 <div class="example">${word.example}</div>
             </div>
         `;
     });
+    
+    // Add missing words button if unit has fewer than 20 words
+    if (unitWords.length < 20) {
+        const missingCount = 20 - unitWords.length;
+        wordsHTML += `
+            <div class="add-words-section">
+                <div class="missing-words-info">
+                    <p>This unit has ${unitWords.length} words. Need ${missingCount} more to reach 20 words.</p>
+                </div>
+                <button class="btn btn-primary" onclick="addMissingWords()">
+                    <i class="fas fa-plus"></i>
+                    Add ${missingCount} Words
+                </button>
+            </div>
+        `;
+    }
     
     wordsList.innerHTML = wordsHTML;
 }
@@ -800,6 +835,342 @@ window.startStudying = startStudying;
 
 function startStudying() {
     showFlashcardScreen();
+}
+
+// Word Management Functions
+function addMissingWords() {
+    if (!currentBook || !currentUnit) return;
+    
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const currentCount = unitWords.length;
+    const missingCount = 20 - currentCount;
+    
+    if (missingCount <= 0) {
+        alert('This unit already has 20 words!');
+        return;
+    }
+    
+    // Show manual word input form
+    showWordInputForm(missingCount);
+}
+
+function showWordInputForm(wordCount) {
+    const formHTML = `
+        <div class="word-input-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add ${wordCount} Words to Unit ${currentUnit}</h3>
+                    <button class="close-btn" onclick="closeWordInputForm()">×</button>
+                </div>
+                <div class="modal-body">
+                    <p class="form-description">Please add ${wordCount} words with their complete information:</p>
+                    <div id="wordInputForms">
+                        ${generateWordInputForms(wordCount)}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeWordInputForm()">Cancel</button>
+                    <button class="btn btn-primary" onclick="saveWords()">Save Words</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', formHTML);
+}
+
+function generateWordInputForms(wordCount) {
+    let formsHTML = '';
+    for (let i = 0; i < wordCount; i++) {
+        formsHTML += `
+            <div class="word-input-form-group">
+                <h4>Word ${i + 1}</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="word${i}">Word:</label>
+                        <input type="text" id="word${i}" placeholder="Enter word" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pos${i}">Part of Speech:</label>
+                        <select id="pos${i}" required>
+                            <option value="">Select part of speech</option>
+                            <option value="noun">Noun</option>
+                            <option value="verb">Verb</option>
+                            <option value="adjective">Adjective</option>
+                            <option value="adverb">Adverb</option>
+                            <option value="preposition">Preposition</option>
+                            <option value="conjunction">Conjunction</option>
+                            <option value="pronoun">Pronoun</option>
+                            <option value="interjection">Interjection</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="meaning${i}">Meaning:</label>
+                    <textarea id="meaning${i}" placeholder="Enter the meaning of the word" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="example${i}">Example Sentence:</label>
+                    <textarea id="example${i}" placeholder="Enter an example sentence using the word" required></textarea>
+                </div>
+            </div>
+        `;
+    }
+    return formsHTML;
+}
+
+function saveWords() {
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const currentCount = unitWords.length;
+    const missingCount = 20 - currentCount;
+    const newWords = [];
+    
+    // Validate and collect all word data
+    for (let i = 0; i < missingCount; i++) {
+        const word = document.getElementById(`word${i}`).value.trim();
+        const pos = document.getElementById(`pos${i}`).value;
+        const meaning = document.getElementById(`meaning${i}`).value.trim();
+        const example = document.getElementById(`example${i}`).value.trim();
+        
+        // Validate required fields
+        if (!word || !pos || !meaning || !example) {
+            alert(`Please fill in all fields for Word ${i + 1}`);
+            return;
+        }
+        
+        // Check for duplicate words in the unit
+        const isDuplicate = unitWords.some(existingWord => 
+            existingWord.word.toLowerCase() === word.toLowerCase()
+        );
+        
+        if (isDuplicate) {
+            alert(`The word "${word}" already exists in this unit. Please use a different word.`);
+            return;
+        }
+        
+        newWords.push({
+            word: word,
+            partOfSpeech: pos,
+            meaning: meaning,
+            example: example
+        });
+    }
+    
+    // Add new words to the unit
+    if (!bookData[currentBook].units[currentUnit]) {
+        bookData[currentBook].units[currentUnit] = [];
+    }
+    
+    bookData[currentBook].units[currentUnit].push(...newWords);
+    
+    // Save to localStorage
+    saveBookDataToLocalStorage();
+    
+    // Close form and update display
+    closeWordInputForm();
+    displayCurrentWords();
+    updatePreviewProgress();
+    
+    // Show success message
+    showNotification(`Successfully added ${missingCount} words to Unit ${currentUnit}!`, 'success');
+}
+
+function closeWordInputForm() {
+    const modal = document.querySelector('.word-input-modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+function editWord(wordIndex) {
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const word = unitWords[wordIndex];
+    
+    if (!word) return;
+    
+    showEditWordForm(wordIndex, word);
+}
+
+function showEditWordForm(wordIndex, word) {
+    const formHTML = `
+        <div class="word-input-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Word: ${word.word}</h3>
+                    <button class="close-btn" onclick="closeWordInputForm()">×</button>
+                </div>
+                <div class="modal-body">
+                    <p class="form-description">Edit the word information:</p>
+                    <div class="word-input-form-group">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="editWord">Word:</label>
+                                <input type="text" id="editWord" value="${word.word}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editPos">Part of Speech:</label>
+                                <select id="editPos" required>
+                                    <option value="noun" ${word.partOfSpeech === 'noun' ? 'selected' : ''}>Noun</option>
+                                    <option value="verb" ${word.partOfSpeech === 'verb' ? 'selected' : ''}>Verb</option>
+                                    <option value="adjective" ${word.partOfSpeech === 'adjective' ? 'selected' : ''}>Adjective</option>
+                                    <option value="adverb" ${word.partOfSpeech === 'adverb' ? 'selected' : ''}>Adverb</option>
+                                    <option value="preposition" ${word.partOfSpeech === 'preposition' ? 'selected' : ''}>Preposition</option>
+                                    <option value="conjunction" ${word.partOfSpeech === 'conjunction' ? 'selected' : ''}>Conjunction</option>
+                                    <option value="pronoun" ${word.partOfSpeech === 'pronoun' ? 'selected' : ''}>Pronoun</option>
+                                    <option value="interjection" ${word.partOfSpeech === 'interjection' ? 'selected' : ''}>Interjection</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editMeaning">Meaning:</label>
+                            <textarea id="editMeaning" required>${word.meaning}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editExample">Example Sentence:</label>
+                            <textarea id="editExample" required>${word.example}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeWordInputForm()">Cancel</button>
+                    <button class="btn btn-primary" onclick="saveEditedWord(${wordIndex})">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', formHTML);
+}
+
+function saveEditedWord(wordIndex) {
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const originalWord = unitWords[wordIndex];
+    
+    const newWord = document.getElementById('editWord').value.trim();
+    const newPos = document.getElementById('editPos').value;
+    const newMeaning = document.getElementById('editMeaning').value.trim();
+    const newExample = document.getElementById('editExample').value.trim();
+    
+    // Validate required fields
+    if (!newWord || !newPos || !newMeaning || !newExample) {
+        alert('Please fill in all fields');
+        return;
+    }
+    
+    // Check for duplicate words (excluding the current word being edited)
+    const isDuplicate = unitWords.some((existingWord, index) => 
+        index !== wordIndex && existingWord.word.toLowerCase() === newWord.toLowerCase()
+    );
+    
+    if (isDuplicate) {
+        alert(`The word "${newWord}" already exists in this unit. Please use a different word.`);
+        return;
+    }
+    
+    // Update the word
+    unitWords[wordIndex] = {
+        word: newWord,
+        partOfSpeech: newPos,
+        meaning: newMeaning,
+        example: newExample
+    };
+    
+    // Save to localStorage
+    saveBookDataToLocalStorage();
+    
+    // Close form and update display
+    closeWordInputForm();
+    displayCurrentWords();
+    updatePreviewProgress();
+    
+    // Show success message
+    showNotification(`Successfully updated "${newWord}"!`, 'success');
+}
+
+function deleteWord(wordIndex) {
+    const unitWords = bookData[currentBook].units[currentUnit] || [];
+    const word = unitWords[wordIndex];
+    
+    if (!word) return;
+    
+    const confirmDelete = confirm(`Are you sure you want to delete the word "${word.word}"?`);
+    
+    if (confirmDelete) {
+        // Remove the word
+        unitWords.splice(wordIndex, 1);
+        
+        // Save to localStorage
+        saveBookDataToLocalStorage();
+        
+        // Update display
+        displayCurrentWords();
+        updatePreviewProgress();
+        
+        // Show success message
+        showNotification(`Successfully deleted "${word.word}"!`, 'success');
+    }
+}
+
+
+
+function saveBookDataToLocalStorage() {
+    try {
+        localStorage.setItem('bookData', JSON.stringify(bookData));
+        console.log('Book data saved to localStorage');
+    } catch (error) {
+        console.error('Error saving book data:', error);
+    }
+}
+
+function loadBookDataFromLocalStorage() {
+    try {
+        const savedData = localStorage.getItem('bookData');
+        if (savedData) {
+            const parsedData = JSON.parse(savedData);
+            // Merge with existing bookData to preserve original data
+            Object.keys(parsedData).forEach(bookKey => {
+                if (bookData[bookKey]) {
+                    Object.keys(parsedData[bookKey].units).forEach(unitKey => {
+                        if (!bookData[bookKey].units[unitKey]) {
+                            bookData[bookKey].units[unitKey] = [];
+                        }
+                        // Add any new words that don't exist in original data
+                        parsedData[bookKey].units[unitKey].forEach(word => {
+                            const exists = bookData[bookKey].units[unitKey].some(existingWord => 
+                                existingWord.word === word.word
+                            );
+                            if (!exists) {
+                                bookData[bookKey].units[unitKey].push(word);
+                            }
+                        });
+                    });
+                }
+            });
+            console.log('Book data loaded from localStorage');
+        }
+    } catch (error) {
+        console.error('Error loading book data:', error);
+    }
+}
+
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span>${message}</span>
+            <button onclick="this.parentElement.parentElement.remove()">×</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto-remove after 3 seconds
+    setTimeout(() => {
+        if (notification.parentElement) {
+            notification.remove();
+        }
+    }, 3000);
 }
 
 // Practice Mode Variables
