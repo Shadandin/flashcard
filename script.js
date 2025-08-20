@@ -1578,6 +1578,9 @@ function startPractice(unitNumber) {
     practiceScore = 0;
     practiceAnswers = [];
     
+    // Reset question type counts for balanced distribution
+    window.questionTypeCounts = { meaning: 0, word: 0, partOfSpeech: 0, example: 0 };
+    
     // Generate practice questions
     generatePracticeQuestions();
     
@@ -1605,9 +1608,13 @@ function generatePracticeQuestions() {
     
     practiceQuestions = [];
     
-    // Generate 30 questions
+    // Create a pool of words to use for questions
+    const availableWords = [...unitWords];
+    const usedWords = new Set();
+    
+    // Generate questions with better word distribution
     for (let i = 0; i < 30; i++) {
-        const question = generateQuestion(unitWords, allWords);
+        const question = generateQuestionWithWordPool(availableWords, allWords, usedWords);
         practiceQuestions.push(question);
     }
 }
@@ -1622,11 +1629,40 @@ function getAllWordsFromBook(bookNumber) {
     return allWords;
 }
 
-function generateQuestion(unitWords, allWords) {
+function generateQuestionWithWordPool(availableWords, allWords, usedWords) {
+    // Create a balanced distribution of question types
     const questionTypes = ['meaning', 'word', 'partOfSpeech', 'example'];
-    const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
     
-    const correctWord = unitWords[Math.floor(Math.random() * unitWords.length)];
+    // Track question type usage to ensure balanced distribution
+    if (!window.questionTypeCounts) {
+        window.questionTypeCounts = { meaning: 0, word: 0, partOfSpeech: 0, example: 0 };
+    }
+    
+    // Select question type with preference for less used types
+    let questionType;
+    const minCount = Math.min(...Object.values(window.questionTypeCounts));
+    const leastUsedTypes = questionTypes.filter(type => window.questionTypeCounts[type] === minCount);
+    questionType = leastUsedTypes[Math.floor(Math.random() * leastUsedTypes.length)];
+    window.questionTypeCounts[questionType]++;
+    
+    // Select a word that hasn't been used too much
+    let correctWord;
+    if (availableWords.length > 0) {
+        // Use words from the available pool first
+        const randomIndex = Math.floor(Math.random() * availableWords.length);
+        correctWord = availableWords.splice(randomIndex, 1)[0];
+        usedWords.add(correctWord.word);
+    } else {
+        // If pool is empty, reset and shuffle
+        const unitWords = bookData[currentBook].units[currentUnit];
+        availableWords.push(...unitWords);
+        availableWords.sort(() => 0.5 - Math.random());
+        
+        const randomIndex = Math.floor(Math.random() * availableWords.length);
+        correctWord = availableWords.splice(randomIndex, 1)[0];
+        usedWords.add(correctWord.word);
+    }
+    
     const incorrectWords = allWords.filter(word => word.word !== correctWord.word);
     
     let question, correctAnswer, options;
@@ -1683,6 +1719,11 @@ function generateQuestion(unitWords, allWords) {
         correctIndex: correctIndex,
         word: correctWord.word
     };
+}
+
+// Keep the original function for backward compatibility
+function generateQuestion(unitWords, allWords) {
+    return generateQuestionWithWordPool([...unitWords], allWords, new Set());
 }
 
 // Helper function to get unique options
