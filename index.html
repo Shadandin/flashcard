@@ -241,6 +241,66 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Practice Screen -->
+            <div id="practiceScreen" class="screen">
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showUnitSelection()">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Units
+                    </button>
+                    <div class="practice-info">
+                        <span class="unit-info">Unit <span id="practiceUnitNumber"></span> Practice</span>
+                        <span class="progress-info"><span id="currentQuestionIndex">1</span>/<span id="totalQuestions">30</span></span>
+                    </div>
+                </div>
+                
+                <div class="practice-container">
+                    <div class="question-card" id="questionCard">
+                        <div class="question-header">
+                            <div class="question-number">Question <span id="questionNumber">1</span></div>
+                            <div class="question-type" id="questionType">Multiple Choice</div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h3 class="question-text" id="questionText">What is the meaning of this word?</h3>
+                            <div class="word-display" id="wordDisplay">Word</div>
+                        </div>
+                        
+                        <div class="options-container" id="optionsContainer">
+                            <!-- Options will be generated here -->
+                        </div>
+                        
+                        <div class="question-feedback" id="questionFeedback" style="display: none;">
+                            <div class="feedback-content">
+                                <div class="feedback-icon" id="feedbackIcon"></div>
+                                <div class="feedback-text" id="feedbackText"></div>
+                                <div class="correct-answer" id="correctAnswer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-navigation">
+                    <button class="nav-btn prev-btn" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button class="nav-btn next-btn" onclick="nextQuestion()" disabled>
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="practice-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="practiceProgressBar" style="width: 0%"></div>
+                    </div>
+                    <div class="score-display">
+                        <span>Score: <span id="currentScore">0</span>/<span id="totalScore">30</span></span>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 

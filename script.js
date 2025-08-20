@@ -146,7 +146,10 @@ function createUnitCard(unitNumber) {
                 <i class="fas fa-play"></i> Study
             </button>
             <button class="action-btn preview-btn" onclick="event.stopPropagation(); selectUnitForPreview(${unitNumber})">
-                <i class="fas fa-eye"></i> Preview
+                <i class="fas fa-eye"></i>
+            </button>
+            <button class="action-btn practice-btn" onclick="event.stopPropagation(); startPractice(${unitNumber})">
+                <i class="fas fa-question-circle"></i>
             </button>
         </div>
     `;
@@ -799,5 +802,313 @@ function startStudying() {
     showFlashcardScreen();
 }
 
+// Practice Mode Variables
+let practiceQuestions = [];
+let currentQuestionIndex = 0;
+let practiceScore = 0;
+let practiceAnswers = [];
 
+// Practice Mode Functions
+function startPractice(unitNumber) {
+    currentUnit = unitNumber;
+    currentQuestionIndex = 0;
+    practiceScore = 0;
+    practiceAnswers = [];
+    
+    // Generate practice questions
+    generatePracticeQuestions();
+    
+    // Show practice screen
+    showPracticeScreen();
+    
+    // Load first question
+    loadCurrentQuestion();
+}
 
+function showPracticeScreen() {
+    hideAllScreens();
+    document.getElementById('practiceScreen').classList.add('active');
+    document.getElementById('practiceUnitNumber').textContent = currentUnit;
+}
+
+function generatePracticeQuestions() {
+    if (!currentBook || !currentUnit || !bookData[currentBook] || !bookData[currentBook].units[currentUnit]) {
+        practiceQuestions = [];
+        return;
+    }
+    
+    const unitWords = bookData[currentBook].units[currentUnit];
+    const allWords = getAllWordsFromBook(currentBook);
+    
+    practiceQuestions = [];
+    
+    // Generate 30 questions
+    for (let i = 0; i < 30; i++) {
+        const question = generateQuestion(unitWords, allWords);
+        practiceQuestions.push(question);
+    }
+}
+
+function getAllWordsFromBook(bookNumber) {
+    const allWords = [];
+    if (bookData[bookNumber] && bookData[bookNumber].units) {
+        Object.values(bookData[bookNumber].units).forEach(unit => {
+            allWords.push(...unit);
+        });
+    }
+    return allWords;
+}
+
+function generateQuestion(unitWords, allWords) {
+    const questionTypes = ['meaning', 'word', 'partOfSpeech', 'example'];
+    const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
+    
+    const correctWord = unitWords[Math.floor(Math.random() * unitWords.length)];
+    const incorrectWords = allWords.filter(word => word.word !== correctWord.word);
+    
+    // Shuffle and get 3 random incorrect words
+    const shuffledIncorrect = incorrectWords.sort(() => 0.5 - Math.random()).slice(0, 3);
+    
+    let question, correctAnswer, options;
+    
+    switch (questionType) {
+        case 'meaning':
+            question = `What is the meaning of "${correctWord.word}"?`;
+            correctAnswer = correctWord.meaning;
+            options = [
+                correctWord.meaning,
+                shuffledIncorrect[0].meaning,
+                shuffledIncorrect[1].meaning,
+                shuffledIncorrect[2].meaning
+            ];
+            break;
+            
+        case 'word':
+            question = `Which word means "${correctWord.meaning}"?`;
+            correctAnswer = correctWord.word;
+            options = [
+                correctWord.word,
+                shuffledIncorrect[0].word,
+                shuffledIncorrect[1].word,
+                shuffledIncorrect[2].word
+            ];
+            break;
+            
+        case 'partOfSpeech':
+            question = `What part of speech is "${correctWord.word}"?`;
+            correctAnswer = correctWord.partOfSpeech;
+            options = [
+                correctWord.partOfSpeech,
+                'noun',
+                'verb',
+                'adjective'
+            ];
+            break;
+            
+        case 'example':
+            question = `Complete the sentence: "${correctWord.example.replace(correctWord.word, '_____')}"`;
+            correctAnswer = correctWord.word;
+            options = [
+                correctWord.word,
+                shuffledIncorrect[0].word,
+                shuffledIncorrect[1].word,
+                shuffledIncorrect[2].word
+            ];
+            break;
+    }
+    
+    // Shuffle options
+    const shuffledOptions = options.sort(() => 0.5 - Math.random());
+    const correctIndex = shuffledOptions.indexOf(correctAnswer);
+    
+    return {
+        type: questionType,
+        question: question,
+        correctAnswer: correctAnswer,
+        options: shuffledOptions,
+        correctIndex: correctIndex,
+        word: correctWord.word
+    };
+}
+
+function loadCurrentQuestion() {
+    if (currentQuestionIndex >= practiceQuestions.length) {
+        showPracticeResults();
+        return;
+    }
+    
+    const question = practiceQuestions[currentQuestionIndex];
+    
+    // Update question display
+    document.getElementById('questionNumber').textContent = currentQuestionIndex + 1;
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionType').textContent = getQuestionTypeText(question.type);
+    
+    if (question.type === 'meaning' || question.type === 'partOfSpeech') {
+        document.getElementById('wordDisplay').textContent = question.word;
+        document.getElementById('wordDisplay').style.display = 'block';
+    } else {
+        document.getElementById('wordDisplay').style.display = 'none';
+    }
+    
+    // Generate options
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
+    
+    question.options.forEach((option, index) => {
+        const optionButton = document.createElement('button');
+        optionButton.className = 'option-btn';
+        optionButton.textContent = option;
+        optionButton.onclick = () => selectOption(index);
+        optionsContainer.appendChild(optionButton);
+    });
+    
+    // Update progress
+    updatePracticeProgress();
+    
+    // Hide feedback
+    document.getElementById('questionFeedback').style.display = 'none';
+    
+    // Update navigation buttons
+    updatePracticeNavigation();
+}
+
+function getQuestionTypeText(type) {
+    switch (type) {
+        case 'meaning': return 'Meaning';
+        case 'word': return 'Word';
+        case 'partOfSpeech': return 'Part of Speech';
+        case 'example': return 'Complete Sentence';
+        default: return 'Multiple Choice';
+    }
+}
+
+function selectOption(optionIndex) {
+    const question = practiceQuestions[currentQuestionIndex];
+    const isCorrect = optionIndex === question.correctIndex;
+    
+    // Store answer
+    practiceAnswers[currentQuestionIndex] = {
+        selected: optionIndex,
+        correct: isCorrect
+    };
+    
+    if (isCorrect) {
+        practiceScore++;
+    }
+    
+    // Show feedback
+    showQuestionFeedback(isCorrect, question);
+    
+    // Enable next button
+    document.querySelector('.next-btn').disabled = false;
+}
+
+function showQuestionFeedback(isCorrect, question) {
+    const feedback = document.getElementById('questionFeedback');
+    const feedbackIcon = document.getElementById('feedbackIcon');
+    const feedbackText = document.getElementById('feedbackText');
+    const correctAnswer = document.getElementById('correctAnswer');
+    
+    if (isCorrect) {
+        feedbackIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+        feedbackIcon.className = 'feedback-icon correct';
+        feedbackText.textContent = 'Correct!';
+        correctAnswer.style.display = 'none';
+    } else {
+        feedbackIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
+        feedbackIcon.className = 'feedback-icon incorrect';
+        feedbackText.textContent = 'Incorrect!';
+        correctAnswer.innerHTML = `Correct answer: <strong>${question.correctAnswer}</strong>`;
+        correctAnswer.style.display = 'block';
+    }
+    
+    feedback.style.display = 'block';
+}
+
+function nextQuestion() {
+    if (currentQuestionIndex < practiceQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadCurrentQuestion();
+    } else {
+        showPracticeResults();
+    }
+}
+
+function previousQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadCurrentQuestion();
+        
+        // Show previous answer if available
+        if (practiceAnswers[currentQuestionIndex]) {
+            const question = practiceQuestions[currentQuestionIndex];
+            const isCorrect = practiceAnswers[currentQuestionIndex].correct;
+            showQuestionFeedback(isCorrect, question);
+        }
+    }
+}
+
+function updatePracticeProgress() {
+    const progressPercentage = ((currentQuestionIndex + 1) / practiceQuestions.length) * 100;
+    document.getElementById('practiceProgressBar').style.width = `${progressPercentage}%`;
+    document.getElementById('currentQuestionIndex').textContent = currentQuestionIndex + 1;
+    document.getElementById('totalQuestions').textContent = practiceQuestions.length;
+    document.getElementById('currentScore').textContent = practiceScore;
+    document.getElementById('totalScore').textContent = practiceQuestions.length;
+}
+
+function updatePracticeNavigation() {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    prevBtn.disabled = currentQuestionIndex === 0;
+    nextBtn.disabled = !practiceAnswers[currentQuestionIndex];
+}
+
+function showPracticeResults() {
+    const percentage = Math.round((practiceScore / practiceQuestions.length) * 100);
+    const grade = getGrade(percentage);
+    
+    const resultsHTML = `
+        <div class="practice-results">
+            <h2>Practice Complete!</h2>
+            <div class="results-score">
+                <div class="score-circle ${grade.toLowerCase()}">
+                    <span class="score-number">${practiceScore}</span>
+                    <span class="score-total">/${practiceQuestions.length}</span>
+                </div>
+                <div class="score-percentage">${percentage}%</div>
+                <div class="score-grade">${grade}</div>
+            </div>
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="restartPractice()">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+                <button class="btn btn-secondary" onclick="showUnitSelection()">
+                    <i class="fas fa-arrow-left"></i> Back to Units
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('practiceScreen').innerHTML = resultsHTML;
+}
+
+function getGrade(percentage) {
+    if (percentage >= 90) return 'A';
+    if (percentage >= 80) return 'B';
+    if (percentage >= 70) return 'C';
+    if (percentage >= 60) return 'D';
+    return 'F';
+}
+
+function restartPractice() {
+    startPractice(currentUnit);
+}
+
+// Add practice functions to global scope
+window.startPractice = startPractice;
+window.nextQuestion = nextQuestion;
+window.previousQuestion = previousQuestion;
+window.restartPractice = restartPractice;
