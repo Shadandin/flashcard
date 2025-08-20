@@ -1764,7 +1764,13 @@ function selectOption(optionIndex) {
     showQuestionFeedback(isCorrect, question);
     
     // Enable next button
-    document.querySelector('.next-btn').disabled = false;
+    const nextBtn = document.querySelector('#practiceScreen .next-btn');
+    if (nextBtn) {
+        nextBtn.disabled = false;
+        console.log('Next button enabled');
+    } else {
+        console.error('Next button not found');
+    }
 }
 
 function showQuestionFeedback(isCorrect, question) {
@@ -1790,6 +1796,11 @@ function showQuestionFeedback(isCorrect, question) {
 }
 
 function nextQuestion() {
+    console.log('nextQuestion called:', {
+        currentQuestionIndex,
+        practiceQuestionsLength: practiceQuestions.length
+    });
+    
     if (currentQuestionIndex < practiceQuestions.length - 1) {
         currentQuestionIndex++;
         loadCurrentQuestion();
@@ -1822,11 +1833,22 @@ function updatePracticeProgress() {
 }
 
 function updatePracticeNavigation() {
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('#practiceScreen .prev-btn');
+    const nextBtn = document.querySelector('#practiceScreen .next-btn');
     
-    prevBtn.disabled = currentQuestionIndex === 0;
-    nextBtn.disabled = !practiceAnswers[currentQuestionIndex];
+    if (prevBtn && nextBtn) {
+        prevBtn.disabled = currentQuestionIndex === 0;
+        nextBtn.disabled = !practiceAnswers[currentQuestionIndex];
+        
+        console.log('Navigation updated:', {
+            currentQuestionIndex,
+            hasAnswer: !!practiceAnswers[currentQuestionIndex],
+            prevDisabled: prevBtn.disabled,
+            nextDisabled: nextBtn.disabled
+        });
+    } else {
+        console.error('Navigation buttons not found');
+    }
 }
 
 function showPracticeResults() {
