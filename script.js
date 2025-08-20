@@ -1881,39 +1881,7 @@ window.testDifficultWords = function() {
     }
 };
 
-// Add test difficult words to all books
-window.addTestDifficultWords = function() {
-    // Add some test difficult words to each book
-    [3, 4, 5, 6].forEach(bookNumber => {
-        if (!userProgress.books[bookNumber].wordDifficulties) {
-            userProgress.books[bookNumber].wordDifficulties = {};
-        }
-        
-        // Check if bookData exists for this book
-        if (!bookData[bookNumber] || !bookData[bookNumber].units) {
-            console.log(`No book data found for Book ${bookNumber}`);
-            return;
-        }
-        
-        // Add test difficult words only for units that exist and have words
-        Object.keys(bookData[bookNumber].units).forEach(unitNumber => {
-            const unit = bookData[bookNumber].units[unitNumber];
-            if (unit && unit.length > 0) {
-                // Mark first 2 words of each unit as difficult
-                for (let wordIndex = 0; wordIndex < Math.min(2, unit.length); wordIndex++) {
-                    const wordKey = `${unitNumber}-${wordIndex}`;
-                    userProgress.books[bookNumber].wordDifficulties[wordKey] = 3; // Mark as difficult
-                    console.log(`Marked word "${unit[wordIndex].word}" from Book ${bookNumber}, Unit ${unitNumber} as difficult`);
-                }
-            }
-        });
-    });
-    
-    saveUserProgress();
-    updateBookProgress();
-    
-    showNotification('Test difficult words added! Check the book cards below.', 'success');
-};
+
 
 // Show all difficult words across all books
 window.showAllDifficultWords = function() {
