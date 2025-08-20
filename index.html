@@ -60,6 +60,21 @@
             <!-- Book Selection Screen -->
             <div id="bookSelection" class="screen active">
                 <h2 class="screen-title">Choose Your Book</h2>
+                
+                <!-- Temporary test section for difficult words -->
+                <div class="test-section" style="background: #f8f9fa; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; text-align: center;">
+                    <h4 style="margin: 0 0 0.5rem 0; color: #333;">🧪 Test Difficult Words Feature</h4>
+                    <p style="margin: 0 0 1rem 0; color: #666; font-size: 0.9rem;">Add some test difficult words to see the feature in action</p>
+                    <button class="btn btn-warning" onclick="addTestDifficultWords()" style="margin-right: 0.5rem;">
+                        <i class="fas fa-plus"></i>
+                        Add Test Difficult Words
+                    </button>
+                    <button class="btn btn-info" onclick="showAllDifficultWords()">
+                        <i class="fas fa-eye"></i>
+                        View All Difficult Words
+                    </button>
+                </div>
+                
                 <div class="books-grid">
                     <div class="book-card" data-book="3">
                         <div class="book-icon">
@@ -71,6 +86,10 @@
                             <div class="progress" style="width: 0%"></div>
                         </div>
                         <span class="progress-text">0% Complete</span>
+                        <button class="difficult-words-btn" onclick="event.stopPropagation(); practiceDifficultWords(3)" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Practice Difficult Words
+                        </button>
                     </div>
                     <div class="book-card" data-book="4">
                         <div class="book-icon">
@@ -82,6 +101,10 @@
                             <div class="progress" style="width: 0%"></div>
                         </div>
                         <span class="progress-text">0% Complete</span>
+                        <button class="difficult-words-btn" onclick="event.stopPropagation(); practiceDifficultWords(4)" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Practice Difficult Words
+                        </button>
                     </div>
                     <div class="book-card" data-book="5">
                         <div class="book-icon">
@@ -93,6 +116,10 @@
                             <div class="progress" style="width: 0%"></div>
                         </div>
                         <span class="progress-text">0% Complete</span>
+                        <button class="difficult-words-btn" onclick="event.stopPropagation(); practiceDifficultWords(5)" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Practice Difficult Words
+                        </button>
                     </div>
                     <div class="book-card" data-book="6">
                         <div class="book-icon">
@@ -104,6 +131,10 @@
                             <div class="progress" style="width: 0%"></div>
                         </div>
                         <span class="progress-text">0% Complete</span>
+                        <button class="difficult-words-btn" onclick="event.stopPropagation(); practiceDifficultWords(6)" style="display: none;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Practice Difficult Words
+                        </button>
                     </div>
                 </div>
             </div>
@@ -224,6 +255,17 @@
                     </button>
                 </div>
 
+                <!-- Difficulty Marking Controls -->
+                <div class="difficulty-controls">
+                    <div class="difficulty-title">Difficulty Status:</div>
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn hard" id="difficultyToggleBtn" onclick="markCardDifficulty(3)" title="Toggle Difficult Status">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span id="difficultyBtnText">Mark as Difficult</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="card-indicators">
                     <div class="indicator-dots" id="indicatorDots">
                         <!-- Dots will be generated here -->
@@ -237,7 +279,7 @@
                         <span class="shortcut">← →</span> Navigate cards
                         <span class="shortcut">Space</span> Next card
                         <span class="shortcut">F</span> Flip card
-                        <span class="shortcut">1-3</span> Mark difficulty
+                        <span class="shortcut">3</span> Mark as difficult
                     </div>
                 </div>
             </div>
@@ -299,6 +341,21 @@
                     <div class="score-display">
                         <span>Score: <span id="currentScore">0</span>/<span id="totalScore">30</span></span>
                     </div>
+                </div>
+            </div>
+
+            <!-- Difficult Words Screen -->
+            <div id="difficultWordsScreen" class="screen">
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showBookSelection()">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Books
+                    </button>
+                    <h2 class="screen-title">Difficult Words Practice</h2>
+                </div>
+                
+                <div class="difficult-words-container" id="difficultWordsContainer">
+                    <!-- Difficult words will be displayed here -->
                 </div>
             </div>
         </main>

@@ -2170,3 +2170,378 @@ body {
 .git-note li {
     margin-bottom: 0.25rem;
 }
+
+/* Difficult Words Styles */
+.difficult-words-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.difficult-count {
+    color: #dc3545;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.difficult-count i {
+    color: #dc3545;
+}
+
+.difficult-words-container {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.difficult-words-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    color: white;
+}
+
+.difficult-words-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.difficult-words-info p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.difficult-words-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.difficult-words-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.difficult-word-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #dc3545;
+}
+
+.difficult-word-number {
+    background: #dc3545;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.difficult-word-content {
+    flex: 1;
+}
+
+.difficult-word-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.difficult-word-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.difficult-word-pos {
+    background: #e9ecef;
+    color: #6c757d;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.difficult-word-details {
+    margin-bottom: 0.5rem;
+}
+
+.difficult-word-meaning {
+    color: #555;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.difficult-word-example {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.difficult-word-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficult-word-unit {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.no-difficult-words {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+.no-difficult-words i {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.no-difficult-words h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.no-difficult-words p {
+    margin: 0 0 2rem 0;
+    font-size: 1.1rem;
+}
+
+/* Book card difficult words button */
+.book-card .difficult-words-btn {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.book-card .difficult-words-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+.book-card .difficult-words-btn i {
+    font-size: 1rem;
+}
+
+/* Responsive design for difficult words */
+@media (max-width: 768px) {
+    .difficult-words-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .difficult-words-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .difficult-word-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .difficult-word-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Test section styles */
+.test-section {
+    background: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px dashed #dee2e6;
+}
+
+.test-section h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.test-section p {
+    margin: 0 0 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    color: #212529;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-warning:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-info:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+}
+
+/* Difficulty Controls Styles */
+.difficulty-controls {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.difficulty-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.difficulty-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.difficulty-btn.hard {
+    background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+    color: white;
+}
+
+.difficulty-btn.hard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.difficulty-btn.hard.active {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.difficulty-btn.hard.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive design for difficulty controls */
+@media (max-width: 768px) {
+    .difficulty-buttons {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .difficulty-btn {
+        justify-content: center;
+    }
+}
+
+/* Card Difficulty Indicator Styles */
+.card-difficulty {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.card-difficulty.normal {
+    background: transparent;
+    color: transparent;
+}
+
+.card-difficulty.easy {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.card-difficulty.medium {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.card-difficulty.difficult {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}

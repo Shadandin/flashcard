@@ -8,10 +8,10 @@ let isCardFlipped = false;
 // Enhanced user progress with study statistics
 let userProgress = {
     books: {
-        3: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 } },
-        4: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 } },
-        5: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 } },
-        6: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 } }
+        3: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 }, wordDifficulties: {} },
+        4: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 }, wordDifficulties: {} },
+        5: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 }, wordDifficulties: {} },
+        6: { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 }, wordDifficulties: {} }
     },
     globalStats: {
         totalStudyTime: 0,
@@ -206,6 +206,11 @@ function selectUnitForPreview(unitNumber) {
 
 // Enhanced Flashcard Management
 function loadCurrentCard() {
+    if (studyMode === 'difficult') {
+        loadDifficultWordCard();
+        return;
+    }
+    
     const card = getCurrentCard();
     if (!card) return;
     
@@ -272,6 +277,18 @@ function flipCard() {
 }
 
 function nextCard() {
+    if (studyMode === 'difficult') {
+        const difficultWords = window.currentDifficultWords || [];
+        if (currentCardIndex < difficultWords.length - 1) {
+            currentCardIndex++;
+            loadCurrentCard();
+            updateIndicatorDots();
+        } else {
+            showDifficultWordsPracticeResults();
+        }
+        return;
+    }
+    
     let maxCards = 20; // Default
     if (currentBook && currentUnit && bookData[currentBook] && bookData[currentBook].units[currentUnit]) {
         maxCards = bookData[currentBook].units[currentUnit].length;
@@ -354,13 +371,34 @@ function addToDifficultWords() {
 
 function updateCardDifficultyIndicator() {
     const difficultyIndicator = document.querySelector('.card-difficulty');
-    if (!difficultyIndicator) return;
+    const difficultyBtn = document.getElementById('difficultyToggleBtn');
+    const difficultyBtnText = document.getElementById('difficultyBtnText');
     
-    const wordKey = `${currentBook}-${currentUnit}-${currentCardIndex}`;
-    const isDifficult = userProgress.globalStats.difficultWords.includes(wordKey);
+    if (!difficultyIndicator || !difficultyBtn || !difficultyBtnText) return;
     
-    difficultyIndicator.className = `card-difficulty ${isDifficult ? 'difficult' : 'normal'}`;
-    difficultyIndicator.textContent = isDifficult ? 'Difficult Word' : '';
+    if (!currentBook || !currentUnit) return;
+    
+    const wordKey = `${currentUnit}-${currentCardIndex}`;
+    const isDifficult = userProgress.books[currentBook].wordDifficulties?.[wordKey] === 3;
+    
+    // Update difficulty indicator on the card
+    difficultyIndicator.className = 'card-difficulty';
+    
+    if (isDifficult) {
+        difficultyIndicator.classList.add('difficult');
+        difficultyIndicator.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Difficult';
+        
+        // Update button to show "Remove from Difficult"
+        difficultyBtn.classList.add('active');
+        difficultyBtnText.textContent = 'Remove from Difficult';
+    } else {
+        difficultyIndicator.classList.add('normal');
+        difficultyIndicator.innerHTML = '';
+        
+        // Update button to show "Mark as Difficult"
+        difficultyBtn.classList.remove('active');
+        difficultyBtnText.textContent = 'Mark as Difficult';
+    }
 }
 
 // Enhanced Progress Management
@@ -477,8 +515,26 @@ function updateBookProgress() {
         const progressBar = card.querySelector('.progress');
         const progressText = card.querySelector('.progress-text');
         
+        // Get difficult words count
+        const difficultWords = getDifficultWordsForBook(bookNumber);
+        const difficultCount = difficultWords.length;
+        
         progressBar.style.width = `${progress}%`;
         progressText.textContent = `${progress}% Complete`;
+        
+        // Show/hide difficult words button based on count
+        const difficultWordsBtn = card.querySelector('.difficult-words-btn');
+        if (difficultWordsBtn) {
+            if (difficultCount > 0) {
+                difficultWordsBtn.style.display = 'flex';
+                difficultWordsBtn.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Practice ${difficultCount} Difficult Words
+                `;
+            } else {
+                difficultWordsBtn.style.display = 'none';
+            }
+        }
     });
 }
 
@@ -581,6 +637,15 @@ function loadProgressFromStorage() {
     const savedProgress = localStorage.getItem('flashcardProgress');
     if (savedProgress) {
         userProgress = JSON.parse(savedProgress);
+        
+        // Ensure wordDifficulties structure exists for all books
+        [3, 4, 5, 6].forEach(bookNumber => {
+            if (!userProgress.books[bookNumber]) {
+                userProgress.books[bookNumber] = { progress: 0, units: {}, stats: { totalTime: 0, sessions: 0, streak: 0 }, wordDifficulties: {} };
+            } else if (!userProgress.books[bookNumber].wordDifficulties) {
+                userProgress.books[bookNumber].wordDifficulties = {};
+            }
+        });
     }
 }
 
@@ -672,11 +737,9 @@ function handleKeyboardNavigation(event) {
         case 'F':
             flipCard();
             break;
-        case '1':
-        case '2':
         case '3':
-            // Mark difficulty (1=easy, 2=medium, 3=hard)
-            markCardDifficulty(parseInt(event.key));
+            // Mark as difficult
+            markCardDifficulty(3);
             break;
     }
 }
@@ -684,19 +747,38 @@ function handleKeyboardNavigation(event) {
 function markCardDifficulty(difficulty) {
     if (!currentBook || !currentUnit) return;
     
-    const wordKey = `${currentBook}-${currentUnit}-${currentCardIndex}`;
+    // Initialize wordDifficulties if it doesn't exist
+    if (!userProgress.books[currentBook].wordDifficulties) {
+        userProgress.books[currentBook].wordDifficulties = {};
+    }
     
-    if (difficulty === 3) {
-        // Mark as difficult
-        if (!userProgress.globalStats.difficultWords.includes(wordKey)) {
-            userProgress.globalStats.difficultWords.push(wordKey);
-        }
-    } else if (difficulty === 1) {
-        // Remove from difficult words
-        const index = userProgress.globalStats.difficultWords.indexOf(wordKey);
+    const wordKey = `${currentUnit}-${currentCardIndex}`;
+    const globalWordKey = `${currentBook}-${currentUnit}-${currentCardIndex}`;
+    
+    // Check if word is already marked as difficult
+    const isCurrentlyDifficult = userProgress.books[currentBook].wordDifficulties[wordKey] === 3;
+    
+    if (isCurrentlyDifficult) {
+        // Remove difficult marking (toggle off)
+        delete userProgress.books[currentBook].wordDifficulties[wordKey];
+        
+        // Remove from global difficult words list
+        const index = userProgress.globalStats.difficultWords.indexOf(globalWordKey);
         if (index > -1) {
             userProgress.globalStats.difficultWords.splice(index, 1);
         }
+        
+        showNotification('Removed from Difficult Words', 'info');
+    } else {
+        // Mark as difficult (toggle on)
+        userProgress.books[currentBook].wordDifficulties[wordKey] = 3;
+        
+        // Add to global difficult words list
+        if (!userProgress.globalStats.difficultWords.includes(globalWordKey)) {
+            userProgress.globalStats.difficultWords.push(globalWordKey);
+        }
+        
+        showNotification('Marked as Difficult', 'info');
     }
     
     saveUserProgress();
@@ -791,7 +873,7 @@ function displayCurrentWords() {
         wordsHTML += `
             <div class="word-item">
                 <div class="word-header">
-                    <div class="word">${word.word}</div>
+                <div class="word">${word.word}</div>
                     <div class="word-actions">
                         <button class="edit-word-btn" onclick="editWord(${index})" title="Edit word">
                             <i class="fas fa-edit"></i>
@@ -1197,6 +1279,219 @@ function closeGitInstructions() {
     }
 }
 
+// Difficult Words Practice Functions
+function getDifficultWordsForBook(bookNumber) {
+    const difficultWords = [];
+    
+    if (!bookData[bookNumber] || !userProgress.books[bookNumber]) {
+        return difficultWords;
+    }
+    
+    const book = bookData[bookNumber];
+    const bookProgress = userProgress.books[bookNumber];
+    
+    // Check each unit in the book
+    Object.keys(book.units).forEach(unitNumber => {
+        const unit = book.units[unitNumber];
+        
+        unit.forEach((word, wordIndex) => {
+            const wordKey = `${unitNumber}-${wordIndex}`;
+            const wordDifficulty = bookProgress.wordDifficulties?.[wordKey];
+            
+            // If word is marked as difficulty level 3, add it to difficult words
+            if (wordDifficulty === 3) {
+                difficultWords.push({
+                    ...word,
+                    unitNumber: parseInt(unitNumber),
+                    wordIndex: wordIndex,
+                    wordKey: wordKey
+                });
+            }
+        });
+    });
+    
+    return difficultWords;
+}
+
+function practiceDifficultWords(bookNumber) {
+    const difficultWords = getDifficultWordsForBook(bookNumber);
+    
+    if (difficultWords.length === 0) {
+        showNotification('No difficult words found for this book!', 'info');
+        return;
+    }
+    
+    // Set up difficult words practice session
+    currentBook = bookNumber;
+    studyMode = 'difficult';
+    currentCardIndex = 0;
+    
+    // Store difficult words for practice
+    window.difficultWordsList = difficultWords;
+    
+    // Show difficult words practice screen
+    showDifficultWordsPracticeScreen();
+}
+
+function showDifficultWordsPracticeScreen() {
+    hideAllScreens();
+    document.getElementById('difficultWordsScreen').classList.add('active');
+    
+    const difficultWords = window.difficultWordsList || [];
+    displayDifficultWords(difficultWords);
+}
+
+function displayDifficultWords(difficultWords) {
+    const container = document.getElementById('difficultWordsContainer');
+    
+    if (difficultWords.length === 0) {
+        container.innerHTML = `
+            <div class="no-difficult-words">
+                <i class="fas fa-check-circle"></i>
+                <h3>No Difficult Words!</h3>
+                <p>Great job! You haven't marked any words as difficult in this book.</p>
+                <button class="btn btn-primary" onclick="showBookSelection()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Books
+                </button>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = `
+        <div class="difficult-words-header">
+            <div class="difficult-words-info">
+                <h3>Difficult Words Practice</h3>
+                <p>Book ${currentBook} • ${difficultWords.length} words marked as difficult</p>
+            </div>
+            <div class="difficult-words-actions">
+                <button class="btn btn-primary" onclick="startDifficultWordsPractice()">
+                    <i class="fas fa-play"></i>
+                    Start Practice
+                </button>
+                <button class="btn btn-secondary" onclick="showBookSelection()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Books
+                </button>
+            </div>
+        </div>
+        
+        <div class="difficult-words-list">
+            ${difficultWords.map((word, index) => `
+                <div class="difficult-word-item">
+                    <div class="difficult-word-number">${index + 1}</div>
+                    <div class="difficult-word-content">
+                        <div class="difficult-word-main">
+                            <div class="difficult-word-text">${word.word}</div>
+                            <div class="difficult-word-pos">${word.partOfSpeech}</div>
+                        </div>
+                        <div class="difficult-word-details">
+                            <div class="difficult-word-meaning">${word.meaning}</div>
+                            <div class="difficult-word-example">${word.example}</div>
+                        </div>
+                        <div class="difficult-word-location">
+                            <span class="difficult-word-unit">Unit ${word.unitNumber}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function startDifficultWordsPractice() {
+    const difficultWords = window.difficultWordsList || [];
+    
+    if (difficultWords.length === 0) {
+        showNotification('No difficult words to practice!', 'error');
+        return;
+    }
+    
+    // Set up flashcard practice with difficult words
+    currentCardIndex = 0;
+    studyMode = 'difficult';
+    
+    // Store difficult words for flashcard practice
+    window.currentDifficultWords = difficultWords;
+    
+    // Show flashcard screen
+    showFlashcardScreen();
+}
+
+function loadDifficultWordCard() {
+    const difficultWords = window.currentDifficultWords || [];
+    
+    if (currentCardIndex >= difficultWords.length) {
+        // Practice completed
+        showDifficultWordsPracticeResults();
+        return;
+    }
+    
+    const word = difficultWords[currentCardIndex];
+    const card = document.getElementById('flashcard');
+    
+    card.innerHTML = `
+        <div class="card-front">
+            <div class="word-display">${word.word}</div>
+            <div class="part-of-speech">${word.partOfSpeech}</div>
+        </div>
+        <div class="card-back">
+            <div class="meaning">${word.meaning}</div>
+            <div class="example">${word.example}</div>
+        </div>
+    `;
+    
+    isCardFlipped = false;
+    card.classList.remove('flipped');
+    
+    updateDifficultWordsProgress();
+}
+
+function updateDifficultWordsProgress() {
+    const difficultWords = window.currentDifficultWords || [];
+    const progressText = document.getElementById('progressText');
+    const progressBar = document.getElementById('progressBar');
+    
+    if (progressText && progressBar) {
+        const progress = ((currentCardIndex + 1) / difficultWords.length) * 100;
+        progressText.textContent = `${currentCardIndex + 1}/${difficultWords.length}`;
+        progressBar.style.width = `${progress}%`;
+    }
+}
+
+function showDifficultWordsPracticeResults() {
+    const difficultWords = window.currentDifficultWords || [];
+    
+    const resultsHTML = `
+        <div class="practice-results">
+            <div class="results-header">
+                <h2>Difficult Words Practice Complete!</h2>
+                <p>You've reviewed ${difficultWords.length} difficult words from Book ${currentBook}</p>
+            </div>
+            
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="startDifficultWordsPractice()">
+                    <i class="fas fa-redo"></i>
+                    Practice Again
+                </button>
+                <button class="btn btn-secondary" onclick="showDifficultWordsPracticeScreen()">
+                    <i class="fas fa-list"></i>
+                    View Words List
+                </button>
+                <button class="btn btn-secondary" onclick="showBookSelection()">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Books
+                </button>
+            </div>
+        </div>
+    `;
+    
+    hideAllScreens();
+    document.getElementById('difficultWordsScreen').classList.add('active');
+    document.getElementById('difficultWordsContainer').innerHTML = resultsHTML;
+}
+
 function loadBookDataFromLocalStorage() {
     try {
         const savedData = localStorage.getItem('bookData');
@@ -1558,3 +1853,111 @@ window.startPractice = startPractice;
 window.nextQuestion = nextQuestion;
 window.previousQuestion = previousQuestion;
 window.restartPractice = restartPractice;
+
+// Add difficult words functions to global scope
+window.practiceDifficultWords = practiceDifficultWords;
+window.startDifficultWordsPractice = startDifficultWordsPractice;
+window.showDifficultWordsPracticeScreen = showDifficultWordsPracticeScreen;
+
+// Test function for difficult words (can be called from console)
+window.testDifficultWords = function() {
+    // Mark some words as difficult for testing
+    if (currentBook && currentUnit) {
+        // Mark current word as difficult
+        markCardDifficulty(3);
+        
+        // Mark a few more words as difficult
+        for (let i = 0; i < 3; i++) {
+            const originalIndex = currentCardIndex;
+            currentCardIndex = i;
+            markCardDifficulty(3);
+            currentCardIndex = originalIndex;
+        }
+        
+        console.log('Test: Marked some words as difficult. Check book selection for difficult words button.');
+        showBookSelection();
+    } else {
+        console.log('Please select a book and unit first');
+    }
+};
+
+// Add test difficult words to all books
+window.addTestDifficultWords = function() {
+    // Add some test difficult words to each book
+    [3, 4, 5, 6].forEach(bookNumber => {
+        if (!userProgress.books[bookNumber].wordDifficulties) {
+            userProgress.books[bookNumber].wordDifficulties = {};
+        }
+        
+        // Check if bookData exists for this book
+        if (!bookData[bookNumber] || !bookData[bookNumber].units) {
+            console.log(`No book data found for Book ${bookNumber}`);
+            return;
+        }
+        
+        // Add test difficult words only for units that exist and have words
+        Object.keys(bookData[bookNumber].units).forEach(unitNumber => {
+            const unit = bookData[bookNumber].units[unitNumber];
+            if (unit && unit.length > 0) {
+                // Mark first 2 words of each unit as difficult
+                for (let wordIndex = 0; wordIndex < Math.min(2, unit.length); wordIndex++) {
+                    const wordKey = `${unitNumber}-${wordIndex}`;
+                    userProgress.books[bookNumber].wordDifficulties[wordKey] = 3; // Mark as difficult
+                    console.log(`Marked word "${unit[wordIndex].word}" from Book ${bookNumber}, Unit ${unitNumber} as difficult`);
+                }
+            }
+        });
+    });
+    
+    saveUserProgress();
+    updateBookProgress();
+    
+    showNotification('Test difficult words added! Check the book cards below.', 'success');
+};
+
+// Show all difficult words across all books
+window.showAllDifficultWords = function() {
+    let allDifficultWords = [];
+    
+    [3, 4, 5, 6].forEach(bookNumber => {
+        const difficultWords = getDifficultWordsForBook(bookNumber);
+        allDifficultWords = allDifficultWords.concat(difficultWords.map(word => ({
+            ...word,
+            bookNumber: bookNumber
+        })));
+    });
+    
+    if (allDifficultWords.length === 0) {
+        showNotification('No difficult words found. Add some test words first!', 'info');
+        return;
+    }
+    
+    // Create a modal to show all difficult words
+    const modalHTML = `
+        <div class="modal-overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000;">
+            <div class="modal-content" style="background: white; border-radius: 12px; padding: 2rem; max-width: 600px; max-height: 80vh; overflow-y: auto;">
+                <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>All Difficult Words (${allDifficultWords.length})</h3>
+                    <button onclick="this.closest('.modal-overlay').remove()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">×</button>
+                </div>
+                <div class="difficult-words-list">
+                    ${allDifficultWords.map((word, index) => `
+                        <div class="difficult-word-item" style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <div style="background: #dc3545; color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">${index + 1}</div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                    <strong>${word.word}</strong>
+                                    <span style="background: #e9ecef; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.8rem;">${word.partOfSpeech}</span>
+                                    <span style="background: #007bff; color: white; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.8rem;">Book ${word.bookNumber}</span>
+                                </div>
+                                <div style="color: #666; font-size: 0.9rem;">${word.meaning}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+};
