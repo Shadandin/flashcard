@@ -84,6 +84,16 @@ function showFlashcardScreen() {
     startStudySession();
     loadCurrentCard();
     generateIndicatorDots();
+    
+    // Hide difficulty controls when in difficult words mode
+    const difficultyControls = document.querySelector('.difficulty-controls');
+    if (difficultyControls) {
+        if (studyMode === 'difficult') {
+            difficultyControls.style.display = 'none';
+        } else {
+            difficultyControls.style.display = 'block';
+        }
+    }
 }
 
 function showUnitPreviewScreen() {
@@ -240,6 +250,9 @@ function loadCurrentCard() {
     
     // Show difficulty indicator if available
     updateCardDifficultyIndicator();
+    
+    // Update keyboard shortcuts display based on study mode
+    updateKeyboardShortcuts();
 }
 
 function getCurrentCard() {
@@ -738,8 +751,10 @@ function handleKeyboardNavigation(event) {
             flipCard();
             break;
         case '3':
-            // Mark as difficult
-            markCardDifficulty(3);
+            // Mark as difficult (disabled in difficult words mode)
+            if (studyMode !== 'difficult') {
+                markCardDifficulty(3);
+            }
             break;
     }
 }
@@ -1394,6 +1409,13 @@ function displayDifficultWords(difficultWords) {
                             <span class="difficult-word-unit">Unit ${word.unitNumber}</span>
                         </div>
                     </div>
+                    <div class="difficult-word-actions">
+                        <button class="btn btn-danger btn-sm" onclick="removeDifficultWordFromList(${currentBook}, ${word.unitNumber}, ${word.wordIndex}, ${index})" 
+                                style="background: #dc3545; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">
+                            <i class="fas fa-times"></i>
+                            Remove
+                        </button>
+                    </div>
                 </div>
             `).join('')}
         </div>
@@ -1920,6 +1942,11 @@ window.showAllDifficultWords = function() {
                                 </div>
                                 <div style="color: #666; font-size: 0.9rem;">${word.meaning}</div>
                             </div>
+                            <button onclick="removeDifficultWord('${word.bookNumber}', '${word.unitNumber}', ${word.wordIndex})" 
+                                    style="background: #dc3545; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.3rem;">
+                                <i class="fas fa-times"></i>
+                                Remove
+                            </button>
                         </div>
                     `).join('')}
                 </div>
@@ -1929,3 +1956,82 @@ window.showAllDifficultWords = function() {
     
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 };
+
+// Remove a word from difficult words list (for modal)
+window.removeDifficultWord = function(bookNumber, unitNumber, wordIndex) {
+    const wordKey = `${unitNumber}-${wordIndex}`;
+    
+    // Remove the word from difficult words
+    if (userProgress.books[bookNumber] && userProgress.books[bookNumber].wordDifficulties) {
+        delete userProgress.books[bookNumber].wordDifficulties[wordKey];
+        
+        // Save the updated progress
+        saveUserProgress();
+        
+        // Update book progress display
+        updateBookProgress();
+        
+        // Show success notification
+        showNotification(`"${bookData[bookNumber].units[unitNumber][wordIndex].word}" removed from difficult words!`, 'success');
+        
+        // Close the modal and reopen it to refresh the list
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) {
+            modal.remove();
+            // Reopen the modal with updated list
+            setTimeout(() => {
+                showAllDifficultWords();
+            }, 100);
+        }
+    }
+};
+
+// Remove a word from difficult words list (for difficult words screen)
+window.removeDifficultWordFromList = function(bookNumber, unitNumber, wordIndex, listIndex) {
+    const wordKey = `${unitNumber}-${wordIndex}`;
+    
+    // Remove the word from difficult words
+    if (userProgress.books[bookNumber] && userProgress.books[bookNumber].wordDifficulties) {
+        const wordToRemove = bookData[bookNumber].units[unitNumber][wordIndex];
+        delete userProgress.books[bookNumber].wordDifficulties[wordKey];
+        
+        // Save the updated progress
+        saveUserProgress();
+        
+        // Update book progress display
+        updateBookProgress();
+        
+        // Show success notification
+        showNotification(`"${wordToRemove.word}" removed from difficult words!`, 'success');
+        
+        // Refresh the difficult words list
+        const difficultWords = getDifficultWordsForBook(bookNumber);
+        displayDifficultWords(difficultWords);
+        
+        // Update the global difficult words list
+        window.difficultWordsList = difficultWords;
+    }
+};
+
+// Update keyboard shortcuts display based on study mode
+function updateKeyboardShortcuts() {
+    const shortcutsList = document.querySelector('.shortcuts-list');
+    if (!shortcutsList) return;
+    
+    if (studyMode === 'difficult') {
+        // Hide the "3" shortcut for marking as difficult in difficult words mode
+        shortcutsList.innerHTML = `
+            <span class="shortcut">← →</span> Navigate cards
+            <span class="shortcut">Space</span> Next card
+            <span class="shortcut">F</span> Flip card
+        `;
+    } else {
+        // Show all shortcuts including "3" for marking as difficult
+        shortcutsList.innerHTML = `
+            <span class="shortcut">← →</span> Navigate cards
+            <span class="shortcut">Space</span> Next card
+            <span class="shortcut">F</span> Flip card
+            <span class="shortcut">3</span> Mark as difficult
+        `;
+    }
+}
