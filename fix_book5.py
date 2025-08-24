@@ -48,9 +48,9 @@ def examine_book5_format():
     except Exception as e:
         print(f"Error reading {file_path}: {e}")
 
-def parse_book5_specific():
-    """Parse Book 5 with improved patterns"""
-    file_path = "Book 5.docx"
+def parse_book_with_special_chars(book_num):
+    """Parse any book with improved patterns that handle special characters"""
+    file_path = f"Book {book_num}.docx"
     
     try:
         doc = Document(file_path)
@@ -79,26 +79,26 @@ def parse_book5_specific():
                 print(f"Found Unit {current_unit}: {unit_match.group(2).strip()}")
                 continue
             
-            # Enhanced patterns for Book 5 - handle all possible dash characters
+            # Enhanced patterns that handle special characters in words
             if current_unit:
-                # Try multiple patterns with different dash characters
+                # Updated patterns to include words with *, ", ', é, è, à, ç, ñ, ü, ö, and other special characters
                 patterns = [
-                    # Pattern 1: "word (pos) – meaning. Example sentence." (en dash)
-                    r'^([A-Za-z]+)\s*\(([^)]+)\)\s*–\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 2: "word – meaning. Example sentence." (en dash)
-                    r'^([A-Za-z]+)\s*–\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 3: "word (pos) - meaning. Example sentence." (hyphen)
-                    r'^([A-Za-z]+)\s*\(([^)]+)\)\s*-\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 4: "word - meaning. Example sentence." (hyphen)
-                    r'^([A-Za-z]+)\s*-\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 5: "word (pos) — meaning. Example sentence." (em dash)
-                    r'^([A-Za-z]+)\s*\(([^)]+)\)\s*—\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 6: "word — meaning. Example sentence." (em dash)
-                    r'^([A-Za-z]+)\s*—\s*(.+?)(?:\.\s*(.+))?$',
-                    # Pattern 7: "word (pos) – meaning" (en dash, no example)
-                    r'^([A-Za-z]+)\s*\(([^)]+)\)\s*–\s*(.+)$',
-                    # Pattern 8: "word – meaning" (en dash, no example)
-                    r'^([A-Za-z]+)\s*–\s*(.+)$'
+                    # Pattern 1: "word* (pos) – meaning. Example sentence." (en dash)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*\(([^)]+)\)\s*–\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 2: "word* – meaning. Example sentence." (en dash)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*–\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 3: "word* (pos) - meaning. Example sentence." (hyphen)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*\(([^)]+)\)\s*-\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 4: "word* - meaning. Example sentence." (hyphen)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*-\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 5: "word* (pos) — meaning. Example sentence." (em dash)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*\(([^)]+)\)\s*—\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 6: "word* — meaning. Example sentence." (em dash)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*—\s*(.+?)(?:\.\s*(.+))?$',
+                    # Pattern 7: "word* (pos) – meaning" (en dash, no example)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*\(([^)]+)\)\s*–\s*(.+)$',
+                    # Pattern 8: "word* – meaning" (en dash, no example)
+                    r'^([A-Za-z\'\"\*éèàçñüöáíóúâêîôûäëïöüÿ]+)\s*–\s*(.+)$'
                 ]
                 
                 for pattern in patterns:
@@ -159,8 +159,89 @@ def parse_book5_specific():
         return units
         
     except Exception as e:
-        print(f"Error processing Book 5: {e}")
+        print(f"Error processing Book {book_num}: {e}")
         return {}
+
+def fix_all_books():
+    """Fix all books by properly extracting words with special characters"""
+    print("Fixing all books to include words with special characters (*, \", ')...")
+    
+    # Read existing bookData.js
+    with open('bookData.js', 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Extract the bookData object
+    start = content.find('const bookData = ') + len('const bookData = ')
+    end = content.find(';\n\n// Export', start)
+    
+    if start == -1 or end == -1:
+        print("Could not find bookData in file")
+        return
+    
+    # Parse existing data
+    existing_data = json.loads(content[start:end])
+    
+    # Process each book
+    for book_num in range(3, 7):
+        book_str = str(book_num)
+        print(f"\n=== Processing Book {book_num} ===")
+        
+        # Get updated data for this book
+        book_units = parse_book_with_special_chars(book_num)
+        
+        if book_units:
+            existing_data[book_str]["units"] = book_units
+            print(f"✅ Updated Book {book_num} with {len(book_units)} units")
+            
+            # Count total words in this book
+            total_words = sum(len(unit) for unit in book_units.values())
+            print(f"📊 Total words in Book {book_num}: {total_words}")
+            
+            # Show unit statistics
+            for unit_num in range(1, 31):
+                unit_str = str(unit_num)
+                if unit_str in book_units:
+                    word_count = len(book_units[unit_str])
+                    print(f"   Unit {unit_num}: {word_count} words")
+                    if word_count < 20:
+                        print(f"      ⚠️  Still needs {20 - word_count} more words")
+        else:
+            print(f"❌ No data extracted for Book {book_num}")
+    
+    # Write updated data
+    with open('bookData.js', 'w', encoding='utf-8') as f:
+        f.write('// Book Data Structure - Extracted from Word Documents\n')
+        f.write('// Real vocabulary content from user-provided files\n')
+        f.write('// All 4 books with complete vocabulary (including special characters)\n\n')
+        f.write('const bookData = ')
+        f.write(json.dumps(existing_data, indent=2, ensure_ascii=False))
+        f.write(';\n\n')
+        f.write('// Export the data for use in the main script\n')
+        f.write('if (typeof module !== \'undefined\' && module.exports) {\n')
+        f.write('    module.exports = bookData;\n')
+        f.write('}\n')
+    
+    print("\n✅ All books updated successfully!")
+    
+    # Print final statistics
+    total_units = sum(len(book["units"]) for book in existing_data.values())
+    total_words = sum(
+        sum(len(unit) for unit in book["units"].values()) 
+        for book in existing_data.values()
+    )
+    print(f"\n📊 Final Statistics:")
+    print(f"Total books: {len(existing_data)}")
+    print(f"Total units: {total_units}")
+    print(f"Total words: {total_words}")
+    
+    for book_num, book_info in existing_data.items():
+        word_count = sum(len(unit) for unit in book_info["units"].values())
+        unit_count = len(book_info["units"])
+        print(f"   Book {book_num}: {word_count} words across {unit_count} units")
+
+def parse_book5_specific():
+    """Parse Book 5 with improved patterns"""
+    return parse_book_with_special_chars(5)
 
 def update_book_data():
     """Update bookData.js with Book 5 content"""
@@ -227,15 +308,10 @@ def update_book_data():
 
 def main():
     """Main function"""
-    print("Fixing Book 5 vocabulary extraction...")
+    print("Fixing vocabulary extraction for all books...")
     
-    # First examine the format
-    examine_book5_format()
-    
-    print("\n" + "="*50)
-    
-    # Then update the data
-    update_book_data()
+    # Fix all books to include words with special characters
+    fix_all_books()
 
 if __name__ == "__main__":
     main()

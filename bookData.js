@@ -1,6 +1,6 @@
 // Book Data Structure - Extracted from Word Documents
 // Real vocabulary content from user-provided files
-// All 4 books with complete vocabulary (placeholders removed)
+// All 4 books with complete vocabulary (including special characters)
 
 const bookData = {
   "3": {
@@ -4171,6 +4171,12 @@ const bookData = {
           "partOfSpeech": "verb",
           "meaning": "to make unclear; unclear image",
           "example": "Tears blurred her vision."
+        },
+        {
+          "word": "café",
+          "partOfSpeech": "noun",
+          "meaning": "a small restaurant",
+          "example": "We had lunch at a café."
         },
         {
           "word": "canvas",
