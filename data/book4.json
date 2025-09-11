@@ -238,6 +238,12 @@
         "partOfSpeech": "verb",
         "meaning": "to move from one place to another",
         "example": "Trucks transport goods across the country."
+      },
+      {
+        "word": "companion",
+        "partOfSpeech": "noun",
+        "meaning": "a friend",
+        "example": "The dog is her constant companion."
       }
     ],
     "3": [
@@ -598,6 +604,12 @@
         "partOfSpeech": "noun",
         "meaning": "how wide something is",
         "example": "The width of the table is 2 meters."
+      },
+      {
+        "word": "fatal",
+        "partOfSpeech": "adjective",
+        "meaning": "causing death",
+        "example": "The driver suffered fatal injuries in the crash."
       }
     ],
     "6": [
